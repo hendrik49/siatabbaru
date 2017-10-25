@@ -34,11 +34,11 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$this->layout = '//site/landing';
 		$model = new LoginForm;
-
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		/*if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
 			echo CActiveForm::validate($model);
 			$model->Tanggal = time();
@@ -54,8 +54,8 @@ class SiteController extends Controller
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
 				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		$this->render('index', array(
+		}*/
+		$this->render('landing', array(
 			'model'=>$model,
 
 		));
@@ -160,4 +160,39 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+	
+	public $dataProvider1;
+	public $dataProvider2;
+	public $dataProvider3;
+	public function actionDashboard()
+	{
+		$model=new Sumur('search');
+		$model->unsetAttributes();
+
+		$sql='SELECT count(id),sumur FROM t_sumur6 GROUP BY sumur';
+		$dataProvider=new CSqlDataProvider($sql,array(
+            'keyField' => 'id',
+		));
+		$sql='SELECT count(id),reservoar  FROM t_sumur6 GROUP BY reservoar';
+		$dataProvider1=new CSqlDataProvider($sql,array(
+			'keyField' => 'id',
+		));
+		$sql='SELECT count(id),pompa,rumah_pompa FROM t_sumur6 GROUP BY pompa,rumah_pompa';
+		$dataProvider2=new CSqlDataProvider($sql,array(
+			'keyField' => 'id',
+		));
+		$sql='SELECT count(id),pompa FROM t_hujan5 GROUP BY pompa';
+		$dataProvider3=new CSqlDataProvider($sql,array(
+			'keyField' => 'id',
+		));
+		$this->render('dashboard',array(
+			'dataProvider'=>$dataProvider,
+			'dataProvider1'=>$dataProvider1,
+			'dataProvider2'=>$dataProvider2,
+			'dataProvider3'=>$dataProvider3,
+			'model'=>$model,
+		));
+
+	}
+
 }

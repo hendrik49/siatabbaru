@@ -20,6 +20,9 @@ class Sumur extends CActiveRecord
 	public $info_gambar;
 	public $status_aset;
 	public $tahun_bangun;
+	public $nama_prov;
+	public $n_prov;
+
 
 	/**
 	 * @return string the associated database table name
@@ -38,9 +41,9 @@ class Sumur extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('', 'required'),
-			array('Tanggal', 'numerical', 'integerOnly'=>true),
+			array('Tanggal, manfaat_jiwa, debit_liter', 'numerical', 'integerOnly'=>true),
 			/* ------------Data Numerical Control------------*/
-			array('ID_IDBalai, NoData, kodefikasi', 'length', 'max'=>13),
+			array('ID_IDBalai, NoData, kodefikasi', 'length', 'max'=>15),
 			/* ------------Data Dasar & Administrasi------------*/
 			array('nama_das, nama_ws, nama_cat', 'length', 'max'=>100),
 			array('provinsi, kota, kecamatan, desa, status, info_gambar', 'length', 'max'=>100),
@@ -49,7 +52,7 @@ class Sumur extends CActiveRecord
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('provinsi, nama_das, kota, kecamatan, 
-			manfaat_jiwa, debit_liter, Nama_sumur, kondisi_sumur,nama_lembaga, tahun_bangun, status_aset', 
+			manfaat_jiwa, debit_liter, Nama_sumur, nama_prov, n_prov, kondisi_sumur,nama_lembaga, tahun_bangun, status_aset', 
 			'safe', 'on'=>'search'),
 		);
 	}
@@ -64,7 +67,7 @@ class Sumur extends CActiveRecord
 		return array(
 			'admin'=>array(self::BELONGS_TO, 'User', 'ID_IDBalai'),
 			'balai'=>array(self::BELONGS_TO, 'UnitKerja', 'ID_IDBalai'),
-			'kotas'=>array(self::BELONGS_TO, 'Kota', 'kota'),
+			'kotas'=>array(self::BELONGS_TO, 'Kota', 'provinsi'),
 			'info'=>array(self::BELONGS_TO, 'InfoSumur', 'ID'),
 			'manfaat'=>array(self::BELONGS_TO, 'ManfaatSumur', 'ID'),
 			'teknissat'=>array(self::BELONGS_TO, 'TeknisSumur', 'ID'),
@@ -96,6 +99,8 @@ class Sumur extends CActiveRecord
 			'debit_liter'=>'Debit (l/dtk)',
 			'status'=>'Status Pekerjaan',
 			'manfaat_jiwa'=>'Jiwa',
+			'nama_prov'=>'Nama Kabupaten',
+			'n_prov' =>'id prov',
 		);
 	}
 
@@ -107,9 +112,90 @@ class Sumur extends CActiveRecord
 	{
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
+		
 
 		$criteria=new CDbCriteria;
+		$criteria->with= array(
+			'admin'=>array('select'=>'Nama'),
+			'info'=>array('select'=>'foto1'),
+			'manfaat'=>array('select'=>'jiwa, debit'),
+			'teknissat'=>array('select'=>'nama_sumur'),
+			'teknisdua'=>array('select'=>'status_aset'),
+			'teknisga'=>array('select'=>'tahun_bangun, nama_lembaga'),
+			'kondisi'=>array('select'=>'sumur'),
+			'kotas'=>array('select'=>'id_prov, provinsi'),
+		);
+		$criteria->compare('manfaat.jiwa',$this->manfaat_jiwa, true);
+		$criteria->compare('manfaat.debit',$this->debit_liter, true);
+		$criteria->compare('teknissat.nama_sumur',$this->Nama_sumur, true);
+		$criteria->compare('kondisi.sumur',$this->kondisi_sumur, true);
+		$criteria->compare('teknisdua.status_aset',$this->status_aset, true);
+		$criteria->compare('teknisga.tahun_bangun',$this->tahun_bangun, true);
+		$criteria->compare('teknisga.nama_lembaga',$this->nama_lembaga, true);
+		$criteria->compare('kotas.id_prov',$this->nama_prov, true);
+		$criteria->compare('kotas.provinsi',$this->n_prov, true);
+		//$criteria->compare('nama_das',$this->nama_das, true);
+		$criteria->compare('nama_ws',$this->nama_ws,true);		
+		$criteria->compare('provinsi',$this->provinsi,true);
+		$criteria->compare('kota',$this->kota,true);
+		$criteria->compare('kecamatan',$this->kecamatan, true);
+		$criteria->compare('desa',$this->desa, true);
+
+		if (isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_ADMIN){
+			$criteria->compare('ID_IDBalai', Yii::app()->user->uid);
 		
+			return new CActiveDataProvider($this, array(
+				'criteria'=>$criteria,
+				'sort'=>array(
+					'defaultOrder'=>'nama_ws DESC',
+				),
+				'sort'=>array(
+					'attributes'=>array(
+						'manfaat_jiwa'=>array('asc'=>'manfaat.jiwa','desc'=>'manfaat.jiwa'),
+						'debit_liter'=>array('asc'=>'manfaat.debit', 'desc'=>'manfaat.debit'),
+						'Nama_sumur'=>array('asc'=>'teknissat.nama_sumur', 'desc'=>'teknissat.nama_sumur'),
+						'kondisi_sumur'=>array('asc'=>'kondisi.sumur', 'desc'=>'kondisi.sumur'),
+						'tahun_bangun'=>array('asc'=>'teknisga.tahun_bangun', 'desc'=>'teknisga.tahun_bangun'),
+						'*',
+					),
+				),
+				'pagination' => array(
+					'pageSize' => 6,
+				),
+			));
+		}else{			
+			return new CActiveDataProvider($this, array(
+				'criteria'=>$criteria,
+				'sort'=>array(
+					'defaultOrder'=>'nama_ws DESC',
+				),
+				'sort'=>array(
+					'attributes'=>array(
+						'manfaat_jiwa'=>array('asc'=>'manfaat.jiwa','desc'=>'manfaat.jiwa','value'=>'manfaat.jiwa'),
+						'debit_liter'=>array('asc'=>'manfaat.debit', 'desc'=>'manfaat.debit','value'=>'manfaat.debit'),
+						'Nama_sumur'=>array('asc'=>'teknissat.nama_sumur', 'desc'=>'teknissat.nama_sumur'),
+						'kondisi_sumur'=>array('asc'=>'kondisi.sumur', 'desc'=>'kondisi.sumur'),
+						'tahun_bangun'=>array('asc'=>'teknisga.tahun_bangun', 'desc'=>'teknisga.tahun_bangun'),
+						'nama_prov'=>array('asc'=>'kotas.id_prov', 'desc'=>'kotas.id_prov'),
+						
+						'*',
+					),
+				),
+				'pagination' => array(
+					'pageSize' => 6,
+				),
+
+			));		
+		}
+	}
+	
+	public function getSearch()
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+		
+
+		$criteria=new CDbCriteria;
 		$criteria->with= array(
 			'admin'=>array('select'=>'Nama'),
 			'info'=>array('select'=>'foto1'),
@@ -121,43 +207,14 @@ class Sumur extends CActiveRecord
 		);
 		$criteria->compare('manfaat.jiwa',$this->manfaat_jiwa, true);
 		$criteria->compare('manfaat.debit',$this->debit_liter, true);
-		$criteria->compare('teknissat.nama_sumur',$this->Nama_sumur, true);
-		$criteria->compare('kondisi.sumur',$this->kondisi_sumur, true);
-		$criteria->compare('teknisdua.status_aset',$this->status_aset, true);
-		$criteria->compare('teknisga.tahun_bangun',$this->tahun_bangun, true);
-		$criteria->compare('teknisga.nama_lembaga',$this->nama_lembaga, true);
-		//$criteria->compare('nama_das',$this->nama_das, true);
-		$criteria->compare('nama_ws',$this->nama_ws,true);		
-		$criteria->compare('provinsi',$this->provinsi,true);
-		$criteria->compare('kota',$this->kota,true);
-		$criteria->compare('kecamatan',$this->kecamatan, true);
-		$criteria->compare('desa',$this->desa, true);
-		
-		
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-			'sort'=>array(
-				'defaultOrder'=>'nama_ws DESC',
-			),
-			'sort'=>array(
-				'attributes'=>array(
-					'manfaat_jiwa'=>array('asc'=>'manfaat.jiwa','desc'=>'manfaat.jiwa'),
-					'debit_liter'=>array('asc'=>'manfaat.debit', 'desc'=>'manfaat.debit'),
-					'Nama_sumur'=>array('asc'=>'teknissat.nama_sumur', 'desc'=>'teknissat.nama_sumur'),
-					'kondisi_sumur'=>array('asc'=>'kondisi.sumur', 'desc'=>'kondisi.sumur'),
-					'tahun_bangun'=>array('asc'=>'teknisga.tahun_bangun', 'desc'=>'teknisga.tahun_bangun'),
-					'*',
-				),
-			),
+		return $criteria;
 
-			'pagination' => array(
-				'pageSize' => 5,
-			),
-		));
-		
 	}
-	
-		public static function getAvailableDataSumurId()
+
+
+
+
+	public static function getAvailableDataSumurId()
 	{
 		$criteria = new CDbCriteria;
 		$criteria->limit = 1;
@@ -237,7 +294,120 @@ class Sumur extends CActiveRecord
 				return '';
 			}
 	}
+	public static function getTotalJiwa()
+	{
+	
+	//$criteria = new CDbCriteria;
+	//$jiwas = self::model()->findAll();
+	$jiwas = self::model()->search()->getData();
+	$_total_jiwa= 0.0;
+	foreach ($jiwas as $jiwa) 
+		{
+			if(isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_ADMIN){
+				if(Yii::app()->user->uid == $jiwa->ID_IDBalai){
+					$_total_jiwa = $_total_jiwa + $jiwa->manfaat->jiwa;
+				}
+			}else{
+				$_total_jiwa = $_total_jiwa + $jiwa->manfaat->jiwa;
+			}
+		}
+	return number_format($_total_jiwa,0);
+	}
 
+	public function getTotal($records,$colname){        
+        $total = 0.0;
+		$nn = 0;
+        if(count($records) > 0){
+            foreach ($records as $record) {
+				$total += $record->$colname;
+				$nn++;	
+            }
+        }
+		//return number_format($total,2);
+		return number_format($nn,0);
+		
+    }
+ 
+	public function getAvarage($column,$ids)	
+	{
+	if($ids){
+	$ids = implode(",",$ids);
+	
+	$connection=Yii::app()->db;
+	$command=$connection->createCommand("SELECT AVG($column) FROM t_sumur2 where id in ($ids)");
+	$amount = $command->queryScalar();
+	return number_format($amount,0);
+	}
+	else 
+	return '0';
+	} 
+	
+	public function getTotals($column,$ids)	
+	{
+	if($ids){
+	$ids = implode(",",$ids);
+	
+	$connection=Yii::app()->db;
+	$command=$connection->createCommand("SELECT SUM($column) FROM t_sumur2 where id in ($ids)");
+	$amount = $command->queryScalar();
+	return number_format($amount,0);
+	}
+	else 
+	return '0';
+	} 
+
+
+	public static function exportXls()
+    {
+		$datadatas = self::model()->search()->getData();
+		$ii = 1;
+        $objPHPExcel=Yii::createComponent('application.extensions.PHPExcel');
+        $objPHPExcel->setActiveSheetIndex(0)
+                    ->setCellValue('A1', 'No')
+                    ->setCellValue('B1', 'Kodefikasi')
+                    ->setCellValue('C1', 'Nama CAT')
+					->setCellValue('D1', 'Nama Das')
+					->setCellValue('E1', 'Nama WS')
+					->setCellValue('F1', 'Provinsi')
+                    ->setCellValue('G1', 'Kota/ Kabupaten')
+                    ->setCellValue('H1', 'Kecamatan')
+					->setCellValue('I1', 'Desa')
+					->setCellValue('J1', 'LS')
+					->setCellValue('K1', 'BT')
+                    ->setCellValue('L1', 'Elevasi Sumur');
+	/*	foreach ($datadatas as $urut){	
+					->setCellValue('A'$ii, $urut->NoData)
+					->setCellValue('B'$ii, $urut->kodefikasi)
+					->setCellValue('C'$ii, $urut->nama_cat)
+					->setCellValue('D'$ii, $urut->nama_das)
+					->setCellValue('E'$ii, $urut->nama_ws)
+					->setCellValue('F'$ii, $urut->provinsi)
+					->setCellValue('G'$ii, $urut->kota)
+					->setCellValue('H'$ii, $urut->kecamatan)
+					->setCellValue('I'$ii, $urut->desa)
+					->setCellValue('J'$ii, $urut->lintang_selatan)
+					->setCellValue('K'$ii, $urut->bujur_timur)
+					->setCellValue('L'$ii, $urut->elevasi_sumur)
+		}
+
+	*/
+        // Redirect output to a client’s web browser (Excel2007)
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename="contohkita.xlsx"');
+        header('Cache-Control: max-age=0');
+        // If you're serving to IE 9, then the following may be needed
+        header('Cache-Control: max-age=1');
+
+        // If you're serving to IE over SSL, then the following may be needed
+        header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+        header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); // always modified
+        header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
+        header ('Pragma: public'); // HTTP/1.0
+
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+        $objWriter->save('php://output');
+        unset($objPHPExcel);
+    }
 
 }
 ?>

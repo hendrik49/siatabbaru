@@ -43,12 +43,13 @@
 					'items'=>array(
 					//array('label'=>'Link', 'url'=>'#'),
 						array('label'=>'Kelola Web', 'url'=>'#', 'items'=>array(
-							array('label'=>'Upload Peta', 'url'=>array('/peta')),
+							array('label'=>'Kelola Peta', 'url'=>array('/peta')),
 							array('label'=>'Manajemen Admin', 'url'=>array('/user'), 'visible'=>(isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN))), 
 							array('label'=>'Kelola Balai', 'url'=>array('/unitKerja')),
 							'---',
-							array('label'=>'Upload Gambar', 'url'=>'#'),
-						)),
+							array('label'=>'Kelola Galeri', 'url'=>'#'),
+						), 'visible'=>(isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == (User::USER_SUPER_ADMIN AND User::USER_ADMIN)))
+					),
 					),
 				),
 			),

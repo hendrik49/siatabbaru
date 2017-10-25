@@ -16,7 +16,7 @@ $this->breadcrumbs=array(
 		'buttonType'=>'Link',
 		'type'=>'primary',
 		'label'=>'Edit Data',
-		'url'=>array('mataair/update/','id'=>$model->ID),
+		'url'=>array('hujan/update/','id'=>$model->ID),
 		
 		));
 ?><?php endif ?></legend></div>

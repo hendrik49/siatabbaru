@@ -3,9 +3,6 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id'=>'Sumur-form',
     'type'=>'horizontal',
 	'enableAjaxValidation'=>false,
-	'htmlOptions'=>array(
-		'enctype'=>'multipart/form-data',
-	),
 )); 
 include '../siatab/connect.php';
 ?>
@@ -45,20 +42,26 @@ include '../siatab/connect.php';
 	<?php echo $form->textFieldRow($model,'kodefikasi',array('id'=>'KodeFikasi')); ?>
 	<?php echo $form->textFieldRow($model,'NoData',array('id'=>'NoUData')); ?>
 	<?php echo $form->textFieldRow($model,'nama_ws');?>
-	<?php echo $form->textFieldRow($model,'provinsi',array('rows'=>3,'cols'=>30, 'readOnly'=>true)); ?>
 	</div>
 	</td>
 </tr>
 <td>
-
+	<?php $test =""; ?>
 	<?php echo $form->textFieldRow($model,'nama_ws'); ?>
-	<?php //echo $form->dropDownListRow($model,'nama_sistem',SistemBaku::lookupNamaSistem()); ?>
-	<?php //echo $form->textFieldRow($model,'nama_objek'); ?>
-	<?php //echo $form->textFieldRow($model,'tahun_data',array('size'=>14,'maxlength'=>15)); ?>
 	<?php echo $form->textFieldRow($model,'nama_das',array('size'=>25,'maxlength'=>30)); ?>
 	<?php echo $form->textFieldRow($model,'nama_cat');?>
-	<?php echo $form->textFieldRow($model,'provinsi',array('rows'=>3,'cols'=>30, 'readOnly'=>true)); ?>
-	<?php echo $form->dropDownListRow($model,'kota',Kota::lookupProvinsi(),array('id'=>'kodeeKab')); ?>
+
+	<?php echo $form->dropDownListRow($model,'provinsi', CHtml::listData(Provinsi::model()->findAll(),'Nama_provinsi','Nama_provinsi'),
+		array(
+		'prompt'=>'Pilih Propinsi', 
+		'value'=>'0',
+		'ajax' => array('type'=>'POST', 'url'=>CController::createUrl('Sumur/setKot'), // panggi filter kabupaten di controller
+		'update'=>'#Sumur_kota', //selector to update
+		'data'=>array('provinsi'=>'js:this.value'),
+		))); ?>
+
+	<?php  echo $form->dropDownListRow($model,'kota', CHtml::listData(Kota::model()->findAll(),'id_prov','kab')); ?>
+	
 </td>
 <td>
 	<!--<fieldset>-->
@@ -111,6 +114,8 @@ include '../siatab/connect.php';
 
 
 <script>
+	var kott = document.getElementById("Provv").value;
+	document.getElementById('kodeeKab').value = kott;
 	<?php $kp = Unitkerja::getKodeProvByAdmin(); ?>
 	var jum ="<?php echo $max; ?>"; 
 	var kota = new Array();
@@ -123,10 +128,10 @@ include '../siatab/connect.php';
 		kota[i] = document.getElementById('NamaKab'+i).value;
 		kode[i] = document.getElementById('KodeKab'+i).value;
 		if(kota[i]==x){
-			kp = Number(kp) * Number(10000000);
-			getKode = (Number(100000) * Number(kode[i])) + Number(109000000000) + Number(kp) + Number(nod);
+			kp = Number(kp) * Number(1000000);
+			getKode = (Number(000000) * Number(kode[i])) + Number(33060900000000) + Number(kp) + Number(nod);
 		}
 	}
-	document.getElementById('KodeFikasi').value = getKode;
+	document.getElementById('KodeFikasi').value = "0"+getKode;
 </script>
 </html>

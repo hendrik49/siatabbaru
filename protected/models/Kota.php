@@ -72,7 +72,7 @@ class Kota extends CActiveRecord
 			'kode' => 'kode Kab/ Kota',
 			'kab' => 'Nama Kab/ Kota',
 			'provinsi' => 'Provinsi',
-			
+			'id_prov' => 'id prov',
 		);
 	}
 
@@ -140,18 +140,18 @@ class Kota extends CActiveRecord
 		return $_items;
 		
 	}	
-	public static function lookupKode1()
+	public function lookupKotaByProv($provinsi)
 	{
 		$kotas = self::model()->findAll();
 		$_items = array();
 		foreach ($kotas as $kota) 
 		{
-			$data = Unitkerja::getProvByAdmin();
+			$data = $provinsi;
 			if($kota->provinsi == $data){
-				$_items['kab'];
+				$_items[$kota->kab] = $kota->kab;
 			}
 		}	
-		//return $_items;
+		return $_items;
 		
 	}
 

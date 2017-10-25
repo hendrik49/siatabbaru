@@ -119,7 +119,7 @@ class Provinsi extends CActiveRecord
 		$_items = array();
 		foreach ($kotas as $kota) 
 		{
-			$_items[$kota->Nama_provinsi] = $kota->Kode_provinsi.' (' . $kota->Nama_provinsi . ')';
+			$_items[$kota->Nama_provinsi] = $kota->Nama_provinsi.' (' . $kota->Nama_provinsi . ')';
 		}	
 		return $_items;
 		

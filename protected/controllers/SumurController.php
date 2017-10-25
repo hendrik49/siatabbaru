@@ -24,7 +24,7 @@ class SumurController extends Controller
 	public $modelteknisGa;
 	public $modelteknisPat;
 	public $modelInfoMa;
-	public $modelAllSave;
+	public $modelKota;
 	
 	private $_mapPath;
 	private $_mapPath1;
@@ -46,12 +46,12 @@ class SumurController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','tambah', 'detail', 'search'),
+				'actions'=>array('index','view','tambah', 'detail', 'search', 'cetak','buatExcel'),
 				'users'=>array('*'),
 			),
  
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('add','update','create'),
+				'actions'=>array('add','update','create','setKot'),
 				'users'=>array_merge($user['superAdmin'], $user['admin']),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -64,61 +64,6 @@ class SumurController extends Controller
 		);
 	}
 	
-	
-	function forceDownload($filename = '', $data = '')
-	{
-		if ($filename == '' OR $data == '')
-		{
-			return FALSE;
-		}
-
-		// Try to determine if the filename includes a file extension.
-		// We need it in order to set the MIME type
-		if (FALSE === strpos($filename, '.'))
-		{
-			return FALSE;
-		}
-
-		// Grab the file extension
-		$x = explode('.', $filename);
-		$extension = end($x);
-
-		// Load the mime types
-		@include(APPPATH.'config/mimes'.EXT);
-
-		// Set a default mime if we can't find it
-		if ( ! isset($mimes[$extension]))
-		{
-			$mime = 'application/octet-stream';
-		}
-		else
-		{
-			$mime = (is_array($mimes[$extension])) ? $mimes[$extension][0] : $mimes[$extension];
-		}
-
-		// Generate the server Albums
-		if (strpos($_SERVER['HTTP_USER_AGENT'], "MSIE") !== FALSE)
-		{
-			header('Content-Type: "'.$mime.'"');
-			header('Content-Disposition: attachment; filename="'.$filename.'"');
-			header('Expires: 0');
-			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-			header("Content-Transfer-Encoding: binary");
-			header('Pragma: public');
-			header("Content-Length: ".strlen($data));
-		}
-		else
-		{
-			header('Content-Type: "'.$mime.'"');
-			header('Content-Disposition: attachment; filename="'.$filename.'"');
-			header("Content-Transfer-Encoding: binary");
-			header('Expires: 0');
-			header('Pragma: no-cache');
-			header("Content-Length: ".strlen($data));
-		}
-
-		exit($data);
-	}
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
@@ -143,55 +88,7 @@ class SumurController extends Controller
 			'modelInfoMa'=>$this->loadModelInfo($id),
 		));
 	}
-	public function actionViewm($id)
-	{
-		$model = $this->loadModelW($id);
-		$this->render('viewm',array(
-			'model'=>$this->loadModelW($id),
-			//'model'=>$model,
-		));
-	}
-	public function actionViewt($id)
-	{
-		$model = $this->loadModelG($id);
-		$this->render('viewt',array(
-			'model'=>$this->loadModelG($id),
-			//'model'=>$model,
-		));
-	}
-	public function actionViewtw($id)
-	{
-		$model = $this->loadModelP($id);
-		$this->render('viewtw',array(
-			'model'=>$this->loadModelP($id),
-			//'model'=>$model,
-		));
-	}
-	public function actionViewtg($id)
-	{
-		$model = $this->loadModelM($id);
-		$this->render('viewtg',array(
-			'model'=>$this->loadModelM($id),
-			//'model'=>$model,
-		));
-	}
-	public function actionViewk($id)
-	{
-		$model = $this->loadModelN($id);
-		$this->render('viewk',array(
-			'model'=>$this->loadModelN($id),
-			//'model'=>$model,
-		));
-	}
 	
-	public function actionViewi($id)
-	{
-		$model = $this->loadModelInfo($id);
-		$this->render('viewi',array(
-			'model'=>$this->loadModelInfo($id),
-			//'model'=>$model,
-		));
-	}	
 	public function actionDetail($id)
 	{
 		$model = $this->loadModel($id);
@@ -222,8 +119,7 @@ class SumurController extends Controller
 			$model->attributes=$_POST['Sumur'];
 			$model->Tanggal = time();
 			if($model->save()) {
-
-				$this->redirect(array('view','id'=>$model->ID));
+				$this->redirect(array('//sumur/view','id'=>$model->ID));
 			}
 		}
 		
@@ -379,32 +275,104 @@ class SumurController extends Controller
 	{	
 		$model=new Sumur('search');
 		$model->unsetAttributes();
-		  // clear any default values
-		//
-			//$criteria->addCondition("ID_IDBalai == Yii::app()->user->ID");
-			
-		//}
-
+		
 		if(isset($_GET['Sumur']))
 			$model->attributes=$_GET['Sumur'];
-			/*$datacompare = $model->ID_IDBalai;
-			$criteria = new CDbCriteria;
-			if (isset(Yii::app()->user->uid) AND Yii::app()->user->uid == $datacompare)
-				
-				$criteria->compare('ID_IDBalai', Yii::app()->user->uid);	
-				$dataProvider=new CActiveDataProvider('Sumur', array(
-					'criteria'=>$criteria,
-					'sort'=>array(
-							'defaultOrder'=>'nama_ws Desc',
-					),
-				));*/
+	
 		$this->render('index',array(
 			//'dataProvider'=>$dataProvider,
 			'model'=>$model,
 		));
 	}
 	
+	public function actionCetak()
+    {
+		Sumur::exportXls();
+		$daftarku=$_POST['NamaSumur'];
+		
+		echo "<title>Cetak Data Sumur</title>";
+		echo "<div class='grid-view'>";
+		echo "<table class='items table table-striped table-bordered table-condensed'><tr><strong>";
+		echo "<th>No</th>";
+		echo "<th>Nama Sumur</th>";
+		echo "<th>Kab/Kota</th>";
+		echo "<th>Kecamatan</th>";
+		echo "<th>Desa</th>";
+		echo "<th>Tahun Bangun</th>";
+		echo "<th>Jiwa</th>";
+		echo "<th>Debit (l/dtk)</th>";
+		echo "<th>Kondisi Sumur</th>";
+		echo "</strong></tr>";
+
+        foreach ($daftarku as $nomor=>$nilai)
+        {
+			$model=$this->loadModel($nilai);
+			$modelteknisWa= $this->loadModelP($nilai);
+			$modelteknis= $this->loadModelG($nilai);
+			$modelmanfaat= $this->loadModelW($nilai);
+			$modelteknisPat= $this->loadModelN($nilai);
+			$modelteknisGa= $this->loadModelM($nilai);
+
+			if($modelteknis->ID == $nilai){
+				
+				echo "<tr>";
+				echo "<td '>".$nilai."</td>";
+				echo "<td>".$modelteknis->nama_sumur."</td>";
+				echo "<td>".$model->kota."</td>";
+				echo "<td>".$model->kecamatan."</td>";
+				echo "<td>".$model->desa."</td>";
+				echo "<td>".$modelteknisGa->tahun_bangun."</td>";
+				echo "<td>".$modelmanfaat->jiwa."</td>";
+				echo "<td>".$modelmanfaat->debit."</td>";
+				echo "<td>".$modelteknisPat->sumur."</td>";
+				echo "</tr>";
+			}
+
+		}
+		echo "</table></div>";
+		echo "<script>window.print();</script>";
+		echo "<script>window.close();</script>";
+	}
+
 	
+	public function actionBuatExcel()
+    {
+         $objPHPExcel=Yii::createComponent('application.extensions.PHPExcel.PHPExcel');
+        $objPHPExcel->setActiveSheetIndex(0)
+                    ->setCellValue('A1', 'Ini di A No 1 ya')
+                    ->setCellValue('B2', 'kalau ini B 2')
+                    ->setCellValue('C1', 'Ini di C1')
+                    ->setCellValue('D2', 'Terakhir di D 2');
+        // Redirect output to a client’s web browser (Excel2007)
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename="contoh01.xlsx"');
+        header('Cache-Control: max-age=0');
+        // If you're serving to IE 9, then the following may be needed
+        header('Cache-Control: max-age=1');
+
+        // If you're serving to IE over SSL, then the following may be needed
+        header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+        header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); // always modified
+        header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
+        header ('Pragma: public'); // HTTP/1.0
+
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+        $objWriter->save('php://output');
+        unset($objPHPExcel);
+    }
+
+	public function actionSetkot()
+	{	 
+		$modelKota= new Kota;
+	   	$data=Kota::model()->findAll('provinsi=:provinsi',
+		array(':provinsi'=>(string) $_POST['provinsi']));
+		$data=CHtml::listData($data,'kab','kab');
+		foreach($data as $value=>$name)
+		{
+		echo CHtml::tag('option',array('value'=>$value),CHtml::encode($name),true);
+		}  
+	}
+
 	public function actionTambah()
 	{
 		$model=new Sumur;
@@ -414,9 +382,16 @@ class SumurController extends Controller
 		$modelteknisGa= new TeknisGaSumur;
 		$modelteknisPat= new KondisiSumur;
 		$modelInfoMa= new InfoSumur;
+		$modelKota= new Kota;
+		
+		
 		
 		if(isset($_POST['Sumur']))
 		{
+
+			//$provinsi = $_GET["provinsi"];
+			
+			$modelKota->attributes=$_POST['Kota'];
 			$model->attributes=$_POST['Sumur'];
 			$model->Tanggal = time();
 			if($model->save()) {
@@ -441,6 +416,7 @@ class SumurController extends Controller
 				$modelInfoMa->save();
 				$this->redirect(array('//sumur/update','id'=>$model->ID));	
 			}
+			
 
 		}
 
@@ -566,22 +542,15 @@ class SumurController extends Controller
 			'modelteknisGa'=>$modelteknisGa,
 			'modelteknisPat'=>$modelteknisPat,
 			'modelInfoMa'=>$modelInfoMa,
+			'modelKota'=>$modelKota,
 			));		
 		}	
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
-	{
-		$model=new Sumur('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Sumur']))
-			$model->attributes=$_GET['Sumur'];
 
-		$this->render('admin',array(
-			'model'=>$model,
-		));
-	}
+
+
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
@@ -638,15 +607,6 @@ class SumurController extends Controller
 		return $modelInfoMa;
 	}
 
-	public function loadModelAllS($id)
-	{
-		$modelAllSave=AllSaveSumur::model()->findByPk($id);
-		if($modelAllSave===null)
-			throw new CHttpException(404,'The requested page does not exist.');
-		return $modelAllSave;
-	}
-	
-	
 	/**
 	 * Performs the AJAX validation.
 	 * @param CModel the model to be validated

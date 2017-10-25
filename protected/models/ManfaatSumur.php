@@ -153,5 +153,25 @@ class ManfaatSumur extends CActiveRecord
 				return '';
 			}
 	}
+
+	public static function getTotalJiwa()
+	{
+		
+		$criteria = new CDbCriteria;
+		$jiwas = self::model()->findAll();
+		$_total_jiwa= 0;
+			foreach ($jiwas as $jiwa) 
+			{
+				if(isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_ADMIN){
+					if(Yii::app()->user->uid == $jiwa->ID_IDBalaiWa){
+						$_total_jiwa = $_total_jiwa + $jiwa->jiwa;
+					}
+				}else{
+					$_total_jiwa = $_total_jiwa + $jiwa->jiwa;
+				}
+			}
+		return $_total_jiwa;
+	}
+
 }
 ?>
