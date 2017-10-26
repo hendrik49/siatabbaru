@@ -100,6 +100,29 @@ class SiteController extends Controller
 		}
 		$this->render('contact',array('model'=>$model));
 	}
+	public $dodo;
+	public function actionIndexdata()
+	{
+		$criteria=new CDbCriteria;
+		
+		
+
+		
+		$dataProvider=new CActiveDataProvider('Sumur', array(
+			'criteria'=>$criteria,
+			'sort'=>array(
+				'defaultOrder'=>'nama_ws DESC',
+			),
+			'pagination' => array(
+				'pageSize' => 5,
+			),
+		));
+
+		$this->render('indexdata',array(
+			'dataProvider'=>$dataProvider,
+			//'dodo'=>$dodo,
+		));
+	}
 
 		public function actionPeraturan()
 	{
@@ -130,7 +153,7 @@ class SiteController extends Controller
 	
 	public function actionLogin()
 	{
-		$this->layout = '//layouts/main';
+		$this->layout = '//login';
 		$model=new LoginForm;
 
 		// if it is ajax validation request

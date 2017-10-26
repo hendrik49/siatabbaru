@@ -287,7 +287,7 @@ class SumurController extends Controller
 	
 	public function actionCetak()
     {
-		Sumur::exportXls();
+		//Sumur::exportXls();
 		$daftarku=$_POST['NamaSumur'];
 		
 		echo "<title>Cetak Data Sumur</title>";

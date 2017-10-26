@@ -13,7 +13,7 @@ $this->breadcrumbs=array(
 <table width="330" border="5" align="center" cellpadding="0">
 <tr bgcolor='orange'>
 <td height="15" colspan="4">
-<strong> Cari Peta <input size="40" type="text" name="NamaPeta">
+<strong> Cari Peta <input size="40" type="text" name="dataPeta">
 <input size="10" type="SUBMIT" name="SUBMIT" id="SUBMIT" value="Search" >
 </strong>
 </td>
@@ -36,14 +36,20 @@ mysql_select_db($dbname) OR die('cant access database');
 
 <?php 
 //include "connect.php";
-if (isset($_POST['NamaPeta'])) {
-$NamaPeta = $_POST['NamaPeta']; //get the nama value from form
+if (isset($_POST['dataPeta'])) {
+$NamaPeta = $_POST['dataPeta']; //get the nama value from form
 
 } else
 {
 	$NamaPeta = '';
 }
-$q = "SELECT * from t_peta where NamaPeta like '%$NamaPeta%' "; //query to get the search result
+$q = "SELECT * from t_peta where 
+	UnitKerja like '%$NamaPeta%' or 
+	NamaPeta like '%$NamaPeta%' or
+	Status like '%$NamaPeta%' or
+	FilePeta1 like '%$NamaPeta%' or
+	FilePeta2 like '%$NamaPeta%' or
+	Jenis like '%$NamaPeta%'"; //query to get the search result
 $result = mysql_query($q); //execute the query $q
 echo "<table border='1' cellpadding='5' cellspacing='8'>";
 echo "";
