@@ -8201,3 +8201,624 @@ Stack trace:
 REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
 HTTP_REFERER=http://localhost/siatab/sumur
 ---
+2017/10/26 15:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/10/26 15:13:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/sumur
+---
+2017/10/26 15:13:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/sumur
+---
+2017/10/26 15:13:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/sistembaku/listbaku
+---
+2017/10/26 21:54:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/undefined/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/undefined/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:54:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/undefined/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/undefined/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:54:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/undefined/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/undefined/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:54:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/undefined/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/undefined/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:56:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Besar Wilayah Sungai Bengawan Solo/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Besar%20Wilayah%20Sungai%20Bengawan%20Solo/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:57:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Besar Wilayah Sungai Bengawan Solo/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Besar%20Wilayah%20Sungai%20Bengawan%20Solo/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:57:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Besar Wilayah Sungai Bengawan Solo/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Besar%20Wilayah%20Sungai%20Bengawan%20Solo/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:57:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Besar Wilayah Sungai Bengawan Solo/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Besar%20Wilayah%20Sungai%20Bengawan%20Solo/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:57:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Besar Wilayah Sungai Bengawan Solo/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Besar%20Wilayah%20Sungai%20Bengawan%20Solo/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:57:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Besar Wilayah Sungai Bengawan Solo/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Besar%20Wilayah%20Sungai%20Bengawan%20Solo/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:57:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Besar Wilayah Sungai Bengawan Solo/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Besar%20Wilayah%20Sungai%20Bengawan%20Solo/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 21:58:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Besar Wilayah Sungai Bengawan Solo/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Besar%20Wilayah%20Sungai%20Bengawan%20Solo/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:07:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:07:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:07:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:07:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:07:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:08:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:09:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:09:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:09:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:09:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:09:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto/foto1"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/foto1
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:19:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:20:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:21:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:24:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:24:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:24:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:25:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:25:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:25:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:25:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:28:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
+2017/10/26 22:28:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Foto"' in C:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 C:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Foto/
+HTTP_REFERER=http://localhost/gis/
+---
