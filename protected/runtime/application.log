@@ -9681,3 +9681,12 @@ Stack trace:
 REQUEST_URI=/siatab/Berita
 HTTP_REFERER=http://localhost/siatab/Peraturan
 ---
+2017/11/04 18:00:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "images/SlideImage/Peraturan.1509366262.pdf"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('images/SlideIma...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/images/SlideImage/Peraturan.1509366262.pdf
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
