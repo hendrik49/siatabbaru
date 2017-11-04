@@ -10,6 +10,8 @@ $this->breadcrumbs=array(
 	/*th{padding:6px 3px;background: #fbc50b;}*/
 	th{padding:6px 3px;background: #fbc50b;}
 </style>		
+<b>Daftar PPK</b>
+
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?>  
 	<?php 
 		$this->widget('bootstrap.widgets.TbButton', array( 'type'=>'primary',
