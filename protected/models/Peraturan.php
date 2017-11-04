@@ -28,16 +28,16 @@ class Peraturan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('NamaPeraturan, status, Tanggal, Link', 'required'),
+			array('NamaPeraturan, NoPeraturan, status, Tanggal, Link', 'required'),
 			array('Tanggal', 'numerical', 'integerOnly'=>true),
 				array('Link',
 				  'file', 'types'=>array(
-						'jpg','jpeg','png','gif','bmp',
+						'pdf',
 					
 				  ),
 				  'allowEmpty'=>true,
 			),	
-			array('Kategori, NamaPeraturan, status, Link', 'length', 'max'=>255),
+			array('Kategori, NamaPeraturan, NoPeraturan, status, Link', 'length', 'max'=>255),
 			array('status', 'length', 'max'=>2),
 			array('ID, Kategori, NamaPeraturan, status, Tanggal, Link, Deskripsi', 'safe', 'on'=>'search'),
 		);
@@ -62,10 +62,11 @@ class Peraturan extends CActiveRecord
 		return array(
 			'ID' => 'ID',
 			'Kategori' => 'Kategori',
+			'NoPeraturan' => 'No Peraturan',
 			'NamaPeraturan' => 'Nama Peraturan',
 			'status' => 'Status Terbit',
 			'Tanggal' => 'Tanggal',
-			'Link' => 'Nama File',
+			'Link' => 'Link File',
 			'Deskripsi' => 'Deskripsi',
 		);
 	}
@@ -83,14 +84,22 @@ class Peraturan extends CActiveRecord
 
 		$criteria->compare('ID',$this->ID);
 		$criteria->compare('Kategori',$this->Kategori);
+		$criteria->compare('NoPeraturan',$this->NoPeraturan,true);
 		$criteria->compare('NamaPeraturan',$this->NamaPeraturan,true);
 		$criteria->compare('status',$this->status,true);
 		$criteria->compare('Tanggal',$this->Tanggal);
 		$criteria->compare('Link',$this->Link,true);
-		$criteria->compare('Deskripsi',$this->Deskripsi);
+		$criteria->compare('Deskripsi',$this->Deskripsi,true);
+
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'pagination' => array(
+				'pageSize' => 5,
+		   	),
+			'sort'=>array(
+				'defaultOrder'=>'Tanggal DESC',
+			)
 		));
 	}
 }
