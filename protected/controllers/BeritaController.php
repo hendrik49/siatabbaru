@@ -234,25 +234,29 @@ class BeritaController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$criteria=new CDbCriteria;
-
-		$rawData = array();
-		for ($i = 0; $i < 8; $i++)
-			$rawData[] = array('id'=>$i + 1);
-
-		$listDataProvider1 = new CArrayDataProvider($rawData);
-		
+		$model=new Berita('search');
+		$model->unsetAttributes();
+		$criteria=new CDbCriteria;		
 		$dataProvider=new CActiveDataProvider('Berita', array(
 			'criteria'=>$criteria,
+			'pagination' => array(
+				'pageSize' => 4,
+		   ),
 			'sort'=>array(
 				'defaultOrder'=>'Tanggal DESC',
 			),
 		));
 
+
+
+		if(isset($_GET['Berita']))
+			$model->attributes=$_GET['Berita'];
+
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-			'listDataProvider1'=>$listDataProvider1,
+			'model'=>$model,
+			'dataProvider'=>$dataProvider			
 		));
+
 	}
 	
 	public function actionGalleri()

@@ -62,7 +62,7 @@ class Berita extends CActiveRecord
 		return array(
 			'ID' => 'ID',
 			'Kategori' => 'Kategori',
-			'NamaBerita' => 'Nama Berita',
+			'NamaBerita' => 'Judul Berita',
 			'status' => 'Status Terbit',
 			'Tanggal' => 'Tanggal',
 			'Link' => 'Nama File',
@@ -91,6 +91,13 @@ class Berita extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'pagination' => array(
+				'pageSize' => 5,
+		   	),
+			'sort'=>array(
+				'defaultOrder'=>'Tanggal DESC',
+			)
 		));
+
 	}
 }

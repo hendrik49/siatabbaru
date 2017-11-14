@@ -8924,3 +8924,1069 @@ Stack trace:
 REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
 HTTP_REFERER=http://localhost/siatab/Berita
 ---
+---
+2017/11/04 17:11:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita/4
+---
+2017/11/04 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Berita/4
+---
+2017/11/04 17:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita/4
+---
+2017/11/04 17:12:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:13:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:13:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "images/pdf.png"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('images/pdf.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/images/pdf.png
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:13:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "images/pdf.png"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('images/pdf.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/images/pdf.png
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:14:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:14:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:14:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:19:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:19:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:19:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:19:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:19:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:19:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:21:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:21:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:21:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:21:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:21:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:21:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:21:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:21:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Peraturan/add
+---
+2017/11/04 17:21:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Peraturan/add
+---
+2017/11/04 17:21:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Peraturan/add
+---
+2017/11/04 17:22:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Peraturan/add
+---
+2017/11/04 17:22:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Peraturan/add
+---
+2017/11/04 17:22:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:22:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:22:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:22:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:23:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:23:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:23:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:23:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja//Gambar.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja//Gambar.jpg
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:27:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/berita/update/4
+---
+2017/11/04 17:27:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:27:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:28:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_siatab.t_neraca_air' doesn't exist. Statement SQL yang dijalankan: SHOW COLUMNS FROM `t_neraca_air`.
+2017/11/04 17:28:25 [error] [exception.CDbException] exception 'CDbException' with message 'Table "t_neraca_air" untuk kelas active record "Neraca" tidak ditemukan dalam database.' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/db/ar/CActiveRecord.php:2263
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/db/ar/CActiveRecord.php(383): CActiveRecordMetaData->__construct(Object(Neraca))
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CActiveDataProvider.php(75): CActiveRecord::model('Neraca')
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/NeracaController.php(174): CActiveDataProvider->__construct('Neraca')
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): NeracaController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): CController->run('')
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('neraca')
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#16 {main}
+REQUEST_URI=/siatab/neraca
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/04 17:28:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "video" seperti yang diminta.' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(271): CController->missingAction('video')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): CController->run('video')
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('Galeri/video')
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#5 {main}
+REQUEST_URI=/siatab/Galeri/video
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/04 17:28:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_siatab.t_neraca_air' doesn't exist. Statement SQL yang dijalankan: SHOW COLUMNS FROM `t_neraca_air`.
+2017/11/04 17:28:46 [error] [exception.CDbException] exception 'CDbException' with message 'Table "t_neraca_air" untuk kelas active record "Neraca" tidak ditemukan dalam database.' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/db/ar/CActiveRecord.php:2263
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/db/ar/CActiveRecord.php(383): CActiveRecordMetaData->__construct(Object(Neraca))
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CActiveDataProvider.php(75): CActiveRecord::model('Neraca')
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/NeracaController.php(174): CActiveDataProvider->__construct('Neraca')
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): NeracaController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): CController->run('')
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('neraca')
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#16 {main}
+REQUEST_URI=/siatab/neraca
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/04 17:29:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:30:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "themes/ckeditor/skins/moono/editor.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('themes/ckeditor...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/themes/ckeditor/skins/moono/editor.css?t=D26D
+HTTP_REFERER=http://localhost/siatab/Berita/add
+---
+2017/11/04 17:32:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 17:32:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 17:32:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 17:32:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 17:32:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 17:33:18 [warning] [application] Gagal mengeset atribut unsafe "NoPeraturan" dari kelas "Peraturan".
+2017/11/04 17:33:18 [warning] [application] Gagal mengeset atribut unsafe "NoPeraturan" dari kelas "Peraturan".
+2017/11/04 17:33:21 [warning] [application] Gagal mengeset atribut unsafe "NoPeraturan" dari kelas "Peraturan".
+2017/11/04 17:33:21 [warning] [application] Gagal mengeset atribut unsafe "NoPeraturan" dari kelas "Peraturan".
+2017/11/04 17:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/berita/4
+---
+2017/11/04 17:49:41 [error] [php] Undefined variable: dataProvider (/Applications/XAMPP/xamppfiles/htdocs/siatab/protected/views/berita/index.php:36)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(870): BeritaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(783): BeritaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/BeritaController.php(245): BeritaController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): BeritaController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): BeritaController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): BeritaController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): BeritaController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): BeritaController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/Berita
+2017/11/04 17:49:54 [error] [php] Undefined variable: dataProvider (/Applications/XAMPP/xamppfiles/htdocs/siatab/protected/views/berita/index.php:36)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(870): BeritaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(783): BeritaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/BeritaController.php(245): BeritaController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): BeritaController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): BeritaController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): BeritaController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): BeritaController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): BeritaController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/Berita
+2017/11/04 17:49:59 [error] [php] Undefined variable: dataProvider (/Applications/XAMPP/xamppfiles/htdocs/siatab/protected/views/berita/index.php:36)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(870): BeritaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(783): BeritaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/BeritaController.php(245): BeritaController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): BeritaController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): BeritaController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): BeritaController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): BeritaController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): BeritaController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/Berita
+2017/11/04 17:51:04 [error] [exception.CException] exception 'CException' with message 'Berita dan behaviornya tidak memiliki method ataupun closure bernama "getData"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CComponent.php:266
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/db/ar/CActiveRecord.php(226): CComponent->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/zii/widgets/CBaseListView.php(108): CActiveRecord->__call('getData', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/zii/widgets/CBaseListView.php(108): Berita->getData()
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/zii/widgets/CListView.php(182): CBaseListView->init()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(148): CListView->init()
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/views/berita/index.php(39): CBaseController->widget('bootstrap.widge...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(127): require('/Applications/X...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(783): CController->renderPartial('index', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/BeritaController.php(245): CController->render('index', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): BeritaController->actionIndex()
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams(Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#20 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): CController->run('')
+#22 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('Berita')
+#23 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#25 {main}
+REQUEST_URI=/siatab/Berita
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:51:26 [error] [exception.CException] exception 'CException' with message 'Properti "TbThumbnails.filter" tidak didefinisikan.' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CComponent.php:174
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWidgetFactory.php(162): CComponent->__set('filter', Object(Berita))
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(BeritaController), 'bootstrap.widge...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/views/berita/index.php(40): CBaseController->widget('bootstrap.widge...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(127): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(783): CController->renderPartial('index', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/BeritaController.php(245): CController->render('index', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): BeritaController->actionIndex()
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): CController->run('')
+#19 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('Berita')
+#20 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#22 {main}
+REQUEST_URI=/siatab/Berita
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:51:37 [error] [exception.CException] exception 'CException' with message 'Properti "TbThumbnails.filter" tidak didefinisikan.' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CComponent.php:174
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWidgetFactory.php(162): CComponent->__set('filter', Object(Berita))
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(BeritaController), 'bootstrap.widge...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/views/berita/index.php(40): CBaseController->widget('bootstrap.widge...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(127): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(783): CController->renderPartial('index', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/BeritaController.php(245): CController->render('index', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): BeritaController->actionIndex()
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): CController->run('')
+#19 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('Berita')
+#20 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#22 {main}
+REQUEST_URI=/siatab/Berita
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:54:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "images/SlideImage/Permen5.pdf"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('images/SlideIma...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/images/SlideImage/Permen5.pdf
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:57:11 [error] [php] Undefined variable: data (/Applications/XAMPP/xamppfiles/htdocs/siatab/protected/views/berita/index.php:24)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(870): BeritaController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(783): BeritaController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/BeritaController.php(258): BeritaController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): BeritaController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): BeritaController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): BeritaController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): BeritaController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): BeritaController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/Berita
+2017/11/04 17:57:28 [error] [exception.CException] exception 'CException' with message 'Properti "TbDataColumn.label" tidak didefinisikan.' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CComponent.php:174
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/YiiBase.php(222): CComponent->__set('label', 'Judul Berita')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/zii/widgets/grid/CGridView.php(334): YiiBase::createComponent(Array, Object(TbGridView))
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/extensions/bootstrap/widgets/TbGridView.php(91): CGridView->initColumns()
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/zii/widgets/grid/CGridView.php(305): TbGridView->initColumns()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/extensions/bootstrap/widgets/TbGridView.php(49): CGridView->init()
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(148): TbGridView->init()
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/views/berita/index.php(36): CBaseController->widget('bootstrap.widge...', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(127): require('/Applications/X...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(783): CController->renderPartial('index', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/BeritaController.php(258): CController->render('index', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): BeritaController->actionIndex()
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): CController->run('')
+#23 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('Berita')
+#24 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#26 {main}
+REQUEST_URI=/siatab/Berita
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 17:57:45 [error] [exception.CException] exception 'CException' with message 'Properti "TbDataColumn.label" tidak didefinisikan.' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CComponent.php:174
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/YiiBase.php(222): CComponent->__set('label', 'Judul Berita')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/zii/widgets/grid/CGridView.php(334): YiiBase::createComponent(Array, Object(TbGridView))
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/extensions/bootstrap/widgets/TbGridView.php(91): CGridView->initColumns()
+#3 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/zii/widgets/grid/CGridView.php(305): TbGridView->initColumns()
+#4 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/extensions/bootstrap/widgets/TbGridView.php(49): CGridView->init()
+#5 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(148): TbGridView->init()
+#6 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/views/berita/index.php(37): CBaseController->widget('bootstrap.widge...', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(127): require('/Applications/X...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(783): CController->renderPartial('index', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/siatab/protected/controllers/BeritaController.php(258): CController->render('index', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/actions/CInlineAction.php(50): BeritaController->actionIndex()
+#14 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(292): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(283): CController->run('')
+#23 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('Berita')
+#24 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#26 {main}
+REQUEST_URI=/siatab/Berita
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 18:00:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "images/SlideImage/Peraturan.1509366262.pdf"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('images/SlideIma...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/images/SlideImage/Peraturan.1509366262.pdf
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/04 18:07:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:07:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:07:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:07:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:07:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:07:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:07:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:07:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:07:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:07:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:13:01 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:13:02 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:14:17 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:14:18 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:14:21 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:14:21 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:14:23 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:14:23 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:14:26 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:14:26 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "Pegawai".
+2017/11/04 18:15:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:15:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:15:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:15:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:15:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:15:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:15:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:15:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:15:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:15:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:17:11 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "PPK".
+2017/11/04 18:17:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/04 18:17:11 [warning] [application] Gagal mengeset atribut unsafe "ID" dari kelas "PPK".
+2017/11/04 18:17:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/web/CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/siatab/yii/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/siatab/index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---

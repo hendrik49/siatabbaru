@@ -263,7 +263,7 @@ a:hover {
 }
 
 .row {
-  margin-left: -5px;
+  margin-left: -20px;
   *zoom: 1;
 }
 
@@ -281,14 +281,14 @@ a:hover {
 [class*="span"] {
   float: left;
   min-height: 1px;
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 .container,
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-   width: 940px; 
+  width: 940px;
 }
 
 .span12 {
@@ -304,7 +304,7 @@ a:hover {
 }
 
 .span9 {
-  width: 730px;
+  width: 700px;
 }
 
 .span8 {
@@ -328,11 +328,11 @@ a:hover {
 }
 
 .span3 {
-  width: 200px;
+  width: 220px;
 }
 
 .span2 {
-  width: 180px;
+  width: 140px;
 }
 
 .span1 {
@@ -408,12 +408,8 @@ a:hover {
   float: left;
   width: 100%;
   min-height: 30px;
-  /*
   margin-left: 2.127659574468085%;
-  *margin-left: 2.074468085106383%; 
-  */
-  margin-left: 0.127659574468085%;
-  *margin-left: 0.074468085106383%; 
+  *margin-left: 2.074468085106383%;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -424,8 +420,7 @@ a:hover {
 }
 
 .row-fluid .controls-row [class*="span"] + [class*="span"] {
-  /*margin-left: 2.127659574468085%;*/
-  margin-left: 0.127659574468085%;
+  margin-left: 2.127659574468085%;
 }
 
 .row-fluid .span12 {
@@ -445,7 +440,7 @@ a:hover {
 
 .row-fluid .span9 {
   width: 74.46808510638297%;
-  *width: 74.41489361702126%; 
+  *width: 74.41489361702126%;
 }
 
 .row-fluid .span8 {
@@ -474,12 +469,8 @@ a:hover {
 }
 
 .row-fluid .span3 {
-  /*
   width: 23.404255319148934%;
   *width: 23.351063829787233%;
-  */
-   width: 18%;
-  *width: 18%;
 }
 
 .row-fluid .span2 {
@@ -640,10 +631,8 @@ a:hover {
 }
 
 .container-fluid {
-  /*padding-right: 2px;
-  padding-left: 20px;*/
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 20px;
+  padding-left: 20px;
   *zoom: 1;
 }
 
@@ -4299,19 +4288,16 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar {
-  /**position: relative;*/
-  position: relative;
+  *position: relative;
   *z-index: 2;
-  /*margin-left: -100px;*/
-  margin-left: 0px;
   margin-bottom: 20px;
   overflow: visible;
 }
 
 .navbar-inner {
   min-height: 40px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
   background-color: #fafafa;
   background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
@@ -4342,7 +4328,6 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .container {
-  /*width: auto;*/
   width: auto;
 }
 
@@ -4352,21 +4337,14 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .brand {
-  margin-left:-80px;
-  background-image: url("../img/LOGO-PU.png");
-  background-size: 30px 30px;
-  background-position: 0px 5px;
-  background-repeat: no-repeat;
   display: block;
   float: left;
-  padding: 10px 50px;
+  padding: 10px 20px 10px;
+  margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
   color: #777777;
   text-shadow: 0 1px 0 #ffffff;
-}
-.logo {
-	left: -100px;
 }
 
 .navbar .brand:hover {
@@ -4732,15 +4710,13 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .navbar-inner {
-  /*background-color: #1b1b1b;*/
-  background-color: #2f4d58;
+  background-color: #1b1b1b;
   background-image: -moz-linear-gradient(top, #222222, #111111);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
   background-image: -webkit-linear-gradient(top, #222222, #111111);
   background-image: -o-linear-gradient(top, #222222, #111111);
   background-image: linear-gradient(to bottom, #222222, #111111);
   background-repeat: repeat-x;
-  /*border-color: #252525;*/
   border-color: #252525;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
 }
