@@ -9990,3 +9990,704 @@ Stack trace:
 REQUEST_URI=/siatab/data/PPK/mataair.jpg
 HTTP_REFERER=http://localhost/siatab/PPK
 ---
+2017/11/14 23:24:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'db_siatab'' in E:\xampp\htdocs\siatab\yii\db\CDbConnection.php:382
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\db\CDbConnection.php(331): CDbConnection->open()
+#1 E:\xampp\htdocs\siatab\yii\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 E:\xampp\htdocs\siatab\yii\base\CModule.php(388): CDbConnection->init()
+#3 E:\xampp\htdocs\siatab\yii\base\CApplication.php(431): CModule->getComponent('db')
+#4 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(619): CApplication->getDb()
+#5 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(2262): CActiveRecord->getDbConnection()
+#6 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(383): CActiveRecordMetaData->__construct(Object(User))
+#7 E:\xampp\htdocs\siatab\protected\models\User.php(26): CActiveRecord::model('User')
+#8 E:\xampp\htdocs\siatab\protected\components\UserIdentity.php(30): User::model()
+#9 E:\xampp\htdocs\siatab\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 E:\xampp\htdocs\siatab\yii\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#11 E:\xampp\htdocs\siatab\yii\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 E:\xampp\htdocs\siatab\yii\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#13 E:\xampp\htdocs\siatab\protected\controllers\SiteController.php(171): CModel->validate()
+#14 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#15 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 E:\xampp\htdocs\siatab\yii\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('login')
+#19 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#20 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#22 {main}
+REQUEST_URI=/siatab/site/login
+HTTP_REFERER=http://localhost/siatab/site/login
+---
+2017/11/14 23:27:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "video" seperti yang diminta.' in E:\xampp\htdocs\siatab\yii\web\CController.php:484
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CController.php(271): CController->missingAction('video')
+#1 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('video')
+#2 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Galeri/video')
+#3 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#5 {main}
+REQUEST_URI=/siatab/Galeri/video
+HTTP_REFERER=http://localhost/siatab/Peraturan
+---
+2017/11/15 01:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/15 01:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/15 01:21:47 [error] [exception.CException] exception 'CException' with message 'Properti "SumurController._mapPath8" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\protected\controllers\SumurController.php(194): CComponent->__set('_mapPath8', '/Applications/X...')
+#1 [internal function]: SumurController->actionUpdate('1')
+#2 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SumurController), Array)
+#3 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SumurController), Object(ReflectionMethod), Array)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#7 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('update')
+#13 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('sumur/update')
+#14 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#16 {main}
+REQUEST_URI=/siatab/sumur/update/1
+HTTP_REFERER=http://localhost/siatab/sumur/update/1
+---
+2017/11/15 01:34:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/15 01:42:12 [error] [exception.CException] exception 'CException' with message 'Properti "CUploadedFile.file" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\siatab\protected\controllers\SumurController.php(251): CComponent->__get('file')
+#1 [internal function]: SumurController->actionUpdate('1')
+#2 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SumurController), Array)
+#3 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SumurController), Object(ReflectionMethod), Array)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#7 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('update')
+#13 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('sumur/update')
+#14 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#16 {main}
+REQUEST_URI=/siatab/sumur/update/1
+HTTP_REFERER=http://localhost/siatab/sumur/update/1
+---
+2017/11/15 01:43:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:43:54 [error] [php] move_uploaded_file(/Applications/XAMPP/xamppfiles/htdocs/siatabbaru//Unit Kerja/Balai Wilayah Sungai Bali Penida/Sumur/Foto/bunga.jpeg): failed to open stream: No such file or directory (E:\xampp\htdocs\siatab\yii\web\CUploadedFile.php:197)
+Stack trace:
+#0 unknown(0): SumurController->actionUpdate()
+#1 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#2 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#3 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams()
+#4 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): SumurController->runAction()
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#6 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CAccessControlFilter->filter()
+#7 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): SumurController->filterAccessControl()
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#9 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(266): SumurController->runActionWithFilters()
+#11 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): SumurController->run()
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController()
+#13 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\siatab\index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/sumur/update/3
+2017/11/15 01:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Sumur/Foto/bunga.jpeg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Sumur/Foto/bunga.jpeg
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:46:30 [error] [php] move_uploaded_file(/Applications/XAMPP/xamppfiles/htdocs/siatabbaru//Unit Kerja/Balai Wilayah Sungai Bali Penida/Sumur/Foto/bunga.jpeg): failed to open stream: No such file or directory (E:\xampp\htdocs\siatab\yii\web\CUploadedFile.php:197)
+Stack trace:
+#0 unknown(0): SumurController->actionUpdate()
+#1 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#2 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#3 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams()
+#4 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): SumurController->runAction()
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#6 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CAccessControlFilter->filter()
+#7 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): SumurController->filterAccessControl()
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#9 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(266): SumurController->runActionWithFilters()
+#11 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): SumurController->run()
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController()
+#13 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\siatab\index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/sumur/update/3
+2017/11/15 01:47:10 [error] [php] move_uploaded_file(/Applications/XAMPP/xamppfiles/htdocs/siatab/Unit Kerja/Balai Wilayah Sungai Bali Penida/Sumur/Foto/bunga.jpeg): failed to open stream: No such file or directory (E:\xampp\htdocs\siatab\yii\web\CUploadedFile.php:197)
+Stack trace:
+#0 unknown(0): SumurController->actionUpdate()
+#1 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#2 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#3 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams()
+#4 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): SumurController->runAction()
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#6 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CAccessControlFilter->filter()
+#7 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): SumurController->filterAccessControl()
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#9 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(266): SumurController->runActionWithFilters()
+#11 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): SumurController->run()
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController()
+#13 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\siatab\index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/sumur/update/3
+2017/11/15 01:48:15 [error] [php] move_uploaded_file(/Applications/XAMPP/xamppfiles/htdocs/siatab/Unit Kerja/Balai Wilayah Sungai Bali Penida/Sumur/Foto/20161205_181635.jpg): failed to open stream: No such file or directory (E:\xampp\htdocs\siatab\yii\web\CUploadedFile.php:197)
+Stack trace:
+#0 unknown(0): SumurController->actionUpdate()
+#1 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#2 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#3 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams()
+#4 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): SumurController->runAction()
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#6 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CAccessControlFilter->filter()
+#7 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): SumurController->filterAccessControl()
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#9 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(266): SumurController->runActionWithFilters()
+#11 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): SumurController->run()
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController()
+#13 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\siatab\index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/sumur/update/3
+2017/11/15 01:49:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:54:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:54:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:56:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:56:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:57:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:58:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:58:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:58:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 01:58:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 02:06:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/15 02:06:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/5
+---
+2017/11/15 02:06:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/5
+---
+2017/11/15 02:09:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/3
+---
+2017/11/15 02:28:42 [error] [php] move_uploaded_file(E:/xampp/htdocs/siatab/data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Permukaan/Video/aaa.mp4): failed to open stream: No such file or directory (E:\xampp\htdocs\siatab\yii\web\CUploadedFile.php:197)
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): PermukaanController->actionTambah()
+#1 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams()
+#2 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): PermukaanController->runAction()
+#3 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CAccessControlFilter->filter()
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): PermukaanController->filterAccessControl()
+#6 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#8 E:\xampp\htdocs\siatab\yii\web\CController.php(266): PermukaanController->runActionWithFilters()
+#9 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): PermukaanController->run()
+#10 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController()
+#11 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\xampp\htdocs\siatab\index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/permukaan/tambah
+2017/11/15 02:30:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in E:\xampp\htdocs\siatab\protected\controllers\PermukaanController.php:655
+Stack trace:
+#0 E:\xampp\htdocs\siatab\protected\controllers\PermukaanController.php(126): PermukaanController->loadModel('5')
+#1 [internal function]: PermukaanController->actionView('5')
+#2 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PermukaanController), Array)
+#3 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PermukaanController), Object(ReflectionMethod), Array)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#7 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('view')
+#13 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('permukaan/view')
+#14 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#16 {main}
+REQUEST_URI=/siatab/permukaan/5
+HTTP_REFERER=http://localhost/siatab/permukaan/tambah
+---
+2017/11/15 02:30:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in E:\xampp\htdocs\siatab\protected\controllers\PermukaanController.php:655
+Stack trace:
+#0 E:\xampp\htdocs\siatab\protected\controllers\PermukaanController.php(126): PermukaanController->loadModel('6')
+#1 [internal function]: PermukaanController->actionView('6')
+#2 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PermukaanController), Array)
+#3 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PermukaanController), Object(ReflectionMethod), Array)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#7 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('view')
+#13 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('permukaan/view')
+#14 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#16 {main}
+REQUEST_URI=/siatab/permukaan/6
+HTTP_REFERER=http://localhost/siatab/permukaan/tambah
+---
+2017/11/15 02:32:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/permukaan/4
+---
+2017/11/15 02:33:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/permukaan/4
+---
+2017/11/15 02:35:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/mataair/1
+---
+2017/11/15 02:35:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/mataair/1
+---
+2017/11/15 02:35:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/tampungan/1
+---
+2017/11/15 02:35:50 [error] [exception.CException] exception 'CException' with message 'Properti "CFileValidator.0" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\validators\CValidator.php(190): CComponent->__set('0', Array)
+#1 E:\xampp\htdocs\siatab\yii\base\CModel.php(285): CValidator::createValidator('file', Object(InfoTampungan), 'foto1, foto2, f...', Array)
+#2 E:\xampp\htdocs\siatab\yii\base\CModel.php(259): CModel->createValidators()
+#3 E:\xampp\htdocs\siatab\yii\base\CModel.php(302): CModel->getValidators('ID_IDBalaiJu')
+#4 E:\xampp\htdocs\siatab\yii\web\helpers\CHtml.php(1197): CModel->isAttributeRequired('ID_IDBalaiJu')
+#5 E:\xampp\htdocs\siatab\yii\web\widgets\CActiveForm.php(560): CHtml::activeLabelEx(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#6 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInput.php(253): CActiveForm->labelEx(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#7 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(39): TbInput->getLabel()
+#8 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(178): TbInputHorizontal->getLabel()
+#9 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInput.php(230): TbInputHorizontal->textField()
+#10 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(24): TbInput->run()
+#11 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(174): TbInputHorizontal->run()
+#12 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#13 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('text', Object(InfoTampungan), 'ID_IDBalaiJu', NULL, Array)
+#14 E:\xampp\htdocs\siatab\protected\views\tampungan\addinfo.php(46): TbActiveForm->textFieldRow(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#15 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#16 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#18 E:\xampp\htdocs\siatab\protected\views\tampungan\tambah.php(42): CController->renderPartial('//tampungan/add...', Array, true)
+#19 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#20 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#22 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('tambah', Array, true)
+#23 E:\xampp\htdocs\siatab\protected\controllers\TampunganController.php(366): CController->render('tambah', Array)
+#24 [internal function]: TampunganController->actionUpdate('1')
+#25 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TampunganController), Array)
+#26 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TampunganController), Object(ReflectionMethod), Array)
+#27 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#28 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#29 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#30 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#31 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#32 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#33 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#34 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#35 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('update')
+#36 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('tampungan/updat...')
+#37 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#38 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#39 {main}
+REQUEST_URI=/siatab/tampungan/update/1
+HTTP_REFERER=http://localhost/siatab/tampungan/1
+---
+2017/11/15 02:37:26 [error] [exception.CException] exception 'CException' with message 'Properti "CFileValidator.0" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\validators\CValidator.php(190): CComponent->__set('0', Array)
+#1 E:\xampp\htdocs\siatab\yii\base\CModel.php(285): CValidator::createValidator('file', Object(InfoTampungan), 'foto1, foto2, f...', Array)
+#2 E:\xampp\htdocs\siatab\yii\base\CModel.php(259): CModel->createValidators()
+#3 E:\xampp\htdocs\siatab\yii\base\CModel.php(302): CModel->getValidators('ID_IDBalaiJu')
+#4 E:\xampp\htdocs\siatab\yii\web\helpers\CHtml.php(1197): CModel->isAttributeRequired('ID_IDBalaiJu')
+#5 E:\xampp\htdocs\siatab\yii\web\widgets\CActiveForm.php(560): CHtml::activeLabelEx(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#6 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInput.php(253): CActiveForm->labelEx(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#7 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(39): TbInput->getLabel()
+#8 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(178): TbInputHorizontal->getLabel()
+#9 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInput.php(230): TbInputHorizontal->textField()
+#10 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(24): TbInput->run()
+#11 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(174): TbInputHorizontal->run()
+#12 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#13 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('text', Object(InfoTampungan), 'ID_IDBalaiJu', NULL, Array)
+#14 E:\xampp\htdocs\siatab\protected\views\tampungan\addinfo.php(46): TbActiveForm->textFieldRow(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#15 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#16 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#18 E:\xampp\htdocs\siatab\protected\views\tampungan\tambah.php(42): CController->renderPartial('//tampungan/add...', Array, true)
+#19 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#20 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#22 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('tambah', Array, true)
+#23 E:\xampp\htdocs\siatab\protected\controllers\TampunganController.php(366): CController->render('tambah', Array)
+#24 [internal function]: TampunganController->actionUpdate('1')
+#25 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TampunganController), Array)
+#26 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TampunganController), Object(ReflectionMethod), Array)
+#27 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#28 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#29 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#30 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#31 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#32 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#33 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#34 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#35 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('update')
+#36 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('tampungan/updat...')
+#37 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#38 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#39 {main}
+REQUEST_URI=/siatab/tampungan/update/1
+HTTP_REFERER=http://localhost/siatab/tampungan/1
+---
+2017/11/15 02:38:13 [error] [exception.CException] exception 'CException' with message 'Properti "CFileValidator.0" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\validators\CValidator.php(190): CComponent->__set('0', Array)
+#1 E:\xampp\htdocs\siatab\yii\base\CModel.php(285): CValidator::createValidator('file', Object(InfoTampungan), 'foto1, foto2, f...', Array)
+#2 E:\xampp\htdocs\siatab\yii\base\CModel.php(259): CModel->createValidators()
+#3 E:\xampp\htdocs\siatab\yii\base\CModel.php(302): CModel->getValidators('ID_IDBalaiJu')
+#4 E:\xampp\htdocs\siatab\yii\web\helpers\CHtml.php(1197): CModel->isAttributeRequired('ID_IDBalaiJu')
+#5 E:\xampp\htdocs\siatab\yii\web\widgets\CActiveForm.php(560): CHtml::activeLabelEx(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#6 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInput.php(253): CActiveForm->labelEx(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#7 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(39): TbInput->getLabel()
+#8 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(178): TbInputHorizontal->getLabel()
+#9 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInput.php(230): TbInputHorizontal->textField()
+#10 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(24): TbInput->run()
+#11 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(174): TbInputHorizontal->run()
+#12 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#13 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('text', Object(InfoTampungan), 'ID_IDBalaiJu', NULL, Array)
+#14 E:\xampp\htdocs\siatab\protected\views\tampungan\addinfo.php(46): TbActiveForm->textFieldRow(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#15 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#16 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#18 E:\xampp\htdocs\siatab\protected\views\tampungan\tambah.php(42): CController->renderPartial('//tampungan/add...', Array, true)
+#19 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#20 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#22 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('tambah', Array, true)
+#23 E:\xampp\htdocs\siatab\protected\controllers\TampunganController.php(366): CController->render('tambah', Array)
+#24 [internal function]: TampunganController->actionUpdate('1')
+#25 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TampunganController), Array)
+#26 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TampunganController), Object(ReflectionMethod), Array)
+#27 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#28 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#29 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#30 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#31 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#32 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#33 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#34 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#35 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('update')
+#36 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('tampungan/updat...')
+#37 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#38 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#39 {main}
+REQUEST_URI=/siatab/tampungan/update/1
+HTTP_REFERER=http://localhost/siatab/tampungan/1
+---
+2017/11/15 02:38:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/tampungan/1
+---
+2017/11/15 02:38:26 [error] [exception.CException] exception 'CException' with message 'Properti "CFileValidator.0" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\validators\CValidator.php(190): CComponent->__set('0', Array)
+#1 E:\xampp\htdocs\siatab\yii\base\CModel.php(285): CValidator::createValidator('file', Object(InfoTampungan), 'foto1, foto2, f...', Array)
+#2 E:\xampp\htdocs\siatab\yii\base\CModel.php(259): CModel->createValidators()
+#3 E:\xampp\htdocs\siatab\yii\base\CModel.php(302): CModel->getValidators('ID_IDBalaiJu')
+#4 E:\xampp\htdocs\siatab\yii\web\helpers\CHtml.php(1197): CModel->isAttributeRequired('ID_IDBalaiJu')
+#5 E:\xampp\htdocs\siatab\yii\web\widgets\CActiveForm.php(560): CHtml::activeLabelEx(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#6 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInput.php(253): CActiveForm->labelEx(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#7 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(39): TbInput->getLabel()
+#8 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(178): TbInputHorizontal->getLabel()
+#9 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInput.php(230): TbInputHorizontal->textField()
+#10 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(24): TbInput->run()
+#11 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(174): TbInputHorizontal->run()
+#12 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#13 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('text', Object(InfoTampungan), 'ID_IDBalaiJu', NULL, Array)
+#14 E:\xampp\htdocs\siatab\protected\views\tampungan\addinfo.php(46): TbActiveForm->textFieldRow(Object(InfoTampungan), 'ID_IDBalaiJu', Array)
+#15 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#16 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#18 E:\xampp\htdocs\siatab\protected\views\tampungan\tambah.php(42): CController->renderPartial('//tampungan/add...', Array, true)
+#19 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#20 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#22 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('tambah', Array, true)
+#23 E:\xampp\htdocs\siatab\protected\controllers\TampunganController.php(366): CController->render('tambah', Array)
+#24 [internal function]: TampunganController->actionUpdate('1')
+#25 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TampunganController), Array)
+#26 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TampunganController), Object(ReflectionMethod), Array)
+#27 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#28 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#29 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#30 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#31 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#32 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#33 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#34 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#35 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('update')
+#36 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('tampungan/updat...')
+#37 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#38 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#39 {main}
+REQUEST_URI=/siatab/tampungan/update/1
+HTTP_REFERER=http://localhost/siatab/tampungan/1
+---
+2017/11/15 02:40:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Tampungan/Video/aaa.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Tampungan/Video/aaa.mp4
+HTTP_REFERER=http://localhost/siatab/tampungan/1
+---
+2017/11/15 02:41:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/tampungan/1
+---
+2017/11/15 02:41:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/hujan/1
+---
+2017/11/15 02:41:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Hujan/Foto/Filter Segmen Peta Berdasarkan Kondisi dari beberapa Infrastruktur.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Hujan/Foto/Filter%20Segmen%20Peta%20Berdasarkan%20Kondisi%20dari%20beberapa%20Infrastruktur.png
+HTTP_REFERER=http://localhost/siatab/hujan/1
+---
+2017/11/15 02:41:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Hujan/Foto/Overlay Beberapa Peta.JPG"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Hujan/Foto/Overlay%20Beberapa%20Peta.JPG
+HTTP_REFERER=http://localhost/siatab/hujan/1
+---
+2017/11/15 02:41:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/hujan/1
+---

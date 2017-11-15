@@ -306,11 +306,13 @@ class TampunganController extends Controller
 			$imgName2 = $modelInfoMa->foto1; $imgName3 = $modelInfoMa->foto2; 
 			$imgName4 = $modelInfoMa->foto3; $imgName5 = $modelInfoMa->foto4;
 			$imgName6 = $modelInfoMa->foto5; 
+			$video = $modelInfoMa->video; 
 			$myUpload3 = CUploadedFile::getInstance($modelInfoMa,'foto1');
 			$myUpload4 = CUploadedFile::getInstance($modelInfoMa,'foto2');
 			$myUpload5 = CUploadedFile::getInstance($modelInfoMa,'foto3');
 			$myUpload6 = CUploadedFile::getInstance($modelInfoMa,'foto4');
 			$myUpload7 = CUploadedFile::getInstance($modelInfoMa,'foto5');
+			$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'video');
 			
 			if (!empty($myUpload3)){ $modelInfoMa->foto1 = $myUpload3->getName(); 
 			}else{$modelInfoMa->foto1 = $imgName2;}
@@ -322,7 +324,8 @@ class TampunganController extends Controller
 			}else{$modelInfoMa->foto4 = $imgName5;}		
 			if (!empty($myUpload7)){ $modelInfoMa->foto5 = $myUpload7->getName();
 			}else{$modelInfoMa->foto5 = $imgName6;}		
-
+			if (!empty($myUpload8)){ $modelInfoMa->video = $myUpload8->getName();
+			}else{$modelInfoMa->video = $video;}		
 
 			if($modelInfoMa->save()) {
 				if (!empty($myUpload3)) {
@@ -344,6 +347,9 @@ class TampunganController extends Controller
 				if (!empty($myUpload7)) {
 					$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 					$myUpload7->saveAs($this->_mapPath6 . '/Tampungan/Foto/'. $myUpload7->getName());
+				}if (!empty($myUpload8)) {
+					$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
+					$myUpload8->saveAs($this->_mapPath6 . '/Tampungan/Video/'. $myUpload8->getName());
 				}
 			}
 			$this->redirect(array('//tampungan/view','id'=>$modelmanfaat->ID));
@@ -509,6 +515,7 @@ class TampunganController extends Controller
 			$myUpload5 = CUploadedFile::getInstance($modelInfoMa,'foto3');
 			$myUpload6 = CUploadedFile::getInstance($modelInfoMa,'foto4');
 			$myUpload7 = CUploadedFile::getInstance($modelInfoMa,'foto5');
+			$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'video');
 			
 			if (!empty($myUpload3)){ $modelInfoMa->foto1 = $myUpload3->getName(); 
 			}//else{$modelInfoMa->foto1 = $imgName2;}
@@ -519,6 +526,8 @@ class TampunganController extends Controller
 			if (!empty($myUpload6)){ $modelInfoMa->foto4 = $myUpload6->getName();
 			}//else{$modelInfoMa->foto4 = $imgName5;}		
 			if (!empty($myUpload7)){ $modelInfoMa->foto5 = $myUpload7->getName();
+			}//else{$modelInfoMa->foto5 = $imgName6;}		
+			if (!empty($myUpload8)){ $modelInfoMa->video = $myUpload8->getName();
 			}//else{$modelInfoMa->foto5 = $imgName6;}		
 
 
@@ -542,6 +551,10 @@ class TampunganController extends Controller
 			if (!empty($myUpload7)) {
 				$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 				$myUpload7->saveAs($this->_mapPath6 . '/Tampungan/Foto/'. $myUpload7->getName());
+			}
+			if (!empty($myUpload8)) {
+				$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
+				$myUpload8->saveAs($this->_mapPath6 . '/Tampungan/Video/'. $myUpload8->getName());
 			}
 			$this->redirect(array('//tampungan/view','id'=>$modelInfoMa->ID));
 		}

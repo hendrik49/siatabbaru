@@ -76,6 +76,12 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 		Upload jika ingin mengganti <?php echo $model->foto5; ?>
 	<?php endif ?>
 
+	<?php echo $form->fileFieldRow($model,'video',array('')); ?>
+	<?php if (isset($model->video) AND $model->video != '') : ?>
+		Upload jika ingin mengganti <?php echo $model->video; ?>
+	<?php endif ?>
+
+
 	</div>
 </td>
 <td>

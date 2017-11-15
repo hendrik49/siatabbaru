@@ -234,6 +234,7 @@ class HujanController extends Controller
 				$imgName2 = $modelInfoMa->foto1; $imgName3 = $modelInfoMa->foto2; 
 				$imgName4 = $modelInfoMa->foto3; $imgName5 = $modelInfoMa->foto4;
 				$imgName6 = $modelInfoMa->foto5; $imgName7 = $modelInfoMa->dokumen_pendukung; 
+				$video = $modelInfoMa->video;
 	
 				$myUpload3 = CUploadedFile::getInstance($modelInfoMa,'foto1');
 				$myUpload4 = CUploadedFile::getInstance($modelInfoMa,'foto2');
@@ -241,6 +242,7 @@ class HujanController extends Controller
 				$myUpload6 = CUploadedFile::getInstance($modelInfoMa,'foto4');
 				$myUpload7 = CUploadedFile::getInstance($modelInfoMa,'foto5');
 				$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'dokumen_pendukung');
+				$myUpload9 = CUploadedFile::getInstance($modelInfoMa,'video');
 				
 				if (!empty($myUpload3)){ $modelInfoMa->foto1 = $myUpload3->getName(); 
 				}else{$modelInfoMa->foto1 = $imgName2;}
@@ -253,7 +255,9 @@ class HujanController extends Controller
 				if (!empty($myUpload7)){ $modelInfoMa->foto5 = $myUpload7->getName();
 				}else{$modelInfoMa->foto5 = $imgName6;}	
 				if (!empty($myUpload8)){ $modelInfoMa->dokumen_pendukung = $myUpload8->getName();
-				}else{$modelInfoMa->dokumen_pendukung = $imgName7;}		
+				}else{$modelInfoMa->dokumen_pendukung = $imgName7;}	
+				if (!empty($myUpload9)){ $modelInfoMa->video = $myUpload9->getName();
+				}else{$modelInfoMa->video = $video;}			
 	
 	
 				if($modelInfoMa->save()) {
@@ -280,6 +284,10 @@ class HujanController extends Controller
 					if (!empty($myUpload8)) {
 						$this->_mapPath7 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 						$myUpload8->saveAs($this->_mapPath7 . '/Hujan/File/'. $myUpload8->getName());
+					}
+					if (!empty($myUpload9)) {
+						$this->_mapPath7 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
+						$myUpload9->saveAs($this->_mapPath7 . '/Hujan/Video/'. $myUpload9->getName());
 					}
 				}	
 			$this->redirect(array('//hujan/view','id'=>$modelInfoMa->ID));
@@ -444,6 +452,7 @@ class HujanController extends Controller
 				$myUpload6 = CUploadedFile::getInstance($modelInfoMa,'foto4');
 				$myUpload7 = CUploadedFile::getInstance($modelInfoMa,'foto5');
 				$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'dokumen_pendukung');
+				$myUpload9 = CUploadedFile::getInstance($modelInfoMa,'video');
 				
 				if (!empty($myUpload3)){ $modelInfoMa->foto1 = $myUpload3->getName(); 
 				}//else{$modelInfoMa->foto1 = $imgName2;}
@@ -456,6 +465,8 @@ class HujanController extends Controller
 				if (!empty($myUpload7)){ $modelInfoMa->foto5 = $myUpload7->getName();
 				}//else{$modelInfoMa->foto5 = $imgName6;}		
 				if (!empty($myUpload8)){ $modelInfoMa->dokumen_pendukung = $myUpload8->getName();
+				}//else{$modelInfoMa->foto5 = $imgName7;}
+				if (!empty($myUpload9)){ $modelInfoMa->video = $myUpload9->getName();
 				}//else{$modelInfoMa->foto5 = $imgName7;}
 	
 				if($modelInfoMa->save()) {	}
@@ -482,6 +493,10 @@ class HujanController extends Controller
 				if (!empty($myUpload8)) {
 					$this->_mapPath7 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 					$myUpload8->saveAs($this->_mapPath7 . '/Hujan/File/'. $myUpload8->getName());
+				}
+				if (!empty($myUpload9)) {
+					$this->_mapPath7 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
+					$myUpload9->saveAs($this->_mapPath7 . '/Hujan/Video/'. $myUpload9->getName());
 				}
 			$this->redirect(array('//hujan/view','id'=>$modelInfoMa->ID));
 			}
