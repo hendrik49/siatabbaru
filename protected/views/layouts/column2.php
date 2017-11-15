@@ -58,7 +58,7 @@
 						</li>
 							<ul class="sub-menu collapse" id="galeriy">
 									<li class="active"><a href="<?php echo Yii::app()->baseUrl; ?>/Galeri"> Foto Kegiatan</a></li>
-									<li class="active"><a href="<?php echo Yii::app()->baseUrl; ?>/Galeri/video"> Video Kegiatan</a></li>									
+									<li class="active"><a href="<?php echo Yii::app()->baseUrl; ?>/Video"> Video Kegiatan</a></li>									
 							</ul>
 				</ul>
 			</div> 

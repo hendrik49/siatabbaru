@@ -10691,3 +10691,261 @@ Stack trace:
 REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
 HTTP_REFERER=http://localhost/siatab/hujan/1
 ---
+2017/11/15 02:46:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/15 02:47:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/15 02:48:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/15 05:45:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "video" seperti yang diminta.' in E:\xampp\htdocs\siatab\yii\web\CController.php:484
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CController.php(271): CController->missingAction('video')
+#1 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('video')
+#2 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Galeri/video')
+#3 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#5 {main}
+REQUEST_URI=/siatab/Galeri/video
+HTTP_REFERER=http://localhost/siatab/unitKerja
+---
+2017/11/15 05:46:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "video" seperti yang diminta.' in E:\xampp\htdocs\siatab\yii\web\CController.php:484
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CController.php(271): CController->missingAction('video')
+#1 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('video')
+#2 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Galeri/video')
+#3 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#5 {main}
+REQUEST_URI=/siatab/Galeri/video
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/15 05:50:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "video" seperti yang diminta.' in E:\xampp\htdocs\siatab\yii\web\CController.php:484
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CController.php(271): CController->missingAction('video')
+#1 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('video')
+#2 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Galeri/video')
+#3 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#5 {main}
+REQUEST_URI=/siatab/Galeri/video
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/15 05:52:02 [error] [php] include(Video.php): failed to open stream: No such file or directory (E:\xampp\htdocs\siatab\yii\YiiBase.php:423)
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(382): spl_autoload_call()
+#1 E:\xampp\htdocs\siatab\yii\web\CActiveDataProvider.php(75): model()
+#2 E:\xampp\htdocs\siatab\protected\controllers\VideoController.php(233): CActiveDataProvider->__construct()
+#3 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): VideoController->actionIndex()
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams()
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): VideoController->runAction()
+#6 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#7 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CAccessControlFilter->filter()
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): VideoController->filterAccessControl()
+#9 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(266): VideoController->runActionWithFilters()
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): VideoController->run()
+#13 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController()
+#14 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\siatab\index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/Video
+2017/11/15 06:16:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tanggal' in 'order clause'. Statement SQL yang dijalankan: SELECT * FROM `t_mataair7` `t` ORDER BY Tanggal DESC LIMIT 8.
+2017/11/15 06:16:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tanggal' in 'order clause'. The SQL statement executed was: SELECT * FROM `t_mataair7` `t` ORDER BY Tanggal DESC LIMIT 8' in E:\xampp\htdocs\siatab\yii\db\CDbCommand.php:528
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(1286): CDbCommand->queryAll()
+#2 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(1405): CActiveRecord->query(Object(CDbCriteria), true)
+#3 E:\xampp\htdocs\siatab\yii\web\CActiveDataProvider.php(150): CActiveRecord->findAll(Object(CDbCriteria))
+#4 E:\xampp\htdocs\siatab\yii\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#5 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(108): CDataProvider->getData()
+#6 E:\xampp\htdocs\siatab\yii\zii\widgets\CListView.php(182): CBaseListView->init()
+#7 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(148): CListView->init()
+#8 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#9 E:\xampp\htdocs\siatab\protected\views\Video\index.php(15): CBaseController->widget('bootstrap.widge...', Array)
+#10 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#11 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#12 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#13 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#14 E:\xampp\htdocs\siatab\protected\controllers\VideoController.php(238): CController->render('index', Array)
+#15 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): VideoController->actionIndex()
+#16 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#19 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#23 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#25 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video')
+#26 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#27 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#28 {main}
+REQUEST_URI=/siatab/Video
+HTTP_REFERER=http://localhost/siatab/unitKerja
+---
+2017/11/15 06:17:07 [error] [exception.CException] exception 'CException' with message 'Properti "Video.Link" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(144): CComponent->__get('Link')
+#1 E:\xampp\htdocs\siatab\protected\views\Video\_thumb.php(3): CActiveRecord->__get('Link')
+#2 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbThumbnails.php(40): CController->renderPartial('_thumb', Array)
+#6 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(161): TbThumbnails->renderItems()
+#7 [internal function]: CBaseListView->renderSection(Array)
+#8 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(144): preg_replace_callback('/{(\\w+)}/', Array, '{items}\n{pager}')
+#9 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(129): CBaseListView->renderContent()
+#10 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(174): CBaseListView->run()
+#11 E:\xampp\htdocs\siatab\protected\views\Video\index.php(15): CBaseController->widget('bootstrap.widge...', Array)
+#12 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#13 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#14 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#15 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#16 E:\xampp\htdocs\siatab\protected\controllers\VideoController.php(237): CController->render('index', Array)
+#17 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): VideoController->actionIndex()
+#18 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#25 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#27 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video')
+#28 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#29 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#30 {main}
+REQUEST_URI=/siatab/Video
+HTTP_REFERER=http://localhost/siatab/unitKerja
+---
+2017/11/15 06:19:24 [error] [exception.CException] exception 'CException' with message 'Properti "Video.Link" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(144): CComponent->__get('Link')
+#1 E:\xampp\htdocs\siatab\protected\views\Video\_thumb.php(3): CActiveRecord->__get('Link')
+#2 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbThumbnails.php(40): CController->renderPartial('_thumb', Array)
+#6 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(161): TbThumbnails->renderItems()
+#7 [internal function]: CBaseListView->renderSection(Array)
+#8 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(144): preg_replace_callback('/{(\\w+)}/', Array, '{items}\n{pager}')
+#9 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(129): CBaseListView->renderContent()
+#10 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(174): CBaseListView->run()
+#11 E:\xampp\htdocs\siatab\protected\views\Video\index.php(15): CBaseController->widget('bootstrap.widge...', Array)
+#12 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#13 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#14 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#15 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#16 E:\xampp\htdocs\siatab\protected\controllers\VideoController.php(237): CController->render('index', Array)
+#17 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): VideoController->actionIndex()
+#18 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#25 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#27 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video')
+#28 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#29 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#30 {main}
+REQUEST_URI=/siatab/Video
+HTTP_REFERER=http://localhost/siatab/unitKerja
+---
+2017/11/15 06:21:15 [error] [exception.CException] exception 'CException' with message 'Properti "Video.Link" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(144): CComponent->__get('Link')
+#1 E:\xampp\htdocs\siatab\protected\views\Video\_thumb.php(3): CActiveRecord->__get('Link')
+#2 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbThumbnails.php(40): CController->renderPartial('_thumb', Array)
+#6 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(161): TbThumbnails->renderItems()
+#7 [internal function]: CBaseListView->renderSection(Array)
+#8 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(144): preg_replace_callback('/{(\\w+)}/', Array, '{items}\n{pager}')
+#9 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(129): CBaseListView->renderContent()
+#10 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(174): CBaseListView->run()
+#11 E:\xampp\htdocs\siatab\protected\views\Video\index.php(15): CBaseController->widget('bootstrap.widge...', Array)
+#12 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#13 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#14 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#15 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#16 E:\xampp\htdocs\siatab\protected\controllers\VideoController.php(237): CController->render('index', Array)
+#17 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): VideoController->actionIndex()
+#18 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#25 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#27 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video')
+#28 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#29 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#30 {main}
+REQUEST_URI=/siatab/Video
+HTTP_REFERER=http://localhost/siatab/unitKerja
+---
+2017/11/15 06:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Videoaaa.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Videoaaa.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/15 06:21:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Videoaaa.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Videoaaa.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/15 07:17:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Videoaaa.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Videoaaa.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/15 10:30:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Videoaaa.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Videoaaa.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
