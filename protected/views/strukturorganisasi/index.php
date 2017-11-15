@@ -236,52 +236,71 @@ right connector from last child*/
 <ul>
 	<li>
 	<a href="#"><img src="http://placehold.it/110x110" alt="CEO">
-	Kepala Bagian
+	KEPALA PUSAT AIR TANAH DAN AIR BAKU
 	</a>
 		<ul>
-			<li><a href="#"><img src="http://placehold.it/110x110" alt="CFO">CFO</a>
+			<li><a href="#"><img src="http://placehold.it/110x110" alt="BIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH BARAT">KEPALA BIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH BARAT</a>
 				<ul>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
+					<li><a href="#"><img src="http://placehold.it/35x35" alt="SUBBIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH BARAT I">SUBBIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH BARAT I</img></a></li>
+					<li><a href="#"><img src="http://placehold.it/35x35" alt="SUBBIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH BARAT II">SUBBIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH BARAT II</img></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><img src="http://placehold.it/110x110" alt="">VP Bus Dev</a>
+			<li><a href="#"><img src="http://placehold.it/110x110" alt="BIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH TIMUR">KEPALA BIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH TIMUR</a>
 				<ul>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
+					<li><a href="#"><img src="http://placehold.it/35x35" alt="SUBBIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH TIMUR I">SUBBIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH TIMUR I</img></a></li>
+					<li><a href="#"><img src="http://placehold.it/35x35" alt="SUBBIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH TIMUR II">SUBBIDANG
+AIR TANAH DAN AIR BAKU
+WILAYAH TIMUR II</img></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><img src="http://placehold.it/110x110" alt="" />VP Div A</a>
+			<li><a href="#"><img src="http://placehold.it/110x110" alt="BIDANG
+KONSERVASI
+AIR TANAH DAN AIR BAKU" />KEPALA BIDANG
+KONSERVASI
+AIR TANAH DAN AIR BAKU</a>
 				<ul>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
+					<li><a href="#"><img src="http://placehold.it/35x35" alt="">SUBBIDANG
+KONSERVASI AIR TANAH DAN
+AIR BAKU WILAYAH BARAT</img></a></li>
+					<li><a href="#"><img src="http://placehold.it/35x35" alt="">SUBBIDANG
+KONSERVASI AIR TANAH DAN
+AIR BAKU WILAYAH TIMUR</img></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><img src="http://placehold.it/110x110" alt="" />VP Div B</a>
+			<li><a href="#"><img src="http://placehold.it/110x110" alt="BAGIAN
+PERENCANAAN DAN
+TATA USAHA" />KEPALA BAGIAN
+PERENCANAAN DAN
+TATA USAHA</a>
 				<ul>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-				</ul>
-			</li>
-			<li><a href="#"><img src="http://placehold.it/110x110" alt="">VP Div C</a>
-				<ul>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/25x25" alt="">Staff</img></a></li>
+					<li><a href="#"><img style="text-align:center;" src="http://placehold.it/35x35" alt="">SUBBAGIAN
+PERENCANAAN</img></a></li>
+					<li><a href="#"><img src="http://placehold.it/35x35" alt="">SUBBAGIAN
+BIMBINGAN TEKNIK</img></a></li>
+					<li><a href="#"><img src="http://placehold.it/35x35" alt="">SUBBAGIAN
+TATA USAHA</img></a></li>
 				</ul>
 			</li>
 		</ul>
