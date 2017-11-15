@@ -217,7 +217,7 @@ right connector from last child*/
 }
 
 .tree li a {
-  max-width:110px;
+  max-width:200px;
 }
 .tree li a img {
   float:left;
@@ -235,71 +235,71 @@ right connector from last child*/
 <div class="tree">
 <ul>
 	<li>
-	<a href="#"><img src="http://placehold.it/110x110" alt="CEO">
+	<a href="#"><img src="http://placehold.it/200x200" alt="CEO">
 	KEPALA PUSAT AIR TANAH DAN AIR BAKU
 	</a>
 		<ul>
-			<li><a href="#"><img src="http://placehold.it/110x110" alt="BIDANG
+			<li><a href="#"><img src="http://placehold.it/100x100" alt="BIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH BARAT">KEPALA BIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH BARAT</a>
 				<ul>
-					<li><a href="#"><img src="http://placehold.it/35x35" alt="SUBBIDANG
+					<li><a href="#"><img src="http://placehold.it/50x50" alt="SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH BARAT I">SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH BARAT I</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/35x35" alt="SUBBIDANG
+					<li><a href="#"><img src="http://placehold.it/50x50" alt="SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH BARAT II">SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH BARAT II</img></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><img src="http://placehold.it/110x110" alt="BIDANG
+			<li><a href="#"><img src="http://placehold.it/100x100" alt="BIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH TIMUR">KEPALA BIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH TIMUR</a>
 				<ul>
-					<li><a href="#"><img src="http://placehold.it/35x35" alt="SUBBIDANG
+					<li><a href="#"><img src="http://placehold.it/50x50" alt="SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH TIMUR I">SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH TIMUR I</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/35x35" alt="SUBBIDANG
+					<li><a href="#"><img src="http://placehold.it/50x50" alt="SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH TIMUR II">SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH TIMUR II</img></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><img src="http://placehold.it/110x110" alt="BIDANG
+			<li><a href="#"><img src="http://placehold.it/100x100" alt="BIDANG
 KONSERVASI
 AIR TANAH DAN AIR BAKU" />KEPALA BIDANG
 KONSERVASI
 AIR TANAH DAN AIR BAKU</a>
 				<ul>
-					<li><a href="#"><img src="http://placehold.it/35x35" alt="">SUBBIDANG
+					<li><a href="#"><img src="http://placehold.it/50x50" alt="">SUBBIDANG
 KONSERVASI AIR TANAH DAN
 AIR BAKU WILAYAH BARAT</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/35x35" alt="">SUBBIDANG
+					<li><a href="#"><img src="http://placehold.it/50x50" alt="">SUBBIDANG
 KONSERVASI AIR TANAH DAN
 AIR BAKU WILAYAH TIMUR</img></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><img src="http://placehold.it/110x110" alt="BAGIAN
+			<li><a href="#"><img src="http://placehold.it/100x100" alt="BAGIAN
 PERENCANAAN DAN
 TATA USAHA" />KEPALA BAGIAN
 PERENCANAAN DAN
 TATA USAHA</a>
 				<ul>
-					<li><a href="#"><img style="text-align:center;" src="http://placehold.it/35x35" alt="">SUBBAGIAN
+					<li><a href="#"><img style="text-align:center;" src="http://placehold.it/50x50" alt="">SUBBAGIAN
 PERENCANAAN</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/35x35" alt="">SUBBAGIAN
+					<li><a href="#"><img src="http://placehold.it/50x50" alt="">SUBBAGIAN
 BIMBINGAN TEKNIK</img></a></li>
-					<li><a href="#"><img src="http://placehold.it/35x35" alt="">SUBBAGIAN
+					<li><a href="#"><img src="http://placehold.it/50x50" alt="">SUBBAGIAN
 TATA USAHA</img></a></li>
 				</ul>
 			</li>
