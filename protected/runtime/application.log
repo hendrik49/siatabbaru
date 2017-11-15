@@ -10949,3 +10949,30 @@ Stack trace:
 REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Videoaaa.mp4
 HTTP_REFERER=http://localhost/siatab/Video
 ---
+2017/11/15 11:27:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/Surah Al Mu'minoon V1-10 - Jibril Wahab.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/Surah%20Al%20Mu'minoon%20V1-10%20-%20Jibril%20Wahab.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/15 11:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/Surah Al Mu'minoon V1-10 - Jibril Wahab.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/Surah%20Al%20Mu'minoon%20V1-10%20-%20Jibril%20Wahab.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/15 11:42:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/Surah Al Mu'minoon V1-10 - Jibril Wahab.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/Surah%20Al%20Mu'minoon%20V1-10%20-%20Jibril%20Wahab.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
