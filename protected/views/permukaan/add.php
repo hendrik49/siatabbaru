@@ -23,8 +23,6 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 		else{
 			$model->NoData = Permukaan::getAvailableNoData();
 		}
-		$model->kodefikasi = Unitkerja::getKodeProvByAdmin() + 103000000000 + $model->NoData;
-		$kota_tmp = Kota::lookupKode();
 		$this->widget('bootstrap.widgets.TbDetailView', array(
 			'data'=>$model,
 			'attributes'=>array(
@@ -37,14 +35,18 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	endif
 	?>
 	<div style="visibility:hidden; position:absolute;"><?php $model->ID_IDBalai = (Yii::app()->user->uid); 
-	$model->provinsi = Unitkerja::getProvByAdmin();
+	$model->kriteria = "Permukaan";
 	$model->nama_ws = Unitkerja::getNamaWS();
+	$model->NamaBalai = Unitkerja::getNamaUnitKerjaByAdmin();
+	$datakota = Provinsi::getKodeByProv($model->provinsi);
+	$model->kodefikasi = "33060800000000" + ($datakota * 1000000) + $model->NoData;	
 	?>
 	<?php echo $form->textFieldRow($model,'ID_IDBalai',array('size'=>25,'maxlength'=>30, 'readOnly'=>true)); ?>
 	<?php echo $form->textFieldRow($model,'kodefikasi',array('size'=>25,'maxlength'=>30, 'readOnly'=>true)); ?>
 	<?php echo $form->textFieldRow($model,'NoData',array('size'=>25,'maxlength'=>30, 'readOnly'=>true)); ?>
 	<?php echo $form->textFieldRow($model,'nama_ws');?>
-	<?php echo $form->textFieldRow($model,'provinsi',array('rows'=>3,'cols'=>30, 'readOnly'=>true)); ?>
+	<?php echo $form->textFieldRow($model,'NamaBalai');?>
+	
 	</div>
 	</td>
 </tr>
@@ -53,10 +55,18 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->textFieldRow($model,'data_dasar'); ?>
 	<?php echo $form->dropDownListRow($model,'nama_sistem',SistemBaku::lookupNamaSistem()); ?>
 	<?php echo $form->textFieldRow($model,'nama_objek'); ?>
-	<?php echo $form->textFieldRow($model,'tahun_data',array('size'=>14,'maxlength'=>15)); ?>
 	<?php echo $form->textFieldRow($model,'nama_das',array('size'=>25,'maxlength'=>30)); ?>
 	<?php //echo $form->textFieldRow($model,'nama_cat');?>
-	<?php echo $form->dropDownListRow($model,'kota',Kota::lookupProvinsi()); ?>
+	<?php echo $form->dropDownListRow($model,'provinsi', CHtml::listData(Provinsi::model()->findAll(),'Nama_provinsi','Nama_provinsi'),
+		array(
+		'prompt'=>'Pilih Propinsi', 
+		'value'=>'0',
+		'ajax' => array('type'=>'POST', 'url'=>CController::createUrl('Permukaan/setKot'), // panggi filter kabupaten di controller
+		'update'=>'#Permukaan_kota', //selector to update
+		'data'=>array('provinsi'=>'js:this.value'),
+		))); ?>
+
+	<?php  echo $form->dropDownListRow($model,'kota', CHtml::listData(Kota::model()->findAll(),'id_prov','kab')); ?>
 </td>
 <td>
 	<!--<fieldset>-->
@@ -64,6 +74,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	
 	<?php echo $form->textFieldRow($model,'kecamatan',array('size'=>30,'maxlength'=>60)); ?>
 	<?php echo $form->textFieldRow($model,'desa'); ?>
+	<?php echo $form->textFieldRow($model,'tahun_data',array('size'=>14,'maxlength'=>15)); ?>
 	<?php echo $form->textFieldRow($model,'lintang_selatan'); ?>
 	<?php echo $form->textFieldRow($model,'bujur_timur'); ?>
 	<?php echo $form->textFieldRow($model,'elevasi'); ?>

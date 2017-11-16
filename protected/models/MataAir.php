@@ -31,9 +31,9 @@ class MataAir extends CActiveRecord
 			array('', 'required'),
 			//array('Tanggal', 'numerical', 'integerOnly'=>true),
 			/* ------------Data Numerical Control------------*/
-			array('ID_IDBalai, NoData, kodefikasi', 'length', 'max'=>13),
+			array('ID_IDBalai, NoData, kodefikasi', 'length', 'max'=>16),
 			/* ------------Data Dasar & Administrasi------------*/
-			array('nama_das,nama_sistem, nama_ws, nama_cat, data_dasar, nama_objek, tahun_data', 'length', 'max'=>100),
+			array('nama_das,nama_sistem, nama_ws, nama_cat, kriteria, NamaBalai, data_dasar, nama_objek, tahun_data', 'length', 'max'=>100),
 			array('provinsi, kota, kecamatan, desa, status', 'length', 'max'=>100),
 			array('bujur_timur, lintang_selatan', 'length', 'max'=>20),
 			array('elevasi', 'length', 'max'=>10),

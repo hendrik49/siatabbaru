@@ -23,8 +23,8 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 		else{
 			$model->NoData = MataAir::getAvailableNoData();
 		}
-		$model->kodefikasi = Unitkerja::getKodeProvByAdmin() + 109000000000 + (0 * 10000) + $model->NoData;
-		
+		$datakota = Provinsi::getKodeByProv($model->provinsi);
+		$model->kodefikasi = "33060800000000" + ($datakota * 1000000) + $model->NoData;	
 		$this->widget('bootstrap.widgets.TbDetailView', array(
 			'data'=>$model,
 			'attributes'=>array(
@@ -37,14 +37,14 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	endif
 	?>
 	<div style="visibility:hidden; position:absolute;"><?php $model->ID_IDBalai = (Yii::app()->user->uid); 
-	$model->provinsi = Unitkerja::getProvByAdmin();
+	$model->kriteria = "Mata Air";
 	$model->nama_ws = Unitkerja::getNamaWS();
+	$model->NamaBalai = Unitkerja::getNamaUnitKerjaByAdmin();
 	?>
 	<?php echo $form->textFieldRow($model,'ID_IDBalai',array('size'=>25,'maxlength'=>30, 'readOnly'=>true)); ?>
 	<?php echo $form->textFieldRow($model,'kodefikasi',array('size'=>25,'maxlength'=>30, 'readOnly'=>true)); ?>
 	<?php echo $form->textFieldRow($model,'NoData',array('size'=>25,'maxlength'=>30, 'readOnly'=>true)); ?>
 	<?php echo $form->textFieldRow($model,'nama_ws');?>
-	<?php echo $form->textFieldRow($model,'provinsi',array('rows'=>3,'cols'=>30, 'readOnly'=>true)); ?>
 	</div>
 	</td>
 </tr>
@@ -56,12 +56,21 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->textFieldRow($model,'tahun_data',array('size'=>14,'maxlength'=>15)); ?>
 	<?php echo $form->textFieldRow($model,'nama_das',array('size'=>25,'maxlength'=>30)); ?>
 	<?php echo $form->textFieldRow($model,'nama_cat');?>
+	<?php echo $form->dropDownListRow($model,'provinsi', CHtml::listData(Provinsi::model()->findAll(),'Nama_provinsi','Nama_provinsi'),
+		array(
+		'prompt'=>'Pilih Propinsi', 
+		'value'=>'0',
+		'ajax' => array('type'=>'POST', 'url'=>CController::createUrl('MataAir/setKot'), // panggi filter kabupaten di controller
+		'update'=>'#MataAir_kota', //selector to update
+		'data'=>array('provinsi'=>'js:this.value'),
+		))); ?>
+
+	
 
 </td>
 <td>
 	<!--<fieldset>-->
-	
-	<?php echo $form->dropDownListRow($model,'kota',Kota::lookupProvinsi()); ?>
+	<?php  echo $form->dropDownListRow($model,'kota', CHtml::listData(Kota::model()->findAll(),'id_prov','kab')); ?>
 	<?php echo $form->textFieldRow($model,'kecamatan',array('size'=>30,'maxlength'=>60)); ?>
 	<?php echo $form->textFieldRow($model,'desa'); ?>
 	<?php echo $form->textFieldRow($model,'lintang_selatan'); ?>

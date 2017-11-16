@@ -3,7 +3,10 @@
 $this->pageTitle=Yii::app()->name;
 $this->breadcrumbs=array('Dashboard');
 include '../siatab/connect.php';
+
 ?>
+
+
     <?php $form=$this->beginWidget('CActiveForm', array(
         'id'=>'tinstrument-form',
         'enableAjaxValidation'=>false,
@@ -23,47 +26,80 @@ include '../siatab/connect.php';
                             
                         </ul>
                         <li class="active">
-                        <div class="span6" style="width:50%;">
-                            <?php $bb=array();
-                            foreach($dataProvider->getData() as $i=>$ii)
-                                $bb[$i]=array($ii['sumur'],(int)$ii['count(id)']);
+                        <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-                            $this->widget('application.extensions.highcharts.HighchartsWidget', array(
-                            'options'=>array(
-                                'series' => array( array('type'=>'pie','data' =>$bb)),
-                                'title'=>'Kondisi Sumur Air Tanah',
-                                'tooltip' => array('formatter' => 'js:function(){ return "<b>"+this.point.name+"</b> :"+this.y; }'),
-                                'plotOptions'=>array('pie'=>(array('allowPointSelect'=>true,'showInLegend'=>true,'cursor'=>'pointer'))),
-                                'credits'=>array('enabled'=>false),
-                            )));
-                            ?>
-                        </div>
-                        <div class="span6" style="width:50%; margin-left:0px;">
-                            <?php $cc=array();
-                            foreach($dataProvider1->getData() as $x=>$nn)
-                                $cc[$x]=array($nn['reservoar'],(int)$nn['count(id)']);
-
-                            $this->widget('application.extensions.highcharts.HighchartsWidget', array(
-                            'options'=>array(
-                                'series' => array( array('type'=>'pie','data' =>$cc)),
-                                'title'=>'Kondisi Reservoar Air Tanah',
-                                'tooltip' => array('formatter' => 'js:function(){ return "<b>"+this.point.name+"</b> :"+this.y; }'),
-                                'plotOptions'=>array('pie'=>(array('allowPointSelect'=>true,'showInLegend'=>true,'cursor'=>'pointer'))),
-                                'credits'=>array('enabled'=>false),
-                            )));
-                            ?>
-                        </div>
+<div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+                        <script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Neraca\'s Air Provinsi Bali'
+    },
+    subtitle: {
+        text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+    },
+    xAxis: {
+        type: 'category',
+        labels: {
+            rotation: -45,
+            style: {
+                fontSize: '13px',
+                fontFamily: 'Verdana, sans-serif'
+            }
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Population (millions)'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
+    },
+    series: [{
+        name: 'Population',
+        data: [
+            ['jawa', 23.7],
+            ['jawa barat', 16.1],
+            ['cianjur', 14.2],
+            ['bali', 14.0],
+            ['denpasar', 12.5],
+            ['buleleng', 12.1],
+            ['klungkung', 11.8],
+        ],
+        dataLabels: {
+            enabled: true,
+            rotation: -90,
+            color: '#FFFFFF',
+            align: 'right',
+            format: '{point.y:.1f}', // one decimal
+            y: 10, // 10 pixels down from the top
+            style: {
+                fontSize: '13px',
+                fontFamily: 'Verdana, sans-serif'
+            }
+        }
+    }]
+});
+                        </script>
                        
                         </li>
                   
                 <li  data-toggle="collapse" data-target="#tabel" class="collapsed">
                     <a href="#"><i class="fa fa-table fa-lg" style="margin-top:0px;"></i><strong> Tabel Kondisi </strong><span class="arrow"></span></a>
                 </li>  
-                    <ul class="sub-menu collapse" id="tabel">
+                    <!--<ul class="sub-menu collapse" id="tabel">
                         <li class="active"><i>Kondisi Infrastuktur Sumur</i>
-                            <?php echo $this->renderPartial('//sumur/index', array('model'=>$model)); ?>
+                            
                         </li>
-                    </ul> 
+                    </ul> -->
                 </ul>
             </div>
         </div>

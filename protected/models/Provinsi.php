@@ -113,6 +113,20 @@ class Provinsi extends CActiveRecord
 		return $_items;
 	}	
 	
+	public function getKodeByProv($provinsi)
+	{
+		if (isset(Yii::app()->user->uid)) {
+		$command = Yii::app()->db->createCommand("SELECT * FROM t_provinsi WHERE Nama_provinsi='$provinsi'");
+		
+		$query = $command->query();
+		
+		$data = $query->read();
+		
+		return $data['Kode_provinsi'];	
+		} else {
+			return '';
+		}	
+	}	
 	public static function lookupProvinsi()
 	{
 		$kotas = self::model()->findAll();

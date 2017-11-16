@@ -43,10 +43,10 @@ class Sumur extends CActiveRecord
 			array('', 'required'),
 			array('Tanggal, manfaat_jiwa, debit_liter', 'numerical', 'integerOnly'=>true),
 			/* ------------Data Numerical Control------------*/
-			array('ID_IDBalai, NoData, kodefikasi', 'length', 'max'=>15),
+			array('ID_IDBalai, NoData, kriteria, kodefikasi', 'length', 'max'=>15),
 			/* ------------Data Dasar & Administrasi------------*/
 			array('nama_das, nama_ws, nama_cat', 'length', 'max'=>100),
-			array('provinsi, kota, kecamatan, desa, status, info_gambar', 'length', 'max'=>100),
+			array('provinsi, kota, kecamatan, NamaBalai desa, status, info_gambar', 'length', 'max'=>100),
 			array('bujur_timur, lintang_selatan', 'length', 'max'=>20),
 			array('elevasi_sumur', 'length', 'max'=>10),
 			// The following rule is used by search().

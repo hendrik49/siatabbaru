@@ -208,6 +208,7 @@ class SiteController extends Controller
 		$dataProvider3=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
 		));
+		
 		$this->render('dashboard',array(
 			'dataProvider'=>$dataProvider,
 			'dataProvider1'=>$dataProvider1,

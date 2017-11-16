@@ -50,7 +50,7 @@ class PermukaanController extends Controller
 			),
  
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('add','update','create'),
+				'actions'=>array('add','update','create','setKot'),
 				'users'=>array_merge($user['superAdmin'], $user['admin']),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -463,7 +463,18 @@ class PermukaanController extends Controller
 		));
 	}
 	
-	
+	public function actionSetkot()
+	{	 
+		$modelKota= new Kota;
+	   	$data=Kota::model()->findAll('provinsi=:provinsi',
+		array(':provinsi'=>(string) $_POST['provinsi']));
+		$data=CHtml::listData($data,'kab','kab');
+		foreach($data as $value=>$name)
+		{
+		echo CHtml::tag('option',array('value'=>$value),CHtml::encode($name),true);
+		}  
+	}
+
 	public function actionTambah()
 	{
 		$model=new Permukaan;

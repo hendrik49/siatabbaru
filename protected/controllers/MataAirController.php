@@ -50,7 +50,7 @@ class MataAirController extends Controller
 			),
  
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('add','update','create'),
+				'actions'=>array('add','update','create','setKot'),
 				'users'=>array_merge($user['superAdmin'], $user['admin']),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -693,6 +693,8 @@ class MataAirController extends Controller
 			'model'=>$model,
 		));
 	}
+
+
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
@@ -749,7 +751,17 @@ class MataAirController extends Controller
 		return $modelInfoMa;
 	}
 	
-	
+	public function actionSetkot()
+	{	 
+		$modelKota= new Kota;
+	   	$data=Kota::model()->findAll('provinsi=:provinsi',
+		array(':provinsi'=>(string) $_POST['provinsi']));
+		$data=CHtml::listData($data,'kab','kab');
+		foreach($data as $value=>$name)
+		{
+		echo CHtml::tag('option',array('value'=>$value),CHtml::encode($name),true);
+		}  
+	}	
 	
 	/**
 	 * Performs the AJAX validation.

@@ -111,8 +111,6 @@ class UnitKerjaController extends Controller
 					mkdir($this->_mapPath . '/Unit Kerja/'.$model->NamaUnitKerja . '/Hujan/Catch', 0777);
 					mkdir($this->_mapPath . '/Unit Kerja/'.$model->NamaUnitKerja . '/Tampungan/Catch', 0777);
 				} 
-
-
 				if (!empty($myUpload)) {
 					$this->_mapPath .= '/Unit Kerja/'.$model->NamaUnitKerja;
 			

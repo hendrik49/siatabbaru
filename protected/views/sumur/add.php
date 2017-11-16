@@ -35,13 +35,25 @@ include '../siatab/connect.php';
 	endif
 	?>
 	<div style="visibility:hidden; position:absolute;"><?php $model->ID_IDBalai = (Yii::app()->user->uid); 
-	$model->provinsi = Unitkerja::getProvByAdmin();
+	//$model->provinsi = Unitkerja::getProvByAdmin();
 	$model->nama_ws = Unitkerja::getNamaWS();
+	$model->NamaBalai = Unitkerja::getNamaUnitKerjaByAdmin();
+	$model->kriteria = "Air Tanah";
+	$datakota = Provinsi::getKodeByProv($model->provinsi);
 	?>
+		<div class="span8" style="visibility: hidden; position:absolute;">
+		<div class="collapse">
+		<?php  
+			$model->kodefikasi = "33060900000000" + ($datakota * 1000000) + $model->NoData;	
+		?>
+		</div>
+		</div>
 	<?php echo $form->textFieldRow($model,'ID_IDBalai',array('size'=>25,'maxlength'=>30, 'readOnly'=>true)); ?>
 	<?php echo $form->textFieldRow($model,'kodefikasi',array('id'=>'KodeFikasi')); ?>
 	<?php echo $form->textFieldRow($model,'NoData',array('id'=>'NoUData')); ?>
 	<?php echo $form->textFieldRow($model,'nama_ws');?>
+	<?php echo $form->textFieldRow($model,'NamaBalai');?>
+	<?php echo $form->textFieldRow($model,'kriteria');?>
 	</div>
 	</td>
 </tr>
@@ -55,7 +67,7 @@ include '../siatab/connect.php';
 		array(
 		'prompt'=>'Pilih Propinsi', 
 		'value'=>'0',
-		'ajax' => array('type'=>'POST', 'url'=>CController::createUrl('Sumur/setKot'), // panggi filter kabupaten di controller
+		'ajax' => array('type'=>'POST', 'url'=>CController::createUrl('Sumur/setKot'), // panggil filter kabupaten di controller
 		'update'=>'#Sumur_kota', //selector to update
 		'data'=>array('provinsi'=>'js:this.value'),
 		))); ?>
@@ -95,43 +107,29 @@ include '../siatab/connect.php';
 <?php $this->endWidget(); 
 	
 ?>
-<div class="span8" style="visibility: hidden; position:absolute;">
-<div class="collapse">
-<?php $_dataKode = array(); $_dataKab = array(); $ii = 0; $max = 0;
-	$get = mysql_query("select * from t_kab_kota order by no desc"); 
-	while($show = mysql_fetch_array($get)){
-		$ii++;
-		if($show['no'] >= $max){
-			$max = $show['no'];
-		}
-		$_dataKode[$ii]= $show['kode'];
-		$_dataKab[$ii]= $show['kab'];
-		echo "<input type='text' width='20px' id='KodeKab".$ii."' value='".$_dataKode[$ii]."'/>";
-		echo "<input type='text' width='20px' id='NamaKab".$ii."' value='".$_dataKab[$ii]."'/>";
-	} ?>
-</div>
-</div>
+
 
 
 <script>
-	var kott = document.getElementById("Provv").value;
+	/*var kott = document.getElementById("Provv").value;
 	document.getElementById('kodeeKab').value = kott;
-	<?php $kp = Unitkerja::getKodeProvByAdmin(); ?>
-	var jum ="<?php echo $max; ?>"; 
+	<?php //$kp = $model->kota; ?>
+	var jum ="<?php// echo $max; ?>"; 
 	var kota = new Array();
 	var kode = new Array();
 	var getKode = 0;
-	var i = 0; var kp = "<?php echo $kp; ?>";
+
+	var i = 0; var kp = "<?php //echo $kp; ?>";
 	var x = document.getElementById("kodeeKab").value;
 	var nod = document.getElementById("NoUData").value;
 	for(i=1;i<=jum;i++){
 		kota[i] = document.getElementById('NamaKab'+i).value;
 		kode[i] = document.getElementById('KodeKab'+i).value;
-		if(kota[i]==x){
-			kp = Number(kp) * Number(1000000);
-			getKode = (Number(000000) * Number(kode[i])) + Number(33060900000000) + Number(kp) + Number(nod);
+		if(kota[i]==kp){
+			//kp = Number(kp) * Number(1000000);
+			//getKode = (Number(000000) * Number(kode[i])) + Number(33060900000000) + Number(nod);
 		}
 	}
-	document.getElementById('KodeFikasi').value = "0"+getKode;
+	document.getElementById('KodeFikasi').value = "0"+getKode; */
 </script>
 </html>
