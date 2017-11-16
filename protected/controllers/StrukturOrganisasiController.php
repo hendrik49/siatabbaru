@@ -246,6 +246,18 @@ class StrukturOrganisasiController extends Controller
 		->where('Jabatan=:Jabatan', array(':Jabatan'=>'KEPALA BIDANG'))
 		->queryAll();
 
+		$kepalasubbidang =Yii::app()->db->createCommand()
+		->select('*')
+		->from('t_pegawai')
+		->where('Jabatan=:Jabatan', array(':Jabatan'=>'KEPALA SUBBIDANG'))
+		->queryAll();
+
+		$subbagian =Yii::app()->db->createCommand()
+		->select('*')
+		->from('t_pegawai')
+		->where('Jabatan=:Jabatan', array(':Jabatan'=>'SUBAGIAN'))
+		->queryAll();
+		
 		
 		$dataProvider=new CActiveDataProvider('Pegawai', array(
 			'sort'=>array(
@@ -257,6 +269,8 @@ class StrukturOrganisasiController extends Controller
 			'dataProvider'=>$dataProvider,
 			'ketuapusat'=>$ketuapusat,
 			'kepalabidang'=>$kepalabidang,
+			'kepalasubbidang'=>$kepalasubbidang,
+			'subbagian'=>$subbagian
 		));
 	}
 	
