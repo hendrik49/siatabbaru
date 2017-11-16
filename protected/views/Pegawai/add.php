@@ -26,6 +26,9 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->textAreaRow($model,'Alamat',array('rows'=>3,'cols'=>40)); ?>
 	<?php echo $form->textFieldRow($model,'NoTelp',array('size'=>14,'maxlength'=>15)); ?>
 	<?php echo $form->textFieldRow($model,'Golongan',array('size'=>40,'maxlength'=>60)); ?>
+	<?php echo $form->textFieldRow($model,'Bidang',array('size'=>40,'maxlength'=>60)); ?>
+	<?php echo $form->textFieldRow($model,'Jabatan',array('size'=>40,'maxlength'=>60)); ?>	
+	<?php echo $form->error($model,'status'); ?>
 	<?php echo $form->fileFieldRow($model, 'Foto'); ?>
 </fieldset>
  

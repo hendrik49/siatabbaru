@@ -239,21 +239,21 @@ right connector from last child*/
 <div class="tree">
 <ul>
 	<li>
-	<a href="#"><img src="http://placehold.it/200x200" alt="CEO">
-	KEPALA PUSAT AIR TANAH DAN AIR BAKU
+	<a href="#"><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$ketuapusat['Foto'] ?>  alt="CEO">
+	KEPALA PUSAT AIR TANAH DAN AIR BAKU </br><b> <?php echo $ketuapusat['Nama'] ?> </b>
 	</a>
 		<ul>
-			<li><a href="#"><img src="http://placehold.it/100x100" alt="BIDANG
+			<li><a href="#"><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[3]['Foto'] ?> alt="BIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH BARAT">KEPALA BIDANG
 AIR TANAH DAN AIR BAKU
-WILAYAH BARAT</a>
+WILAYAH BARAT  </br><b> <?php echo $kepalabidang[3]['Nama'] ?> </b></a>
 				<ul>
 					<li><a href="#"><img src="http://placehold.it/50x50" alt="SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH BARAT I">SUBBIDANG
 AIR TANAH DAN AIR BAKU
-WILAYAH BARAT I</img></a></li>
+WILAYAH BARAT I </img></a></li>
 					<li><a href="#"><img src="http://placehold.it/50x50" alt="SUBBIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH BARAT II">SUBBIDANG
@@ -261,11 +261,11 @@ AIR TANAH DAN AIR BAKU
 WILAYAH BARAT II</img></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><img src="http://placehold.it/100x100" alt="BIDANG
+			<li><a href="#"><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[2]['Foto'] ?> alt="BIDANG
 AIR TANAH DAN AIR BAKU
 WILAYAH TIMUR">KEPALA BIDANG
 AIR TANAH DAN AIR BAKU
-WILAYAH TIMUR</a>
+WILAYAH TIMUR  </br><b> <?php echo $kepalabidang[2]['Nama'] ?> </b></a>
 				<ul>
 					<li><a href="#"><img src="http://placehold.it/50x50" alt="SUBBIDANG
 AIR TANAH DAN AIR BAKU
@@ -279,11 +279,11 @@ AIR TANAH DAN AIR BAKU
 WILAYAH TIMUR II</img></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><img src="http://placehold.it/100x100" alt="BIDANG
+			<li><a href="#"><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[1]['Foto'] ?> alt="BIDANG
 KONSERVASI
 AIR TANAH DAN AIR BAKU" />KEPALA BIDANG
 KONSERVASI
-AIR TANAH DAN AIR BAKU</a>
+AIR TANAH DAN AIR BAKU  </br><b> <?php echo $kepalabidang[1]['Nama'] ?> </b></a>
 				<ul>
 					<li><a href="#"><img src="http://placehold.it/50x50" alt="">SUBBIDANG
 KONSERVASI AIR TANAH DAN
@@ -293,11 +293,11 @@ KONSERVASI AIR TANAH DAN
 AIR BAKU WILAYAH TIMUR</img></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><img src="http://placehold.it/100x100" alt="BAGIAN
+			<li><a href="#"><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[0]['Foto'] ?> alt="BAGIAN
 PERENCANAAN DAN
 TATA USAHA" />KEPALA BAGIAN
 PERENCANAAN DAN
-TATA USAHA</a>
+TATA USAHA </br><b> <?php echo $kepalabidang[0]['Nama'] ?> </b>  </a>
 				<ul>
 					<li><a href="#"><img style="text-align:center;" src="http://placehold.it/50x50" alt="">SUBBAGIAN
 PERENCANAAN</img></a></li>
