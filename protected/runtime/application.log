@@ -11215,3 +11215,138 @@ Stack trace:
 #23 {main}
 REQUEST_URI=/siatab/StrukturOrganisasi
 ---
+2017/11/16 12:21:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/Surah Al Mu'minoon V1-10 - Jibril Wahab.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/Surah%20Al%20Mu'minoon%20V1-10%20-%20Jibril%20Wahab.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/16 12:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/permukaan/1
+---
+2017/11/16 12:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/PUSAT Air Tanah dan Air Baku/Permukaan/Foto/Filter Segmen Peta Berdasarkan Kondisi dari beberapa Infrastruktur.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/PUSAT%20Air%20Tanah%20dan%20Air%20Baku/Permukaan/Foto/Filter%20Segmen%20Peta%20Berdasarkan%20Kondisi%20dari%20beberapa%20Infrastruktur.png
+HTTP_REFERER=http://localhost/siatab/permukaan/1
+---
+2017/11/16 12:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/PUSAT Air Tanah dan Air Baku/Permukaan/Foto/Overlay Beberapa Peta.JPG"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/PUSAT%20Air%20Tanah%20dan%20Air%20Baku/Permukaan/Foto/Overlay%20Beberapa%20Peta.JPG
+HTTP_REFERER=http://localhost/siatab/permukaan/1
+---
+2017/11/16 12:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/PUSAT Air Tanah dan Air Baku/Permukaan/Foto"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/PUSAT%20Air%20Tanah%20dan%20Air%20Baku/Permukaan/Foto/
+HTTP_REFERER=http://localhost/siatab/permukaan/1
+---
+2017/11/16 12:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/PUSAT Air Tanah dan Air Baku/Permukaan/Video"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/PUSAT%20Air%20Tanah%20dan%20Air%20Baku/Permukaan/Video/
+HTTP_REFERER=http://localhost/siatab/permukaan/1
+---
+2017/11/16 12:22:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/16 12:22:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/PUSAT Air Tanah dan Air Baku/Sumur/Foto"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/PUSAT%20Air%20Tanah%20dan%20Air%20Baku/Sumur/Foto/
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/16 12:22:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/PUSAT Air Tanah dan Air Baku/Sumur/Video/aaa.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/PUSAT%20Air%20Tanah%20dan%20Air%20Baku/Sumur/Video/aaa.mp4
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/16 12:22:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/16 12:25:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/1
+---
+2017/11/16 12:25:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/2
+---
+2017/11/16 12:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/Surah Al Mu'minoon V1-10 - Jibril Wahab.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/Surah%20Al%20Mu'minoon%20V1-10%20-%20Jibril%20Wahab.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/16 12:29:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/dtgrid/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/dtgrid/deta...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/dtgrid/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/sumur/2
+---
+2017/11/16 12:51:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/Surah Al Mu'minoon V1-10 - Jibril Wahab.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/Surah%20Al%20Mu'minoon%20V1-10%20-%20Jibril%20Wahab.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---

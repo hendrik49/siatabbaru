@@ -2,8 +2,10 @@
 
 
 $this->breadcrumbs=array(
-	'StrukturOrganisasi',
+'StrukturOrganisasi',
 );
+
+
 
 ?>
 <style type="text/css">
@@ -226,7 +228,9 @@ right connector from last child*/
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;  
 }
-//<?php echo CHtml::link('Membuat Struktur Organisasi', array('StrukturOrganisasi/add')); ?>
+//<?php echo CHtml::link('Membuat Struktur Organisasi', array('StrukturOrganisasi/add'));
+
+?>
 </style>
 <h2 class="h-view" style="text-align:center;"><?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN OR Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>Struktur Organisasi <?php endif ?></h2>
 	
@@ -309,28 +313,30 @@ TATA USAHA</img></a></li>
 	</div>
 <?php else : ?>
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
-	'type'=>'striped bordered condensed',
-	'cssFile'=>Yii::app()->baseUrl . '/css/gridview/styles.css',
-	'summaryText'=>'',
-	'columns'=>array(
-		array(
-			'name'=>'Tanggal',
-			'value'=>'date("d / m / Y", $data->Tanggal)',
-		),
-		'NamaJabatan',
-		'status',
-		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-			'template'=>'{Lihat}',
-			'buttons'=>array(
-				'Lihat'=>array(
-					'label'=>'Lihat',
-					'url'=>'Yii::app()->createUrl("StrukturOrganisasi/view", array("id"=>$data->ID))',
-					
-				),
-			),
-		),
-	),
-));  ?>
+'type'=>'striped bordered condensed',
+'cssFile'=>Yii::app()->baseUrl . '/css/gridview/styles.css',
+'summaryText'=>'',
+'columns'=>array(
+array(
+'name'=>'Tanggal',
+'value'=>'date("d / m / Y", $data->Tanggal)',
+),
+'NamaJabatan',
+'status',
+array(
+'class'=>'bootstrap.widgets.TbButtonColumn',
+'template'=>'{Lihat}',
+'buttons'=>array(
+'Lihat'=>array(
+'label'=>'Lihat',
+'url'=>'Yii::app()->createUrl("StrukturOrganisasi/view", array("id"=>$data->ID))',
+
+),
+),
+),
+),
+));
+
+?>
 
 <?php endif ?>
