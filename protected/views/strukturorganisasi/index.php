@@ -225,6 +225,7 @@ right connector from last child*/
 .tree li a img {
   float:left;
   margin-bottom:5px;
+  padding-right:5px;
   border-radius:5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;  
