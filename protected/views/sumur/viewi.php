@@ -61,6 +61,15 @@
 					'value'=>'<img width="180px" src="'.Yii::app()->request->baseUrl.'/data/Unit Kerja/'
 					.UnitKerja::getNamaUnitKerjaByAdmin().'/Sumur/Foto/'.$model->foto5.'"/>',
 				),
+				array(
+					'name'=>'Video',
+					'type'=>'raw',
+					'value'=>'
+					<video width="320" height="240" controls>
+					<source src="'.Yii::app()->request->baseUrl.'/data/Unit Kerja/'
+					.UnitKerja::getNamaUnitKerjaByAdmin().'/Sumur/Video/'.$model->video.'" type="video/mp4">
+				  	</video>',
+				),
 				),
 			)); 
 		?>

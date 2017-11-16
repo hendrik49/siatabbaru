@@ -31,6 +31,7 @@ class InfoPermukaan extends CActiveRecord
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID_IDBalaiJu, NoDataJu', 'length', 'max'=>13),
 			array('foto1,foto2,foto3,foto4,foto5', 'length', 'max'=>100),
+			array('video', 'file', 'types'=>array('mp4', '3gp'),'maxSize'=>1024 * 1024 * 20, 'tooLarge'=>'File has to be smaller than 20MB', 'allowEmpty'=>true),			
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('', 'safe', 'on'=>'search'),
@@ -65,12 +66,12 @@ class InfoPermukaan extends CActiveRecord
 			'ID' => 'ID',
 			'ID_IDBalaiJu' => 'ID Balai',
 			'NoDataJu' => 'Data Ke', 
-			
 			'foto1' => 'Foto - 1',
 			'foto2' => 'Foto - 2',
 			'foto3' => 'Foto - 3',
 			'foto4' => 'Foto - 4',
 			'foto5' => 'Foto - 5',
+			'video' => 'Video',
 		);
 	}
 

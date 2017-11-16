@@ -12,59 +12,83 @@ $this->breadcrumbs=array(
 <?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN OR Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'type'=>'striped bordered condensed',
-	'dataProvider'=>$dataProvider,
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,	
 	'template'=>'{summary}{items}{pager}',
 	'enablePagination' => true,
 	'summaryText'=>'Displaying {start}-{end} of {count} results.',
 	'columns'=>array(
 		array(
-			'name'=>'Tanggal',
-			'value'=>'date("d / m / Y", $data->Tanggal)',
+			'name'=>'NoPeraturan',
+			'htmlOptions'=>array('width'=>'100')
 		),		
-		'NoPeraturan',
-		'NamaPeraturan',
+		array(
+			'name'=>'NamaPeraturan',
+			'htmlOptions'=>array('width'=>'300')
+		),		
 		array(
 			'name'=>'Link',
 			   'header'=>'Link',
 			   'type'=>'raw',
-			   'value'=>'CHtml::link($data["Link"],Yii::app()->createUrl("/data/peraturan/", array("id"=>$data["Link"])))',
-			   'htmlOptions'=>array('width'=>'40'),
-					
-		),
-		'status',				
+			   'type' => 'raw',
+			   'value'=> function($data){
+				   return '
+				   <p><img width="25px" height="25px" src="'.Yii::app()->request->baseUrl.'/images/pdf.png"/>
+				   <a href="'.Yii::app()->createUrl("/images/SlideImage/", array("id"=>urlencode($data->Link))).'">'.$data->Link.'</a>			   
+				   </p>			
+				   ';
+				 },   
+			   'htmlOptions'=>array('width'=>'300')
+				),
+			array(
+			'name'=>'Tanggal',
+			'value'=>'date("j, M Y", $data->Tanggal)',
+			'htmlOptions'=>array('width'=>'80')			
+		),				
 		array(
             'class'=>'bootstrap.widgets.TbButtonColumn',
             'htmlOptions'=>array('style'=>'width: 50px'),
 		),
 	),
 )); ?>
+
 <?php else : ?>
+
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'type'=>'striped bordered condensed',
-	'dataProvider'=>$dataProvider,
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
 	'template'=>'{summary}{items}{pager}',
 	'enablePagination' => true,
 	'summaryText'=>'Displaying {start}-{end} of {count} results.',
 	'columns'=>array(
 		array(
-			'name'=>'Tanggal',
-			'value'=>'date("d / m / Y", $data->Tanggal)',
-		),
-		'NoPeraturan',
-		'NamaPeraturan',
-		'Link',		
-		'status',		
-		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-			'template'=>'{Lihat}',
-			'buttons'=>array(
-				'Lihat'=>array(
-					'label'=>'Lihat',
-					'url'=>'Yii::app()->createUrl("Peraturan/view", array("id"=>$data->ID))',
-					
-				),
-			),
+			'name'=>'NoPeraturan',
+			'htmlOptions'=>array('width'=>'100')
 		),		
+		array(
+			'name'=>'NamaPeraturan',
+			'htmlOptions'=>array('width'=>'300')
+		),		
+		array(
+			'name'=>'Link',
+			   'header'=>'Link',
+			   'type'=>'raw',
+			   'type' => 'raw',
+			   'value'=> function($data){
+				   return '
+				   <p><img width="25px" height="25px" src="'.Yii::app()->request->baseUrl.'/images/pdf.png"/>
+					   <a href="'.Yii::app()->createUrl("/images/SlideImage/", array("id"=>rawurlencode($data->Link))).'">'.$data->Link.'</a>			   
+				   </p>			
+				   ';
+				 },   
+			   'htmlOptions'=>array('width'=>'300')
+			),
+		array(
+			'name'=>'Tanggal',
+			'value'=>'date("j, M Y", $data->Tanggal)',
+			'htmlOptions'=>array('width'=>'80')			
+		),
 	),
 ));  ?>
 

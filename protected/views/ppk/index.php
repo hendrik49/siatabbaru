@@ -12,7 +12,7 @@ $this->breadcrumbs=array(
 </style>
 		
 		
-<b>List PPK</b>
+<b>Daftar PPK</b>
 
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?> | 
 	<?php 
@@ -28,8 +28,11 @@ $this->breadcrumbs=array(
 		$this->widget('bootstrap.widgets.TbGridView', array(
 			'type'=>'striped bordered condensed',
 			'id'=>'PPK',
-			'dataProvider'=>$dataProvider,
-			'template'=>"{items}",
+			'dataProvider'=>$model->search(),
+			'filter'=>$model,	
+			'template'=>'{summary}{items}{pager}',
+			'enablePagination' => true,
+			'summaryText'=>'Displaying {start}-{end} of {count} results.',
 			'columns'=>
 				array( 
 					'ID','Nama', 'NIP', 'Email', 'Alamat', 'NoTelp', 

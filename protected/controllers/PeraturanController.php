@@ -30,7 +30,7 @@ class PeraturanController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view', 'peraturan'),
-				'users'=>array_merge($user['superAdmin'], $user['admin']),
+				'users'=>array('*'),
 			),
 
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -52,7 +52,7 @@ class PeraturanController extends Controller
 		$model = $this->loadModel($id);
 
 			if ($model->Link) {
-				$data = file_get_contents(Yii::app()->params->baseMapPath . "/data/peraturan/" . $model->Link);
+				$data = file_get_contents(Yii::app()->params->baseMapPath . "/images/Peraturan/" . $model->Link);
 				$this->forceDownload($model->Link, $data);
 			} else 
 				throw new CHttpException(404,'Halaman tidak ditemukan.');
@@ -144,26 +144,23 @@ class PeraturanController extends Controller
 		if(isset($_POST['Peraturan']))
 		{
 			$model->attributes=$_POST['Peraturan'];
-			//$file1 = CUploadedFile::getInstance($model, 'Link');
-			$model->Link = CUploadedFile::getInstance($model,'Link');	
+			$myUpload = CUploadedFile::getInstance($model, 'Link');		
 			$model->Tanggal = time();
 			
-			//if (!empty($file1))
-			//	$model->Link = $myUpload->getName();
-			//else
-			//	$model->Link =  $imgName();
-			if($model->save()) {
-				$this->_mapPath = Yii::app()->params->baseMapPath;
-				$model->Link->saveAs($this->_mapPath . '/images/SlideImage/'. $model->Link->getName());
-						
-				//if (!empty($myUpload)) {
-					//$this->_mapPath = Yii::app()->request->baseUrl;
-					//$file1->saveAs($this->_mapPath . $file1->getName());
-					//$model->Link = $file1->getName();
-				//}	
-				
-			}$this->redirect(array('view','id'=>$model->ID));
+			
+			if (!empty($myUpload))
+				$model->Link = 'Peraturan.'.time().'.'.$myUpload->getExtensionName();
 
+			if($model->save()) {	
+				
+				if (!empty($myUpload)) {
+					$this->_mapPath = Yii::app()->params->baseMapPath;
+					$myUpload->saveAs($this->_mapPath .'/images/SlideImage/Peraturan.'.time().'.'.$myUpload->getExtensionName());
+				}	
+
+				$this->redirect(array('view','id'=>$model->ID));
+				
+			}
 		}
 		
 		$this->render('add',array(
@@ -232,20 +229,14 @@ class PeraturanController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$criteria=new CDbCriteria;
-		$model=new Berita('search');
+		$model=new Peraturan('search');
 		$model->unsetAttributes();
 
-		$dataProvider=new CActiveDataProvider('Peraturan', array(
-			'criteria'=>$criteria,
-			'sort'=>array(
-				'defaultOrder'=>'Tanggal DESC',
-			),
-		));
+		if(isset($_GET['Peraturan']))
+			$model->attributes=$_GET['Peraturan'];
 
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-			'model'=>$model,
+			'model'=>$model
 		));
 	}
 	
