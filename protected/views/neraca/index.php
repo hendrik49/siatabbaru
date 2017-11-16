@@ -26,7 +26,7 @@ $this->breadcrumbs=array(
 					'name'=>'Tanggal',
 					'value'=>'date("d / m / Y", $data->Tanggal)',
 				),
-				'NamaBalai', 'kota', 'PopulasiKabKota', 'TotalABKabKota', 'JiwaTerlayani', 'JiwaBelumTerlayani', 
+				'NamaBalai', 'KabKota', 'Provinsi', 'PopulasiKabKota', 'TotalABKabKota', 'JiwaTerlayani', 'JiwaBelumTerlayani', 
 				array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{view}', 'buttons'=>array(
 					'viewButtonUrl'=>'Yii::app()->createUrl("neraca/view/", array("id"=>$data->ID))'),
 				), 

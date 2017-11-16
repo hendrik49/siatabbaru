@@ -68,7 +68,7 @@ if (isset($_POST['dataIndex'])) {
 
 	$dmataair="SELECT t_mataair1.nama_ws, t_mataair1.ID, t_mataair1.desa, t_mataair1.kecamatan, t_mataair1.kota, 
 					t_mataair1.provinsi, t_mataair1.status,	t_mataair2.jiwa, t_mataair2.debit, 
-					t_mataair1.kriteria1, t_mataair1.nama_sistem, t_mataair5.tahun_bangun, t_mataair6.broncaptering 
+					t_mataair1.kriteria, t_mataair1.nama_sistem, t_mataair5.tahun_bangun, t_mataair6.broncaptering 
 		FROM t_mataair1 
 				JOIN t_mataair2 ON t_mataair1.ID = t_mataair2.ID JOIN t_mataair3 ON t_mataair1.ID = t_mataair3.ID
 				JOIN t_mataair5 ON t_mataair1.ID = t_mataair5.ID JOIN t_mataair6 ON t_mataair1.ID = t_mataair6.ID
@@ -76,7 +76,7 @@ if (isset($_POST['dataIndex'])) {
 				OR t_mataair1.desa LIKE '%$KeyData%' OR t_mataair1.kecamatan LIKE '%$KeyData%' 
 				OR t_mataair1.kota LIKE '%$KeyData%' OR t_mataair1.provinsi LIKE '%$KeyData%'
 				OR t_mataair5.tahun_bangun LIKE '%$KeyData%' OR t_mataair6.broncaptering LIKE '%$KeyData%'
-				OR t_mataair1.kriteria1 LIKE '%$KeyData%'
+				OR t_mataair1.kriteria LIKE '%$KeyData%'
 		";	
 
 	//query to get the search result Air Baku
@@ -93,9 +93,105 @@ if (isset($_POST['dataIndex'])) {
 		echo "<td>".$dmataair['debit']." l/d</td>";
 		echo "<td>".$dmataair['broncaptering']."</td>";
 		echo "<td>thn ".$dmataair['tahun_bangun']."</td>";
-		echo "<td>".$dmataair['kriteria1']."</td>";
+		echo "<td>".$dmataair['kriteria']."</td>";
 		echo "</tr>";
 		$datacek++;
+	}
+
+	$dtampungan="SELECT t_tampungan1.nama_ws, t_tampungan1.ID, t_tampungan1.desa, t_tampungan1.kecamatan, t_tampungan1.kota, 
+	t_tampungan1.provinsi, t_tampungan1.status,	t_tampungan2.jiwa, t_tampungan2.debit, 
+	t_tampungan1.kriteria, t_tampungan1.nama_sistem, t_tampungan5.tahun_bangun, t_tampungan6.kondisi_sungai 
+	FROM t_tampungan1 
+	JOIN t_tampungan2 ON t_tampungan1.ID = t_tampungan2.ID JOIN t_tampungan3 ON t_tampungan1.ID = t_tampungan3.ID
+	JOIN t_tampungan5 ON t_tampungan1.ID = t_tampungan5.ID JOIN t_tampungan6 ON t_tampungan1.ID = t_tampungan6.ID
+	WHERE t_tampungan1.nama_ws LIKE '%$KeyData%' OR t_tampungan1.nama_sistem LIKE '%$KeyData%'
+	OR t_tampungan1.desa LIKE '%$KeyData%' OR t_tampungan1.kecamatan LIKE '%$KeyData%' 
+	OR t_tampungan1.kota LIKE '%$KeyData%' OR t_tampungan1.provinsi LIKE '%$KeyData%'
+	OR t_tampungan5.tahun_bangun LIKE '%$KeyData%' OR t_tampungan6.kondisi_sungai LIKE '%$KeyData%'
+	OR t_tampungan1.kriteria LIKE '%$KeyData%'
+	";	
+
+	//query to get the search result Air Baku
+	$resultwa = mysql_query($dtampungan); //execute the query $tampungan
+	while ($dtampungan = mysql_fetch_array($resultwa)) {  //fetch the result from query into an array
+	echo "<tr>";
+	echo "<td>".CHtml::link(CHtml::encode($dtampungan['nama_sistem']),Yii::app()->createUrl("tampungan/view", array("id"=>$dtampungan['ID'])))."</td>";
+	echo "<td>".$dtampungan['nama_ws']."</td>";	
+	echo "<td>".$dtampungan['desa']."</td>";
+	echo "<td>".$dtampungan['kecamatan']."</td>";
+	echo "<td>".$dtampungan['kota']."</td>";
+	echo "<td>".$dtampungan['provinsi']."</td>";
+	echo "<td>".$dtampungan['jiwa']."</td>";
+	echo "<td>".$dtampungan['debit']." l/d</td>";
+	echo "<td>".$dtampungan['kondisi_sungai']."</td>";
+	echo "<td>thn ".$dtampungan['tahun_bangun']."</td>";
+	echo "<td>".$dtampungan['kriteria']."</td>";
+	echo "</tr>";
+	$datacek++;
+	}
+
+	$dpermukaan="SELECT t_permukaan1.nama_ws, t_permukaan1.ID, t_permukaan1.desa, t_permukaan1.kecamatan, t_permukaan1.kota, 
+	t_permukaan1.provinsi, t_permukaan1.status,	t_permukaan2.jiwa, t_permukaan2.debit, 
+	t_permukaan1.kriteria, t_permukaan1.nama_sistem, t_permukaan5.tahun_bangun, t_permukaan6.kondisi_sungai 
+	FROM t_permukaan1 
+	JOIN t_permukaan2 ON t_permukaan1.ID = t_permukaan2.ID JOIN t_permukaan3 ON t_permukaan1.ID = t_permukaan3.ID
+	JOIN t_permukaan5 ON t_permukaan1.ID = t_permukaan5.ID JOIN t_permukaan6 ON t_permukaan1.ID = t_permukaan6.ID
+	WHERE t_permukaan1.nama_ws LIKE '%$KeyData%' OR t_permukaan1.nama_sistem LIKE '%$KeyData%'
+	OR t_permukaan1.desa LIKE '%$KeyData%' OR t_permukaan1.kecamatan LIKE '%$KeyData%' 
+	OR t_permukaan1.kota LIKE '%$KeyData%' OR t_permukaan1.provinsi LIKE '%$KeyData%'
+	OR t_permukaan5.tahun_bangun LIKE '%$KeyData%' OR t_permukaan6.kondisi_sungai LIKE '%$KeyData%'
+	OR t_permukaan1.kriteria LIKE '%$KeyData%'
+	";	
+
+	//query to get the search result Air Baku
+	$resultga = mysql_query($dpermukaan); //execute the query $permukaan
+	while ($dpermukaan = mysql_fetch_array($resultga)) {  //fetch the result from query into an array
+	echo "<tr>";
+	echo "<td>".CHtml::link(CHtml::encode($dpermukaan['nama_sistem']),Yii::app()->createUrl("permukaan/view", array("id"=>$dpermukaan['ID'])))."</td>";
+	echo "<td>".$dpermukaan['nama_ws']."</td>";	
+	echo "<td>".$dpermukaan['desa']."</td>";
+	echo "<td>".$dpermukaan['kecamatan']."</td>";
+	echo "<td>".$dpermukaan['kota']."</td>";
+	echo "<td>".$dpermukaan['provinsi']."</td>";
+	echo "<td>".$dpermukaan['jiwa']."</td>";
+	echo "<td>".$dpermukaan['debit']." l/d</td>";
+	echo "<td>".$dpermukaan['kondisi_sungai']."</td>";
+	echo "<td>thn ".$dpermukaan['tahun_bangun']."</td>";
+	echo "<td>".$dpermukaan['kriteria']."</td>";
+	echo "</tr>";
+	$datacek++;
+	}
+
+	$dhujan="SELECT t_hujan1.nama_ws, t_hujan1.ID, t_hujan1.desa, t_hujan1.kecamatan, t_hujan1.kota, 
+	t_hujan1.provinsi, t_hujan1.status,	t_hujan2.jiwa, t_hujan2.debit, 
+	t_hujan1.kriteria, t_hujan1.nama_sistem, t_hujan4.tahun_bangun, t_hujan5.broncaptering 
+	FROM t_hujan1 
+	JOIN t_hujan2 ON t_hujan1.ID = t_hujan2.ID JOIN t_hujan3 ON t_hujan1.ID = t_hujan3.ID
+	JOIN t_hujan4 ON t_hujan1.ID = t_hujan4.ID JOIN t_hujan5 ON t_hujan1.ID = t_hujan5.ID
+	WHERE t_hujan1.nama_ws LIKE '%$KeyData%' OR t_hujan1.nama_sistem LIKE '%$KeyData%'
+	OR t_hujan1.desa LIKE '%$KeyData%' OR t_hujan1.kecamatan LIKE '%$KeyData%' 
+	OR t_hujan1.kota LIKE '%$KeyData%' OR t_hujan1.provinsi LIKE '%$KeyData%'
+	OR t_hujan4.tahun_bangun LIKE '%$KeyData%' OR t_hujan5.broncaptering LIKE '%$KeyData%'
+	OR t_hujan1.kriteria LIKE '%$KeyData%'
+	";	
+
+	//query to get the search result Air Baku
+	$resultpat = mysql_query($dhujan); //execute the query $hujan
+	while ($dhujan = mysql_fetch_array($resultpat)) {  //fetch the result from query into an array
+	echo "<tr>";
+	echo "<td>".CHtml::link(CHtml::encode($dhujan['nama_sistem']),Yii::app()->createUrl("hujan/view", array("id"=>$dhujan['ID'])))."</td>";
+	echo "<td>".$dhujan['nama_ws']."</td>";	
+	echo "<td>".$dhujan['desa']."</td>";
+	echo "<td>".$dhujan['kecamatan']."</td>";
+	echo "<td>".$dhujan['kota']."</td>";
+	echo "<td>".$dhujan['provinsi']."</td>";
+	echo "<td>".$dhujan['jiwa']."</td>";
+	echo "<td>".$dhujan['debit']." l/d</td>";
+	echo "<td>".$dhujan['broncaptering']."</td>";
+	echo "<td>thn ".$dhujan['tahun_bangun']."</td>";
+	echo "<td>".$dhujan['kriteria']."</td>";
+	echo "</tr>";
+	$datacek++;
 	}
 		echo "</tbody>";
 		echo "</table>";

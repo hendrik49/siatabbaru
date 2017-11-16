@@ -71,16 +71,16 @@
 			<?php echo $content; ?>	
 	</div>		<!-- footer -->
 	<footer class="modal-footer">
-		<center><p>Suggestions: <span id="txtHint"></span></p>
-			<div>
-				Copyright &copy; <?php echo date('Y'); ?> by Pusat Air Tanah dan Air Baku<br/>
-				All Rights Reserved.<br/><?php // echo Yii::powered(); ?>
+		
+		
+		<!--<p>Suggestions: <span id="txtHint"></span></p>-->
+		
+			<div class="span11" style="margin-left: 250px;">
+			<p style="padding: 0 0 -5px; " align='left' ><i class="fa fa-map-marker"></i> JL. Pattimura 20, Kebayoran Baru Jakarta - Indonesia - 12110<br>
+			<i class="fa fa-envelope"></i> Email: <a href="#">kompu.sda@gmail.com</a><br>
+			<i class="fa fa-phone"></i> Phone/Fax: (021)-7396616</p>
 			</div>
-		</center>
 		</footer>
-
-
-
 
 </body>
 	

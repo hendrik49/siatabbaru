@@ -382,7 +382,7 @@ class SumurController extends Controller
 		$modelteknisGa= new TeknisGaSumur;
 		$modelteknisPat= new KondisiSumur;
 		$modelInfoMa= new InfoSumur;
-		$modelKota= new Kota;
+		//$modelKota= new Kota;
 		
 		
 		
@@ -391,7 +391,7 @@ class SumurController extends Controller
 
 			//$provinsi = $_GET["provinsi"];
 			
-			$modelKota->attributes=$_POST['Kota'];
+			//$modelKota->attributes=$_POST['Kota'];
 			$model->attributes=$_POST['Sumur'];
 			$model->Tanggal = time();
 			if($model->save()) {
@@ -542,7 +542,7 @@ class SumurController extends Controller
 			'modelteknisGa'=>$modelteknisGa,
 			'modelteknisPat'=>$modelteknisPat,
 			'modelInfoMa'=>$modelInfoMa,
-			'modelKota'=>$modelKota,
+			//'modelKota'=>$modelKota,
 			));		
 		}	
 	/**
