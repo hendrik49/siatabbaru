@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 class StrukturOrganisasiController extends Controller
 {
@@ -234,16 +234,20 @@ class StrukturOrganisasiController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$criteria=new CDbCriteria;
+		$ketuapusat =Yii::app()->db->createCommand()
+		->select('*')
+		->from('t_pegawai')
+		->where('Jabatan=:Jabatan', array(':Jabatan'=>'KEPALA PUSAT'))
+		->queryRow();
 
-		$rawData = array();
-		for ($i = 0; $i < 8; $i++)
-			$rawData[] = array('id'=>$i + 1);
+		$kepalabidang =Yii::app()->db->createCommand()
+		->select('*')
+		->from('t_pegawai')
+		->where('Jabatan=:Jabatan', array(':Jabatan'=>'KEPALA BIDANG'))
+		->queryAll();
 
-		$listDataProvider1 = new CArrayDataProvider($rawData);
 		
-		$dataProvider=new CActiveDataProvider('StrukturOrganisasi', array(
-			'criteria'=>$criteria,
+		$dataProvider=new CActiveDataProvider('Pegawai', array(
 			'sort'=>array(
 				'defaultOrder'=>'Tanggal DESC',
 			),
@@ -251,7 +255,8 @@ class StrukturOrganisasiController extends Controller
 
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-			'listDataProvider1'=>$listDataProvider1,
+			'ketuapusat'=>$ketuapusat,
+			'kepalabidang'=>$kepalabidang,
 		));
 	}
 	
