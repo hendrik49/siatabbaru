@@ -282,12 +282,12 @@ p.word{
     </div>
     <div class="container-air">
         <a href="<?php echo Yii::app()->baseUrl; ?>/sumur">
-            <div class="airtanah">
+            <div class="box airtanah">
                 <img src="../siatab/images/airtanahlogo.png">
             </div>
         </a>
         <a href="http://localhost/siatab/sistembaku/listbaku">
-            <div class="airbaku">
+            <div class="box airbaku">
                 <img src="../siatab/images/airbakulogo.png">
             </div>
         </a>
