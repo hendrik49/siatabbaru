@@ -242,7 +242,7 @@ right connector from last child*/
 <div class="tree">
 <ul>
 	<li>
-	<a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$ketuapusat['ID'] ?> ><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$ketuapusat['Foto'] ?>  alt="CEO">
+	<a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$ketuapusat['ID'] ?> ><img height="20" src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$ketuapusat['Foto'] ?>  alt="CEO">
 	KEPALA PUSAT AIR TANAH DAN AIR BAKU </br><b> <?php echo $ketuapusat['Nama'] ?> </b>
 	</a>
 		<ul>
