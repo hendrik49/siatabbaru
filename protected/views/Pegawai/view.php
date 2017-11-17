@@ -17,7 +17,7 @@ $this->breadcrumbs=array(
 			//'cssFile'=>Yii::app()->baseUrl . '/css/dtgrid/detailview/styles.css',
 			'data'=>$model,
 			'attributes'=>array(
-				'Nama', 'NIP', 'Email', 'Alamat', 'NoTelp', 'Golongan',
+				'Nama', 'NIP', 'Email', 'Alamat', 'NoTelp', 'Golongan','Bidang','Jabatan',
 					array(
 						'name'=>'Foto Profil',
 						'type'=>'raw',

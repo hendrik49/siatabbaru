@@ -147,7 +147,7 @@ class PegawaiController extends Controller
 	 */
 	public function actionAdd()
 	{
-		$model=new Pegawai;
+		$model =new Pegawai;
 		
 		if(isset($_POST['Pegawai']))
 		{
@@ -161,9 +161,11 @@ class PegawaiController extends Controller
 			//else
 			//	$model->Foto =  $imgName();
 			if($model->save()) {
-				$this->_mapPath = Yii::app()->params->baseMapPath;
-				$model->Foto->saveAs($this->_mapPath . '/pegawai/'. $model->Foto->getName());
-						
+				
+				if($model->Foto){
+					$this->_mapPath = Yii::app()->params->baseMapPath;
+					$model->Foto->saveAs($this->_mapPath . '/pegawai/'. $model->Foto->getName());
+				}
 				//if (!empty($myUpload)) {
 					//$this->_mapPath = Yii::app()->request->baseUrl;
 					//$file1->saveAs($this->_mapPath . $file1->getName());
