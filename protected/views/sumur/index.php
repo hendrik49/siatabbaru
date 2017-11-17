@@ -19,8 +19,7 @@ $this->breadcrumbs=array(
 <?php endif ?>
 </h4></div>
 <?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>	
-	<form method="POST" name="dataku">
-	
+	<form method="POST" name="dataku">	
 	<?php 
 		$this->widget('bootstrap.widgets.TbGridView', array(
 			'summaryText'=>'',
@@ -106,6 +105,7 @@ $this->breadcrumbs=array(
 <?php else : ?>
 <?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?>
 <?php 
+
 		$this->widget('bootstrap.widgets.TbGridView', array(
 			'summaryText'=>'',
 			'type'=>'striped bordered condensed',
@@ -276,9 +276,11 @@ $this->breadcrumbs=array(
 	</div>
 </form>
 <script>
+
 function cetak()
 {	
     document.dataku.action="/siatab/sumur/cetak";
     document.dataku.submit();
+	<?php  ?>
 }
 </script>

@@ -31,7 +31,7 @@ class InfoTampungan extends CActiveRecord
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID_IDBalaiJu, NoDataJu', 'length', 'max'=>13),
 			//array('foto1,foto2,foto3,foto4,foto5', 'length', 'max'=>100),
-			array('foto1, foto2, foto3, foto4, foto5', 'file','types'=>array('jpg', 'jpeg', 'gif', 'png', 'bmp'), 'allowEmpty'=>true),
+			array('foto1, foto2, foto3, foto4, foto5', 'file','types'=>array('jpg', 'jpeg', 'gif', 'png', 'bmp'), 'maxSize'=>1024 * 1024 * 20, 'tooLarge'=>'File has to be smaller than 20MB','allowEmpty'=>true),
 			array('video', 'file', 'types'=>array('mp4'), 'maxSize'=>1024 * 1024 * 20, 'tooLarge'=>'File has to be smaller than 20MB', 'allowEmpty'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

@@ -6,11 +6,6 @@ include '../siatab/connect.php';
 
 ?>
 
-
-    <?php $form=$this->beginWidget('CActiveForm', array(
-        'id'=>'tinstrument-form',
-        'enableAjaxValidation'=>false,
-    )); ?>
     <div class="span12" style="height:465px; border: 0px solid red; background-color:#fff;">
 
     <!-- List Info Tengah -->
@@ -22,89 +17,122 @@ include '../siatab/connect.php';
                 <li  data-toggle="collapse" data-target="#kondisi" class="collapsed">
                     <a href="#"><i class="fa fa-bar-chart fa-lg" style="margin-top:0px;"></i><strong> Hasil Neraca Air </strong><span class="arrow"></span></a>
                 </li>
-                        <ul class="sub-menu collapse" id="kondisi">
-                            
-                        </ul>
-                        <li class="active">
-                        <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <ul class="sub-menu collapse" id="kondisi">
+                    </ul>
+                    <li class="active">
+                <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+                'id'=>'horizontalForm',
+                'type'=>'horizontal',
+                'enableAjaxValidation'=>false,
+                'htmlOptions'=>array(
+                    'enctype'=>'multipart/form-data',
+                    ),
+                )); 
+                ?>
+    <?php echo $form->dropDownListRow($model,'provinsi', CHtml::listData(Provinsi::model()->findAll(),'Nama_provinsi','Nama_provinsi'),
+		array(
+		'prompt'=>'Pilih Provinsi', 
+		'value'=>'0',
+		'ajax' => array('type'=>'POST', 'url'=>CController::createUrl('Site/setKot'), // panggi filter kabupaten di controller
+		'update'=>'#Site_KabKota', //selector to update
+		'data'=>array('provinsi'=>'js:this.value'),
+		))); ?>
 
-<div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
-                        <script>
+	<?php  echo $form->dropDownListRow($model,'KabKota', CHtml::listData(Kota::model()->findAll(),'id_prov','kab')); ?>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <div id="container" style="min-width: 220px; height: 300px; margin: 0 auto"></div>
+
+
+     <script>
+
 Highcharts.chart('container', {
     chart: {
         type: 'column'
     },
     title: {
-        text: 'Neraca\'s Air Provinsi Bali'
+        text: 'Neraca Air '
     },
     subtitle: {
-        text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+        //text: 'Source: WorldClimate.com'
     },
     xAxis: {
-        type: 'category',
-        labels: {
-            rotation: -45,
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        }
+        categories: [
+            'Jiwa Terlayani'
+            /*'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',*/
+            
+        ],
+        crosshair: true
     },
     yAxis: {
         min: 0,
         title: {
-            text: 'Population (millions)'
+            text: 'Rainfall (mm)'
         }
-    },
-    legend: {
-        enabled: false
     },
     tooltip: {
-        pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
     },
     series: [{
-        name: 'Population',
-        data: [
-            ['jawa', 23.7],
-            ['jawa barat', 16.1],
-            ['cianjur', 14.2],
-            ['bali', 14.0],
-            ['denpasar', 12.5],
-            ['buleleng', 12.1],
-            ['klungkung', 11.8],
-        ],
-        dataLabels: {
-            enabled: true,
-            rotation: -90,
-            color: '#FFFFFF',
-            align: 'right',
-            format: '{point.y:.1f}', // one decimal
-            y: 10, // 10 pixels down from the top
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        }
+        name: 'Jembrana',
+        data: [49.9]
+        
+    }, {
+        name: 'Klungkung',
+        data: [83.6]
+
+    }, {
+        name: 'Buleleng',
+        data: [48.9]
+    
+    }, {
+        name: 'Gianyar',
+        data: [28.2]
+    }, {
+        name: 'Badung',
+        data: [38.9]
+
+    }, {
+        name: 'Denpasar',
+        data: [42.4]
+
+    }, {
+        name: 'Karangasem',
+        data: [53.6]
+
+    }, {
+        name: 'Bangli',
+        data: [61.6]
     }]
 });
-                        </script>
-                       
-                        </li>
-                  
-                <li  data-toggle="collapse" data-target="#tabel" class="collapsed">
-                    <a href="#"><i class="fa fa-table fa-lg" style="margin-top:0px;"></i><strong> Tabel Kondisi </strong><span class="arrow"></span></a>
-                </li>  
-                    <!--<ul class="sub-menu collapse" id="tabel">
-                        <li class="active"><i>Kondisi Infrastuktur Sumur</i>
-                            
-                        </li>
-                    </ul> -->
+    </script>
+    </li>
+
                 </ul>
             </div>
         </div>
     </div>
-
 
 
     <!-- List Info Kolom Kanan -->
