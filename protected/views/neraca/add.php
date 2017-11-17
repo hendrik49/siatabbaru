@@ -25,7 +25,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 )); 
 $model->NamaBalai = Unitkerja::getNamaUnitKerjaByAdmin();
-$model->Provinsi = Unitkerja::getProvByAdmin();
+$model->provinsi = Unitkerja::getProvByAdmin();
 
 ?>
 	<div class="10"><center><legend><h3>NERACA PEMENUHAN PENYEDIAAN AIR BAKU PER KABUPATEN</h3></legend></center></div>
@@ -33,7 +33,7 @@ $model->Provinsi = Unitkerja::getProvByAdmin();
 	<?php /* echo $this->renderPartial('addts', array('model'=>$modelSumur)); */?>
 	<div class="span5">
 	<?php echo $form->textFieldRow($model,'NamaBalai',array('readOnly'=>true)); ?>
-	<?php echo $form->textFieldRow($model,'Provinsi', array('readOnly'=>true), array('id'=>'Provinsi')); ?>
+	<?php echo $form->textFieldRow($model,'provinsi', array('readOnly'=>true), array('id'=>'provinsi')); ?>
 	<?php echo $form->DropDownListRow($model,'KabKota',Kota::lookupProvinsi(), array('id'=>'KabKota')
 	/*array('empty'=>'-pilih-Kab',
       'ajax'=>array(

@@ -98,8 +98,72 @@ class SumurController extends Controller
 		));	
 	}
 	
+	public function actionGetExportFile()
+	{
+		Yii::app()->request->sendFile('export.csv',Yii::app()->user->getState('export'));
+		Yii::app()->user->clearState('export');
+	}
 	
-	
+	public function actionExport()
+	{
+		$fp = fopen('php://temp', 'w');
+	 
+		/* 
+		 * Write a header of csv file
+		 */
+		$headers = array(
+			'd_date',
+			'client.clientFirstName',
+			'client.clientLastName',
+			'd_time',
+		);
+		$row = array();
+		foreach($headers as $header) {
+			$row[] = MODEL::model()->getAttributeLabel($header);
+		}
+		fputcsv($fp,$row);
+	 
+		/*
+		 * Init dataProvider for first page
+		 */
+		$model=new MODEL('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['MODEL'])) {
+			$model->attributes=$_GET['MODEL'];
+		}
+		$dp = $model->search();
+	 
+		/*
+		 * Get models, write to a file, then change page and re-init DataProvider
+		 * with next page and repeat writing again
+		 */
+		while($models = $dp->getData()) {
+			foreach($models as $model) {
+				$row = array();
+				foreach($headers as $head) {
+					$row[] = CHtml::value($model,$head);
+				}
+				fputcsv($fp,$row);
+			}
+	 
+			unset($model,$dp,$pg);
+			$model=new MODEL('search');
+			$model->unsetAttributes();  // clear any default values
+			if(isset($_GET['MODEL']))
+				$model->attributes=$_GET['MODEL'];
+	 
+			$dp = $model->search();
+			$nextPage = $dp->getPagination()->getCurrentPage()+1;
+			$dp->getPagination()->setCurrentPage($nextPage);
+		}
+	 
+		/*
+		 * save csv content to a Session
+		 */
+		rewind($fp);
+		Yii::app()->user->setState('export',stream_get_contents($fp));
+		fclose($fp);
+	}
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -284,12 +348,16 @@ class SumurController extends Controller
 	 */
 	public function actionIndex()
 	{	
+		
 		$model=new Sumur('search');
 		$model->unsetAttributes();
 		
 		if(isset($_GET['Sumur']))
 			$model->attributes=$_GET['Sumur'];
-	
+		if(Yii::app()->request->getParam('export')) {
+			$this->actionExport();
+			Yii::app()->end();
+		}
 		$this->render('index',array(
 			//'dataProvider'=>$dataProvider,
 			'model'=>$model,
@@ -300,7 +368,7 @@ class SumurController extends Controller
     {
 		//Sumur::exportXls();
 		$daftarku=$_POST['NamaSumur'];
-		
+		Sumur::exportXls();
 		echo "<title>Cetak Data Sumur</title>";
 		echo "<div class='grid-view'>";
 		echo "<table class='items table table-striped table-bordered table-condensed'><tr><strong>";

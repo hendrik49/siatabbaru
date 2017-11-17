@@ -375,22 +375,23 @@ class Sumur extends CActiveRecord
 					->setCellValue('J1', 'LS')
 					->setCellValue('K1', 'BT')
                     ->setCellValue('L1', 'Elevasi Sumur');
-	/*	foreach ($datadatas as $urut){	
-					->setCellValue('A'$ii, $urut->NoData)
-					->setCellValue('B'$ii, $urut->kodefikasi)
-					->setCellValue('C'$ii, $urut->nama_cat)
-					->setCellValue('D'$ii, $urut->nama_das)
-					->setCellValue('E'$ii, $urut->nama_ws)
-					->setCellValue('F'$ii, $urut->provinsi)
-					->setCellValue('G'$ii, $urut->kota)
-					->setCellValue('H'$ii, $urut->kecamatan)
-					->setCellValue('I'$ii, $urut->desa)
-					->setCellValue('J'$ii, $urut->lintang_selatan)
-					->setCellValue('K'$ii, $urut->bujur_timur)
-					->setCellValue('L'$ii, $urut->elevasi_sumur)
-		}
+					foreach ($datadatas as $urut){	
+						$ii++;
+						$objPHPExcel->setActiveSheetIndex(0)->setCellValue('A'.$ii, $urut->NoData)
+								->setCellValue('B'.$ii, $urut->kodefikasi)
+								->setCellValue('C'.$ii, $urut->nama_cat)
+								->setCellValue('D'.$ii, $urut->nama_das)
+								->setCellValue('E'.$ii, $urut->nama_ws)
+								->setCellValue('F'.$ii, $urut->provinsi)
+								->setCellValue('G'.$ii, $urut->kota)
+								->setCellValue('H'.$ii, $urut->kecamatan)
+								->setCellValue('I'.$ii, $urut->desa)
+								->setCellValue('J'.$ii, $urut->lintang_selatan)
+								->setCellValue('K'.$ii, $urut->bujur_timur)
+								->setCellValue('L'.$ii, $urut->elevasi_sumur);
+					}
 
-	*/
+	
         // Redirect output to a client’s web browser (Excel2007)
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         header('Content-Disposition: attachment;filename="contohkita.xlsx"');

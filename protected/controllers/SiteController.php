@@ -184,13 +184,25 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 	
+	public function actionSetkot()
+	{	 
+		$modelKota= new Kota;
+	   	$data=Kota::model()->findAll('provinsi=:provinsi',
+		array(':provinsi'=>(string) $_POST['Provinsi']));
+		$data=CHtml::listData($data,'kab','kab');
+		foreach($data as $value=>$name)
+		{
+			echo CHtml::tag('option',array('value'=>$value),CHtml::encode($name),true);
+		}  
+	}
+
 	public $dataProvider1;
 	public $dataProvider2;
 	public $dataProvider3;
 	public function actionDashboard()
 	{
-		$model=new Sumur('search');
-		$model->unsetAttributes();
+		$model=new Neraca;
+		
 
 		$sql='SELECT count(id),sumur FROM t_sumur6 GROUP BY sumur';
 		$dataProvider=new CSqlDataProvider($sql,array(
@@ -209,6 +221,8 @@ class SiteController extends Controller
 			'keyField' => 'id',
 		));
 		
+
+
 		$this->render('dashboard',array(
 			'dataProvider'=>$dataProvider,
 			'dataProvider1'=>$dataProvider1,
