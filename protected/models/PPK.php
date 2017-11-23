@@ -58,8 +58,8 @@ class PPK extends CActiveRecord
 	{
 		return array(
 			'ID' => 'ID',
-			'Nama' => 'Nama PPK',
-			'NIP' => 'Nomor Induk PPK',
+			'Nama' => 'Nama Satker',
+			'NIP' => 'Nomor Induk Satker',
 			'Alamat' => 'Alamat',
 			'Email' => 'E-mail',
 			'NoTelp' => 'Nomor Telepon',

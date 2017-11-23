@@ -3238,3 +3238,408 @@ Stack trace:
 REQUEST_URI=/siatab/css/detailview/styles.css
 HTTP_REFERER=http://localhost/siatab/video/4
 ---
+2017/11/23 16:34:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/2
+---
+2017/11/23 16:35:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:36:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:38:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:39:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/pPK/5
+---
+2017/11/23 16:40:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:40:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:40:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:40:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:40:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:40:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/pPK/5
+---
+2017/11/23 16:40:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/pPK/5
+---
+2017/11/23 16:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/mataair.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/mataai...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/mataair.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/embung1.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/embung...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/embung1.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/Danau.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/Danau....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/Danau.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/sumur.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/sumur....')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/sumur.jpg
+HTTP_REFERER=http://localhost/siatab/PPK
+---
+2017/11/23 16:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/PPK/default_profil.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/PPK/defaul...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/PPK/default_profil.png
+HTTP_REFERER=http://localhost/siatab/PPK
+---

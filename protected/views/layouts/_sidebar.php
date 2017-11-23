@@ -46,7 +46,7 @@
 									<li class="active"><a href="#">DT-Base</a></li>
 									<li class="active"><a href="#">Struktur Organisasi</a></li>
 									<li class="active"><a href="#">Profil Pegawai</a></li>
-									<li class="active"><a href="#">Profil PPK</a></li>
+									<li class="active"><a href="#">Profil Satker</a></li>
 								</ul>
 								<li  data-toggle="collapse" data-target="#atabbarat" class="collapsed">
 									<a href="#"><i class="fa fa-gift fa-lg"></i> ATAB Barat <span class="arrow"></span></a>

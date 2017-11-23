@@ -19,7 +19,7 @@
 							<li class="active"><a href="<?php echo Yii::app()->baseUrl; ?>/dbrencana">Program Kerja (DB)</a></li>
 							<li class="active"><a href="<?php echo Yii::app()->baseUrl; ?>/Pegawai">Progress Fisik (eMon)</a></li >
 							<li class="active"><a href="<?php echo Yii::app()->baseUrl; ?>/Pegawai">Pegawai</a></li >
-							<li class="active"><a href="<?php echo Yii::app()->baseUrl; ?>/PPK">Profil PPK</a></li>
+							<li class="active"><a href="<?php echo Yii::app()->baseUrl; ?>/PPK">Profil Satker</a></li>
 							
 							<!--<li  data-toggle="collapse" data-target="#perdantu" class="collapsed">
 								<a href="<?php echo Yii::app()->baseUrl; ?>/StrukturOrganisasi"><i class="fa fa-sitemap fa-lg"></i> rencana dan TU <span class="arrow"></span></a>

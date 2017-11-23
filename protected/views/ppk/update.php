@@ -2,7 +2,7 @@
 /* @bitartik Group */
 
 $this->breadcrumbs=array(
-	'Data PPK-Edit'=>array('index'),
+	'Data Satker-Edit'=>array('index'),
 	$model->Nama=>array('update','id'=>$model->ID),
 	'update',
 );
@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 
 <!--<h2 class="form-add">Update/edit <?php echo $model->ID; ?></h2>-->
 
-<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN OR Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?><h2 class="h-view">Kelola Data Sumur | <?php echo CHtml::link('Lihat Data', array('PPK/view', 'id'=>$model->ID)); ?></h2><?php endif ?>
+<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN OR Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?><h2 class="h-view">Kelola Data Satker | <?php echo CHtml::link('Lihat Data', array('PPK/view', 'id'=>$model->ID)); ?></h2><?php endif ?>
 <?php
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id'=>'horizontalForm',
@@ -22,7 +22,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 )); ?>
 
 <fieldset>
-    <legend>Input Data PPK</legend>
+    <legend>Ubah Data Satker</legend>
 	<?php echo $form->textFieldRow($model,'Nama',array('size'=>60,'maxlength'=>60)); ?>
 	<?php echo $form->textFieldRow($model,'NIP',array('size'=>25,'maxlength'=>30)); ?>
 	<?php echo $form->textFieldRow($model,'Email',array('size'=>60,'maxlength'=>60)); ?>

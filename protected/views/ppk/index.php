@@ -2,7 +2,7 @@
 /* Bitartic Group */
 $this->pageTitle=Yii::app()->name . ' - Pusat ATAB';
 $this->breadcrumbs=array(
-	'List PPK',
+	'List Satker',
 );
 ?>
 <style type="text/css">
@@ -12,7 +12,7 @@ $this->breadcrumbs=array(
 </style>
 		
 		
-<b>Daftar PPK</b>
+<b>Daftar Staker</b>
 
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?> | 
 	<?php 
@@ -34,8 +34,12 @@ $this->breadcrumbs=array(
 			'enablePagination' => true,
 			'summaryText'=>'Displaying {start}-{end} of {count} results.',
 			'columns'=>
-				array( 
-					'ID','Nama', 'NIP', 'Email', 'Alamat', 'NoTelp', 
+				array(
+					array(
+						'name'=>'ID',
+						'htmlOptions' => array('style' =>'width: 30px;text-align:center;')					
+					),	 
+					'Nama', 'NIP', 'Email', 'Alamat', 'NoTelp', 
 					array(
 						'name'=>'Foto', 
 						'type'=>'raw',
