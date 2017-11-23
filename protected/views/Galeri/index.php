@@ -20,20 +20,21 @@ $this->breadcrumbs=array(
 	'columns'=>array(
         array(
 			'name'=>'ID',
-			'htmlOptions'=>array('width'=>'20')
-		),	
+			'header' => 'ID',
+			'htmlOptions' => array('style' =>'width: 30px;text-align:center;')			
+				),	
 		array(
-			'name'=>'NamaGambar',
-			'htmlOptions'=>array('width'=>'100')
+			'name'=>'NamaGambar'
 		),			
 		array(
 			'name'=>'Tanggal',
 			'value'=>'date("j, M Y", $data->Tanggal)',
-			'htmlOptions'=>array('width'=>'80')	
+			'htmlOptions' => array('style' =>'width: 100px;text-align:center;')			
+			
 		),				
 		array(
-            'class'=>'bootstrap.widgets.TbButtonColumn',
-            'htmlOptions'=>array('style'=>'width: 50px'),
+			'class'=>'bootstrap.widgets.TbButtonColumn',		
+			'htmlOptions' => array('style' =>'width: 100px; text-align:center;')		
 		),
 	),
 )); ?>

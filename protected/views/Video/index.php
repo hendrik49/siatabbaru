@@ -17,22 +17,23 @@ $this->breadcrumbs=array(
 	'enablePagination' => true,
 	'summaryText'=>'Displaying {start}-{end} of {count} results.',
 	'columns'=>array(
-        array(
-			'name'=>'ID',
-			'htmlOptions'=>array('width'=>'20')
-		),	
 		array(
-			'name'=>'NamaVideo',
-			'htmlOptions'=>array('width'=>'100')
+			'name'=>'ID',
+			'header' => 'ID',
+			'htmlOptions' => array('style' =>'width: 30px;text-align:center;')			
+				),	
+		array(
+			'name'=>'NamaVideo'
 		),			
 		array(
 			'name'=>'Tanggal',
 			'value'=>'date("j, M Y", $data->Tanggal)',
-			'htmlOptions'=>array('width'=>'80')	
+			'htmlOptions' => array('style' =>'width: 100px;text-align:center;')			
+			
 		),				
 		array(
-            'class'=>'bootstrap.widgets.TbButtonColumn',
-            'htmlOptions'=>array('style'=>'width: 50px'),
+			'class'=>'bootstrap.widgets.TbButtonColumn',		
+			'htmlOptions' => array('style' =>'width: 100px; text-align:center;')		
 		),
 	),
 )); ?>
