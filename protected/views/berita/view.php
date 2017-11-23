@@ -14,7 +14,7 @@ $this->breadcrumbs=array(
 	'attributes'=>array(	
 		array(
 			'name'=>'Tanggal',
-			'value'=>date('d / m / Y', $model->Tanggal),
+			'value'=>date('d, M Y', $model->Tanggal),
 		),
 		'NamaBerita',
 		'Kategori',
@@ -26,7 +26,7 @@ $this->breadcrumbs=array(
 		array(
 			'name'=>'Foto Berita',
 			'type'=>'raw',
-			'value'=>'<img width="700px" height="300px" src="'.Yii::app()->request->baseUrl.'/images/SlideImage/'.$model->Link.'"/>',
+			'value'=>'<img width="700px" height="300px" src="'.Yii::app()->request->baseUrl.'/data/images/SlideImage/'.$model->Link.'"/>',
 		),
 	),
 )); ?>
@@ -43,11 +43,11 @@ $this->breadcrumbs=array(
 		),
 		array(
 			'type'=>'raw',
-			'value'=>'<img width="100%" height="300px" src="'.Yii::app()->request->baseUrl.'/images/SlideImage/'.$model->Link.'"/>',
+			'value'=>'<img width="100%" height="300px" src="'.Yii::app()->request->baseUrl.'/data/images/SlideImage/'.$model->Link.'"/>',
 		),
 		array(
 			'type'=>'raw',
-			'value'=>$model->Deskripsi,
+			'value'=>'<p  style="color:#999;">Jakarta, '.date('d, M Y', $model->Tanggal).'. Foto: Administrator Siatab'.$model->Deskripsi.'<p>',
 			'htmlOptions'=>array('style'=>'text-align:justify;')			
 		)
 	),
