@@ -3643,3 +3643,12 @@ Stack trace:
 REQUEST_URI=/siatab/data/PPK/default_profil.png
 HTTP_REFERER=http://localhost/siatab/PPK
 ---
+2017/11/23 16:44:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---

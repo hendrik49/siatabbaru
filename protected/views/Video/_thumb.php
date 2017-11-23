@@ -7,10 +7,9 @@
     	<source  src=<?php echo Yii::app()->request->baseUrl."/data/Video/".$data->Link;?> type="video/mp4">
 		</video>
 	</a>
-	<p class="date" style="font-size:12px;color:#999;">
+	<p class="date" style="font-size:12px;color:#999; background:rgb(58, 58, 58);padding: 5px 10px;">
 	<b><?php echo $data->NamaVideo ?></b>
 	</br>
-	<?php echo substr($data->Deskripsi,32,67);?>
 	<?php echo date('d, M Y', $data->Tanggal);?>	
 	<i> created by Admin </i>
 	</p>

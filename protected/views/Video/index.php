@@ -3,7 +3,7 @@
 
 $this->pageTitle=Yii::app()->name;
 $this->breadcrumbs=array(
-	'Video',
+	'Galeri Video',
 );
 ?>
 <h2 class="h-view">
