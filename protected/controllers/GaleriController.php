@@ -134,7 +134,7 @@ class GaleriController extends Controller
 			//	$model->Link =  $imgName();
 			if($model->save()) {
 				$this->_mapPath = Yii::app()->params->baseMapPath;
-				$model->Link->saveAs($this->_mapPath . '/images/SlideImage/'. $model->Link->getName());
+				$model->Link->saveAs($this->_mapPath . '/Galeri/'. $model->Link->getName());
 						
 				//if (!empty($myUpload)) {
 					//$this->_mapPath = Yii::app()->request->baseUrl;
@@ -182,7 +182,7 @@ class GaleriController extends Controller
 				$model->Link = $imgName;
 
 			if($model->save()) {
-				$this->_mapPath .= '/SlideImage';
+				$this->_mapPath .= '/Galeri';
 
 				if (!empty($file1))
 					$file1->saveAs($this->_mapPath .'/'. $file1->getName());

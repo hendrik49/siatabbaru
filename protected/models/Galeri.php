@@ -28,7 +28,7 @@ class Galeri extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('NamaGambar, status, Tanggal, Link', 'required'),
+			array('NamaGambar, status, Tanggal,Deskripsi, Link', 'required'),
 			array('Tanggal', 'numerical', 'integerOnly'=>true),
 				array('Link',
 				  'file', 'types'=>array(

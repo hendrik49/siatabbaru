@@ -2250,3 +2250,991 @@ Stack trace:
 REQUEST_URI=/siatab/Video
 HTTP_REFERER=http://localhost/siatab/Galeri
 ---
+2017/11/23 15:37:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/2
+---
+2017/11/23 15:37:54 [error] [exception.CException] exception 'CException' with message 'VideoController tidak bisa menemukan view "_form" yang di-request.' in E:\xampp\htdocs\siatab\yii\web\CController.php:879
+Stack trace:
+#0 E:\xampp\htdocs\siatab\protected\views\Video\update.php(13): CController->renderPartial('_form', Array)
+#1 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#3 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('update', Array, true)
+#5 E:\xampp\htdocs\siatab\protected\controllers\VideoController.php(194): CController->render('update', Array)
+#6 [internal function]: VideoController->actionUpdate('2')
+#7 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#8 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#9 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#12 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#16 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('update')
+#18 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('video/update')
+#19 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#21 {main}
+REQUEST_URI=/siatab/video/update/2
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/23 15:37:58 [error] [exception.CException] exception 'CException' with message 'VideoController tidak bisa menemukan view "_form" yang di-request.' in E:\xampp\htdocs\siatab\yii\web\CController.php:879
+Stack trace:
+#0 E:\xampp\htdocs\siatab\protected\views\Video\update.php(13): CController->renderPartial('_form', Array)
+#1 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#3 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('update', Array, true)
+#5 E:\xampp\htdocs\siatab\protected\controllers\VideoController.php(194): CController->render('update', Array)
+#6 [internal function]: VideoController->actionUpdate('3')
+#7 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#8 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#9 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#12 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#16 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('update')
+#18 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('video/update')
+#19 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#21 {main}
+REQUEST_URI=/siatab/video/update/3
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/23 15:40:35 [error] [exception.CException] exception 'CException' with message 'Properti "TbGridView.0" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWidgetFactory.php(162): CComponent->__set('0', Array)
+#1 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(PegawaiController), 'bootstrap.widge...', Array)
+#2 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 E:\xampp\htdocs\siatab\protected\views\Pegawai\index.php(56): CBaseController->widget('bootstrap.widge...', Array)
+#4 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#5 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#6 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#7 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#8 E:\xampp\htdocs\siatab\protected\controllers\PegawaiController.php(289): CController->render('index', Array)
+#9 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): PegawaiController->actionIndex()
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#13 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#19 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Pegawai')
+#20 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#22 {main}
+REQUEST_URI=/siatab/Pegawai
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/23 15:41:40 [error] [exception.CException] exception 'CException' with message 'Properti "TbDataColumn.htmlHeaderOptions" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\YiiBase.php(222): CComponent->__set('htmlHeaderOptio...', Array)
+#1 E:\xampp\htdocs\siatab\yii\zii\widgets\grid\CGridView.php(334): YiiBase::createComponent(Array, Object(TbGridView))
+#2 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbGridView.php(91): CGridView->initColumns()
+#3 E:\xampp\htdocs\siatab\yii\zii\widgets\grid\CGridView.php(305): TbGridView->initColumns()
+#4 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#5 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(148): TbGridView->init()
+#6 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 E:\xampp\htdocs\siatab\protected\views\Pegawai\index.php(56): CBaseController->widget('bootstrap.widge...', Array)
+#8 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#9 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 E:\xampp\htdocs\siatab\protected\controllers\PegawaiController.php(289): CController->render('index', Array)
+#13 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): PegawaiController->actionIndex()
+#14 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#23 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Pegawai')
+#24 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#25 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#26 {main}
+REQUEST_URI=/siatab/Pegawai
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/23 15:41:52 [error] [exception.CException] exception 'CException' with message 'Properti "TbDataColumn.htmlheaderOptions" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\YiiBase.php(222): CComponent->__set('htmlheaderOptio...', Array)
+#1 E:\xampp\htdocs\siatab\yii\zii\widgets\grid\CGridView.php(334): YiiBase::createComponent(Array, Object(TbGridView))
+#2 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbGridView.php(91): CGridView->initColumns()
+#3 E:\xampp\htdocs\siatab\yii\zii\widgets\grid\CGridView.php(305): TbGridView->initColumns()
+#4 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#5 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(148): TbGridView->init()
+#6 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 E:\xampp\htdocs\siatab\protected\views\Pegawai\index.php(56): CBaseController->widget('bootstrap.widge...', Array)
+#8 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#9 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 E:\xampp\htdocs\siatab\protected\controllers\PegawaiController.php(289): CController->render('index', Array)
+#13 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): PegawaiController->actionIndex()
+#14 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#23 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Pegawai')
+#24 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#25 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#26 {main}
+REQUEST_URI=/siatab/Pegawai
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/23 15:41:53 [error] [exception.CException] exception 'CException' with message 'Properti "TbDataColumn.htmlheaderOptions" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\YiiBase.php(222): CComponent->__set('htmlheaderOptio...', Array)
+#1 E:\xampp\htdocs\siatab\yii\zii\widgets\grid\CGridView.php(334): YiiBase::createComponent(Array, Object(TbGridView))
+#2 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbGridView.php(91): CGridView->initColumns()
+#3 E:\xampp\htdocs\siatab\yii\zii\widgets\grid\CGridView.php(305): TbGridView->initColumns()
+#4 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#5 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(148): TbGridView->init()
+#6 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 E:\xampp\htdocs\siatab\protected\views\Pegawai\index.php(56): CBaseController->widget('bootstrap.widge...', Array)
+#8 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#9 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 E:\xampp\htdocs\siatab\protected\controllers\PegawaiController.php(289): CController->render('index', Array)
+#13 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): PegawaiController->actionIndex()
+#14 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#23 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Pegawai')
+#24 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#25 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#26 {main}
+REQUEST_URI=/siatab/Pegawai
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/23 15:42:17 [error] [exception.CException] exception 'CException' with message 'Properti "TbDataColumn.htmlheaderOptions" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:174
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\YiiBase.php(222): CComponent->__set('htmlheaderOptio...', Array)
+#1 E:\xampp\htdocs\siatab\yii\zii\widgets\grid\CGridView.php(334): YiiBase::createComponent(Array, Object(TbGridView))
+#2 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbGridView.php(91): CGridView->initColumns()
+#3 E:\xampp\htdocs\siatab\yii\zii\widgets\grid\CGridView.php(305): TbGridView->initColumns()
+#4 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#5 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(148): TbGridView->init()
+#6 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 E:\xampp\htdocs\siatab\protected\views\Pegawai\index.php(56): CBaseController->widget('bootstrap.widge...', Array)
+#8 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#9 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 E:\xampp\htdocs\siatab\protected\controllers\PegawaiController.php(289): CController->render('index', Array)
+#13 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): PegawaiController->actionIndex()
+#14 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#23 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Pegawai')
+#24 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#25 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#26 {main}
+REQUEST_URI=/siatab/Pegawai
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/23 15:43:42 [error] [php] move_uploaded_file(E:/xampp/htdocs/siatab/data/SlideImage/20161128_143108.jpg): failed to open stream: No such file or directory (E:\xampp\htdocs\siatab\yii\web\CUploadedFile.php:197)
+Stack trace:
+#0 unknown(0): GaleriController->actionUpdate()
+#1 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#2 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#3 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams()
+#4 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): GaleriController->runAction()
+#5 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#6 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CAccessControlFilter->filter()
+#7 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): GaleriController->filterAccessControl()
+#8 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#9 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(266): GaleriController->runActionWithFilters()
+#11 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): GaleriController->run()
+#12 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController()
+#13 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\siatab\index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/galeri/update/2
+2017/11/23 15:44:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:44:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "images/SlideImage/20161128_143108.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('images/SlideIma...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/images/SlideImage/20161128_143108.jpg
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:45:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:45:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:45:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:46:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:46:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/3
+---
+2017/11/23 15:46:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/4
+---
+2017/11/23 15:47:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:49:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:50:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 15:51:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/3
+---
+2017/11/23 15:52:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/3
+---
+2017/11/23 15:52:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/4
+---
+2017/11/23 15:53:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Galeri/20161128_143108.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Galeri/201...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Galeri/20161128_143108.jpg
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/23 15:53:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Galeri/20161128_143304.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Galeri/201...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Galeri/20161128_143304.jpg
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/23 15:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Galeri/2
+---
+2017/11/23 15:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/images/SlideImage/20161128_143108.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/images/Sli...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/images/SlideImage/20161128_143108.jpg
+HTTP_REFERER=http://localhost/siatab/Galeri/2
+---
+2017/11/23 15:58:59 [error] [exception.CException] exception 'CException' with message 'Properti "Galeri.NamaBerita" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(144): CComponent->__get('NamaBerita')
+#1 E:\xampp\htdocs\siatab\protected\views\Galeri\view.php(42): CActiveRecord->__get('NamaBerita')
+#2 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('view', Array, true)
+#6 E:\xampp\htdocs\siatab\protected\controllers\GaleriController.php(75): CController->render('view', Array)
+#7 [internal function]: GaleriController->actionView('2')
+#8 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GaleriController), Array)
+#9 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GaleriController), Object(ReflectionMethod), Array)
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#13 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('view')
+#19 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Galeri/view')
+#20 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#22 {main}
+REQUEST_URI=/siatab/Galeri/2
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/23 15:59:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Galeri/2
+---
+2017/11/23 15:59:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/images/SlideImage/20161128_143108.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/images/Sli...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/images/SlideImage/20161128_143108.jpg
+HTTP_REFERER=http://localhost/siatab/Galeri/2
+---
+2017/11/23 15:59:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Galeri/2
+---
+2017/11/23 16:01:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Galeri/3
+---
+2017/11/23 16:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 16:07:22 [warning] [application] Gagal mengeset atribut unsafe "Deskripsi" dari kelas "Galeri".
+2017/11/23 16:07:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 16:08:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 16:08:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/3
+---
+2017/11/23 16:09:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/4
+---
+2017/11/23 16:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/images/SlideImage/20161128_143304.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/images/Sli...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/images/SlideImage/20161128_143304.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/23 16:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/images/SlideImage/20161128_143108.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/images/Sli...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/images/SlideImage/20161128_143108.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/23 16:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/images/SlideImage/20161128_143121.jpg"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/images/Sli...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/images/SlideImage/20161128_143121.jpg
+HTTP_REFERER=http://localhost/siatab/Berita
+---
+2017/11/23 16:09:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Galeri/2
+---
+2017/11/23 16:09:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Galeri/2
+---
+2017/11/23 16:09:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Galeri/3
+---
+2017/11/23 16:09:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Galeri/4
+---
+2017/11/23 16:13:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/sumur.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/sumur.png
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/23 16:13:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/danau.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/danau.png
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/23 16:13:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/embung.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Unit Kerja...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/embung.png
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/23 16:15:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/2
+---
+2017/11/23 16:15:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/images/SlideImage/20161214_174624.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/images/Sli...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/images/SlideImage/20161214_174624.mp4
+HTTP_REFERER=http://localhost/siatab/video/2
+---
+2017/11/23 16:15:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/2
+---
+2017/11/23 16:16:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/2
+---
+2017/11/23 16:16:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/2
+---
+2017/11/23 16:21:26 [error] [php] Undefined variable: model (E:\xampp\htdocs\siatab\protected\views\Galeri\_thumb.php:5)
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CController.php(870): GaleriController->renderFile()
+#1 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbThumbnails.php(40): GaleriController->renderPartial()
+#2 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(161): TbThumbnails->renderItems()
+#3 unknown(0): TbThumbnails->renderSection()
+#4 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(144): preg_replace_callback()
+#5 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(129): TbThumbnails->renderContent()
+#6 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(174): TbThumbnails->run()
+#7 E:\xampp\htdocs\siatab\protected\views\Galeri\index.php(48): GaleriController->widget()
+#8 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require()
+#9 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): GaleriController->renderInternal()
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(870): GaleriController->renderFile()
+#11 E:\xampp\htdocs\siatab\yii\web\CController.php(783): GaleriController->renderPartial()
+#12 E:\xampp\htdocs\siatab\protected\controllers\GaleriController.php(227): GaleriController->render()
+#13 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): GaleriController->actionIndex()
+#14 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams()
+#15 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): GaleriController->runAction()
+#16 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CAccessControlFilter->filter()
+#18 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): GaleriController->filterAccessControl()
+#19 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#20 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(266): GaleriController->runActionWithFilters()
+#22 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): GaleriController->run()
+#23 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController()
+#24 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#25 E:\xampp\htdocs\siatab\index.php(27): CWebApplication->run()
+REQUEST_URI=/siatab/Galeri
+2017/11/23 16:22:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Video/embung.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Video/embu...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Video/embung.png
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/23 16:22:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Video/danau.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Video/dana...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Video/danau.png
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/23 16:22:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data//data/Unit Kerja/Balai Wilayah Sungai Bali Penida/Mata Air/Video/20161214_174624.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data//data/Unit...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data//data/Unit%20Kerja/Balai%20Wilayah%20Sungai%20Bali%20Penida/Mata%20Air/Video/20161214_174624.mp4
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/23 16:23:47 [error] [exception.CException] exception 'CException' with message 'Properti "Video.NamaGambar" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(144): CComponent->__get('NamaGambar')
+#1 E:\xampp\htdocs\siatab\protected\views\Video\_thumb.php(10): CActiveRecord->__get('NamaGambar')
+#2 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\siatab\protected\extensions\bootstrap\widgets\TbThumbnails.php(40): CController->renderPartial('_thumb', Array)
+#6 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(161): TbThumbnails->renderItems()
+#7 [internal function]: CBaseListView->renderSection(Array)
+#8 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(144): preg_replace_callback('/{(\\w+)}/', Array, '{items}\n{pager}')
+#9 E:\xampp\htdocs\siatab\yii\zii\widgets\CBaseListView.php(129): CBaseListView->renderContent()
+#10 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(174): CBaseListView->run()
+#11 E:\xampp\htdocs\siatab\protected\views\Video\index.php(47): CBaseController->widget('bootstrap.widge...', Array)
+#12 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#13 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#14 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#15 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('index', Array, true)
+#16 E:\xampp\htdocs\siatab\protected\controllers\VideoController.php(225): CController->render('index', Array)
+#17 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(50): VideoController->actionIndex()
+#18 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#21 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#25 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('')
+#27 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video')
+#28 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#29 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#30 {main}
+REQUEST_URI=/siatab/Video
+HTTP_REFERER=http://localhost/siatab/Galeri
+---
+2017/11/23 16:25:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:25:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "<" seperti yang diminta.' in E:\xampp\htdocs\siatab\yii\web\CController.php:484
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CController.php(271): CController->missingAction('<')
+#1 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('<')
+#2 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video/<')
+#3 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#5 {main}
+REQUEST_URI=/siatab/Video/%3C?php
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:26:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:26:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "<" seperti yang diminta.' in E:\xampp\htdocs\siatab\yii\web\CController.php:484
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CController.php(271): CController->missingAction('<')
+#1 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('<')
+#2 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video/<')
+#3 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#5 {main}
+REQUEST_URI=/siatab/Video/%3C?php
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:26:52 [error] [exception.CException] exception 'CException' with message 'Properti "Video.NamaGambar" tidak didefinisikan.' in E:\xampp\htdocs\siatab\yii\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\db\ar\CActiveRecord.php(144): CComponent->__get('NamaGambar')
+#1 E:\xampp\htdocs\siatab\protected\views\Video\view.php(42): CActiveRecord->__get('NamaGambar')
+#2 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(127): require('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\siatab\yii\web\CBaseController.php(96): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#4 E:\xampp\htdocs\siatab\yii\web\CController.php(870): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#5 E:\xampp\htdocs\siatab\yii\web\CController.php(783): CController->renderPartial('view', Array, true)
+#6 E:\xampp\htdocs\siatab\protected\controllers\VideoController.php(75): CController->render('view', Array)
+#7 [internal function]: VideoController->actionView('2')
+#8 E:\xampp\htdocs\siatab\yii\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#9 E:\xampp\htdocs\siatab\yii\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#10 E:\xampp\htdocs\siatab\yii\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 E:\xampp\htdocs\siatab\yii\web\filters\CFilter.php(41): CFilterChain->run()
+#13 E:\xampp\htdocs\siatab\yii\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 E:\xampp\htdocs\siatab\yii\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\xampp\htdocs\siatab\yii\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\xampp\htdocs\siatab\yii\web\CController.php(292): CFilterChain->run()
+#17 E:\xampp\htdocs\siatab\yii\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('view')
+#19 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video/view')
+#20 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#22 {main}
+REQUEST_URI=/siatab/Video/2
+HTTP_REFERER=http://localhost/siatab/Video
+---
+2017/11/23 16:26:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:26:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Galeri/20161214_174624.mp4"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Galeri/201...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Galeri/20161214_174624.mp4
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:27:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:27:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "<" seperti yang diminta.' in E:\xampp\htdocs\siatab\yii\web\CController.php:484
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CController.php(271): CController->missingAction('<')
+#1 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('<')
+#2 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video/<')
+#3 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#5 {main}
+REQUEST_URI=/siatab/Video/%3C?php
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:27:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:27:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "<" seperti yang diminta.' in E:\xampp\htdocs\siatab\yii\web\CController.php:484
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CController.php(271): CController->missingAction('<')
+#1 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(283): CController->run('<')
+#2 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('Video/<')
+#3 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#5 {main}
+REQUEST_URI=/siatab/Video/%3C?php
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:27:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:28:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:29:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:29:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:29:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:30:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/Video/2
+---
+2017/11/23 16:30:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/2
+---
+2017/11/23 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/galeri/2
+---
+2017/11/23 16:30:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/3
+---
+2017/11/23 16:30:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "data/Video/danau.png"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('data/Video/dana...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/data/Video/danau.png
+HTTP_REFERER=http://localhost/siatab/video/3
+---
+2017/11/23 16:32:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/3
+---
+2017/11/23 16:33:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "css/detailview/styles.css"' in E:\xampp\htdocs\siatab\yii\web\CWebApplication.php:287
+Stack trace:
+#0 E:\xampp\htdocs\siatab\yii\web\CWebApplication.php(142): CWebApplication->runController('css/detailview/...')
+#1 E:\xampp\htdocs\siatab\yii\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\siatab\index.php(27): CApplication->run()
+#3 {main}
+REQUEST_URI=/siatab/css/detailview/styles.css
+HTTP_REFERER=http://localhost/siatab/video/4
+---

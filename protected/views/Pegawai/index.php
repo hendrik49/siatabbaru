@@ -31,8 +31,13 @@ $this->breadcrumbs=array(
 			'enablePagination' => true,
 			'summaryText'=>'Displaying {start}-{end} of {count} results.',
 					'columns'=>
+					
 				array( 
-					'ID','Nama', 'NIP', 'Email', 'Golongan', 'Jabatan','Bidang', 
+					array(
+						'name'=>'ID',
+						'htmlOptions' => array('style' =>'width: 30px;text-align:center;')					
+					),	
+					'Nama', 'NIP', 'Email', 'Golongan', 'Jabatan','Bidang',			 
 					array(
 						'name'=>'Foto', 
 						'type'=>'raw',

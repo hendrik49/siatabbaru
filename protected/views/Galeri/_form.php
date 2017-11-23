@@ -17,10 +17,16 @@
 	<?php echo $form->textField($model,'NamaGambar',array('size'=>60,'maxlength'=>255)); ?>
 	<?php echo $form->error($model,'NamaGambar'); ?>	
 	</div>
-		
+
+	<div class="row">
+	<?php echo $form->labelEx($model,'Kategori'); ?>
+	<?php echo $form->textField($model,'Kategori',array('size'=>60,'maxlength'=>100)); ?>
+	<?php echo $form->error($model,'Kategori'); ?>	
+	</div>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'Deskripsi'); ?>
-		<?php echo $form->textArea($model,'Deskripsi',array('rows'=>6, 'name'=>'editor1', 'id'=>'editor1', 'class'=>'ckeditor','cols'=>50)); ?>
+		<?php echo $form->textArea($model,'Deskripsi', array('rows'=>6, 'class'=>'ckeditor','cols'=>50)); ?>
 		<?php echo $form->error($model,'Deskripsi'); ?>
 	</div>
 
@@ -31,7 +37,7 @@
 		  array('empty' => '(Pilih Status Terbit)'));?>
 	<?php echo $form->error($model,'status'); ?>
 	</div>
-
+		
 	<div class="row">
 		<?php echo $form->labelEx($model,'Link'); ?>
 		<?php echo $form->FileField($model,'Link',array('size'=>60,'maxlength'=>255)); ?>

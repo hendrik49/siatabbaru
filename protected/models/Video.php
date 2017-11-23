@@ -28,11 +28,11 @@ class Video extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('NamaVideo, status, Tanggal, Link', 'required'),
+			array('NamaVideo, status, Tanggal,Deskripsi, Link', 'required'),
 			array('Tanggal', 'numerical', 'integerOnly'=>true),
 				array('Link',
 				  'file', 'types'=>array(
-						'jpg','jpeg','png','gif','bmp',
+						'mp4','3gp',
 					
 				  ),
 				  'allowEmpty'=>true,
