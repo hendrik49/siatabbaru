@@ -60,6 +60,7 @@ include('styles-css.php');
 					'htmlOptions'=>array('class'=>'rc-button rc-button-submit'),
 					'type'=>'primary',
 					'label'=>'Login',
+					
 				)); ?>
 
 			</div>

@@ -311,10 +311,15 @@ class HujanController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
-
+		$this->loadModelW($id)->delete();
+		$this->loadModelG($id)->delete();
+		//$this->loadModelP($id)->delete();
+		$this->loadModelM($id)->delete();
+		$this->loadModelN($id)->delete();
+		$this->loadModelInfo($id)->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 
 	public function actionSetkot()

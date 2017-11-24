@@ -179,11 +179,19 @@ p.word{
         </div>
 
         <div class="kanan">
+            <?php if(Yii::app()->user->isGuest) : ?>
             <a href="<?php echo Yii::app()->baseUrl; ?>/site/login">
                 <div class="cssLogin">
                     <p style="font-size:16px;color:white">SIGN IN</p>
                 </div>
             </a>
+            <?php else : ?>
+            <a href="<?php echo Yii::app()->baseUrl; ?>/site/logout">
+                <div class="cssLogin">
+                    <p style="font-size:16px;color:white">SIGN OUT</p>
+                </div>
+            </a>
+            <?php endif ?>
         </div>
    
         <!-- <img class="logo" src="../images/LOGO-KEMENTERIAN-PEKERJAAN-UMUM.png">

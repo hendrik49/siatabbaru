@@ -45,7 +45,7 @@ class MataAirController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('search','index','view','viewm','viewt','viewtg','viewts','viewk','search','tambah', 'detail', 'viewi'),
+				'actions'=>array('search','index','view','search','tambah', 'detail', 'viewi', 'emataair'),
 				'users'=>array('*'),
 			),
  
@@ -478,10 +478,16 @@ class MataAirController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
+		$this->loadModelW($id)->delete();
+		$this->loadModelG($id)->delete();
+		$this->loadModelP($id)->delete();
+		$this->loadModelM($id)->delete();
+		$this->loadModelN($id)->delete();
+		$this->loadModelInfo($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 	/**
 	 * Lists all models.
@@ -512,7 +518,6 @@ class MataAirController extends Controller
 			'model'=>$model,
 		));
 	}
-	
 	
 	public function actionTambah()
 	{
@@ -694,6 +699,12 @@ class MataAirController extends Controller
 		));
 	}
 
+	public function actionEmataair()
+    {
+		if(isset($_POST['MataAir'])){
+			MataAir::exportXls();
+		}
+	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

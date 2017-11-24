@@ -77,22 +77,4 @@
 	</div>
 <?php
 
-function getUKByAdmin()
-{
-	//$id = Yii::app()->$model->ID_IDBalaiJu;
-	//$id = array($model, 'ID_IDBalaiJu');
-	
-	if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN))
-	{
-		if (!isset($model->ID_IDBalaiJu)){
-		$id = 2;
-		$command = Yii::app()->db->createCommand("SELECT * FROM t_unitkerja WHERE ID_Admin='$id'");
-		$query = $command->query();
-		$data = $query->read();
-		return $data['NamaUnitKerja'];	
-		}else {
-			return '';
-		}
-	}
-}
 ?>

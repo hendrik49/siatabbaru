@@ -30,7 +30,10 @@ class InfoSumur extends CActiveRecord
 		return array(
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID_IDBalaiJu, NoDataJu', 'length', 'max'=>13),
-			array('foto1, foto2, foto3, foto4, foto5', 'file', 'types'=>array('jpg', 'jpeg', 'gif', 'png', 'bmp'), 'allowEmpty'=>true),
+			array('foto1, foto2, foto3, foto4, foto5', 
+				'file', 'types'=>'jpg, jpeg, gif, png, bmp',
+				'allowEmpty'=>true),
+				
 			array('video', 'file', 'types'=>array('mp4', '3gp'), 'maxSize'=>1024 * 1024 * 20, 'tooLarge'=>'File has to be smaller than 20MB', 'allowEmpty'=>true),
 			array('dokumen_pendukung', 'file', 'types'=>array('jpg', 'jpeg', 'png', 'pdf', 'xls', 'doc', 'xlsx'), 'allowEmpty'=>true),
 			array('baku_mutuair, konduktivitas, nilai_storativitas, nilai_tranmisivitas, sumber_pendanaan, instansi_pembangun, dokumen_pendukung', 'length', 'max'=>100),
@@ -80,7 +83,7 @@ class InfoSumur extends CActiveRecord
 			'foto3' => 'Foto - 3',
 			'foto4' => 'Foto - 4',
 			'foto5' => 'Foto - 5',
-			'video' => 'Video',
+			//'video' => 'Video',
 		);
 	}
 

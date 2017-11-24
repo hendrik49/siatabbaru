@@ -48,7 +48,7 @@ $this->breadcrumbs=array(
 	
 </style>
 	<div>
-		<div class="span8">
+		<div class="span12">
 
 			<div class="span3" style="padding-left:5px;">
 
@@ -82,34 +82,5 @@ $this->breadcrumbs=array(
 				</div>
 		</div>
 
-		<div class="span4" >
-			<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) :?> | 
-			<?php $datacomp = 0;
-				$this->widget('bootstrap.widgets.TbButton', array( 'type'=>'primary',
-					'label'=>'Tambah Sistem',
-					'url'=>'/siatab/sistembaku/add',
-					'htmlOptions'=>array('data-dismiss'=>'CHtml'),
-				)); 
-			?>
-			<?php endif ?>
-			<?php //$this->renderPartial('//sumurs/search', array('model'=>$model)); ?>
-			<?php 		
-				$this->widget('bootstrap.widgets.TbGridView', array(
-					'type'=>'striped bordered condensed',
-					'id'=>'SistemBaku',
-					//'dataProvider'=>$model->search(),
-					'dataProvider'=>$dataProvider,
-					//'filter'=>$model,
-					'template'=>"{items}",
-					'columns'=>array( 'Nama_Sistem',
-					array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{view}', 'buttons'=>array(
-							'viewButtonUrl'=>'Yii::app()->createUrl("sistembaku/view", array("id"=>$data->ID_Balai_Sistem))'),
-						), 
-						),
-					)
-
-				); 		
-			?>		
-			
-		</div>
+		
 	</div>	

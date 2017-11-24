@@ -1,11 +1,10 @@
 <?php
-$this->pageTitle=Yii::app()->name . ' - ATAB';
-$this->breadcrumbs=array(
-	'Air Baku'=>array('/sistembaku/listbaku'),
-	'Mata Air'=>array('/mataair/index'),
-	'Tambah data',
-);
-
+	$this->pageTitle=Yii::app()->name . ' - ATAB';
+	$this->breadcrumbs=array(
+		'Air Baku'=>array('/sistembaku/listbaku'),
+		'Mata Air'=>array('/mataair/index'),
+		'(Tambah/Ubah)',
+	);
 ?>
 <div style="float:right; margin-top:-53px; margin-right: 185px;">
 

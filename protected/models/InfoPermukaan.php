@@ -30,8 +30,13 @@ class InfoPermukaan extends CActiveRecord
 		return array(
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID_IDBalaiJu, NoDataJu', 'length', 'max'=>13),
+<<<<<<< HEAD
+			array('foto1,foto2,foto3,foto4,foto5', 'length', 'max'=>100),
+			//array('video', 'file', 'types'=>array('mp4', '3gp'),'maxSize'=>1024 * 1024 * 20, 'tooLarge'=>'File has to be smaller than 20MB', 'allowEmpty'=>true),			
+=======
 			array('foto1,foto2,foto3,foto4,foto5', 'maxSize'=>1024 * 1024 * 10, 'tooLarge'=>'File has to be smaller than 20MB', 'allowEmpty'=>true),
 			array('video', 'file', 'types'=>array('mp4', '3gp'),'maxSize'=>1024 * 1024 * 20, 'tooLarge'=>'File has to be smaller than 20MB', 'allowEmpty'=>true),			
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('', 'safe', 'on'=>'search'),

@@ -45,10 +45,9 @@ class PermukaanController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','viewm','viewt','viewtg','viewts','viewk','search','tambah', 'detail', 'viewi'),
+				'actions'=>array('index','view', 'search','tambah', 'detail', 'viewi', 'esungai'),
 				'users'=>array('*'),
 			),
- 
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('add','update','create','setKot'),
 				'users'=>array_merge($user['superAdmin'], $user['admin']),
@@ -197,9 +196,7 @@ class PermukaanController extends Controller
 		));
 		
 	}
-	
-	
-	
+
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -255,6 +252,14 @@ class PermukaanController extends Controller
 			'modelteknis'=>$modelteknis,
 		));		
 	}
+
+	public function actionEsungai()
+    {
+		if(isset($_POST['Permukaan'])){
+			Permukaan::exportXls();
+		}
+	}
+
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -357,14 +362,14 @@ class PermukaanController extends Controller
 			$imgName2 = $modelInfoMa->foto1; $imgName3 = $modelInfoMa->foto2; 
 			$imgName4 = $modelInfoMa->foto3; $imgName5 = $modelInfoMa->foto4;
 			$imgName6 = $modelInfoMa->foto5; 
-			$video = $modelInfoMa->video; 
+			//$video = $modelInfoMa->video; 
 			
 			$myUpload3 = CUploadedFile::getInstance($modelInfoMa,'foto1');
 			$myUpload4 = CUploadedFile::getInstance($modelInfoMa,'foto2');
 			$myUpload5 = CUploadedFile::getInstance($modelInfoMa,'foto3');
 			$myUpload6 = CUploadedFile::getInstance($modelInfoMa,'foto4');
 			$myUpload7 = CUploadedFile::getInstance($modelInfoMa,'foto5');
-			$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'video');
+			//$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'video');
 			
 			if (!empty($myUpload3)){ $modelInfoMa->foto1 = $myUpload3->getName(); 
 			}else{$modelInfoMa->foto1 = $imgName2;}
@@ -376,8 +381,8 @@ class PermukaanController extends Controller
 			}else{$modelInfoMa->foto4 = $imgName5;}		
 			if (!empty($myUpload7)){ $modelInfoMa->foto5 = $myUpload7->getName();
 			}else{$modelInfoMa->foto5 = $imgName6;}		
-			if (!empty($myUpload8)){ $modelInfoMa->video = $myUpload8->getName();
-			}else{$modelInfoMa->video = $video;}		
+			//if (!empty($myUpload8)){ $modelInfoMa->video = $myUpload8->getName();
+			//}else{$modelInfoMa->video = $video;}		
 
 
 			if($modelInfoMa->save()) {
@@ -401,10 +406,10 @@ class PermukaanController extends Controller
 					$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 					$myUpload7->saveAs($this->_mapPath6 . '/Permukaan/Foto/'. $myUpload7->getName());
 				}
-				if (!empty($myUpload8)) {
-					$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
-					$myUpload8->saveAs($this->_mapPath6 . '/Permukaan/Video/'. $myUpload8->getName());
-				}
+				//if (!empty($myUpload8)) {
+				//	$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
+				//	$myUpload8->saveAs($this->_mapPath6 . '/Permukaan/Video/'. $myUpload8->getName());
+				//}
 			}
 			$this->redirect(array('//permukaan/view','id'=>$modelInfoMa->ID));
 		}
@@ -427,10 +432,16 @@ class PermukaanController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
-
+		$this->loadModelW($id)->delete();
+		$this->loadModelG($id)->delete();
+		$this->loadModelP($id)->delete();
+		$this->loadModelM($id)->delete();
+		$this->loadModelN($id)->delete();
+		$this->loadModelInfo($id)->delete();
+		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 	/**
 	 * Lists all models.
@@ -447,16 +458,12 @@ class PermukaanController extends Controller
 			$model->attributes=$_GET['Permukaan'];
 			$criteria=new CDbCriteria;
 			
-
-		//if (isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_ADMIN)
-		//	$criteria->compare('Administrator', Yii::app()->user->name);
-
-		$dataProvider=new CActiveDataProvider('Permukaan', array(
-			'criteria'=>$criteria,
-			'sort'=>array(
-				//'defaultOrder'=>'Tanggal DESC',
-			),
-		));
+			$dataProvider=new CActiveDataProvider('Permukaan', array(
+					'criteria'=>$criteria,
+					'sort'=>array(
+						//'defaultOrder'=>'Tanggal DESC',
+					),
+				));
 			$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 			'model'=>$model,
@@ -543,6 +550,7 @@ class PermukaanController extends Controller
 					$this->redirect(array('//permukaan/viewt','id'=>$modelteknis->ID));
 				}
 			}
+
 			
 			if(isset($_POST['TeknisWaPermukaan'])){
 				$modelteknisWa->attributes=$_POST['TeknisWaPermukaan'];
@@ -587,7 +595,7 @@ class PermukaanController extends Controller
 				$myUpload5 = CUploadedFile::getInstance($modelInfoMa,'foto3');
 				$myUpload6 = CUploadedFile::getInstance($modelInfoMa,'foto4');
 				$myUpload7 = CUploadedFile::getInstance($modelInfoMa,'foto5');
-				$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'video');
+				//$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'video');
 				
 				if (!empty($myUpload3)){ $modelInfoMa->foto1 = $myUpload3->getName(); 
 				}//else{$modelInfoMa->foto1 = $imgName2;}
@@ -599,8 +607,8 @@ class PermukaanController extends Controller
 				}//else{$modelInfoMa->foto4 = $imgName5;}		
 				if (!empty($myUpload7)){ $modelInfoMa->foto5 = $myUpload7->getName();
 				}//else{$modelInfoMa->foto5 = $imgName6;}		
-				if (!empty($myUpload8)){ $modelInfoMa->video = $myUpload8->getName();
-				}//else{$modelInfoMa->foto5 = $imgName6;}		
+				//if (!empty($myUpload8)){ $modelInfoMa->video = $myUpload8->getName();
+				//}//else{$modelInfoMa->foto5 = $imgName6;}		
 	
 				if($modelInfoMa->save()) {	}
 				if (!empty($myUpload3)) {
@@ -623,10 +631,10 @@ class PermukaanController extends Controller
 					$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 					$myUpload7->saveAs($this->_mapPath6 . '/Permukaan/Foto/'. $myUpload7->getName());
 				}
-				if (!empty($myUpload8)) {
-					$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
-					$myUpload8->saveAs($this->_mapPath6 . '/Permukaan/Video/'. $myUpload8->getName());
-				}
+				//if (!empty($myUpload8)) {
+				//	$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
+				//	$myUpload8->saveAs($this->_mapPath6 . '/Permukaan/Video/'. $myUpload8->getName());
+				//}
 			$this->redirect(array('//permukaan/view','id'=>$modelInfoMa->ID));				
 		}
 
@@ -709,8 +717,6 @@ class PermukaanController extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $modelInfoMa;
 	}
-	
-	
 	
 	/**
 	 * Performs the AJAX validation.

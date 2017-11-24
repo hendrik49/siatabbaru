@@ -12,6 +12,16 @@ class MataAir extends CActiveRecord
 		return parent::model($className);
 	}
 	
+	public $manfaat_jiwa;
+	public $debit_liter;
+	public $nama_lembaga;
+	public $broncaptering;
+	public $info_gambar;
+	public $status_aset;
+	public $tahun_bangun;
+	public $nama_prov;
+	public $n_prov;
+	public $nama_sungai;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -37,9 +47,9 @@ class MataAir extends CActiveRecord
 			array('provinsi, kota, kecamatan, desa, status', 'length', 'max'=>100),
 			array('bujur_timur, lintang_selatan', 'length', 'max'=>20),
 			array('elevasi', 'length', 'max'=>10),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('nama_das,nama_sistem, nama_ws, nama_cat, provinsi, kota, kecamatan', 'safe', 'on'=>'search'),
+			/* ------------Search Semua Data Tabel------------*/
+			array('nama_das, nama_sistem, nama_ws, nama_cat, provinsi, kota, kecamatan, desa,
+				tahun_bangun, debit_liter, manfaat_jiwa, broncaptering', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,10 +64,12 @@ class MataAir extends CActiveRecord
 			'admin'=>array(self::BELONGS_TO, 'User', 'ID_IDBalai'),
 			'balai'=>array(self::BELONGS_TO, 'UnitKerja', 'ID_IDBalai'),
 			'kotas'=>array(self::BELONGS_TO, 'Kota', 'kota'),
-			'madasar'=>array(self::BELONGS_TO, 'MataAir', 'ID_IDBalai'),
-			'manfaat'=>array(self::BELONGS_TO, 'ManfaatMA', 'ID_IDBalai'),
-			'teknissat'=>array(self::BELONGS_TO, 'TeknisMA', 'ID_IDBalai'),
-			'teknisdua'=>array(self::BELONGS_TO, 'TeknisWaMA', 'ID_IDBalai'),
+			'madasar'=>array(self::BELONGS_TO, 'MataAir', 'ID'),
+			'manfaat'=>array(self::BELONGS_TO, 'ManfaatMA', 'ID'),
+			'teknissat'=>array(self::BELONGS_TO, 'TeknisMA', 'ID'),
+			'teknisdua'=>array(self::BELONGS_TO, 'TeknisWaMA', 'ID'),
+			'teknisga'=>array(self::BELONGS_TO, 'TeknisGaMA', 'ID'),
+			'kondisi'=>array(self::BELONGS_TO, 'KondisiMA', 'ID'),
 		);
 	}
 
@@ -94,34 +106,91 @@ class MataAir extends CActiveRecord
 	 */
 	public function search()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
-
 		$criteria=new CDbCriteria;
+		$criteria->with= array(
+			'admin'=>array('select'=>'Nama'),
+			//'info'=>array('select'=>'foto1'),
+			'manfaat'=>array('select'=>'jiwa, debit, tadah_saatini, suplesi_saatini'),
+			//'teknissat'=>array('select'=>'nama_objek'),
+			//'teknisdua'=>array('select'=>'status_aset'),
+			'teknisga'=>array('select'=>'tahun_bangun, nama_lembaga'),
+			'kondisi'=>array('select'=>'broncaptering'),
+			//'kotas'=>array('select'=>'id_prov, provinsi'),
+		);
 
-		$criteria=new CDbCriteria;
+		$criteria->compare('manfaat.jiwa',$this->manfaat_jiwa, true);
+		$criteria->compare('manfaat.debit',$this->debit_liter, true);
+		//$criteria->compare('manfaat.nama_sungai',$this->nama_sungai, true);
+		$criteria->compare('kondisi.broncaptering',$this->broncaptering, true);
+		//$criteria->compare('teknisdua.status_aset',$this->status_aset, true);
+		$criteria->compare('teknisga.tahun_bangun',$this->tahun_bangun, true);
+
 		$criteria->compare('nama_das',$this->nama_das, true);
+		$criteria->compare('nama_objek',$this->nama_objek, true);
 		$criteria->compare('nama_ws',$this->nama_ws, true);	
-		$criteria->compare('nama_ws',$this->nama_sistem, true);		
+		$criteria->compare('nama_sistem',$this->nama_sistem, true);		
 		$criteria->compare('provinsi',$this->provinsi, true);
 		$criteria->compare('kota',$this->kota, true);
-		$criteria->compare('kecamatan',$this->kecamatan);
-		$criteria->compare('desa',$this->desa);
-		//$criteria->compare('sumurw.kode_sumur',$this->sumurw.kode_sumur);
-		//$criteria->compare('desa',$this->desa);
-		/*if (Yii::app()->user->ID == ID_IDBalai) {
-			$criteria->compare('ID_IDBalai', Yii::app()->user->ID);
-		}*/
+		$criteria->compare('kecamatan',$this->kecamatan, true);
+		$criteria->compare('desa',$this->desa, true);
+
+		if (isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_ADMIN){
+			$criteria->compare('ID_IDBalai', Yii::app()->user->uid);
 		
+<<<<<<< HEAD
+			return new CActiveDataProvider($this, array(
+				'criteria'=>$criteria,
+				'sort'=>array(
+					'defaultOrder'=>'nama_ws DESC',
+				),
+				'sort'=>array(
+					'attributes'=>array(
+						'manfaat_jiwa'=>array('asc'=>'manfaat.jiwa','desc'=>'manfaat.jiwa'),
+						'debit_liter'=>array('asc'=>'manfaat.debit', 'desc'=>'manfaat.debit'),
+						//'nama_sungai'=>array('asc'=>'manfaat.nama_sungai', 'desc'=>'manfaat.nama_sungai'),
+						'broncaptering'=>array('asc'=>'kondisi.broncaptering', 'desc'=>'kondisi.broncaptering'),
+						'tahun_bangun'=>array('asc'=>'teknisga.tahun_bangun', 'desc'=>'teknisga.tahun_bangun'),
+						'*',
+					),
+				),
+				'pagination' => array(
+					'pageSize' => 6,
+				),
+			));
+		}else{			
+			return new CActiveDataProvider($this, array(
+				'criteria'=>$criteria,
+				'sort'=>array(
+					'defaultOrder'=>'nama_ws DESC',
+				),
+				'sort'=>array(
+					'attributes'=>array(
+						'manfaat_jiwa'=>array('asc'=>'manfaat.jiwa','desc'=>'manfaat.jiwa','value'=>'manfaat.jiwa'),
+						'debit_liter'=>array('asc'=>'manfaat.debit', 'desc'=>'manfaat.debit','value'=>'manfaat.debit'),
+						//'nama_sungai'=>array('asc'=>'manfaat.nama_sungai', 'desc'=>'manfaat.nama_sungai'),
+						'broncaptering'=>array('asc'=>'kondisi.broncaptering', 'desc'=>'kondisi.broncaptering'),
+						'tahun_bangun'=>array('asc'=>'teknisga.tahun_bangun', 'desc'=>'teknisga.tahun_bangun'),
+						//'nama_prov'=>array('asc'=>'kotas.id_prov', 'desc'=>'kotas.id_prov'),
+						
+						'*',
+					),
+				),
+				'pagination' => array(
+					'pageSize' => 6,
+				),
+			));		
+		}
+=======
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 			'pagination' => array(
 				'pageSize' => 6,
 			),
 		));
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 	}
 	
-		public static function getAvailableDataMataairId()
+	public static function getAvailableDataMataairId()
 	{
 		$criteria = new CDbCriteria;
 		$criteria->limit = 1;
@@ -136,8 +205,10 @@ class MataAir extends CActiveRecord
 		else
 			return 1;
 	}	
+
 	public static function getAvailableNoData()
-	{$criteria = new CDbCriteria;
+	{
+		$criteria = new CDbCriteria;
 		if (isset(Yii::app()->user->uid)) {
 			
 			$criteria->compare('ID_IDBalai', Yii::app()->user->uid);
@@ -154,6 +225,7 @@ class MataAir extends CActiveRecord
 				return 1;
 		}
 	}
+
 	public static function getNoDataByAdmin()
 	{
 		if (isset(Yii::app()->user->uid)) {
@@ -169,5 +241,110 @@ class MataAir extends CActiveRecord
 				return '';
 			}
 	}	
+
+	public function getTotals($column,$ids)	
+	{
+		if($ids){
+			$ids = implode(",",$ids);
+			$connection=Yii::app()->db;
+			$command=$connection->createCommand("SELECT SUM($column) FROM t_mataair2 where id in ($ids)");
+			$amount = $command->queryScalar();
+			return number_format($amount,0);
+		}
+		else 
+		return '0';
+	} 
+
+	public static function exportXls()
+    {
+		if(isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN OR Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)){
+			$datadatas = self::model()->findAll();
+			$ii = 2;
+			$objPHPExcel=Yii::createComponent('application.extensions.PHPExcel');
+			$objPHPExcel->setActiveSheetIndex(0)
+				->mergeCells('A1:K1')
+				->setCellValue('A1', 'Data Dasar')
+				->setCellValue('A2', 'No')
+				->setCellValue('B2', 'Nama Objek')
+				->setCellValue('C2', 'Nama Sistem,')
+				->setCellValue('D2', 'Wilayah Sungai')
+				->setCellValue('E2', 'Provinsi')
+				->setCellValue('F2', 'Kota/ Kabupaten')
+				->setCellValue('G2', 'Kecamatan')
+				->setCellValue('H2', 'Desa')
+				->setCellValue('I2', 'Manfaat Jiwa')
+				->setCellValue('J2', 'Debit / Liter')
+				->setCellValue('K2', 'tahun bangun');
+			
+			foreach ($datadatas as $urut){	
+				$ii++;
+				$objPHPExcel->setActiveSheetIndex(0)->setCellValue('A'.$ii, $urut->NoData)
+				->setCellValue('B'.$ii, $urut->nama_objek)
+				->setCellValue('C'.$ii, $urut->nama_sistem)
+				->setCellValue('D'.$ii, $urut->nama_ws)
+				->setCellValue('E'.$ii, $urut->provinsi)
+				->setCellValue('F'.$ii, $urut->kota)
+				->setCellValue('G'.$ii, $urut->kecamatan)
+				->setCellValue('H'.$ii, $urut->desa)
+				->setCellValue('I'.$ii, $urut->manfaat->jiwa)
+				->setCellValue('J'.$ii, $urut->manfaat->debit)
+				->setCellValue('K'.$ii, $urut->teknisga->tahun_bangun);
+			}
+		}else if(Yii::app()->user->isGuest){
+			$datadatas = self::model()->findAll();
+			$ii = 2;
+			$objPHPExcel=Yii::createComponent('application.extensions.PHPExcel');
+			$objPHPExcel->setActiveSheetIndex(0)
+				->mergeCells('A1:K1')
+				->setCellValue('A1', 'Data Dasar')
+				->setCellValue('A2', 'No')
+				->setCellValue('B2', 'Nama Objek')
+				->setCellValue('C2', 'Nama Sistem,')
+				->setCellValue('D2', 'Wilayah Sungai')
+				->setCellValue('E2', 'Provinsi')
+				->setCellValue('F2', 'Kota/ Kabupaten')
+				->setCellValue('G2', 'Kecamatan')
+				->setCellValue('H2', 'Desa')
+				->setCellValue('I2', 'Manfaat Jiwa')
+				->setCellValue('J2', 'Debit / Liter')
+				->setCellValue('K2', 'tahun bangun');
+			
+			foreach ($datadatas as $urut){	
+				$ii++;
+				$objPHPExcel->setActiveSheetIndex(0)->setCellValue('A'.$ii, $urut->NoData)
+				->setCellValue('B'.$ii, $urut->nama_objek)
+				->setCellValue('C'.$ii, $urut->nama_sistem)
+				->setCellValue('D'.$ii, $urut->nama_ws)
+				->setCellValue('E'.$ii, $urut->provinsi)
+				->setCellValue('F'.$ii, $urut->kota)
+				->setCellValue('G'.$ii, $urut->kecamatan)
+				->setCellValue('H'.$ii, $urut->desa)
+				->setCellValue('I'.$ii, $urut->manfaat->jiwa)
+				->setCellValue('J'.$ii, $urut->manfaat->debit)
+				->setCellValue('K'.$ii, $urut->teknisga->tahun_bangun);
+			}
+		}
+
+		header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		if(isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_ADMIN){
+			header('Content-Disposition: attachment;filename="Air Baku (Mata Air) - '.UnitKerja::getNamaUnitKerjaByAdmin().'.xlsx"');
+		}else if(isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN){
+			header('Content-Disposition: attachment;filename="Air Baku (Mata Air) se-Indonesia.xlsx"');
+		}else if(Yii::app()->user->isGuest){
+			header('Content-Disposition: attachment;filename="Air Baku (Mata Air).xlsx"');
+		}
+		header('Cache-Control: max-age=0');
+		// If you're serving to IE 9, then the following may be needed
+		header('Cache-Control: max-age=1');
+		// If you're serving to IE over SSL, then the following may be needed
+		header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+		header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); // always modified
+		header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
+		header ('Pragma: public'); // HTTP/1.0
+		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+		$objWriter->save('php://output');
+		unset($objPHPExcel);
+	}
+
 }
 ?>

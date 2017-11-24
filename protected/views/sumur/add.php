@@ -111,6 +111,9 @@ include '../siatab/connect.php';
 
 
 <script>
+<<<<<<< HEAD
+=======
 	
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 </script>
 </html>

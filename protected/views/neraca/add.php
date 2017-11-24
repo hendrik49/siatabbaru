@@ -150,7 +150,7 @@ function getDataKota(){
 	document.getElementById("TotalABKabKota").value = tot;
 	document.getElementById("dilayani").value = totterlayani;
 	document.getElementById("kebutuhanAB").value = totaldbtawal;
-	document.getElementById("Target").value = (totaldbtawal/ Number(60))/Number(365)  ;
+	document.getElementById("Target").value = (totaldbtawal/ Number(60))/Number(365);
 }
 
 
