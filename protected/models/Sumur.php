@@ -368,7 +368,6 @@ class Sumur extends CActiveRecord
 
 	public static function exportXls()
     {
-<<<<<<< HEAD
 		if(isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN OR Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)){
 			$datadatas = self::model()->findAll();
 			$ii = 2;
@@ -392,48 +391,6 @@ class Sumur extends CActiveRecord
 
 				->mergeCells('N1:U1')
 				->setCellValue('N1', 'Manfaat Sumur')
-=======
-		$datadatas = self::model()->search()->getData();
-		$ii = 1;
-        $objPHPExcel=Yii::createComponent('application.extensions.PHPExcel');
-        $objPHPExcel->setActiveSheetIndex(0)
-                    ->setCellValue('A1', 'No')
-                    ->setCellValue('B1', 'Kodefikasi')
-                    ->setCellValue('C1', 'Nama CAT')
-					->setCellValue('D1', 'Nama Das')
-					->setCellValue('E1', 'Nama WS')
-					->setCellValue('F1', 'Provinsi')
-                    ->setCellValue('G1', 'Kota/ Kabupaten')
-                    ->setCellValue('H1', 'Kecamatan')
-					->setCellValue('I1', 'Desa')
-					->setCellValue('J1', 'LS')
-					->setCellValue('K1', 'BT')
-                    ->setCellValue('L1', 'Elevasi Sumur');
-					foreach ($datadatas as $urut){	
-						$ii++;
-						$objPHPExcel->setActiveSheetIndex(0)->setCellValue('A'.$ii, $urut->NoData)
-								->setCellValue('B'.$ii, $urut->kodefikasi)
-								->setCellValue('C'.$ii, $urut->nama_cat)
-								->setCellValue('D'.$ii, $urut->nama_das)
-								->setCellValue('E'.$ii, $urut->nama_ws)
-								->setCellValue('F'.$ii, $urut->provinsi)
-								->setCellValue('G'.$ii, $urut->kota)
-								->setCellValue('H'.$ii, $urut->kecamatan)
-								->setCellValue('I'.$ii, $urut->desa)
-								->setCellValue('J'.$ii, $urut->lintang_selatan)
-								->setCellValue('K'.$ii, $urut->bujur_timur)
-								->setCellValue('L'.$ii, $urut->elevasi_sumur);
-					}
-
-	
-        // Redirect output to a client’s web browser (Excel2007)
-        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment;filename="contohkita.xlsx"');
-        header('Cache-Control: max-age=0');
-        // If you're serving to IE 9, then the following may be needed
-        header('Cache-Control: max-age=1');
->>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
-
 				->setCellValue('N2', 'Manfaat Jiwa')
 				->setCellValue('O2', 'Debit / Liter')
 				->setCellValue('P2', 'tadah_awal')

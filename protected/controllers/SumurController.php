@@ -99,8 +99,6 @@ class SumurController extends Controller
 		));	
 	}
 	
-<<<<<<< HEAD
-=======
 	public function actionGetExportFile()
 	{
 		Yii::app()->request->sendFile('export.csv',Yii::app()->user->getState('export'));
@@ -177,7 +175,6 @@ class SumurController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
->>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
@@ -361,14 +358,11 @@ class SumurController extends Controller
 		
 		if(isset($_GET['Sumur']))
 			$model->attributes=$_GET['Sumur'];
-<<<<<<< HEAD
 			
-=======
 		if(Yii::app()->request->getParam('export')) {
 			$this->actionExport();
 			Yii::app()->end();
 		}
->>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 		$this->render('index',array(
 			//'dataProvider'=>$dataProvider,
 			'model'=>$model,
@@ -377,10 +371,8 @@ class SumurController extends Controller
 	
 	public function actionCetak()
     {
-<<<<<<< HEAD
 		if(isset($_POST['Sumur'])){
 			Sumur::exportXls();
-=======
 		//Sumur::exportXls();
 		$daftarku=$_POST['NamaSumur'];
 		Sumur::exportXls();
@@ -421,8 +413,7 @@ class SumurController extends Controller
 				echo "<td>".$modelteknisPat->sumur."</td>";
 				echo "</tr>";
 			}
-
->>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
+			}
 		}
 	}
 
