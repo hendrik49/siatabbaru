@@ -7,6 +7,7 @@ class SiteController extends Controller
 	/**
 	 * Declares class-based actions.
 	 */
+
 	public function actions()
 	{
 		return array(
@@ -22,11 +23,13 @@ class SiteController extends Controller
 			),
 		);
 	}
-	public $modelS;
+	/*public $modelS;
 	public $modelT;
 	public $modelH;
 	public $modelP;
-	public $modelM;
+	public $modelM;*/
+	public $modelKota;
+	
 
 	/**
 	 * This is the default 'index' action that is invoked
@@ -100,14 +103,11 @@ class SiteController extends Controller
 		}
 		$this->render('contact',array('model'=>$model));
 	}
-	public $dodo;
+
 	public function actionIndexdata()
 	{
 		$criteria=new CDbCriteria;
-		
-		
 
-		
 		$dataProvider=new CActiveDataProvider('Sumur', array(
 			'criteria'=>$criteria,
 			'sort'=>array(
@@ -120,11 +120,10 @@ class SiteController extends Controller
 
 		$this->render('indexdata',array(
 			'dataProvider'=>$dataProvider,
-			//'dodo'=>$dodo,
 		));
 	}
 
-		public function actionPeraturan()
+	public function actionPeraturan()
 	{
 		$model=new ContactForm;
 		if(isset($_POST['ContactForm']))
@@ -149,7 +148,6 @@ class SiteController extends Controller
 	/**
 	 * Displays the login page
 	 */
-	 
 	
 	public function actionLogin()
 	{
@@ -189,8 +187,8 @@ class SiteController extends Controller
 	public $dataProvider3;
 	public function actionDashboard()
 	{
-		$model=new Sumur('search');
-		$model->unsetAttributes();
+		$model=new Neraca;
+		
 
 		$sql='SELECT count(id),sumur FROM t_sumur6 GROUP BY sumur';
 		$dataProvider=new CSqlDataProvider($sql,array(
@@ -208,7 +206,7 @@ class SiteController extends Controller
 		$dataProvider3=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
 		));
-		
+
 		$this->render('dashboard',array(
 			'dataProvider'=>$dataProvider,
 			'dataProvider1'=>$dataProvider1,
@@ -219,4 +217,15 @@ class SiteController extends Controller
 
 	}
 
+	public function actionSetkot()
+	{	 
+		$modelKota= new Kota;
+	   	$data=Kota::model()->findAll('provinsi=:provinsi',
+		array(':provinsi'=>(string) $_POST['provinsi']));
+		$data=CHtml::listData($data,'kab','kab');
+		foreach($data as $value=>$name)
+		{
+		echo CHtml::tag('option',array('value'=>$value),CHtml::encode($name),true);
+		}  
+	}
 }

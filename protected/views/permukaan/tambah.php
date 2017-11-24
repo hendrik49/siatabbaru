@@ -2,8 +2,8 @@
 $this->pageTitle=Yii::app()->name . ' - ATAB';
 $this->breadcrumbs=array(
 	'Air Baku'=>array('/sistembaku/listbaku'),
-	'Permukaan'=>array('/permukaan/index'),
-	'Tambah data',
+	'Sungai'=>array('/permukaan/index'),
+	'(Tambah/Ubah)',
 );
 
 ?>

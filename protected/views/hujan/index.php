@@ -36,8 +36,8 @@ $this->breadcrumbs=array(
 				array('name'=>'NoData', 'htmlOptions'=>array('style'=>'width: 40px')),
 				array('name'=>'kodefikasi', 'htmlOptions'=>array('style'=>'width: 120px')),
 				'nama_sistem', 'nama_ws', 'nama_das', 'provinsi', 'kota',
-			array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{view}', 'buttons'=>array(
-					'viewButtonUrl'=>'Yii::app()->createUrl("hujan/view/", array("id"=>$data->ID))'),
+			array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{delete}', 'buttons'=>array(
+					'viewButtonUrl'=>'Yii::app()->createUrl("hujan/delete", array("id"=>$data->ID))'),
 				), 
 				),
 			)
@@ -57,8 +57,8 @@ $this->breadcrumbs=array(
 				array('name'=>'NoData', 'htmlOptions'=>array('style'=>'width: 40px')),
 				array('name'=>'kodefikasi', 'htmlOptions'=>array('style'=>'width: 120px')),
 				'nama_sistem', 'nama_ws', 'nama_das', 'provinsi', 'kota',
-			array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{view}', 'buttons'=>array(
-				'viewButtonUrl'=>'Yii::app()->createUrl("detail/", array("id"=>$data->ID))'),
+			array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{delete}', 'buttons'=>array(
+				'viewButtonUrl'=>'Yii::app()->createUrl("hujan/delete", array("id"=>$data->ID))'),
 			), 
 
 

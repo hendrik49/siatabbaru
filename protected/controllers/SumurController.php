@@ -34,6 +34,7 @@ class SumurController extends Controller
 	private $_mapPath5;
 	private $_mapPath6;
 	private $_mapPath7;
+	private $_mapPath8;
 	
 	/**
 	 * Specifies the access control rules.
@@ -46,7 +47,7 @@ class SumurController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','tambah', 'detail', 'search', 'cetak','buatExcel'),
+				'actions'=>array('index','view','tambah', 'detail', 'search', 'cetak'),
 				'users'=>array('*'),
 			),
  
@@ -98,18 +99,6 @@ class SumurController extends Controller
 		));	
 	}
 	
-	
-	
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
@@ -191,12 +180,13 @@ class SumurController extends Controller
 				$this->_mapPath2 = Yii::app()->params->baseMapPath; $this->_mapPath3 = Yii::app()->params->baseMapPath;
 				$this->_mapPath4 = Yii::app()->params->baseMapPath; $this->_mapPath5 = Yii::app()->params->baseMapPath;
 				$this->_mapPath6 = Yii::app()->params->baseMapPath; $this->_mapPath7 = Yii::app()->params->baseMapPath;
+				$this->_mapPath8 = Yii::app()->params->baseMapPath;
 
 				$imgName2 = $modelInfoMa->foto1; $imgName3 = $modelInfoMa->foto2; 
 				$imgName4 = $modelInfoMa->foto3; $imgName5 = $modelInfoMa->foto4;
 				$imgName6 = $modelInfoMa->foto5; $imgName7 = $modelInfoMa->dokumen_pendukung; 
 				$video = $modelInfoMa->video;
-	
+				
 				$myUpload3 = CUploadedFile::getInstance($modelInfoMa,'foto1');
 				$myUpload4 = CUploadedFile::getInstance($modelInfoMa,'foto2');
 				$myUpload5 = CUploadedFile::getInstance($modelInfoMa,'foto3');
@@ -204,7 +194,7 @@ class SumurController extends Controller
 				$myUpload7 = CUploadedFile::getInstance($modelInfoMa,'foto5');
 				$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'dokumen_pendukung');
 				$myUpload9 = CUploadedFile::getInstance($modelInfoMa,'video');
-				
+
 				if (!empty($myUpload3)){ $modelInfoMa->foto1 = $myUpload3->getName(); 
 				}else{$modelInfoMa->foto1 = $imgName2;}
 				if (!empty($myUpload4)){ $modelInfoMa->foto2 = $myUpload4->getName();
@@ -218,40 +208,37 @@ class SumurController extends Controller
 				if (!empty($myUpload8)){ $modelInfoMa->dokumen_pendukung = $myUpload8->getName();
 				}else{$modelInfoMa->dokumen_pendukung = $imgName7;}		
 				if (!empty($myUpload9)){ $modelInfoMa->video = $myUpload9->getName();
-				}else{$modelInfoMa->video = $video;}		
-	
+				}else{$modelInfoMa->video = $video;}
 	
 				if($modelInfoMa->save()) {
 					if (!empty($myUpload3)) {
 						$this->_mapPath2 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 						$myUpload3->saveAs($this->_mapPath2 . '/Sumur/Foto/'. $myUpload3->getName());
-					}
+					}else{$modelInfoMa->foto1 = $imgName2;}
 					if (!empty($myUpload4)) {
 						$this->_mapPath3 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 						$myUpload4->saveAs($this->_mapPath3 . '/Sumur/Foto/'. $myUpload4->getName());
-					}
+					}else{$modelInfoMa->foto2 = $imgName3;}
 					if (!empty($myUpload5)) {
 						$this->_mapPath4 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 						$myUpload5->saveAs($this->_mapPath4 . '/Sumur/Foto/'. $myUpload5->getName());
-					}
+					}else{$modelInfoMa->foto3 = $imgName4;}
 					if (!empty($myUpload6)) {
 						$this->_mapPath5 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 						$myUpload6->saveAs($this->_mapPath5 . '/Sumur/Foto/'. $myUpload6->getName());
-					}
+					}else{$modelInfoMa->foto4 = $imgName5;}
 					if (!empty($myUpload7)) {
 						$this->_mapPath6 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 						$myUpload7->saveAs($this->_mapPath6 . '/Sumur/Foto/'. $myUpload7->getName());
-					}
+					}else{$modelInfoMa->foto5 = $imgName6;}
 					if (!empty($myUpload8)) {
 						$this->_mapPath7 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 						$myUpload8->saveAs($this->_mapPath7 . '/Sumur/File/'. $myUpload8->getName());
 					}
 					if (!empty($myUpload9)) {
-						$this->_mapPath7 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
-						var_dump($myUpload9->getName());
-						$myUpload9->saveAs($this->_mapPath7 . '/Sumur/Video/'. $myUpload9->getName());
+						$this->_mapPath8 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
+						$myUpload9->saveAs($this->_mapPath8 . '/Sumur/Video/'. $myUpload9->getName());
 					}
-
 				}
 				$this->redirect(array('//sumur/view','id'=>$modelInfoMa->ID));
 			}
@@ -274,10 +261,15 @@ class SumurController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
-
+		$this->loadModelW($id)->delete();
+		$this->loadModelG($id)->delete();
+		$this->loadModelP($id)->delete();
+		$this->loadModelM($id)->delete();
+		$this->loadModelN($id)->delete();
+		$this->loadModelInfo($id)->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 	/**
 	 * Lists all models.
@@ -289,7 +281,7 @@ class SumurController extends Controller
 		
 		if(isset($_GET['Sumur']))
 			$model->attributes=$_GET['Sumur'];
-	
+			
 		$this->render('index',array(
 			//'dataProvider'=>$dataProvider,
 			'model'=>$model,
@@ -298,80 +290,12 @@ class SumurController extends Controller
 	
 	public function actionCetak()
     {
-		//Sumur::exportXls();
-		$daftarku=$_POST['NamaSumur'];
-		
-		echo "<title>Cetak Data Sumur</title>";
-		echo "<div class='grid-view'>";
-		echo "<table class='items table table-striped table-bordered table-condensed'><tr><strong>";
-		echo "<th>No</th>";
-		echo "<th>Nama Sumur</th>";
-		echo "<th>Kab/Kota</th>";
-		echo "<th>Kecamatan</th>";
-		echo "<th>Desa</th>";
-		echo "<th>Tahun Bangun</th>";
-		echo "<th>Jiwa</th>";
-		echo "<th>Debit (l/dtk)</th>";
-		echo "<th>Kondisi Sumur</th>";
-		echo "</strong></tr>";
-
-        foreach ($daftarku as $nomor=>$nilai)
-        {
-			$model=$this->loadModel($nilai);
-			$modelteknisWa= $this->loadModelP($nilai);
-			$modelteknis= $this->loadModelG($nilai);
-			$modelmanfaat= $this->loadModelW($nilai);
-			$modelteknisPat= $this->loadModelN($nilai);
-			$modelteknisGa= $this->loadModelM($nilai);
-
-			if($modelteknis->ID == $nilai){
-				
-				echo "<tr>";
-				echo "<td '>".$nilai."</td>";
-				echo "<td>".$modelteknis->nama_sumur."</td>";
-				echo "<td>".$model->kota."</td>";
-				echo "<td>".$model->kecamatan."</td>";
-				echo "<td>".$model->desa."</td>";
-				echo "<td>".$modelteknisGa->tahun_bangun."</td>";
-				echo "<td>".$modelmanfaat->jiwa."</td>";
-				echo "<td>".$modelmanfaat->debit."</td>";
-				echo "<td>".$modelteknisPat->sumur."</td>";
-				echo "</tr>";
-			}
-
+		if(isset($_POST['Sumur'])){
+			Sumur::exportXls();
 		}
-		echo "</table></div>";
-		echo "<script>window.print();</script>";
-		echo "<script>window.close();</script>";
 	}
 
 	
-	public function actionBuatExcel()
-    {
-         $objPHPExcel=Yii::createComponent('application.extensions.PHPExcel.PHPExcel');
-        $objPHPExcel->setActiveSheetIndex(0)
-                    ->setCellValue('A1', 'Ini di A No 1 ya')
-                    ->setCellValue('B2', 'kalau ini B 2')
-                    ->setCellValue('C1', 'Ini di C1')
-                    ->setCellValue('D2', 'Terakhir di D 2');
-        // Redirect output to a client’s web browser (Excel2007)
-        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment;filename="contoh01.xlsx"');
-        header('Cache-Control: max-age=0');
-        // If you're serving to IE 9, then the following may be needed
-        header('Cache-Control: max-age=1');
-
-        // If you're serving to IE over SSL, then the following may be needed
-        header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
-        header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); // always modified
-        header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
-        header ('Pragma: public'); // HTTP/1.0
-
-        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-        $objWriter->save('php://output');
-        unset($objPHPExcel);
-    }
-
 	public function actionSetkot()
 	{	 
 		$modelKota= new Kota;
@@ -393,16 +317,9 @@ class SumurController extends Controller
 		$modelteknisGa= new TeknisGaSumur;
 		$modelteknisPat= new KondisiSumur;
 		$modelInfoMa= new InfoSumur;
-		//$modelKota= new Kota;
-		
-		
 		
 		if(isset($_POST['Sumur']))
 		{
-
-			//$provinsi = $_GET["provinsi"];
-			
-			//$modelKota->attributes=$_POST['Kota'];
 			$model->attributes=$_POST['Sumur'];
 			$model->Tanggal = time();
 			if($model->save()) {
@@ -502,7 +419,7 @@ class SumurController extends Controller
 			$myUpload6 = CUploadedFile::getInstance($modelInfoMa,'foto4');
 			$myUpload7 = CUploadedFile::getInstance($modelInfoMa,'foto5');
 			$myUpload8 = CUploadedFile::getInstance($modelInfoMa,'dokumen_pendukung');
-			$myUpload9 = CUploadedFile::getInstance($modelInfoMa,'video');
+			//$myUpload9 = CUploadedFile::getInstance($modelInfoMa,'video');
 			
 			if (!empty($myUpload3)){ $modelInfoMa->foto1 = $myUpload3->getName(); 
 			}//else{$modelInfoMa->foto1 = $imgName2;}
@@ -516,9 +433,9 @@ class SumurController extends Controller
 			}//else{$modelInfoMa->foto5 = $imgName6;}		
 			if (!empty($myUpload8)){ $modelInfoMa->dokumen_pendukung = $myUpload8->getName();
 			}//else{$modelInfoMa->foto5 = $imgName7;}
-			if (!empty($myUpload9)){ $modelInfoMa->video = $myUpload9->getName();
+			/*if (!empty($myUpload9)){ $modelInfoMa->video = $myUpload9->getName();
 			}//else{$modelInfoMa->foto5 = $imgName7;}
-
+			*/
 			if($modelInfoMa->save()) {	}
 			if (!empty($myUpload3)) {
 				$this->_mapPath2 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
@@ -544,10 +461,10 @@ class SumurController extends Controller
 				$this->_mapPath7 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 				$myUpload8->saveAs($this->_mapPath7 . '/Sumur/File/'. $myUpload8->getName());
 			}
-			if (!empty($myUpload9)) {
+			/*if (!empty($myUpload9)) {
 				$this->_mapPath7 .= '/Unit Kerja/'.UnitKerja::getNamaUnitKerjaByAdmin();
 				$myUpload9->saveAs($this->_mapPath7 . '/Sumur/Video/'. $myUpload9->getName());
-			}
+			}*/
 			$this->redirect(array('//sumur/view','id'=>$modelInfoMa->ID));
 
 		}

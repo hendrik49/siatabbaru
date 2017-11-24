@@ -9,6 +9,7 @@
 			'legalitas',
 			'tahun_berdiri',
 			'keaktifan',
+			'jumlah_anggota',
 			'no_kontrak',
 			'status_kelola',
 			'status_operasi',

@@ -3,7 +3,7 @@
 			'cssFile'=>Yii::app()->baseUrl . '/css/dtgrid/detailview/styles.css',
 			'data'=>$model,
 			'attributes'=>array(
-				'jiwa','debit', 'tadah_awal','tadah_saatini', 'suplesi_awal', 'suplesi_saatini',
+				'jiwa','debit', 'nama_sungai', 'luas_dta', 'tadah_awal','tadah_saatini', 'suplesi_awal', 'suplesi_saatini',
 				'kecamatan1','desa1','kecamatan2','desa2',
 				array(
 					'name'=>'catchment_area',
