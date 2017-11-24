@@ -147,7 +147,6 @@ class Permukaan extends CActiveRecord
 		if (isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_ADMIN){
 			$criteria->compare('ID_IDBalai', Yii::app()->user->uid);
 		
-<<<<<<< HEAD
 			return new CActiveDataProvider($this, array(
 				'criteria'=>$criteria,
 				'sort'=>array(
@@ -191,14 +190,6 @@ class Permukaan extends CActiveRecord
 
 			));		
 		}
-=======
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-			'pagination' => array(
-				'pageSize' => 6,
-			),
-		));
->>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 	}
 	
 	public static function getAvailableDataMataairId()
