@@ -182,6 +182,18 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 	
+	public function actionSetkot()
+	{	 
+		$modelKota= new Kota;
+	   	$data=Kota::model()->findAll('provinsi=:provinsi',
+		array(':provinsi'=>(string) $_POST['Provinsi']));
+		$data=CHtml::listData($data,'kab','kab');
+		foreach($data as $value=>$name)
+		{
+			echo CHtml::tag('option',array('value'=>$value),CHtml::encode($name),true);
+		}  
+	}
+
 	public $dataProvider1;
 	public $dataProvider2;
 	public $dataProvider3;
@@ -206,6 +218,11 @@ class SiteController extends Controller
 		$dataProvider3=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
 		));
+<<<<<<< HEAD
+=======
+		
+
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 
 		$this->render('dashboard',array(
 			'dataProvider'=>$dataProvider,

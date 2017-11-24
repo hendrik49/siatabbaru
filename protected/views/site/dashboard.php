@@ -14,9 +14,13 @@ include '../siatab/connect.php';
         )); 
     ?>
 
+<<<<<<< HEAD
 <script src="highcharts.js"></script>
 <script src="exporting.js"></script>
 
+=======
+    <div class="span12" style="height:465px; border: 0px solid red; background-color:#fff;">
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 
 <div class="span12" style="height:465px; border: 0px solid red; background-color:#fff;">
     <!-- List Info Tengah -->
@@ -25,6 +29,7 @@ include '../siatab/connect.php';
             <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
             <div class="menu-list">
                 <ul id="menu-content" class="menu-content">
+<<<<<<< HEAD
                     <li  data-toggle="collapse" data-target="#kondisi" class="collapsed">
                         <a href="#"><i class="fa fa-bar-chart fa-lg" style="margin-top:0px;"></i><strong> Hasil Neraca Air </strong><span class="arrow"></span></a>
                     </li>
@@ -42,13 +47,129 @@ include '../siatab/connect.php';
                         </div>
                         <div id="container" style="width: 99.9%; height: 370px; margin: 5px -1px auto"></div>
                     </li>
+=======
+                <li  data-toggle="collapse" data-target="#kondisi" class="collapsed">
+                    <a href="#"><i class="fa fa-bar-chart fa-lg" style="margin-top:0px;"></i><strong> Hasil Neraca Air </strong><span class="arrow"></span></a>
+                </li>
+                    <ul class="sub-menu collapse" id="kondisi">
+                    </ul>
+                    <li class="active">
+                <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+                'id'=>'horizontalForm',
+                'type'=>'horizontal',
+                'enableAjaxValidation'=>false,
+                'htmlOptions'=>array(
+                    'enctype'=>'multipart/form-data',
+                    ),
+                )); 
+                ?>
+    <?php echo $form->dropDownListRow($model,'provinsi', CHtml::listData(Provinsi::model()->findAll(),'Nama_provinsi','Nama_provinsi'),
+		array(
+		'prompt'=>'Pilih Provinsi', 
+		'value'=>'0',
+		'ajax' => array('type'=>'POST', 'url'=>CController::createUrl('Site/setKot'), // panggi filter kabupaten di controller
+		'update'=>'#Site_KabKota', //selector to update
+		'data'=>array('provinsi'=>'js:this.value'),
+		))); ?>
+
+	<?php  echo $form->dropDownListRow($model,'KabKota', CHtml::listData(Kota::model()->findAll(),'id_prov','kab')); ?>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <div id="container" style="min-width: 220px; height: 300px; margin: 0 auto"></div>
+
+
+     <script>
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Neraca Air '
+    },
+    subtitle: {
+        //text: 'Source: WorldClimate.com'
+    },
+    xAxis: {
+        categories: [
+            'Jiwa Terlayani'
+            /*'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',*/
+            
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Rainfall (mm)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Jembrana',
+        data: [49.9]
+        
+    }, {
+        name: 'Klungkung',
+        data: [83.6]
+
+    }, {
+        name: 'Buleleng',
+        data: [48.9]
+    
+    }, {
+        name: 'Gianyar',
+        data: [28.2]
+    }, {
+        name: 'Badung',
+        data: [38.9]
+
+    }, {
+        name: 'Denpasar',
+        data: [42.4]
+
+    }, {
+        name: 'Karangasem',
+        data: [53.6]
+
+    }, {
+        name: 'Bangli',
+        data: [61.6]
+    }]
+});
+    </script>
+    </li>
+
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
                 </ul>
             </div>
         </div>
     </div>
 
     
-
 
 
 

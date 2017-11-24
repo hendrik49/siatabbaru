@@ -99,6 +99,85 @@ class SumurController extends Controller
 		));	
 	}
 	
+<<<<<<< HEAD
+=======
+	public function actionGetExportFile()
+	{
+		Yii::app()->request->sendFile('export.csv',Yii::app()->user->getState('export'));
+		Yii::app()->user->clearState('export');
+	}
+	
+	public function actionExport()
+	{
+		$fp = fopen('php://temp', 'w');
+	 
+		/* 
+		 * Write a header of csv file
+		 */
+		$headers = array(
+			'd_date',
+			'client.clientFirstName',
+			'client.clientLastName',
+			'd_time',
+		);
+		$row = array();
+		foreach($headers as $header) {
+			$row[] = MODEL::model()->getAttributeLabel($header);
+		}
+		fputcsv($fp,$row);
+	 
+		/*
+		 * Init dataProvider for first page
+		 */
+		$model=new MODEL('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['MODEL'])) {
+			$model->attributes=$_GET['MODEL'];
+		}
+		$dp = $model->search();
+	 
+		/*
+		 * Get models, write to a file, then change page and re-init DataProvider
+		 * with next page and repeat writing again
+		 */
+		while($models = $dp->getData()) {
+			foreach($models as $model) {
+				$row = array();
+				foreach($headers as $head) {
+					$row[] = CHtml::value($model,$head);
+				}
+				fputcsv($fp,$row);
+			}
+	 
+			unset($model,$dp,$pg);
+			$model=new MODEL('search');
+			$model->unsetAttributes();  // clear any default values
+			if(isset($_GET['MODEL']))
+				$model->attributes=$_GET['MODEL'];
+	 
+			$dp = $model->search();
+			$nextPage = $dp->getPagination()->getCurrentPage()+1;
+			$dp->getPagination()->setCurrentPage($nextPage);
+		}
+	 
+		/*
+		 * save csv content to a Session
+		 */
+		rewind($fp);
+		Yii::app()->user->setState('export',stream_get_contents($fp));
+		fclose($fp);
+	}
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+
+	/**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
@@ -276,12 +355,20 @@ class SumurController extends Controller
 	 */
 	public function actionIndex()
 	{	
+		
 		$model=new Sumur('search');
 		$model->unsetAttributes();
 		
 		if(isset($_GET['Sumur']))
 			$model->attributes=$_GET['Sumur'];
+<<<<<<< HEAD
 			
+=======
+		if(Yii::app()->request->getParam('export')) {
+			$this->actionExport();
+			Yii::app()->end();
+		}
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 		$this->render('index',array(
 			//'dataProvider'=>$dataProvider,
 			'model'=>$model,
@@ -290,8 +377,52 @@ class SumurController extends Controller
 	
 	public function actionCetak()
     {
+<<<<<<< HEAD
 		if(isset($_POST['Sumur'])){
 			Sumur::exportXls();
+=======
+		//Sumur::exportXls();
+		$daftarku=$_POST['NamaSumur'];
+		Sumur::exportXls();
+		echo "<title>Cetak Data Sumur</title>";
+		echo "<div class='grid-view'>";
+		echo "<table class='items table table-striped table-bordered table-condensed'><tr><strong>";
+		echo "<th>No</th>";
+		echo "<th>Nama Sumur</th>";
+		echo "<th>Kab/Kota</th>";
+		echo "<th>Kecamatan</th>";
+		echo "<th>Desa</th>";
+		echo "<th>Tahun Bangun</th>";
+		echo "<th>Jiwa</th>";
+		echo "<th>Debit (l/dtk)</th>";
+		echo "<th>Kondisi Sumur</th>";
+		echo "</strong></tr>";
+
+        foreach ($daftarku as $nomor=>$nilai)
+        {
+			$model=$this->loadModel($nilai);
+			$modelteknisWa= $this->loadModelP($nilai);
+			$modelteknis= $this->loadModelG($nilai);
+			$modelmanfaat= $this->loadModelW($nilai);
+			$modelteknisPat= $this->loadModelN($nilai);
+			$modelteknisGa= $this->loadModelM($nilai);
+
+			if($modelteknis->ID == $nilai){
+				
+				echo "<tr>";
+				echo "<td '>".$nilai."</td>";
+				echo "<td>".$modelteknis->nama_sumur."</td>";
+				echo "<td>".$model->kota."</td>";
+				echo "<td>".$model->kecamatan."</td>";
+				echo "<td>".$model->desa."</td>";
+				echo "<td>".$modelteknisGa->tahun_bangun."</td>";
+				echo "<td>".$modelmanfaat->jiwa."</td>";
+				echo "<td>".$modelmanfaat->debit."</td>";
+				echo "<td>".$modelteknisPat->sumur."</td>";
+				echo "</tr>";
+			}
+
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 		}
 	}
 

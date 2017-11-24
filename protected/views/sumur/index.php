@@ -26,7 +26,21 @@
 	</h4>
 	</div>
 
+<<<<<<< HEAD
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>	
+=======
+<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?> | 
+    <?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
+        'type'=>'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+        'buttons'=>array(
+            array('label'=>'Tambah', 'url'=>'/siatab/sumur/tambah'),
+        ),
+    )); ?>	
+<?php endif ?>
+</h4></div>
+<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>	
+	<form method="POST" name="dataku">	
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 	<?php 
 		$this->widget('bootstrap.widgets.TbGridView', array(
 			'summaryText'=>'',
@@ -202,9 +216,17 @@
 				))
 			); 		
 	?>	
+<<<<<<< HEAD
 	<?php else : ?>
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?>
 	<?php 
+=======
+		
+<?php else : ?>
+<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?>
+<?php 
+
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 		$this->widget('bootstrap.widgets.TbGridView', array(
 			'summaryText'=>'',
 			'type'=>'striped bordered condensed',
@@ -561,10 +583,16 @@
 	<?php endif ?>
 </form>
 <script>
+
 function cetak()
 {	
     document.dataku.action="/siatab/sumur/cetak";
+<<<<<<< HEAD
 	document.dataku.submit();
+=======
+    document.dataku.submit();
+	<?php  ?>
+>>>>>>> 68b3e2c3b8078e19a40b818bd9afa31340424a31
 }
 </script>
  

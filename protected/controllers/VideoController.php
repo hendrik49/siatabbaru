@@ -213,33 +213,21 @@ class VideoController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$criteria=new CDbCriteria;
-
-		$rawData = array();
-		for ($i = 0; $i < 8; $i++)
-			$rawData[] = array('id'=>$i + 1);
-
-		$listDataProvider1 = new CArrayDataProvider($rawData);
-		
-		$dataProvider=new CActiveDataProvider('Video', array(
-			'criteria'=>$criteria,
-			'sort'=>array(
-				'defaultOrder'=>'video DESC',
-			),
-			'pagination' => array(
-				'pageSize' => 8,
-			),
-		));
+		$model=new Video('search');
+		$model->unsetAttributes();
+		$dataProvider=new CActiveDataProvider('Video');	
+		if(isset($_GET['Video']))
+			$model->attributes=$_GET['Video'];
 
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-			'listDataProvider1'=>$listDataProvider1,
+			'model'=>$model,
+			'dataProvider'=>$dataProvider
 		));
 	}
 	
 	public function actionGalleri()
 	{
-		$this->render('galleri');
+		$this->render('video');
 	}
 
 	/**

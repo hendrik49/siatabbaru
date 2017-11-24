@@ -1,5 +1,5 @@
 <?php
-
+use yii\db\ActiveRecord;
 class Pegawai extends CActiveRecord
 {
 	/**
@@ -20,6 +20,14 @@ class Pegawai extends CActiveRecord
 		return 't_pegawai';
 	}
 
+	public static function getDb()
+    {
+        // use the "db2" application component
+        return \Yii::$app->db2;  
+    }
+
+	
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -30,7 +38,7 @@ class Pegawai extends CActiveRecord
 		return array(
 			array('Nama, Alamat, Golongan', 'required'),
 			//array('Tanggal', 'numerical', 'integerOnly'=>true),
-			array('Nama, Email, Golongan, Dokumen', 'length', 'max'=>60),
+			array('Nama, Email, Golongan, Dokumen, Jabatan, Bidang', 'length', 'max'=>60),
 			array('Alamat, Foto', 'length', 'max'=>255),
 			array('NoTelp', 'length', 'max'=>14),
 			array('NIP', 'length', 'max'=>30),
@@ -65,11 +73,14 @@ class Pegawai extends CActiveRecord
 			'NoTelp' => 'Nomor Telepon',
 			'Dokumen' => 'Dokumen SK',
 			'Foto' => 'Foto Profil',
-			'Golongan' => 'Golongan / Jabatan',
-			
+			'Golongan' => 'Golongan ',
+			'Bidang' => 'Bidang',
+			'Jabatan'=> 'Jabatan'
+
 		);
 	}
 
+	
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -89,6 +100,8 @@ class Pegawai extends CActiveRecord
 		$criteria->compare('Dokumen',$this->Dokumen);
 		$criteria->compare('Foto',$this->Foto);
 		$criteria->compare('Email',$this->Email);
+		$criteria->compare('Bidang',$this->Bidang);
+		$criteria->compare('Jabatan',$this->Jabatan);
 		
 		if (Yii::app()->user->hakAkses == User::USER_ADMIN) {
 			$criteria->compare('Administrator', Yii::app()->user->name);

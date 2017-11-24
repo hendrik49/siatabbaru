@@ -64,8 +64,11 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<div style="/*margin-left: -175px;*/">
 	<?php echo $form->fileFieldRow($model,'dokumen_pendukung',array('class'=>'input-small')); ?>
 	<?php echo $form->fileFieldRow($model,'foto1');?>
+	<?php echo $form->error($model,'foto1'); ?>
 	<?php echo $form->fileFieldRow($model,'foto2');?>
+	<?php echo $form->error($model,'foto2'); ?>
 	<?php echo $form->fileFieldRow($model,'foto3');?>
+	<?php echo $form->error($model,'foto3'); ?>
 	<?php echo $form->fileFieldRow($model,'foto4');?>
 	<?php echo $form->fileFieldRow($model,'foto5');?>
 	<?php echo $form->fileFieldRow($model,'video');?>

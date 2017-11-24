@@ -7,6 +7,8 @@
 	</br>
 	<b><?php echo $data->NamaBerita ?></b>
 	</br>
+	<?php echo  substr($data->Deskripsi,0,100);  ?>
+	</br>
 	<?php echo date('d, M Y', $data->Tanggal); ?>	
 	<i> created by Admin </i>
 	</p>
