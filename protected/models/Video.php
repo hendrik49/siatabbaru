@@ -28,7 +28,7 @@ class Video extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('NamaVideo, status, Tanggal,Deskripsi, Link', 'required'),
+			array('NamaVideo, Tanggal, Deskripsi, Youtube', 'required'),
 			array('Tanggal', 'numerical', 'integerOnly'=>true),
 				array('Link',
 				  'file', 'types'=>array(
@@ -37,9 +37,8 @@ class Video extends CActiveRecord
 				  ),
 				  'allowEmpty'=>true,
 			),	
-			array('Kategori, NamaVideo, status, Link', 'length', 'max'=>255),
-			array('status', 'length', 'max'=>2),
-			array('ID, Kategori, NamaVideo, status, Tanggal, Link, Deskripsi', 'safe', 'on'=>'search'),
+			array('Kategori, NamaVideo, Link, Youtube', 'length', 'max'=>255),
+			array('ID, Kategori, NamaVideo, Tanggal, Link, Youtube, Deskripsi', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,10 +62,10 @@ class Video extends CActiveRecord
 			'ID' => 'ID',
 			'Kategori' => 'Kategori',
 			'NamaVideo' => 'Nama Video',
-			'status' => 'Status Terbit',
 			'Tanggal' => 'Tanggal',
 			'Link' => 'Nama File',
 			'Deskripsi' => 'Deskripsi',
+			'Youtube' => 'Link Youtube',
 		);
 	}
 
@@ -88,7 +87,8 @@ class Video extends CActiveRecord
 		$criteria->compare('Tanggal',$this->Tanggal);
 		$criteria->compare('Link',$this->Link,true);
 		$criteria->compare('Deskripsi',$this->Deskripsi);
-
+		$criteria->compare('Youtube',$this->Youtube);
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

@@ -28,7 +28,7 @@ class Galeri extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('NamaGambar, status, Tanggal,Deskripsi, Link', 'required'),
+			array('NamaGambar, Tanggal, Deskripsi, Link', 'required'),
 			array('Tanggal', 'numerical', 'integerOnly'=>true),
 				array('Link',
 				  'file', 'types'=>array(
@@ -37,9 +37,9 @@ class Galeri extends CActiveRecord
 				  ),
 				  'allowEmpty'=>true,
 			),	
-			array('Kategori, NamaGambar, status, Link', 'length', 'max'=>255),
+			array('Kategori, NamaGambar, Link', 'length', 'max'=>255),
 			array('status', 'length', 'max'=>2),
-			array('ID, Kategori, NamaGambar, status, Tanggal, Link, Deskripsi', 'safe', 'on'=>'search'),
+			array('ID, Kategori, NamaGambar, Tanggal, Link, Deskripsi', 'safe', 'on'=>'search'),
 		);
 	}
 

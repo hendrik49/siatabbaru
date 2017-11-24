@@ -1,7 +1,7 @@
 <div class="form" style="padding-left:35px">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'album-form',
+	'id'=>'video-form',
 	'enableAjaxValidation'=>false,
 	'htmlOptions'=>array(
 		'enctype'=>'multipart/form-data',
@@ -42,6 +42,12 @@
 		<?php echo $form->labelEx($model,'Link'); ?>
 		<?php echo $form->FileField($model,'Link',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'Link'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'Youtube'); ?>
+		<?php echo $form->textField($model,'Youtube',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->error($model,'Youtube'); ?>
 	</div>
 
 	<div class="row buttons">

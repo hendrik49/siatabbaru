@@ -24,7 +24,13 @@ $this->breadcrumbs=array(
 		),
 		'status',
 		array(
-			'name'=>'Foto Video',
+			'name'=>'Youtube',
+			'type'=>'raw',
+			'value'=>'<iframe width="720" height="400"  src="'.$model->Youtube.'" frameborder="0" gesture="media" allowfullscreen>
+			</iframe>',
+		),
+		array(
+			'name'=>'Video',
 			'type'=>'raw',
 			'value'=>'<video width="720" height="320" controls id="video">
 			<source  src="'.Yii::app()->request->baseUrl.'/data/Video/'.$model->Link.'" type="video/mp4">
@@ -48,6 +54,12 @@ $this->breadcrumbs=array(
 			'value'=>'<video width="720" height="320" controls id="video">
 			<source  src="'.Yii::app()->request->baseUrl.'/data/Video/'.$model->Link.'" type="video/mp4">
 			</video>',
+		),
+		array(
+			'name'=>'Youtube',
+			'type'=>'raw',
+			'value'=>'<iframe width="720" height="400"  src="'.$model->Youtube.'" frameborder="0" gesture="media" allowfullscreen>
+			</iframe>',
 		),
 		array(
 			'type'=>'raw',
