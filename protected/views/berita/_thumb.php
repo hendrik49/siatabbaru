@@ -7,10 +7,9 @@
 	</br>
 	<b><?php echo $data->NamaBerita ?></b>
 	<p class="date" style="font-size:12px;color:#999;">
-	<?php echo substr($data->Deskripsi,32,67);  ?>
+	<?php echo  date('d, M Y', $data->Tanggal); echo '. '.substr($data->Deskripsi,32,25);  ?>
 	</br>
-	<?php echo date('d, M Y', $data->Tanggal); ?>	
-	<i> created by Admin </i>
+	<i class="fa fa-user"> created by Admin </i>
 	</p>
 	</p>
 	</li>
