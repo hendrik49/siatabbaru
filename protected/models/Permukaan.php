@@ -384,6 +384,7 @@ class Permukaan extends CActiveRecord
 				$permukaan->save();
 				
 				$mpermukaan = new ManfaatPermukaan;
+				$mpermukaan->ID=$permukaan->ID;
 				$mpermukaan->ID_IDBalaiWa=2;
 				$mpermukaan->NoDataWa=$permukaan->NoData;
 				$mpermukaan->jiwa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();			
@@ -404,6 +405,85 @@ class Permukaan extends CActiveRecord
 				$mpermukaan->catchment_area="";
 				$mpermukaan->catchment_area1="";
 				$mpermukaan->save();
+
+				$tpermukaan = new TeknisPermukaan;
+				
+				$tpermukaan->ID=$permukaan->ID;
+				$tpermukaan->ID_IDBalaiGa=2;
+				$tpermukaan->NoDataGa=$permukaan->NoData;
+				$tpermukaan->sistem=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->jenis_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->head_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->tahun_pengadaan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
+				$tpermukaan->listrik=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->genset=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->solar_cell=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->lain_lain=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->debit_andal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->debit_awal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->his_ID=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->debit_idle=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tpermukaan->save();
+
+				$twpermukaan = new TeknisWaPermukaan;
+
+				$twpermukaan->ID=$permukaan->ID;
+				$twpermukaan->ID_IDBalaiPat=2;
+				$twpermukaan->NoDataPat=$permukaan->NoData;
+				$twpermukaan->jenis_intake=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twpermukaan->pj_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twpermukaan->reservoar=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twpermukaan->hidran_umum=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
+				$twpermukaan->status_aset=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue()+ $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue()+ $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twpermukaan->luas_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$twpermukaan->jumlah_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$twpermukaan->jumlah_boxbagi="";
+				$twpermukaan->jumlah_splingker="";
+				$twpermukaan->save();
+
+				$tgpermukaan = new TeknisGaPermukaan;
+
+				$tgpermukaan->ID=$permukaan->ID;
+				$tgpermukaan->ID_IDBalaiMa=2;
+				$tgpermukaan->NoDataMa=$permukaan->NoData;
+				$tgpermukaan->tahun_bangun=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->rehab=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->rencana_rehab=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->nama_lembaga=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->legalitas=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->tahun_berdiri=$tgpermukaan->tahun_bangun;
+				$tgpermukaan->perizinan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->no_kontrak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->status_kelola=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->status_operasi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->keterangan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgpermukaan->save();
+
+
+				$tdpermukaan = new KondisiPermukaan;
+				
+				$tdpermukaan->ID=$permukaan->ID;
+				$tdpermukaan->ID_IDBalaiNam=2;
+				$tdpermukaan->NoDataNam=$permukaan->NoData;
+				$tdpermukaan->kondisi_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdpermukaan->ket_kondisi_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdpermukaan->kondisi_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdpermukaan->ket_kondisi_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
+
+				$tdpermukaan->kondisi_reservoir=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdpermukaan->ket_kondisi_reservoir=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdpermukaan->kondisi_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdpermukaan->ket_kondisi_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdpermukaan->kondisi_penggerak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$tdpermukaan->ket_kondisi_penggerak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdpermukaan->instansi_pembangun=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdpermukaan->sumber_pendanaan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
+				$tdpermukaan->dokumen_pendukung=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdpermukaan->save();
 			}
 		}else{
 			echo json_encode($_FILES);
