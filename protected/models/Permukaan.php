@@ -390,10 +390,10 @@ class Permukaan extends CActiveRecord
 				$mpermukaan->jiwa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();			
 				$mpermukaan->debit=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
 				$mpermukaan->status_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
-				$mpermukaan->kecamatan1==$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
-				$mpermukaan->kecamatan2="";
-				$mpermukaan->desa1==$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
-				$mpermukaan->desa2="";
+				$mpermukaan->kecamatan1=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$mpermukaan->kecamatan2="no desa";
+				$mpermukaan->desa1=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$mpermukaan->desa2="no desa";
 				$mpermukaan->nama_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$mpermukaan->luas_dta=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$mpermukaan->lebar_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
@@ -406,7 +406,10 @@ class Permukaan extends CActiveRecord
 				$mpermukaan->catchment_area1="";
 				$mpermukaan->save();
 
+				print_r($mpermukaan->attributes);
+
 				$tpermukaan = new TeknisPermukaan;
+
 				
 				$tpermukaan->ID=$permukaan->ID;
 				$tpermukaan->ID_IDBalaiGa=2;
@@ -422,6 +425,7 @@ class Permukaan extends CActiveRecord
 				$tpermukaan->debit_andal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$tpermukaan->debit_awal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$tpermukaan->his_ID=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tanggal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$tpermukaan->debit_idle=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$tpermukaan->save();
 

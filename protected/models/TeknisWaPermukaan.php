@@ -30,7 +30,7 @@ class TeknisWaPermukaan extends CActiveRecord
 		return array(
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID_IDBalaiPat, NoDataPat', 'length', 'max'=>13),
-			array('pj_airbaku, bendung, reservoar, hidran_umum, luas_bangunan, jumlah_bangunan, jumlah_boxbagi, jumlah_splingker', 'length', 'max'=>13),
+			array('pj_airbaku, bendung, reservoar, hidran_umum, luas_bangunan, jumlah_bangunan, jumlah_boxbagi, jumlah_splingker', 'length', 'max'=>300),
 			array('status_aset, jenis_intake, mt1, mt2, mt3', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
