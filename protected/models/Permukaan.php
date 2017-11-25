@@ -406,8 +406,6 @@ class Permukaan extends CActiveRecord
 				$mpermukaan->catchment_area1="";
 				$mpermukaan->save();
 
-				print_r($mpermukaan->attributes);
-
 				$tpermukaan = new TeknisPermukaan;
 
 				
