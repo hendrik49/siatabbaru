@@ -264,6 +264,7 @@ class PermukaanController extends Controller
     {
 		if(isset($_POST['Permukaan'])){
 			Permukaan::importXls($_FILES);
+			$this->actionIndex();
 		}
 	}
 

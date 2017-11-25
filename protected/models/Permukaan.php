@@ -44,7 +44,7 @@ class Permukaan extends CActiveRecord
 			/* ------------Data Numerical Control------------*/
 			array('ID_IDBalai, NoData, kodefikasi', 'length', 'max'=>16),
 			/* ------------Data Dasar & Administrasi------------*/
-			array('nama_das,nama_sistem, nama_ws, NamaBalai, kriteria, data_dasar, nama_objek, tahun_data', 'length', 'max'=>100),
+			array('nama_das,nama_sistem, nama_ws, data_dasar, nama_objek, tahun_data', 'length', 'max'=>100),
 			array('provinsi, kota, kecamatan, desa, status', 'length', 'max'=>100),
 			array('bujur_timur, lintang_selatan', 'length', 'max'=>20),
 			array('elevasi', 'length', 'max'=>10),
@@ -89,7 +89,6 @@ class Permukaan extends CActiveRecord
 			'data_dasar'=>'Kelompok Data Dasar',
 			'nama_das' => 'Nama DAS',
 			'nama_ws' => 'Nama WS',
-			//'nama_cat' => 'Nama CAT',
 			'nama_sistem' => 'Nama Sistem Air Baku',
 			'nama_objek' => 'Objek Sistem Air Baku',
 			'provinsi' => 'Provinsi',
@@ -360,13 +359,100 @@ class Permukaan extends CActiveRecord
 			$highestRow = $objWorksheet->getHighestRow(); // e.g. 10
 			$highestColumn = $objWorksheet->getHighestColumn(); // e.g 'F'
 			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); // e.g. 5
-			echo '<table>' . "\n";
-			for ($row = 2; $row <= $highestRow; ++$row) {
-			echo '<tr>' . "\n";
-			for ($col = 0; $col <= $highestColumnIndex; ++$col) {
-				echo '<td>' . $objWorksheet->getCellByColumnAndRow($col, $row)->getValue() . '</td>' . "\n";
+			
+			for ($row = 9; $row <= $highestRow; ++$row) {
+				$permukaan = new Permukaan;
+				$c=-1;
+				$permukaan->ID_IDBalai=2;
+				$permukaan->NoData= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->data_dasar= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->nama_sistem= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$permukaan->nama_objek= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$permukaan->tahun_data= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->kodefikasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$permukaan->nama_das= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$permukaan->nama_ws= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->provinsi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->kota= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->kecamatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->desa= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->bujur_timur= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->lintang_selatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->elevasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->status= "Rencana";
+				$permukaan->nama_cat="";
+				$permukaan->save();
+				
+				$mpermukaan = new ManfaatPermukaan;
+				$mpermukaan->ID_IDBalaiWa=2;
+				$mpermukaan->NoDataWa=$permukaan->NoData;
+				$mpermukaan->jiwa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();			
+				$mpermukaan->debit=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$mpermukaan->status_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$mpermukaan->kecamatan1==$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$mpermukaan->kecamatan2="";
+				$mpermukaan->desa1==$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$mpermukaan->desa2="";
+				$mpermukaan->nama_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$mpermukaan->luas_dta=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$mpermukaan->lebar_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$mpermukaan->tadah_awal="";
+				$mpermukaan->tadah_saatini="";
+				$mpermukaan->suplesi_awal="";
+				$mpermukaan->suplesi_saatini="";
+				$mpermukaan->catchment_area="";
+				$mpermukaan->catchment_area1="";
+				$mpermukaan->save();
 			}
-			echo '</tr>' . "\n";
+		}else{
+			echo json_encode($_FILES);
+		}
+	}
+	public static function importOldXls()
+    {
+		Yii::import('application.extensions.PHPExcel', true);
+		$objReader = new PHPExcel_Reader_Excel5;
+		if(isset($_FILES['inputatab'])){
+			$objPHPExcel = $objReader->load($_FILES['inputatab']['tmp_name']);
+			$objWorksheet = $objPHPExcel->getActiveSheet();
+			$highestRow = $objWorksheet->getHighestRow(); // e.g. 10
+			$highestColumn = $objWorksheet->getHighestColumn(); // e.g 'F'
+			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); // e.g. 5
+			
+			echo '<table>' . "\n";
+			for ($row = 9; $row <= $highestRow; ++$row) {
+				echo '<tr>' . "\n";
+				$permukaan = new Permukaan;
+				$c=-1;
+				$permukaan->ID_IDBalai=2;
+				$permukaan->NoData= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->data_dasar= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->nama_sistem= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$permukaan->nama_objek= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$permukaan->tahun_data= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->kodefikasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$permukaan->nama_das= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$permukaan->nama_ws= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->provinsi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->kota= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->kecamatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->desa= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->bujur_timur= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->lintang_selatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->elevasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$permukaan->status= "Rencana";
+
+				$permukaan->manfaat->jiwa= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();									
+				$permukaan->manfaat->jiwa= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();									
+				$permukaan->nama_cat="";
+				$permukaan->save();
+						
+				for ($col = 0; $col <= $highestColumnIndex; ++$col) {
+					echo '<td>' . $objWorksheet->getCellByColumnAndRow($col, $row)->getValue(). '</td>' . "\n";
+				}
+				echo '</tr>' . "\n";
+				
 			}
 			echo '</table>' . "\n";
 		}else{
