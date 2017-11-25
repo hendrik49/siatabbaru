@@ -349,5 +349,29 @@ class Permukaan extends CActiveRecord
 		$objWriter->save('php://output');
 		unset($objPHPExcel);
 	}
+
+	public static function importXls()
+    {
+		Yii::import('application.extensions.PHPExcel', true);
+		$objReader = new PHPExcel_Reader_Excel5;
+		if(isset($_FILES['inputatab'])){
+			$objPHPExcel = $objReader->load($_FILES['inputatab']['tmp_name']);
+			$objWorksheet = $objPHPExcel->getActiveSheet();
+			$highestRow = $objWorksheet->getHighestRow(); // e.g. 10
+			$highestColumn = $objWorksheet->getHighestColumn(); // e.g 'F'
+			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); // e.g. 5
+			echo '<table>' . "\n";
+			for ($row = 2; $row <= $highestRow; ++$row) {
+			echo '<tr>' . "\n";
+			for ($col = 0; $col <= $highestColumnIndex; ++$col) {
+				echo '<td>' . $objWorksheet->getCellByColumnAndRow($col, $row)->getValue() . '</td>' . "\n";
+			}
+			echo '</tr>' . "\n";
+			}
+			echo '</table>' . "\n";
+		}else{
+			echo json_encode($_FILES);
+		}
+	}
 }
 ?>

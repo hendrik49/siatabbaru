@@ -15,7 +15,7 @@ $this->breadcrumbs=array(
 		Data Air Baku (Mata Air)
 		<!--<div class="span4" style="margin-left: 50px;">-->
 		| <input type="button" value="Export" onClick="emataair()" class="btn btn-info">
-		| <input type="button" value="Import" onClick="imataair()" class="btn btn-danger">
+		| <input type="button" type="file" value="Import" onClick="imataair()" class="btn btn-danger">
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>  
 		| <?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
 			'type'=>'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
@@ -296,6 +296,11 @@ $this->breadcrumbs=array(
 function emataair()
 {	
     document.dMataair.action="/siatab/mataair/emataair";
+	document.dMataair.submit();
+}
+function imataair()
+{	
+    document.dMataair.action="/siatab/mataair/imataair";
 	document.dMataair.submit();
 }
 </script>
