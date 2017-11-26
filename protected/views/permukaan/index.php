@@ -5,8 +5,7 @@
 		'(Sungai)',
 	);
 ?>
-
-<form method="POST" name="dSungai">
+<form method="POST" enctype="multipart/form-data" name="dSungai">
 	<div class="span12" style="background: #fcd13c; height: auto; margin: -10px 0px 5px 0px; padding: 2px;">
 	<h5 style="margin: 0 5px auto;">
 	<div class="span7">
@@ -16,7 +15,10 @@
 		Data Air Baku (Sungai)
 		<!--<div class="span4" style="margin-left: 50px;">-->
 		| <input type="button" value="Export" onClick="esungai()" class="btn btn-info">
+		| <input type="file" name="inputatab" value="Pilih File" class="btn btn-success">
 		| <input type="button" value="Import" onClick="isungai()" class="btn btn-danger">
+
+
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>  
 		| <?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
 			'type'=>'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
@@ -431,6 +433,12 @@
 function esungai()
 {	
     document.dSungai.action="/siatab/permukaan/esungai";
+	document.dSungai.submit();
+}
+
+function isungai()
+{	
+    document.dSungai.action="/siatab/permukaan/isungai";
 	document.dSungai.submit();
 }
 </script>

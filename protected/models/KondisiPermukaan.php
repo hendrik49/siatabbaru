@@ -30,8 +30,8 @@ class KondisiPermukaan extends CActiveRecord
 		return array(
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID, ID_IDBalaiNam, NoDataNam', 'length', 'max'=>13),
-			array('kondisi_sungai, kondisi_reservoir, kondisi_pompa, kondisi_bangunan, kondisi_penggerak', 'length', 'max'=>100),
-			array('ket_kondisi_sungai, ket_kondisi_reservoir, ket_kondisi_pompa, ket_kondisi_bangunan, ket_kondisi_penggerak', 'length', 'max'=>100),
+			array('kondisi_sungai, kondisi_reservoir, kondisi_pompa, kondisi_bangunan, kondisi_penggerak', 'length', 'max'=>300),
+			array('ket_kondisi_sungai, ket_kondisi_reservoir, ket_kondisi_pompa, ket_kondisi_bangunan, ket_kondisi_penggerak', 'length', 'max'=>300),
 			array('sumber_pendanaan, instansi_pembangun, dokumen_pendukung', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

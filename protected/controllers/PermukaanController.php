@@ -45,7 +45,7 @@ class PermukaanController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'search','tambah', 'detail', 'viewi', 'esungai'),
+				'actions'=>array('index','view', 'search','tambah', 'detail', 'viewi', 'esungai','isungai'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -260,6 +260,14 @@ class PermukaanController extends Controller
 		}
 	}
 
+	public function actionIsungai()
+    {
+		if(isset($_POST['Permukaan'])){
+			Permukaan::importXls($_FILES);
+			$this->actionIndex();
+		}
+	}
+
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -441,7 +449,7 @@ class PermukaanController extends Controller
 		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 	/**
 	 * Lists all models.
