@@ -202,7 +202,7 @@ class BeritaController extends Controller
 				$model->Link = $imgName;
 
 			if($model->save()) {
-				$this->_mapPath .= '/SlideImage';
+				$this->_mapPath .= '/images/SlideImage';
 
 				if (!empty($file1))
 					$file1->saveAs($this->_mapPath .'/'. $file1->getName());

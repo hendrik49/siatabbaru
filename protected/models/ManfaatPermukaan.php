@@ -32,7 +32,7 @@ class ManfaatPermukaan extends CActiveRecord
 			//array('Tanggal', 'numerical', 'integerOnly'=>true),
 			array('ID_IDBalaiWa, NoDataWa, debit, jiwa', 'length', 'max'=>13),
 			array('catchment_area, catchment_area1', 'file', 'types'=>array('dbf', 'shp', 'sbx', 'sbn', 'prj'), 'allowEmpty'=>true),
-			array('status_airbaku, tadah_awal, tadah_saatini, suplesi_awal, suplesi_saatini, kecamatan1, kecamatan2, desa1, desa2, lebar_sungai', 'length', 'max'=>100),
+			array('status_airbaku, tadah_awal, tadah_saatini, suplesi_awal, suplesi_saatini, kecamatan1, kecamatan2, desa1, desa2, lebar_sungai', 'length', 'max'=>300),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('', 'safe', 'on'=>'search'),

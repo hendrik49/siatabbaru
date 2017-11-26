@@ -2,7 +2,7 @@
 /* @Bitartik Group */
 
 $this->breadcrumbs=array(
-	'PPK'=>array('index'),
+	'Satker'=>array('index'),
 	$model->ID,
 );
 

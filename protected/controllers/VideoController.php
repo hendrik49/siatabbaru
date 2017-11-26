@@ -126,22 +126,21 @@ class VideoController extends Controller
 			$model->attributes=$_POST['Video'];
 			//$file1 = CUploadedFile::getInstance($model, 'Link');
 			$model->Link = CUploadedFile::getInstance($model,'Link');	
+			$model->Tanggal = time();
 			
 			//if (!empty($file1))
 			//	$model->Link = $myUpload->getName();
 			//else
 			//	$model->Link =  $imgName();
 			if($model->save()) {
-				$this->_mapPath = Yii::app()->params->baseMapPath;
-				$model->Link->saveAs($this->_mapPath . '/images/SlideImage/'. $model->Link->getName());
-						
-				//if (!empty($myUpload)) {
-					//$this->_mapPath = Yii::app()->request->baseUrl;
-					//$file1->saveAs($this->_mapPath . $file1->getName());
-					//$model->Link = $file1->getName();
-				//}	
-				
-			}$this->redirect(array('view','id'=>$model->ID));
+				if($model->Link){
+					$this->_mapPath = Yii::app()->params->baseMapPath;
+					$model->Link->saveAs($this->_mapPath . '/Video/'. $model->Link->getName());
+				}
+				$this->redirect(array('view','id'=>$model->ID));
+			}else{
+				echo json_encode($_POST['Video']);
+			}
 
 		}
 		
@@ -159,11 +158,6 @@ class VideoController extends Controller
 	{
 		$model=$this->loadModel($id);
 
-		//if ($model->Administrator != Yii::app()->user->name AND (Yii::app()->user->hakAkses != User::USER_SUPER_ADMIN))
-		//	throw new CHttpException(404,'Halaman tidak ditemukan.');
-		
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
 
 		$imgName = $model->Link;
 
@@ -181,7 +175,7 @@ class VideoController extends Controller
 				$model->Link = $imgName;
 
 			if($model->save()) {
-				$this->_mapPath .= '/SlideImage';
+				$this->_mapPath .= '/Video';
 
 				if (!empty($file1))
 					$file1->saveAs($this->_mapPath .'/'. $file1->getName());
@@ -213,33 +207,21 @@ class VideoController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$criteria=new CDbCriteria;
-
-		$rawData = array();
-		for ($i = 0; $i < 8; $i++)
-			$rawData[] = array('id'=>$i + 1);
-
-		$listDataProvider1 = new CArrayDataProvider($rawData);
-		
-		$dataProvider=new CActiveDataProvider('Video', array(
-			'criteria'=>$criteria,
-			'sort'=>array(
-				'defaultOrder'=>'video DESC',
-			),
-			'pagination' => array(
-				'pageSize' => 8,
-			),
-		));
+		$model=new Video('search');
+		$model->unsetAttributes();
+		$dataProvider=new CActiveDataProvider('Video');	
+		if(isset($_GET['Video']))
+			$model->attributes=$_GET['Video'];
 
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-			'listDataProvider1'=>$listDataProvider1,
+			'model'=>$model,
+			'dataProvider'=>$dataProvider
 		));
 	}
 	
 	public function actionGalleri()
 	{
-		$this->render('galleri');
+		$this->render('video');
 	}
 
 	/**

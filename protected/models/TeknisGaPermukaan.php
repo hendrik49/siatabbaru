@@ -30,7 +30,7 @@ class TeknisGaPermukaan extends CActiveRecord
 		return array(
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID_IDBalaiMa, NoDataMa', 'length', 'max'=>13),
-			array('tahun_bangun, rehab, rencana_rehab, nama_lembaga, legalitas, tahun_berdiri, perizinan, no_kontrak, status_kelola, status_operasi, keterangan', 'length', 'max'=>100),
+			array('tahun_bangun, rehab, rencana_rehab, nama_lembaga, legalitas, tahun_berdiri, perizinan, no_kontrak, status_kelola, status_operasi, keterangan', 'length', 'max'=>300),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('', 'safe', 'on'=>'search'),

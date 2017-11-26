@@ -134,7 +134,7 @@ class GaleriController extends Controller
 			//	$model->Link =  $imgName();
 			if($model->save()) {
 				$this->_mapPath = Yii::app()->params->baseMapPath;
-				$model->Link->saveAs($this->_mapPath . '/images/SlideImage/'. $model->Link->getName());
+				$model->Link->saveAs($this->_mapPath . '/Galeri/'. $model->Link->getName());
 						
 				//if (!empty($myUpload)) {
 					//$this->_mapPath = Yii::app()->request->baseUrl;
@@ -182,7 +182,7 @@ class GaleriController extends Controller
 				$model->Link = $imgName;
 
 			if($model->save()) {
-				$this->_mapPath .= '/SlideImage';
+				$this->_mapPath .= '/Galeri';
 
 				if (!empty($file1))
 					$file1->saveAs($this->_mapPath .'/'. $file1->getName());
@@ -214,27 +214,16 @@ class GaleriController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$criteria=new CDbCriteria;
-
-		$rawData = array();
-		for ($i = 0; $i < 8; $i++)
-			$rawData[] = array('id'=>$i + 1);
-
-		$listDataProvider1 = new CArrayDataProvider($rawData);
 		
-		$dataProvider=new CActiveDataProvider('Galeri', array(
-			'criteria'=>$criteria,
-			'sort'=>array(
-				'defaultOrder'=>'Tanggal DESC',
-			),
-			'pagination' => array(
-				'pageSize' => 8,
-			),
-		));
+		$model=new Galeri('search');
+		$model->unsetAttributes();
+		$dataProvider=new CActiveDataProvider('Galeri');	
+		if(isset($_GET['Galeri']))
+			$model->attributes=$_GET['Galeri'];
 
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-			'listDataProvider1'=>$listDataProvider1,
+			'model'=>$model,
+			'dataProvider'=>$dataProvider
 		));
 	}
 	

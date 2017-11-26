@@ -17,7 +17,7 @@ class Video extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'video';
+		return 't_video';
 	}
 
 	/**
@@ -28,7 +28,17 @@ class Video extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ID, video', 'safe', 'on'=>'search'),
+			array('NamaVideo, Tanggal, Deskripsi, Youtube', 'required'),
+			array('Tanggal', 'numerical', 'integerOnly'=>true),
+				array('Link',
+				  'file', 'types'=>array(
+						'mp4','3gp',
+					
+				  ),
+				  'allowEmpty'=>true,
+			),	
+			array('Kategori, NamaVideo, Link, Youtube', 'length', 'max'=>255),
+			array('ID, Kategori, NamaVideo, Tanggal, Link, Youtube, Deskripsi', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +60,12 @@ class Video extends CActiveRecord
 	{
 		return array(
 			'ID' => 'ID',
-			'video' => 'Video',
+			'Kategori' => 'Kategori',
+			'NamaVideo' => 'Nama Video',
+			'Tanggal' => 'Tanggal',
+			'Link' => 'Nama File',
+			'Deskripsi' => 'Deskripsi',
+			'Youtube' => 'Link Youtube',
 		);
 	}
 
@@ -66,8 +81,14 @@ class Video extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('ID',$this->ID);
-		$criteria->compare('video',$this->Kategori);
-
+		$criteria->compare('Kategori',$this->Kategori);
+		$criteria->compare('NamaVideo',$this->NamaVideo,true);
+		$criteria->compare('status',$this->status,true);
+		$criteria->compare('Tanggal',$this->Tanggal);
+		$criteria->compare('Link',$this->Link,true);
+		$criteria->compare('Deskripsi',$this->Deskripsi);
+		$criteria->compare('Youtube',$this->Youtube);
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

@@ -65,7 +65,7 @@ class KondisiPermukaan extends CActiveRecord
 		return array(
 			'ID' => 'ID',
 			'ID_IDBalaiNam' => 'ID Balai',
-			'NoDataMa' => 'Data Ke', 
+			'NoDataNam' => 'Data Ke', 
 			'kondisi_sungai' => 'Kondisi Sungai',
 			'kondisi_reservoir' => 'Kondisi Reservoir',
 			'kondisi_pompa' => 'Kondisi Pompa',

@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 	/*th{padding:6px 3px;background: #fbc50b;}*/
 	th{padding:6px 3px;background: #fbc50b;}
 </style>		
-<b>Daftar Pegawai</b>
+<b></b>
 
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?>  
 	<?php 
@@ -31,8 +31,13 @@ $this->breadcrumbs=array(
 			'enablePagination' => true,
 			'summaryText'=>'Displaying {start}-{end} of {count} results.',
 					'columns'=>
+					
 				array( 
-					'ID','Nama', 'NIP', 'Email', 'Alamat', 'NoTelp', 
+					array(
+						'name'=>'ID',
+						'htmlOptions' => array('style' =>'width: 30px;text-align:center;')					
+					),	
+					'Nama', 'NIP', 'Email', 'Golongan', 'Jabatan','Bidang',			 
 					array(
 						'name'=>'Foto', 
 						'type'=>'raw',

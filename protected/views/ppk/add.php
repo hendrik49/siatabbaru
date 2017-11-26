@@ -2,7 +2,7 @@
 /* @Bitartik Group */
 
 $this->breadcrumbs=array(
-	'Data PPK'=>array('index'),
+	'Data Satker'=>array('index'),
 	'Tambah',
 );
 ?>

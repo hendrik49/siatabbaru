@@ -61,7 +61,7 @@
 							array('label'=>'Tata Usaha', 'url'=>array('#'),'items'=>array(
 								array('label'=>'Struktur Organisasi', 'url'=>array('#')),
 								array('label'=>'Profil Pegawai', 'url'=>array('#')),
-								array('label'=>'Profil PPK', 'url'=>array('#')),
+								array('label'=>'Profil Satker', 'url'=>array('#')),
 								array('label'=>'Persuratan', 'url'=>array('#')),
 								)),
 							)),					
