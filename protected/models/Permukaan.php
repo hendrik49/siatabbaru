@@ -487,6 +487,20 @@ class Permukaan extends CActiveRecord
 				$tdpermukaan->sumber_pendanaan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
 				$tdpermukaan->dokumen_pendukung=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$tdpermukaan->save();
+
+				
+				$ipermukaan = new InfoPermukaan;
+				$ipermukaan->ID=$permukaan->ID;
+				$ipermukaan->ID_IDBalaiJu=2;
+				$ipermukaan->NoDataJu=$permukaan->NoData;
+				$ipermukaan->foto1="";
+				$ipermukaan->foto2="";
+				$ipermukaan->foto3="";
+				$ipermukaan->foto4="";
+				$ipermukaan->foto5="";
+				$ipermukaan->video="";
+				$ipermukaan->save();
+
 			}
 		}else{
 			echo json_encode($_FILES);
