@@ -30,14 +30,16 @@ class DTBase extends CActiveRecord
 		return array(
 			array('Tanggal', 'required'),
 			array('Tanggal', 'numerical', 'integerOnly'=>true),
-			array('kdsatker, NamaSatker, NamaBalai, KdOutput, nmoutput, Kinerja, satm, vol1, st_outcome', 'length', 'max'=>100),
-			array('vol2, rpm, rmp, apln, Jumlah, nmkabkota, kewenangan, jk2, b_sp, swakelola, RTRW, SIPPA
-			Permohonan, RKP_Renstra, DokumenLH, DokumenkesiapanLahan, FS_SID_DED, KAK_RAB, Keterangan', 'length', 'max'=>100),
+			array('kode_satker, NamaSatker, kode_balai, NamaBalai, kode_provinsi, nama_lokasi, kode_kegiatan, nama_kegiatan, 
+				kode_output, nama_output, vol_outcome, vol_output, sat_output, sat_outcome, apln', 'length', 'max'=>100),
+			array('rpm, rmp, apln, Jumlah, kode_kabupaten, nama_kabkota, kewenangan, MYC, b_sp, tahun_mulai, tahun_selesai,
+			kegiatan_prioritas, sasaran_kegiatan, tahun_ded, tahun_dok, tahun_pembebasan, kode_dukungan_bap, kode_dukungan_wps,
+			prioritas_nasional, program_prioritas', 'length', 'max'=>100),
 			array('file_','file','types'=>'xls', 'allowEmpty'=>true),
-			array('Strategis', 'length', 'max'=>255),
+			
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('kdsatker, NamaSatker, NamaBalai, KdOutput, nmoutput, Kinerja, satm, vol1, SatuanOutcome', 'safe', 'on'=>'search'),
+			array('', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,17 +64,18 @@ class DTBase extends CActiveRecord
 	{
 		return array(
 			'ID' => 'ID',
-			'kdsatker' => 'kdsatker',
-			'NamaSatker' => 'NamaSatker',
-			'NamaBalai' => 'NamaBalai',
-			'KdOutput' => 'KdOutput',
-			'nmoutput' => 'nmoutput',
-			'Kinerja' => 'Kinerja',
-			'satm' => 'satm',
-			'vol1' => 'vol1',
-			'st_outcome' => 'satuan outcome',
-			'Strategis' => 'Strategis',
-			'file_'=>'Upload File Excel',
+			'NamaSatker' => 'Nama Satker',
+			'NamaBalai' => 'Nama Balai',
+			'nama_output' => 'Nama Output',
+			'nama_paket' => 'Nama Paket',
+			'vol_output' => 'Volume Output',
+			'vol_outcome' => 'Volume Outcome',
+			'sat_output' => 'Satuan Output',
+			'sat_outcome' => 'Satuan Outcome',
+			'rpm' => 'R P M',
+			'rmp'=>'R M P',
+			'apln' => 'A P L N',
+			'Jumlah'=>'Jumlah',
 
 		);
 	}
@@ -89,7 +92,7 @@ class DTBase extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('ID',$this->ID);
-		$criteria->compare('kdsatker',$this->kdsatker);
+		//$criteria->compare('kdsatker',$this->kdsatker);
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

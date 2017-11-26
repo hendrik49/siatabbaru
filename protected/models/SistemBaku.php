@@ -93,27 +93,35 @@ class SistemBaku extends CActiveRecord
 	public static function getAvailableSistemId()
 	{
 		$criteria = new CDbCriteria;
-		$criteria->limit = 1;
-		$criteria->order = 'ID_Sistem';
+		if (isset(Yii::app()->user->uid)) {
+			$criteria->compare('ID_Balai_Sistem', Yii::app()->user->uid);
+			$criteria->limit = 1;
+			$criteria->order = 'ID_Sistem DESC';
 
-		$lastDataSumur =self::model()->find(
-			$criteria
-		);
+			$lastNoData =self::model()->find(
+				$criteria
+			);
 
-		if (isset($lastDataSumur->ID_Sistem))
-			return $lastDataSumur->ID_Sistem + 1;
-		else
-			return 1;
-	}	
+			if (isset($lastNoData->ID_Sistem))
+				return $lastNoData->ID_Sistem + 1;
+			else
+				return 1;
+		}
+	}
 
 	public static function lookupNamaSistem()
 	{
 		$namas = self::model()->findAll();
-
+		$reror = "Data Belum diSet";
 		$_items = array();
 		foreach ($namas as $nama) 
 		{
-			$_items[$nama->Nama_Sistem] = $nama->Nama_Sistem;
+			if(isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_ADMIN){
+				if(Yii::app()->user->uid == $nama->ID_Balai_Sistem){
+					$_items[$nama->Nama_Sistem] = $nama->Nama_Sistem;
+				}else{$_items[1] = $reror;}
+			}
+			
 		}
 
 		return $_items;

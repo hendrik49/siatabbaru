@@ -2,7 +2,7 @@
 			'cssFile'=>Yii::app()->baseUrl . '/css/dtgrid/detailview/styles.css',
 			'data'=>$model,
 			'attributes'=>array(
-				'tahun_bangun',
+			'tahun_bangun',
 			'rehab',
 			'rencana_rehab',
 			'nama_lembaga',

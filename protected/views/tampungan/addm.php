@@ -68,8 +68,8 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 			 Upload jika ingin mengganti <?php echo $model->catchment_area1; ?>
 		<?php endif ?>
 	
-	<?php echo $form->dropDownListRow($model,'nama_sungai',array('05'=>'Embung',
-	'04'=>'Danau', '07'=>'Waduk/ Bendungan', '06'=>'Situ')); ?>
+	<?php echo $form->dropDownListRow($model,'nama_sungai',array('Embung'=>'Embung',
+	'Danau'=>'Danau', 'Waduk'=>'Waduk/ Bendungan', 'Situ'=>'Situ')); ?>
 	<?php echo $form->textFieldRow($model,'luas_dta'); ?>
 	<?php echo $form->textFieldRow($model,'kapasitas_tampung'); ?>
 

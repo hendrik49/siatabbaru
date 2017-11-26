@@ -26,7 +26,7 @@ $this->breadcrumbs=array(
 					'name'=>'Tanggal',
 					'value'=>'date("d / m / Y", $data->Tanggal)',
 				),
-				'NamaBalai', 'KabKota', 'Provinsi', 'PopulasiKabKota', 'TotalABKabKota', 'JiwaTerlayani', 'JiwaBelumTerlayani', 
+				'NamaBalai', 'KabKota', 'provinsi', 'PopulasiKabKota', 'TotalABKabKota', 'JiwaTerlayani', 'JiwaBelumTerlayani', 
 				array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{view}', 'buttons'=>array(
 					'viewButtonUrl'=>'Yii::app()->createUrl("neraca/view/", array("id"=>$data->ID))'),
 				), 
@@ -47,7 +47,7 @@ $this->breadcrumbs=array(
 					'name'=>'Tanggal',
 					'value'=>'date("d / m / Y", $data->Tanggal)',
 				),
-				'NamaBalai', 'kota', 'PopulasiKabKota', 'TotalABKabKota', 'JiwaTerlayani', 'JiwaBelumTerlayani', 
+				'NamaBalai', 'kota', 'PopulasiKabKota', 'provinsi', 'TotalABKabKota', 'JiwaTerlayani', 'JiwaBelumTerlayani', 
 				array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{view}', 'buttons'=>array(
 					'viewButtonUrl'=>'Yii::app()->createUrl("neraca/view/", array("id"=>$data->ID))'),
 				), 
@@ -56,3 +56,5 @@ $this->breadcrumbs=array(
 		)); 	
 	?>
 <?php endif ?>
+
+

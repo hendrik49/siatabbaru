@@ -32,11 +32,11 @@ class Neraca extends CActiveRecord
 			array('Tanggal', 'numerical', 'integerOnly'=>true),
 			array('Nrw, PopulasiKabKota, TargetJiwa, TotalABKabKota, JiwaTerlayani, JiwaBelumTerlayani, 
 			KebutuhanAirBaku, JTOL, RencanaLayanan', 'length', 'max'=>13),
-			array('Provinsi, NamaBalai, KabKota, kota', 'length', 'max'=>100),
+			array('provinsi, NamaBalai, KabKota, kota', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('Nrw, PopulasiKabKota, TargetJiwa, TotalABKabKota, JiwaTerlayani, JiwaBelumTerlayani, 
-			KebutuhanAirBaku, JTOL, Provinsi, NamaBalai, KabKota', 'safe', 'on'=>'search'),
+			KebutuhanAirBaku, JTOL, provinsi, NamaBalai, KabKota', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,7 +74,7 @@ class Neraca extends CActiveRecord
 			'JiwaBelumTerlayani' => 'Penduduk Belum terlayani',
 			'KebutuhanAirBaku' => 'Kebutuhan Air Baku',
 			'JTOL' => 'Jiwa Tidak Perlu Layanan',
-			'Provinsi' => 'Provinsi',
+			'provinsi' => 'Provinsi',
 			'NamaBalai' => 'Nama Balai',
 			'KabKota' => 'Kabupaten/Kota',
 			'RencanaLayanan' => 'Rencana Layanan Air Baku',
@@ -100,6 +100,8 @@ class Neraca extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	
 	
 }
 ?>

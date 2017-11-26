@@ -26,8 +26,12 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 		
 	endif
 	?>
-	<div style="visibility:hidden; position:absolute;"><?php $model->ID_Balai_Sistem = (Yii::app()->user->uid); 
+	<div style="visibility:hidden; position:absolute;"><?php 
+		$model->ID_Balai_Sistem = Yii::app()->user->uid; 
+		$model->ID_Sistem = SistemBaku::getAvailableSistemId();
 	?>
+	<?php echo $form->textFieldRow($model,'ID_Balai_Sistem',array('size'=>25,'maxlength'=>30)); ?>
+	<?php echo $form->textFieldRow($model,'ID_Sistem',array('size'=>25,'maxlength'=>30)); ?>
 	</div>
 	</td>
 </tr>

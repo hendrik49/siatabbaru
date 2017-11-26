@@ -12,7 +12,7 @@ $this->breadcrumbs=array(
 </style>
 		
 		
-<b>Daftar PPK</b>
+<b>Daftar Satker</b>
 
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?> | 
 	<?php 

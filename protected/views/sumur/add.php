@@ -111,25 +111,5 @@ include '../siatab/connect.php';
 
 
 <script>
-	/*var kott = document.getElementById("Provv").value;
-	document.getElementById('kodeeKab').value = kott;
-	<?php //$kp = $model->kota; ?>
-	var jum ="<?php// echo $max; ?>"; 
-	var kota = new Array();
-	var kode = new Array();
-	var getKode = 0;
-
-	var i = 0; var kp = "<?php //echo $kp; ?>";
-	var x = document.getElementById("kodeeKab").value;
-	var nod = document.getElementById("NoUData").value;
-	for(i=1;i<=jum;i++){
-		kota[i] = document.getElementById('NamaKab'+i).value;
-		kode[i] = document.getElementById('KodeKab'+i).value;
-		if(kota[i]==kp){
-			//kp = Number(kp) * Number(1000000);
-			//getKode = (Number(000000) * Number(kode[i])) + Number(33060900000000) + Number(nod);
-		}
-	}
-	document.getElementById('KodeFikasi').value = "0"+getKode; */
 </script>
 </html>

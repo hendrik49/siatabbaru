@@ -19,7 +19,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 )); ?>
 
 <fieldset>
-    <legend>Input Data PPK</legend>
+    <legend>Input Data Satker</legend>
 	<?php echo $form->textFieldRow($model,'Nama',array('size'=>60,'maxlength'=>60)); ?>
 	<?php echo $form->textFieldRow($model,'NIP',array('size'=>25,'maxlength'=>30)); ?>
 	<?php echo $form->textFieldRow($model,'Email',array('size'=>60,'maxlength'=>60)); ?>

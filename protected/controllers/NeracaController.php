@@ -34,7 +34,7 @@ class NeracaController extends Controller
 				'users'=>array_merge($user['superAdmin'], $user['admin']),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('update', 'add'),
+				'actions'=>array('update', 'add', 'setKot'),
 				'users'=>array_merge($user['superAdmin'], $user['admin']),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -68,28 +68,7 @@ class NeracaController extends Controller
 	public function actionAdd()
 	{
 		$model=new Neraca;
-		//$modelSumur=new TeknisSumur;
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-	/*if(Yii::app()->request->isAjaxRequest && $_POST['Neraca']){
-		/*if(Yii::app()->request->isAjaxRequest && $_POST['TeknisSumur']){
-			$id = $_POST['TeknisSumur']['KabKota'];
-			$modelSumur = TeknisSumur::model()->findByAttributes($id);
-			echo CJSON::encode($modelSumur);
-		}
-		$id = $_POST['Neraca']['KabKota'];
-		$model = Neraca::model()->findByPk($id);
-		echo CJSON::encode($model);
-	}
-		else {
-			$model = new Neraca;
-				$this->render('add',array(
-				'model'=>$model,
-				//'modelSumur'=>$modelSumur,
-			));
-		}*/
-		
+	
 		if(isset($_POST['Neraca']))
 		{
 			$model->attributes=$_POST['Neraca'];	
@@ -130,28 +109,6 @@ class NeracaController extends Controller
 				'model'=>$model,
 			));
 	}
-
-	public function actionImport($id)
-	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-		
-		//require_once Yii::app()->_mapPath.'/File/excel_reader2.php';
-
-			if(isset($_POST['Neraca']))
-			{
-				$model->attributes=$_POST['Neraca'];
-				$this->redirect(array('view','id'=>$model->ID));
-			}
-
-			$this->render('import',array(
-				'model'=>$model,
-			));
-
-	}
-
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
@@ -171,12 +128,27 @@ class NeracaController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$model = new Neraca;
 		$dataProvider=new CActiveDataProvider('Neraca');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
-
+	
+	
+	public $modelkota;
+	public function actionSetkot()
+	{	 
+		$modelKota= new Kota;
+	   	$data=Kota::model()->findAll('provinsi=:provinsi',
+		array(':provinsi'=>(string) $_POST['provinsi']));
+		$data=CHtml::listData($data,'kab','kab');
+		foreach($data as $value=>$name)
+		{
+		echo CHtml::tag('option',array('value'=>$value),CHtml::encode($name),true);
+		}  
+	}
 	
 
 	/**

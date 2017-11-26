@@ -30,8 +30,8 @@ class KondisiHujan extends CActiveRecord
 		return array(
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID_IDBalaiMa, NoDataMa', 'length', 'max'=>13),
-			array('broncaptering, reservoar, pompa, rumah_pompa, hidran_umum, saluran_airbaku, saluran_irigasi, box_pembagi, springkler, penggerak', 'length', 'max'=>100),
-			array('ket_broncaptering, ket_reservoar, ket_pompa, ket_rumah_pompa, ket_hidran_umum, ket_saluran_airbaku, ket_saluran_irigasi, ket_box_pembagi, ket_springkler, penggerak', 'length', 'max'=>100),
+			array('saringan, reservoar, pompa, rumah_pompa, hidran_umum, saluran_airbaku, saluran_irigasi, box_pembagi, springkler, penggerak', 'length', 'max'=>100),
+			array('ket_saringan, ket_reservoar, ket_pompa, ket_rumah_pompa, ket_hidran_umum, ket_saluran_airbaku, ket_saluran_irigasi, ket_box_pembagi, ket_springkler, penggerak', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('', 'safe', 'on'=>'search'),
@@ -65,7 +65,7 @@ class KondisiHujan extends CActiveRecord
 			'ID' => 'ID',
 			'ID_IDBalaiMa' => 'ID Balai',
 			'NoDataMa' => 'Data Ke', 
-			'broncaptering' => 'Saringan',
+			'saringan' => 'Saringan',
 			'reservoar' => 'Reservoar',
 			'pompa' => 'Pompa',
 			'rumah_pompa' => 'Rumah Pompa',
@@ -76,7 +76,7 @@ class KondisiHujan extends CActiveRecord
 			'springkler' => 'Springkler',
 			'penggerak' => 'Penggerak',
 
-			'ket_broncaptering' => '',
+			'ket_saringan' => '',
 			'ket_reservoar' => '',
 			'ket_pompa' => '',
 			'ket_rumah_pompa' => '',

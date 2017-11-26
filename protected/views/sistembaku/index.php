@@ -31,7 +31,7 @@ $this->breadcrumbs=array(
 			'dataProvider'=>$dataProvider,
 			//'filter'=>$model,
 			'template'=>"{items}",
-			'columns'=>array( 'ID_Sistem', 'Nama_Sistem', 'ID_Balai_Sistem',
+			'columns'=>array( 'ID_Sistem', 'Nama_Sistem', 'ID_Balai_Sistem', 
 			array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{view}', 'buttons'=>array(
 					'viewButtonUrl'=>'Yii::app()->createUrl("sistembaku/view", array("id"=>$data->ID_Balai_Sistem))'),
 				), 

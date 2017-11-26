@@ -1,11 +1,10 @@
 <?php
-/* @Bitartik Group */
-
-	$this->breadcrumbs=array(
-	'Permukaan'=>array('index'),
-	$model->ID,
+$this->pageTitle=Yii::app()->name . ' - ATAB';
+$this->breadcrumbs=array(
+	'Air Baku'=>array('/sistembaku/listbaku'),
+	'Sungai'=>array('/permukaan/index'),
+	'Lihat data',
 );
-
 ?>
 
 <div style="background: #fcd13c; width: 48%">  

@@ -56,7 +56,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->fileFieldRow($model,'foto3');?>
 	<?php echo $form->fileFieldRow($model,'foto4');?>
 	<?php echo $form->fileFieldRow($model,'foto5');?>
-	<?php echo $form->fileFieldRow($model,'video');?>
+	<?php //echo $form->fileFieldRow($model,'video');?>
 	</div>
 </td>
 <td>

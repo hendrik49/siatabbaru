@@ -32,7 +32,10 @@ class ManfaatTampungan extends CActiveRecord
 			//array('Tanggal', 'numerical', 'integerOnly'=>true),
 			array('ID_IDBalaiWa, NoDataWa, debit, jiwa', 'length', 'max'=>13),
 			array('catchment_area, catchment_area1', 'file', 'types'=>array('dbf', 'shp', 'sbx', 'sbn', 'prj'), 'allowEmpty'=>true),
-			array('status_airbaku, tadah_awal, tadah_saatini, suplesi_awal, suplesi_saatini, kecamatan1, kecamatan2, desa1, desa2, kapasitas_tampung', 'length', 'max'=>100),
+			
+			array('jiwa, debit, status_airbaku, nama_sungai, tadah_awal, luas_dta, tadah_saatini, 
+			suplesi_awal, suplesi_saatini, kecamatan1, kecamatan2, desa1, 
+			desa2, kapasitas_tampung', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('', 'safe', 'on'=>'search'),
@@ -64,10 +67,10 @@ class ManfaatTampungan extends CActiveRecord
 			'NoDataWa'=>'Data Ke',
 			'jiwa'=>'Manfaat (Jumlah Jiwa)',
 			'debit'=>'Debit (Liter/Detik)',
-			'tadah_awal'=>'Tadah Hujan Awal',
-			'tadah_saatini'=>'Tadah Hujan Saat ini',
-			'suplesi_awal'=>'Suplesi Hujan Awal',
-			'suplesi_saatini'=>'Suplesi Hujan Saat ini',
+			'tadah_awal'=>'Tadah Hujan Awal (ha)',
+			'tadah_saatini'=>'Tadah Hujan Saat ini (ha)',
+			'suplesi_awal'=>'Suplesi Hujan Awal (ha)',
+			'suplesi_saatini'=>'Suplesi Hujan Saat ini (ha)',
 			'kecamatan1'=>'Layanan Air Baku Kecamatan',
 			'kecamatan2'=>'Layanan Irigasi Kecamatan',
 			'desa1'=>'Layanan Air Baku Desa',

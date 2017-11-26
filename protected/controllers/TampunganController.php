@@ -45,7 +45,7 @@ class TampunganController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','viewm','viewt','viewtg','viewts','viewk','search','tambah', 'detail', 'viewi'),
+				'actions'=>array('index','view','search','tambah', 'detail', 'viewi', 'ewaduk'),
 				'users'=>array('*'),
 			),
  
@@ -62,25 +62,7 @@ class TampunganController extends Controller
 			),
 		);
 	}
-	public function actionCreate()
- 
-    {
- 
-    }
-	
-	public function actionFoto1($id)
-	{
-		$modelInfoMa = $this->loadModelFoto1($id);
 
-			if ($modelInfoMa->foto1) {
-				$data = file_get_contents(Yii::app()->params->baseMapPath . "/tampungan/" . $modelInfoMa->foto1);
-				$this->forceDownload($modelInfoMa->foto1, $data);
-			} else 
-				throw new CHttpException(404,'Halaman tidak ditemukan.');
-		
-	}	
-	
-	
 	function forceDownload($filename = '', $data = '')
 	{
 		if ($filename == '' OR $data == '')
@@ -377,6 +359,7 @@ class TampunganController extends Controller
 			'modelInfoMa'=>$modelInfoMa,
 		));
 	}
+
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
@@ -385,18 +368,23 @@ class TampunganController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
+		$this->loadModelW($id)->delete();
+		$this->loadModelG($id)->delete();
+		$this->loadModelP($id)->delete();
+		$this->loadModelM($id)->delete();
+		$this->loadModelN($id)->delete();
+		$this->loadModelInfo($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
+
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
 	{	
-		
-		//$datacompare = User::lookupIDUsers();
 		$model=new Tampungan('search');
 		$model->unsetAttributes();  // clear any default values
 		
@@ -405,9 +393,6 @@ class TampunganController extends Controller
 			$model->attributes=$_GET['Tampungan'];
 			$criteria=new CDbCriteria;
 
-		//if (isset(Yii::app()->user->hakAkses) AND Yii::app()->user->hakAkses == User::USER_ADMIN)
-		//	$criteria->compare('Administrator', Yii::app()->user->name);
-
 		$dataProvider=new CActiveDataProvider('Tampungan', array(
 			'criteria'=>$criteria,
 			'sort'=>array(
@@ -415,12 +400,11 @@ class TampunganController extends Controller
 			),
 		));
 			$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			//'dataProvider'=>$dataProvider,
 			'model'=>$model,
 		));
 	}
-	
-	
+		
 	public function actionTambah()
 	{
 		
@@ -571,19 +555,20 @@ class TampunganController extends Controller
 			$this->redirect(array('//tampungan/view','id'=>$modelInfoMa->ID));
 		}
 
-	$this->render('tambah',array(
-		'model'=>$model,
-		'modelmanfaat'=>$modelmanfaat,
-		'modelteknis'=>$modelteknis,
-		'modelteknisWa'=>$modelteknisWa,
-		'modelteknisGa'=>$modelteknisGa,
-		'modelteknisPat'=>$modelteknisPat,
-		'modelInfoMa'=>$modelInfoMa,
-		));		
-	}	
+		$this->render('tambah',array(
+			'model'=>$model,
+			'modelmanfaat'=>$modelmanfaat,
+			'modelteknis'=>$modelteknis,
+			'modelteknisWa'=>$modelteknisWa,
+			'modelteknisGa'=>$modelteknisGa,
+			'modelteknisPat'=>$modelteknisPat,
+			'modelInfoMa'=>$modelInfoMa,
+			));		
+		}	
+	
 	/**
-	 * Manages all models.
-	 */
+		* Manages all models.
+	**/
 	public function actionAdmin()
 	{
 		$model=new Tampungan('search');
@@ -595,6 +580,7 @@ class TampunganController extends Controller
 			'model'=>$model,
 		));
 	}
+
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
@@ -642,7 +628,6 @@ class TampunganController extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $modelteknisPat;
 	}
-	
 	public function loadModelInfo($id)
 	{
 		$modelInfoMa=InfoTampungan::model()->findByPk($id);
@@ -651,7 +636,12 @@ class TampunganController extends Controller
 		return $modelInfoMa;
 	}
 	
-	
+	public function actionEwaduk()
+    {
+		if(isset($_POST['Tampungan'])){
+			Tampungan::exportXls();
+		}
+	}	
 	
 	/**
 	 * Performs the AJAX validation.
