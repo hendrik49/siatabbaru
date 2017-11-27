@@ -45,7 +45,7 @@ class MataAirController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('search','index','view','search','tambah', 'detail', 'viewi', 'emataair'),
+				'actions'=>array('search','index','view','search','tambah', 'detail', 'viewi', 'emataair','imataair'),
 				'users'=>array('*'),
 			),
  
@@ -706,6 +706,14 @@ class MataAirController extends Controller
 		}
 	}
 
+
+	public function actionImataair()
+    {
+		if(isset($_POST['MataAir'])){
+			MataAir::importXls($_FILES);
+			//$this->actionIndex();
+		}
+	}
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

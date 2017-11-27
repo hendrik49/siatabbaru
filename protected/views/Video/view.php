@@ -1,40 +1,19 @@
 <?php
 
 $this->breadcrumbs=array(
-<<<<<<< HEAD
-	'View Peraturan'=>array('index'),
-=======
 	'View Galeri'=>array('index'),
->>>>>>> 4babcd7f82c9942e0770269afdd7bdb43cd93a7a
 	$model->ID,
 );
 
 ?>
-<<<<<<< HEAD
-
-=======
 <div>
 <?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN OR Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>
->>>>>>> 4babcd7f82c9942e0770269afdd7bdb43cd93a7a
 <?php $this->widget('bootstrap.widgets.TbDetailView', array(
 	'cssFile'=>Yii::app()->baseUrl . '/css/detailview/styles.css',
 	'data'=>$model,
 	'attributes'=>array(	
 		array(
 			'name'=>'Tanggal',
-<<<<<<< HEAD
-			'value'=>date('d / m / Y', $model->Tanggal),
-		),
-		'NamaVideo',
-		'status',
-		array(
-			'name'=>'Foto Peraturan',
-			'type'=>'raw',
-			'value'=>'<img width="700px" height="300px" src="'.Yii::app()->request->baseUrl.'/images/SlideImage/'.$model->Link.'"/>',
-		),
-	),
-)); ?>
-=======
 			'value'=>date('d, M Y', $model->Tanggal),
 		),
 		'NamaVideo',
@@ -93,4 +72,3 @@ $this->breadcrumbs=array(
 
 <?php endif ?>
 </div>
->>>>>>> 4babcd7f82c9942e0770269afdd7bdb43cd93a7a
