@@ -63,6 +63,7 @@ class TeknisMA extends CActiveRecord
 			'ID' => 'ID',
 			'ID_IDBalaiGa' => 'ID Balai',
 			'NoDataGa' => 'Data Ke', 
+			'nama_matair' => 'Nama Mata Air',
 			'sistem' => 'Sistem Kerja Pompa',
 			'jenis_pompa' => 'Jenis Pompa',
 			'head_pompa' => 'Head Pompa',

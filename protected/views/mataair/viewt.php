@@ -3,7 +3,7 @@
 			'cssFile'=>Yii::app()->baseUrl . '/css/dtgrid/detailview/styles.css',
 			'data'=>$model,
 			'attributes'=>array(
-				'sistem','jenis_pompa','head_pompa','tahun_pengadaan', 'listrik','genset', 'solar_cell', 'lain_lain','debit_andal', 'debit_awal', 'debit_idle',
+				'nama_matair','sistem','jenis_pompa','head_pompa','tahun_pengadaan', 'listrik','genset', 'solar_cell', 'lain_lain','debit_andal', 'debit_awal', 'debit_idle',
 					/*
 					array(
 						'name'=>'Foto Kantor Unit Kerja',

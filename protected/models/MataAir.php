@@ -358,6 +358,7 @@ class MataAir extends CActiveRecord
 				$permukaan->nama_objek= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
 				$permukaan->tahun_data= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$permukaan->kodefikasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$permukaan->nama_cat= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
 				$permukaan->nama_das= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
 				$permukaan->nama_ws= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$permukaan->provinsi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
@@ -394,6 +395,7 @@ class MataAir extends CActiveRecord
 				$tpermukaan->ID=$permukaan->ID;
 				$tpermukaan->ID_IDBalaiGa=2;
 				$tpermukaan->NoDataGa=$permukaan->NoData;
+				$tpermukaan->nama_matair=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$tpermukaan->sistem=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$tpermukaan->jenis_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$tpermukaan->head_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();

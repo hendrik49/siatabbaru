@@ -711,7 +711,7 @@ class MataAirController extends Controller
     {
 		if(isset($_POST['MataAir'])){
 			MataAir::importXls($_FILES);
-			//$this->actionIndex();
+			$this->actionIndex();
 		}
 	}
 	/**
