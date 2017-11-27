@@ -81,7 +81,7 @@ class InfoHujan extends CActiveRecord
 			'foto3' => 'Foto - 3',
 			'foto4' => 'Foto - 4',
 			'foto5' => 'Foto - 5',
-			'video' => 'Video',			
+			'Video' => 'Video',			
 		);
 	}
 

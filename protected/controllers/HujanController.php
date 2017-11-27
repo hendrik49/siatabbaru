@@ -45,7 +45,7 @@ class HujanController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','viewm','viewt','viewtg','viewts','viewk','search','tambah', 'detail', 'viewi','search', 'ehujan'),
+				'actions'=>array('index','view','viewm','viewt','viewtg','viewts','viewk','search','tambah', 'detail', 'viewi','search', 'ehujan','ihujan'),
 				'users'=>array('*'),
 			),
  
@@ -605,6 +605,15 @@ class HujanController extends Controller
 			Hujan::exportXls();
 		}
 	}	
+
+	
+	public function actionIhujan()
+    {
+		if(isset($_POST['Hujan'])){
+			Hujan::importXls($_FILES);
+			$this->actionIndex();
+		}
+	}
 	
 	/**
 	 * Performs the AJAX validation.

@@ -343,5 +343,171 @@ class Hujan extends CActiveRecord
 		unset($objPHPExcel);
 	}	
 
+
+	public static function importXls()
+    {
+		Yii::import('application.extensions.PHPExcel', true);
+		$objReader = new PHPExcel_Reader_Excel5;
+		if(isset($_FILES['inputatab'])){
+			$objPHPExcel = $objReader->load($_FILES['inputatab']['tmp_name']);
+			$objWorksheet = $objPHPExcel->getActiveSheet();
+			$highestRow = $objWorksheet->getHighestRow(); // e.g. 10
+			$highestColumn = $objWorksheet->getHighestColumn(); // e.g 'F'
+			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); // e.g. 5
+			
+			for ($row = 9; $row <= $highestRow; ++$row) {
+				$hujan = new Hujan;
+				$c=-1;
+				$hujan->ID_IDBalai=2;
+				$hujan->NoData= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->data_dasar= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->nama_sistem= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$hujan->nama_objek= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$hujan->tahun_data= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->kodefikasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$hujan->nama_das= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$hujan->nama_ws= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->provinsi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->kota= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->kecamatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->desa= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->bujur_timur= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->lintang_selatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->elevasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$hujan->status= "Rencana";
+				$hujan->nama_cat="";
+				$hujan->save();
+				
+				$mhujan = new ManfaatHujan;
+				$mhujan->ID=$hujan->ID;
+				$mhujan->ID_IDBalaiWa=2;
+				$mhujan->NoDataWa=$hujan->NoData;
+				$mhujan->jiwa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();			
+				$mhujan->debit=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$mhujan->kecamatan1=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$mhujan->desa1=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$mhujan->sistem=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$mhujan->jenis_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$mhujan->head_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$mhujan->tahun_pengadaan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
+				$mhujan->listrik=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$mhujan->genset=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$mhujan->solar_cell=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$mhujan->lain_lain=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$mhujan->catchment_area="";
+				$mhujan->catchment_area1="";
+				$mhujan->save();
+
+				$thujan = new TeknisHujan;
+
+				
+				$thujan->ID=$hujan->ID;
+				$thujan->ID_IDBalaiGa=2;
+				$thujan->NoDataGa=$hujan->NoData;
+				$thujan->curah_hujan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->durasi_hujan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->luas_atap=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->debit_andalan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->debit_awal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->debit_idle=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				++$c;++$c;
+				$thujan->status_aset=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue()
+									+$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue()
+									+$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue()
+									+$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->jumlah_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->luas_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->kapasitas_tampung=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->jenis_penampung=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->bahan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->jenis_saringan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->pj_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->hidran_umum=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$thujan->save();
+
+				$tghujan = new TeknisGaHujan;
+
+				$tghujan->ID=$hujan->ID;
+				$tghujan->ID_IDBalaiPat=2;
+				$tghujan->NoDataPat=$hujan->NoData;		
+				$tghujan->tahun_bangun=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->rehab=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->rencana_rehab=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->nama_lembaga=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->legalitas=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->tahun_berdiri=$tghujan->tahun_bangun;
+				$tghujan->keaktifan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->no_kontrak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->status_kelola=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->status_operasi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->keterangan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tghujan->save();
+
+
+				$tdhujan = new KondisiHujan;
+				
+				$tdhujan->ID=$hujan->ID;
+				$tdhujan->ID_IDBalaiMa=2;
+				$tdhujan->NoDataMa=$hujan->NoData;
+				$tdhujan->saringan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdhujan->ket_saringan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdhujan->reservoar=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdhujan->ket_reservoar=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdhujan->pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdhujan->ket_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+
+				$tdhujan->rumah_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdhujan->ket_rumah_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdhujan->hidran_umum=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdhujan->ket_hidran_umum=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdhujan->saluran_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdhujan->ket_saluran_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdhujan->saluran_irigasi=$tdhujan->saluran_airbaku;
+				$tdhujan->ket_saluran_irigasi=$tdhujan->ket_saluran_airbaku;
+				
+				$tdhujan->box_pembagi="";
+				$tdhujan->ket_box_pembagi="";
+				
+				$tdhujan->springkler="";
+				$tdhujan->ket_springkler="";
+				
+				$tdhujan->penggerak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$tdhujan->ket_penggerak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				$tdhujan->save();
+
+				
+				$ihujan = new InfoHujan;
+				$ihujan->ID=$hujan->ID;
+				$ihujan->ID_IDBalaiNam=2;
+				$ihujan->NoDataNam=$hujan->NoData;
+
+				$ihujan->baku_mutuair=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$ihujan->konduktivitas=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$ihujan->nilai_storativitas=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$ihujan->nilai_tranmisivitas=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$ihujan->instansi_pembangun=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$ihujan->sumber_pendanaan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$ihujan->dokumen_pendukung=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+
+				$ihujan->foto1="";
+				$ihujan->foto2="";
+				$ihujan->foto3="";
+				$ihujan->foto4="";
+				$ihujan->foto5="";
+				$ihujan->video="";
+				$ihujan->save();
+
+			}
+		}else{
+			echo json_encode($_FILES);
+		}
+	}
+
 }
 ?>
