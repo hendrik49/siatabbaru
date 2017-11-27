@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<form method="POST" name="dWaduk">
+<form method="POST"  enctype="multipart/form-data" name="dWaduk">
 	<div class="span12" style="background: #fcd13c; height: auto; margin: -10px 0px 5px 0px; padding: 2px;">
 	<h5 style="margin: 0 5px auto;">
 	<div class="span7">
@@ -16,7 +16,9 @@ $this->breadcrumbs=array(
 		Data Air Baku (Waduk, Danau, Embung, Setu)
 		<!--<div class="span4" style="margin-left: 50px;">-->
 		| <input type="button" value="Export" onClick="ewaduk()" class="btn btn-info">
+		| <input type="file" name="inputatab" value="Pilih File" class="btn btn-success">
 		| <input type="button" value="Import" onClick="iwaduk()" class="btn btn-danger">
+
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>  
 		| <?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
 			'type'=>'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
@@ -431,6 +433,12 @@ $this->breadcrumbs=array(
 function ewaduk()
 {	
     document.dWaduk.action="/siatab/tampungan/ewaduk";
+	document.dWaduk.submit();
+}
+
+function iwaduk()
+{	
+    document.dWaduk.action="/siatab/tampungan/iwaduk";
 	document.dWaduk.submit();
 }
 </script>

@@ -14,9 +14,9 @@ $this->breadcrumbs=array(
 	<?php endif ?>	
 		Data Air Baku (Hujan)
 		<!--<div class="span4" style="margin-left: 50px;">-->
-		| <input type="button" value="Export" onClick="esungai()" class="btn btn-info">
+		| <input type="button" value="Export" onClick="ehujan()" class="btn btn-info">
 		| <input type="file" name="inputatab" value="Pilih File" class="btn btn-success">
-		| <input type="button" value="Import" onClick="isungai()" class="btn btn-danger">
+		| <input type="button" value="Import" onClick="ihujan()" class="btn btn-danger">
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>  
 		| <?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
 			'type'=>'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
@@ -451,7 +451,7 @@ function ehujan()
 	document.dHujan.submit();
 }
 
-function isungai()
+function ihujan()
 {	
     document.dHujan.action="/siatab/hujan/ihujan";
 	document.dHujan.submit();

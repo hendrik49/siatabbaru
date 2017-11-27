@@ -45,7 +45,7 @@ class TampunganController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','search','tambah', 'detail', 'viewi', 'ewaduk'),
+				'actions'=>array('index','view','search','tambah', 'detail', 'viewi', 'ewaduk','iwaduk'),
 				'users'=>array('*'),
 			),
  
@@ -642,6 +642,14 @@ class TampunganController extends Controller
 			Tampungan::exportXls();
 		}
 	}	
+
+	public function actionIwaduk()
+    {
+		if(isset($_POST['Tampungan'])){
+			Tampungan::exportXls($_FILES);
+			$this->actionIndex();
+		}
+	}
 	
 	/**
 	 * Performs the AJAX validation.
