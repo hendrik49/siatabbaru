@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 <form method="POST"  enctype="multipart/form-data" name="dWaduk">
 	<div class="span12" style="background: #fcd13c; height: auto; margin: -10px 0px 5px 0px; padding: 2px;">
 	<h5 style="margin: 0 5px auto;">
-	<div class="span7">
+	<div class="span10">
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>
 		Kelola 
 	<?php endif ?>	

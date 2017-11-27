@@ -646,7 +646,7 @@ class TampunganController extends Controller
 	public function actionIwaduk()
     {
 		if(isset($_POST['Tampungan'])){
-			Tampungan::exportXls($_FILES);
+			Tampungan::importXls($_FILES);
 			$this->actionIndex();
 		}
 	}
