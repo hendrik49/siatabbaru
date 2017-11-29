@@ -242,33 +242,33 @@ right connector from last child*/
 <div class="tree">
 <ul>
 	<li>
-	<a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$ketuapusat['ID'] ?> ><img height="20" src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$ketuapusat['Foto'] ?>  alt="CEO">
+	<a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$ketuapusat['ID'] ?> ><img height="20" src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$ketuapusat['Foto'] ?>"  alt="CEO">
 	KEPALA PUSAT AIR TANAH DAN AIR BAKU </br><b> <?php echo $ketuapusat['Nama'] ?> </b>
 	</a>
 		<ul>
-			<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalabidang[2]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[3]['Foto'] ?> alt="BIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT">KEPALA BIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT  </br><b> <?php echo $kepalabidang[3]['Nama'] ?> </b></a>
+			<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalabidang[2]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[3]['Foto'] ?>" alt="BIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT">KEPALA BIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT  </br><b> <?php echo $kepalabidang[3]['Nama'] ?> </b></a>
 				<ul>
-					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[0]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[5]['Foto'] ?> alt="SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT I">SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT I </br><b> <?php echo $kepalasubbidang[5]['Nama'] ?> </b></img></a></li>
-					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[1]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[4]['Foto'] ?> alt="SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT II">SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT II </br><b> <?php echo $kepalasubbidang[4]['Nama'] ?> </b></img></a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[0]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[5]['Foto'] ?>" alt="SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT I">SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT I </br><b> <?php echo $kepalasubbidang[5]['Nama'] ?> </b></img></a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[1]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[4]['Foto'] ?>" alt="SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT II">SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH BARAT II </br><b> <?php echo $kepalasubbidang[4]['Nama'] ?> </b></img></a></li>
 				</ul>
 			</li>
-			<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalabidang[3]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[2]['Foto'] ?> alt="BIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR">KEPALA BIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR  </br><b> <?php echo $kepalabidang[2]['Nama'] ?> </b></a>
+			<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalabidang[3]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[2]['Foto'] ?>" alt="BIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR">KEPALA BIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR  </br><b> <?php echo $kepalabidang[2]['Nama'] ?> </b></a>
 				<ul>
-					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[2]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[3]['Foto'] ?> alt="SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR I">SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR I </br><b> <?php echo $kepalasubbidang[3]['Nama'] ?> </b></img></a></li>
-					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[3]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[2]['Foto'] ?> alt="SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR II">SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR II </br><b> <?php echo $kepalasubbidang[2]['Nama'] ?> </b></img></a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[2]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[3]['Foto'] ?>" alt="SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR I">SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR I </br><b> <?php echo $kepalasubbidang[3]['Nama'] ?> </b></img></a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[3]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[2]['Foto'] ?>" alt="SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR II">SUBBIDANG AIR TANAH DAN AIR BAKU WILAYAH TIMUR II </br><b> <?php echo $kepalasubbidang[2]['Nama'] ?> </b></img></a></li>
 				</ul>
 			</li>
-			<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalabidang[1]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[1]['Foto'] ?> alt="BIDANG KONSERVASI AIR TANAH DAN AIR BAKU" />KEPALA BIDANG KONSERVASI AIR TANAH DAN AIR BAKU  </br><b> <?php echo $kepalabidang[1]['Nama'] ?> </b></a>
+			<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalabidang[1]['ID'] ?>><img height="50" src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[1]['Foto']; ?>" alt="BIDANG KONSERVASI AIR TANAH DAN AIR BAKU" />KEPALA BIDANG KONSERVASI AIR TANAH DAN AIR BAKU  </br><b> <?php echo $kepalabidang[1]['Nama'] ?> </b></a>
 				<ul>
-					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[4]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[1]['Foto'] ?> alt="">SUBBIDANG KONSERVASI AIR TANAH DAN AIR BAKU WILAYAH BARAT </br><b> <?php echo $kepalasubbidang[1]['Nama'] ?> </b></img></a></li>
-					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[5]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[0]['Foto'] ?> alt="">SUBBIDANG KONSERVASI AIR TANAH DAN AIR BAKU WILAYAH TIMUR </br><b> <?php echo $kepalasubbidang[0]['Nama'] ?> </b> </img></a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[4]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[1]['Foto'] ?>" alt="">SUBBIDANG KONSERVASI AIR TANAH DAN AIR BAKU WILAYAH BARAT </br><b> <?php echo $kepalasubbidang[1]['Nama'] ?> </b></img></a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalasubbidang[5]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalasubbidang[0]['Foto'] ?>" alt="">SUBBIDANG KONSERVASI AIR TANAH DAN AIR BAKU WILAYAH TIMUR </br><b> <?php echo $kepalasubbidang[0]['Nama'] ?> </b> </img></a></li>
 				</ul>
 			</li>
-			<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalabidang[0]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[0]['Foto'] ?> alt="BAGIAN PERENCANAAN DAN TATA USAHA" />KEPALA BAGIAN PERENCANAAN DAN TATA USAHA </br><b> <?php echo $kepalabidang[0]['Nama'] ?> </b>  </a>
+			<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$kepalabidang[0]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$kepalabidang[0]['Foto'] ?>" alt="BAGIAN PERENCANAAN DAN TATA USAHA" />KEPALA BAGIAN PERENCANAAN DAN TATA USAHA </br><b> <?php echo $kepalabidang[0]['Nama'] ?> </b>  </a>
 				<ul>
-					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$subbagian[1]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$subbagian[1]['Foto'] ?> alt="">SUBBAGIAN BIMBINGAN TEKNIK </br><b> <?php echo $subbagian[1]['Nama'] ?> </b></img></a></li>
-					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$subbagian[0]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$subbagian[0]['Foto'] ?> alt="">SUBBAGIAN PERENCANAAN </br><b> <?php echo $subbagian[0]['Nama'] ?> </b></img></a></li>
-					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$subbagian[2]['ID'] ?>><img src=<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$subbagian[2]['Foto'] ?> alt="">SUBBAGIAN TATA USAHA </br><b> <?php echo $subbagian[2]['Nama'] ?> </b></img></a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$subbagian[1]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$subbagian[1]['Foto'] ?>" alt="">SUBBAGIAN BIMBINGAN TEKNIK </br><b> <?php echo $subbagian[1]['Nama'] ?> </b></img></a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$subbagian[0]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$subbagian[0]['Foto'] ?>" alt="">SUBBAGIAN PERENCANAAN </br><b> <?php echo $subbagian[0]['Nama'] ?> </b></img></a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl.'/pegawai/'.$subbagian[2]['ID'] ?>><img src="<?php echo Yii::app()->request->baseUrl.'/data/pegawai/'.$subbagian[2]['Foto'] ?>" alt="">SUBBAGIAN TATA USAHA </br><b> <?php echo $subbagian[2]['Nama'] ?> </b></img></a></li>
           </ul>
 			</li>
 		</ul>
