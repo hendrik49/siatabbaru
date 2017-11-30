@@ -76,7 +76,7 @@ class KondisiHujan extends CActiveRecord
 			'springkler' => 'Springkler',
 			'penggerak' => 'Penggerak',
 
-			'ket_saringan' => '',
+			'ket_broncaptering' => '',
 			'ket_reservoar' => '',
 			'ket_pompa' => '',
 			'ket_rumah_pompa' => '',

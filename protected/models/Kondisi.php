@@ -1,6 +1,6 @@
 <?php
 
-class Video extends CActiveRecord
+class Kondisi extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -17,7 +17,7 @@ class Video extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 't_video';
+		return 't_kondisi';
 	}
 
 	/**
@@ -28,18 +28,12 @@ class Video extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('NamaVideo, Tanggal, Deskripsi', 'required'),
-			array('Tanggal', 'numerical', 'integerOnly'=>true),
-				array('Link',
-				  'file', 'types'=>array(
-						'mp4','3gp',
-					
-				  ), 'maxSize' => 1024 * 1024 * 5000, 'tooLarge'=>'File has to be smaller than 50MB',
-				  'allowEmpty'=>true,
-			),	
-			
-			array('Kategori, NamaVideo, Link, Youtube', 'length', 'max'=>255),
-			array('ID, Kategori, NamaVideo, Tanggal, Link, Youtube, Deskripsi', 'safe', 'on'=>'search'),
+			//array('ID_IDBalaiWa', 'required'),
+			array('ID', 'length', 'max'=>13),
+			array('persen_kondisi, provinsi, nama_balai, kondisi, kriteria', 'length', 'max'=>100),
+			// The following rule is used by search().
+			// Please remove those attributes that should not be searched.
+			array('', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,6 +45,7 @@ class Video extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+
 		);
 	}
 
@@ -61,12 +56,10 @@ class Video extends CActiveRecord
 	{
 		return array(
 			'ID' => 'ID',
-			'Kategori' => 'Kategori',
-			'NamaVideo' => 'Nama Video',
-			'Tanggal' => 'Tanggal',
-			'Link' => 'Nama File',
-			'Deskripsi' => 'Deskripsi',
-			'Youtube' => 'Link Youtube',
+			'persen_kondisi' => 'kondisi',
+			'provinsi' => 'Provinsi', 
+            'nama_balai' => 'Nama Balai',
+            'kriteria' => 'Jenis ATAB',
 		);
 	}
 
@@ -81,17 +74,13 @@ class Video extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('ID',$this->ID);
-		$criteria->compare('Kategori',$this->Kategori);
-		$criteria->compare('NamaVideo',$this->NamaVideo,true);
-		$criteria->compare('status',$this->status,true);
-		$criteria->compare('Tanggal',$this->Tanggal);
-		$criteria->compare('Link',$this->Link,true);
-		$criteria->compare('Deskripsi',$this->Deskripsi);
-		$criteria->compare('Youtube',$this->Youtube);
+		$criteria=new CDbCriteria;
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+	
+
 }
+?>

@@ -32,7 +32,7 @@ class Neraca extends CActiveRecord
 			array('Tanggal', 'numerical', 'integerOnly'=>true),
 			array('Nrw, PopulasiKabKota, TargetJiwa, TotalABKabKota, JiwaTerlayani, JiwaBelumTerlayani, 
 			KebutuhanAirBaku, JTOL, RencanaLayanan', 'length', 'max'=>13),
-			array('provinsi, NamaBalai, KabKota, kota', 'length', 'max'=>100),
+			array('provinsi, NamaBalai, KabKota', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('Nrw, PopulasiKabKota, TargetJiwa, TotalABKabKota, JiwaTerlayani, JiwaBelumTerlayani, 
@@ -101,7 +101,43 @@ class Neraca extends CActiveRecord
 		));
 	}
 
-	
-	
+	public static function hitungNeraca(){
+		$dataSumur = Sumur::model()->findAll();
+		$kalkulasi = new Neraca;
+		$dataMSumur = ManfaatSumur::model()->findAll();
+
+		/*
+		$dataSungai = Permukaan::model()->findAll();
+		$dataHujan = Hujan::model()->findAll();
+		$dataTampung = Tampungan::model()->findAll();
+		$dataMataair = MataAir::model()->findAll();*/
+		
+		$key= $_POST['kota']; $datkot = array();
+		$ii= 0;
+		if(isset($_POST['kota'])){
+			foreach($dataSumur as $dataSum){
+				$ii++;
+				if($dataSum->kota == $key){
+					$datkot[$ii] = $ii;
+				}
+				
+			}
+			$kalkulasi->TotalABKabKota = Neraca::getTotalDebit($ii);
+		}
+		
+	}
+	public function getTotalDebit($ids)	
+	{
+		if($ids){
+		$ids = implode(",",$ids);
+		
+		$connection=Yii::app()->db;
+		$command=$connection->createCommand("SELECT SUM(debit) FROM t_sumur2 where id in ($ids)");
+		$amount = $command->queryScalar();
+		return number_format($amount,0);
+		}else 
+		return '0';
+	} 
 }
+
 ?>

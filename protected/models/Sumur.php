@@ -43,7 +43,7 @@ class Sumur extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('', 'required'),
-			array('Tanggal, manfaat_jiwa, debit_liter', 'numerical', 'integerOnly'=>true),
+			array('manfaat_jiwa, debit_liter', 'numerical', 'integerOnly'=>true),
 			/* ------------Data Numerical Control------------*/
 			array('ID_IDBalai, NoData, kriteria, kodefikasi', 'length', 'max'=>15),
 			/* ------------Data Dasar & Administrasi------------*/
@@ -100,7 +100,7 @@ class Sumur extends CActiveRecord
 			'bujur_timur' => 'Bujur Timur',
 			'lintang_selatan' => 'Lintang Selatan',
 			'debit_liter'=>'Debit (l/dtk)',
-			'status'=>'Status Pekerjaan',
+			'status'=>'Status Pembangunan',
 			'manfaat_jiwa'=>'Manfaat Jiwa',
 			'nama_prov'=>'Nama Kabupaten',
 			'n_prov' =>'id prov',
@@ -141,7 +141,7 @@ class Sumur extends CActiveRecord
 		$criteria->compare('teknisga.nama_lembaga',$this->nama_lembaga, true);
 		//$criteria->compare('kotas.id_prov',$this->nama_prov, true);
 		//$criteria->compare('kotas.provinsi',$this->n_prov, true);
-		//$criteria->compare('nama_das',$this->nama_das, true);
+		$criteria->compare('nama_das',$this->nama_das, true);
 		$criteria->compare('nama_ws',$this->nama_ws,true);		
 		$criteria->compare('provinsi',$this->provinsi,true);
 		$criteria->compare('kota',$this->kota,true);
@@ -187,8 +187,6 @@ class Sumur extends CActiveRecord
 						'Nama_sumur'=>array('asc'=>'teknissat.nama_sumur', 'desc'=>'teknissat.nama_sumur'),
 						'kondisi_sumur'=>array('asc'=>'kondisi.sumur', 'desc'=>'kondisi.sumur'),
 						'tahun_bangun'=>array('asc'=>'teknisga.tahun_bangun', 'desc'=>'teknisga.tahun_bangun'),
-						//'nama_prov'=>array('asc'=>'kotas.id_prov', 'desc'=>'kotas.id_prov'),
-						
 						'*',
 					),
 				),
@@ -199,31 +197,6 @@ class Sumur extends CActiveRecord
 		}
 	}
 	
-	public function getSearch()
-	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
-		
-
-		$criteria=new CDbCriteria;
-		$criteria->with= array(
-			'admin'=>array('select'=>'Nama'),
-			'info'=>array('select'=>'foto1'),
-			'manfaat'=>array('select'=>'jiwa, debit'),
-			'teknissat'=>array('select'=>'nama_sumur'),
-			'teknisdua'=>array('select'=>'status_aset'),
-			'teknisga'=>array('select'=>'tahun_bangun, nama_lembaga'),
-			'kondisi'=>array('select'=>'sumur'),
-		);
-		$criteria->compare('manfaat.jiwa',$this->manfaat_jiwa, true);
-		$criteria->compare('manfaat.debit',$this->debit_liter, true);
-		return $criteria;
-
-	}
-
-
-
-
 	public static function getAvailableDataSumurId()
 	{
 		$criteria = new CDbCriteria;
@@ -705,149 +678,305 @@ class Sumur extends CActiveRecord
 			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); // e.g. 5
 			
 			for ($row = 9; $row <= $highestRow; ++$row) {
-				$permukaan = new Permukaan;
+				$sumur = new Sumur;
 				$c=-1;
-				$permukaan->ID_IDBalai=2;
-				$permukaan->NoData= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->data_dasar= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->nama_sistem= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
-				$permukaan->nama_objek= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
-				$permukaan->tahun_data= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->kodefikasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
-				$permukaan->nama_das= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
-				$permukaan->nama_ws= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->provinsi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->kota= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->kecamatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->desa= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->bujur_timur= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->lintang_selatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->elevasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$permukaan->status= "Rencana";
-				$permukaan->nama_cat="";
-				$permukaan->save();
+				$sumur->ID_IDBalai=Yii::app()->user->uid;
+				$sumur->NamaBalai=Unitkerja::getNamaUnitKerjaByAdmin();
+				$sumur->NoData= Sumur::getAvailableNoData();
+				++$c;
+				$sumur->kodefikasi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$sumur->nama_cat= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->nama_das= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$sumur->nama_ws= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->provinsi= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->kota= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->kecamatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->desa= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->lintang_selatan= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->bujur_timur= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->elevasi_sumur= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->status= $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$sumur->kriteria="Air Tanah";
+				$sumur->save();
 				
-				$mpermukaan = new ManfaatPermukaan;
-				$mpermukaan->ID=$permukaan->ID;
-				$mpermukaan->ID_IDBalaiWa=2;
-				$mpermukaan->NoDataWa=$permukaan->NoData;
-				$mpermukaan->jiwa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();			
-				$mpermukaan->debit=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
-				$mpermukaan->status_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
-				$mpermukaan->kecamatan1=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
-				$mpermukaan->kecamatan2="no desa";
-				$mpermukaan->desa1=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
-				$mpermukaan->desa2="no desa";
-				$mpermukaan->nama_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$mpermukaan->luas_dta=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$mpermukaan->lebar_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				
-				$mpermukaan->tadah_awal="";
-				$mpermukaan->tadah_saatini="";
-				$mpermukaan->suplesi_awal="";
-				$mpermukaan->suplesi_saatini="";
-				$mpermukaan->catchment_area="";
-				$mpermukaan->catchment_area1="";
-				$mpermukaan->save();
+				$msumur = new ManfaatSumur;
+				$msumur->ID=$sumur->ID;
+				$msumur->ID_IDBalaiWa=Yii::app()->user->uid;
+				$msumur->NoDataWa=$sumur->NoData;
+				$msumur->jiwa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();			
+				$msumur->debit=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();						
+				$msumur->kecamatan1=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$msumur->desa1=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$msumur->tadah_awal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$msumur->tadah_saatini=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$msumur->suplesi_awal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$msumur->suplesi_saatini=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$msumur->kecamatan2=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();		
+				$msumur->desa2=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$msumur->catchment_area="";
+				$msumur->catchment_area1="";
+				$msumur->save();
 
-				$tpermukaan = new TeknisPermukaan;
-
+				$tsumur = new TeknisSumur;
 				
-				$tpermukaan->ID=$permukaan->ID;
-				$tpermukaan->ID_IDBalaiGa=2;
-				$tpermukaan->NoDataGa=$permukaan->NoData;
-				$tpermukaan->sistem=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->jenis_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->head_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->tahun_pengadaan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
-				$tpermukaan->listrik=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->genset=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->solar_cell=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->lain_lain=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->debit_andal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->debit_awal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->his_ID=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->ID=$sumur->ID;
+				$tsumur->ID_IDBalaiGa=Yii::app()->user->uid;
+				$tsumur->NoDataGa=$sumur->NoData;
+				$tsumur->nama_sumur=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->dalam_sumur=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->jenis_sumur=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->sistem=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->jenis_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->head_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->tahun_pengadaan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
+				$tsumur->listrik=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->genset=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->solar_cell=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->lain_lain=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tsumur->debit_andal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->debit_awal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->his_ID=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				$tanggal=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->debit_idle=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tpermukaan->save();
+				$tsumur->debit_idle=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tsumur->save();
 
-				$twpermukaan = new TeknisWaPermukaan;
+				$twsumur = new TeknisWaSumur;
 
-				$twpermukaan->ID=$permukaan->ID;
-				$twpermukaan->ID_IDBalaiPat=2;
-				$twpermukaan->NoDataPat=$permukaan->NoData;
-				$twpermukaan->jenis_intake=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$twpermukaan->pj_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$twpermukaan->reservoar=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$twpermukaan->hidran_umum=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
-				$twpermukaan->status_aset=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue()+ $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue()+ $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$twpermukaan->luas_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
-				$twpermukaan->jumlah_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
-				$twpermukaan->jumlah_boxbagi="";
-				$twpermukaan->jumlah_splingker="";
-				$twpermukaan->save();
+				$twsumur->ID=$sumur->ID;
+				$twsumur->ID_IDBalaiPat=Yii::app()->user->uid;
+				$twsumur->NoDataPat=$sumur->NoData;
+				$twsumur->status_aset=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue()+ $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue()+ $objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->luas_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				$twsumur->jumlah_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();					
+				$twsumur->pj_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->reservoar=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->hidran_umum=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
+				$twsumur->pj_irigasi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->sistem_jaringan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->jumlah_boxbagi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->jumlah_splingker=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->mt1=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->mt2=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->mt3=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$twsumur->save();
 
-				$tgpermukaan = new TeknisGaPermukaan;
+				$tgsumur = new TeknisGaSumur;
 
-				$tgpermukaan->ID=$permukaan->ID;
-				$tgpermukaan->ID_IDBalaiMa=2;
-				$tgpermukaan->NoDataMa=$permukaan->NoData;
-				$tgpermukaan->tahun_bangun=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->rehab=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->rencana_rehab=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->nama_lembaga=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->legalitas=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->tahun_berdiri=$tgpermukaan->tahun_bangun;
-				$tgpermukaan->perizinan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->no_kontrak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->status_kelola=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->status_operasi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->keterangan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tgpermukaan->save();
+				$tgsumur->ID=$sumur->ID;
+				$tgsumur->ID_IDBalaiMa=Yii::app()->user->uid;
+				$tgsumur->NoDataMa=$sumur->NoData;
+				$tgsumur->tahun_bangun=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->rehab=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->rencana_rehab=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->nama_lembaga=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->legalitas=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->jumlah_anggota=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->tahun_berdiri=$tgsumur->tahun_bangun;
+				$tgsumur->keaktifan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->no_kontrak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->status_kelola=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->status_operasi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->keterangan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tgsumur->save();
 
 
-				$tdpermukaan = new KondisiPermukaan;
+				$tdsumur = new KondisiSumur;
 				
-				$tdpermukaan->ID=$permukaan->ID;
-				$tdpermukaan->ID_IDBalaiNam=2;
-				$tdpermukaan->NoDataNam=$permukaan->NoData;
-				$tdpermukaan->kondisi_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tdpermukaan->ket_kondisi_sungai=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				$tdsumur->ID=$sumur->ID;
+				$tdsumur->ID_IDBalaiNam=Yii::app()->user->uid;
+				$tdsumur->NoDataNam=$sumur->NoData;
+				//$tdsumur->sumur=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->ket_broncaptering=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				
-				$tdpermukaan->kondisi_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tdpermukaan->ket_kondisi_bangunan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
+				//$tdsumur->reservoar=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->ket_reservoar=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				
+				//$tdsumur->pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->ket_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 
-				$tdpermukaan->kondisi_reservoir=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tdpermukaan->ket_kondisi_reservoir=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->rumah_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->ket_rumah_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				
-				$tdpermukaan->kondisi_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tdpermukaan->ket_kondisi_pompa=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->hidran_umum=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
+				//$tdsumur->ket_hidran_umum=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				
-				$tdpermukaan->kondisi_penggerak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();	
-				$tdpermukaan->ket_kondisi_penggerak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->saluran_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->ket_saluran_airbaku=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+
+				//$tdsumur->saluran_irigasi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->ket_saluran_irigasi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+
+				//$tdsumur->box_pembagi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->ket_box_pembagi=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+
+				//$tdsumur->springkler=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->ket_springkler=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+
+				//$tdsumur->penggerak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
+				//$tdsumur->ket_penggerak=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
 				
-				$tdpermukaan->instansi_pembangun=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tdpermukaan->sumber_pendanaan=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();				
-				$tdpermukaan->dokumen_pendukung=$objWorksheet->getCellByColumnAndRow(++$c, $row)->getValue();
-				$tdpermukaan->save();
+				$tdsumur->save();
 
 				
-				$ipermukaan = new InfoPermukaan;
-				$ipermukaan->ID=$permukaan->ID;
-				$ipermukaan->ID_IDBalaiJu=2;
-				$ipermukaan->NoDataJu=$permukaan->NoData;
-				$ipermukaan->foto1="";
-				$ipermukaan->foto2="";
-				$ipermukaan->foto3="";
-				$ipermukaan->foto4="";
-				$ipermukaan->foto5="";
-				$ipermukaan->video="";
-				$ipermukaan->save();
+				$isumur = new InfoSumur;
+				$isumur->ID=$sumur->ID;
+				$isumur->ID_IDBalaiJu=Yii::app()->user->uid;
+				$isumur->NoDataJu=$sumur->NoData;
+				$isumur->foto1="";
+				$isumur->foto2="";
+				$isumur->foto3="";
+				$isumur->foto4="";
+				$isumur->foto5="";
+				$isumur->video="";
+				$isumur->save();
 
 			}
 		}else{
 			echo json_encode($_FILES);
 		}
+	}
+
+	public static function updateSumur(){
+		$datadatas = self::model()->findAll();
+		$ii = 0;
+		$countkondisi = new KondisiSumur;
+		$datas= array();
+		$jumlah_nilai = 0;
+		$valid_data = 0;
+		foreach ($datadatas as $dkondisi){
+			$nilai = 0; $ii++;
+			if(Yii::app()->user->uid == $dkondisi->ID_IDBalai){
+				
+				if(($dkondisi->kondisi->sumur != "")){
+					$datasumur = $dkondisi->kondisi->sumur;
+					switch ($datasumur) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((38.65/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (38.65/5); 
+					}
+
+					$datareservoar = $dkondisi->kondisi->reservoar;
+					switch ($datareservoar) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((38.65/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (38.65/5); 
+					}
+
+					$datapompa = $dkondisi->kondisi->pompa;
+					switch ($datapompa) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((38.65/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (38.65/5); 
+					}
+					
+					$datarumah = $dkondisi->kondisi->rumah_pompa;
+					switch ($datarumah) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((38.65/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (38.65/5); 
+					}
+
+					$datapenggerak = $dkondisi->kondisi->penggerak;
+					switch ($datapenggerak) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((38.65/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (38.65/5); 
+					}
+					
+					$databox_pembagi = $dkondisi->kondisi->box_pembagi;
+					switch ($databox_pembagi) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((29.7/2) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (29.7/2); 
+					}
+					$datahidran_umum = $dkondisi->kondisi->hidran_umum;
+					switch ($datahidran_umum) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((29.7/2) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (29.7/2); 
+					}
+					$datasaluran_airbaku = $dkondisi->kondisi->saluran_airbaku;
+					switch ($datasaluran_airbaku) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((31.65/3) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (31.65/3); 
+					}
+					$datasaluran_irigasi = $dkondisi->kondisi->saluran_irigasi;
+					switch ($datasaluran_irigasi) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((31.65/3) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (31.65/3); 
+					}
+					$dataspringkler = $dkondisi->kondisi->springkler;
+					switch ($dataspringkler) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((31.65/3) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (31.65/3); 
+					}
+
+					$jumlah_nilai = $jumlah_nilai + $nilai;
+					if($nilai > 90){
+						KondisiSumur::model()->updateByPk($ii, array('kinerja'=>'Baik'));	
+					}
+					else if($nilai > 60 and $nilai <= 90){				
+						KondisiSumur::model()->updateByPk($ii, array('kinerja'=>'Rusak Ringan'));	
+					}else{
+						KondisiSumur::model()->updateByPk($ii, array('kinerja'=>'Rusak Berat'));		
+					}			
+				}
+			}	
+		}
+		Yii::app()->user->setFlash('success', '<strong>Update Selasai!</strong> Anda dapat mengecek hasil perhitungan dikolom Kondisi.');	
 	}
 
 }

@@ -78,7 +78,7 @@ include '../siatab/connect.php';
                         <div style="width: 330px;">
                         <?php $aa=array(); $xx=array();
                             foreach($dataProvider2->getData() as $s=>$rr)
-                                $aa[$s]=array($rr['sumur'],(int)$rr['count(id)']);
+                                $aa[$s]=array($rr['kinerja'],(int)$rr['count(id)']);
                                 //$xx[$s]=array($rr['rumah_pompa'],(int)$rr['count(id)']);
 
                         $this->widget('application.extensions.highcharts.HighchartsWidget', array(
@@ -106,13 +106,13 @@ include '../siatab/connect.php';
                         <?php $broncap=array(); $reserv=array(); $pompa=array(); $r_pompa=array();
                             foreach($dataProvider->getData() as $s=>$rr)
                                 
-                                $pompa[$s]=array($rr['broncaptering'],(int)$rr['count(id)']);
+                                $pompa[$s]=array($rr['kinerja'],(int)$rr['count(id)']);
                                 
                             $this->widget('application.extensions.highcharts.HighchartsWidget', array(
                             'options'=>array(
                                 'series' => array( 
                                     array('type'=>'pie','data'=>$pompa)), 
-                                'title'=>'Kondisi Broncaptering',
+                                'title'=>'Kondisi',
                                 'tooltip' => array('formatter' => 'js:function(){ return "<p>"+this.point.name+"</p> :"+this.y+"."; }'),
                                 'plotOptions'=>array(
                                     'pie'=>(array(
@@ -135,13 +135,13 @@ include '../siatab/connect.php';
                         <?php $broncap=array(); $reserv=array(); $pompa=array(); $r_pompa=array();
                             foreach($dataProvider3->getData() as $s=>$rr)
                                 
-                                $pompa[$s]=array($rr['reservoar'],(int)$rr['count(id)']);
+                                $pompa[$s]=array($rr['kinerja'],(int)$rr['count(id)']);
                                 
                             $this->widget('application.extensions.highcharts.HighchartsWidget', array(
                             'options'=>array(
                                 'series' => array( 
                                     array('type'=>'pie','data'=>$pompa)), 
-                                'title'=>'Kondisi Reservoar',
+                                'title'=>'Kondisi Kinerja Infrastruktur',
                                 'tooltip' => array('formatter' => 'js:function(){ return "<p>"+this.point.name+"</p> :"+this.y+"."; }'),
                                 'plotOptions'=>array(
                                     'pie'=>(array(
@@ -166,7 +166,7 @@ include '../siatab/connect.php';
                         <?php $broncap=array(); $reserv=array(); $pompa=array(); $r_pompa=array();
                             foreach($dataProvider1->getData() as $s=>$rr)
                                 
-                                $pompa[$s]=array($rr['kondisi_sungai'],(int)$rr['count(id)']);
+                                $pompa[$s]=array($rr['kinerja'],(int)$rr['count(id)']);
                                 
                             $this->widget('application.extensions.highcharts.HighchartsWidget', array(
                             'options'=>array(
@@ -195,7 +195,7 @@ include '../siatab/connect.php';
                         <?php $broncap=array(); $reserv=array(); $pompa=array(); $r_pompa=array();
                             foreach($dataProvider4->getData() as $s=>$rr)
                                 
-                                $pompa[$s]=array($rr['kondisi_sungai'],(int)$rr['count(id)']);
+                                $pompa[$s]=array($rr['kinerja'],(int)$rr['count(id)']);
                                 
                             $this->widget('application.extensions.highcharts.HighchartsWidget', array(
                             'options'=>array(
@@ -242,77 +242,109 @@ function getDataKota(){
     var kotas = new Array();
     var kodes = new Array();
     var datas = new Array();
+    var rencana = new Array();
+    var layanan = new Array();
+    var totalab = new Array();
+    var selisih = new Array();
     var provs = new Array();
     var i = 0; var jdata = 0;
     <?php $ii = 0; $max=0;?>
     <?php $_dkot = array(); $_dkod = array(); $_data = array();
+    $_drencana = array();
     if (isset($_POST['provinsi'])) {
         $pprov = $_POST['provinsi']; //get the nama value from form
     }else{
-        $pprov = 'Jawa Tengah';
+        //$pprov = 'Jawa Tengah';
     }?>
     var x = document.getElementById("Pprovi").value;
-
+    
     <?php 
-        $gets = mysql_query("SELECT * FROM t_kab_kota p order by no desc"); 
+        $gets = mysql_query("SELECT * FROM t_neraca_air p order by ID desc"); 
         while($show = mysql_fetch_array($gets)) : 
             
-            if($show['no'] >= $max){ $max = $show['no']; }
+            if($show['ID'] >= $max){ $max = $show['ID']; }
             $ii++;
-            $_dkode[$ii]=$show['kode'];
-            $_dkot[$ii]=$show['kab']; 
     ?> i++;
         
         provs[i]='<?php echo $show['provinsi']; ?>';
         
         if(provs[i]==x){
             
-            datas[jdata]=<?php echo $show['kode']; ?>;
-            kodes[jdata]=['<?php echo $show['kab']; ?>',datas[jdata]];    
+            datas[jdata]=<?php echo $show['ID']; ?>;
+            totalab[jdata]=<?php echo $show['TotalABKabKota']; ?>;
+            rencana[jdata]=<?php echo $show['RencanaLayanan']; ?>;
+            layanan[jdata]=<?php echo $show['KebutuhanAirBaku']; ?>;
+            kodes[jdata]=['<?php echo $show['KabKota']; ?>'];     
+            //selisih[jdata]= (totalab[jdata] + rencana[jdata]) - layanan[jdata];
+            selisih[jdata]=<?php echo $show['Selisih']; ?>;
             jdata++;
+            
+
         }
         
     <?php endwhile ?>
    
-    
+ 
     Highcharts.chart('container', {
-        chart: { type: 'column' },
-        title: { text: 'Neraca Air Provinsi '+ x },
-        subtitle: {},
-        xAxis: { type: 'category', 
-            labels: { rotation: -45, style: { fontSize: '13px', fontFamily: 'Verdana, sans-serif' }
-            }
-        },
-        yAxis: { min: 0, title: { text: 'Debit (Liter)' }
-        },
-        legend: { enabled: false },
-        tooltip: { pointFormat: 'Debit: <b>{point.y:.1f} liter</b>' },
-        series: [{
-            name: 'Debit',
-            data: kodes, datas,
-            dataLabels: {
-                enabled: true,
-                rotation: -0,
-                color: '#FFFFFF',
-                align: 'right',
-                format: '{point.y:.1f}', // one decimal
-                y: 10, // 10 pixels down from the top
-                style: {
-                    fontSize: '11px',
-                    fontFamily: 'Verdana, sans-serif'
-                }
-            }
-        }]
-    });
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Neraca Air Provinsi '+ x 
+    },
+    subtitle: {
+        //text: 'Source: WorldClimate.com'
+    },
+    xAxis: {
+        categories: kodes, 
+        
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Liter (m3/thn)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} m3/thn</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Total Air Baku Kab/ Kota',
+        data: totalab,
+    }, {
+        name: 'Kebutuhan Air Baku',
+        data: layanan,
+    }, {
+        name: 'Rencana Layanan',
+        data: rencana,
+    }, {
+        name: 'Selisih atau Defisit',
+        data: selisih,
+    }]
+});
+
+
+
+
+
 }
 </script>    
 
 </div>
 </div>        
 <?php $this->endWidget(); ?>  
-
-
-
 
 
 

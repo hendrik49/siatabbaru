@@ -5,21 +5,27 @@
 		'(Sungai)',
 	);
 ?>
+<?php 
+	$this->widget('bootstrap.widgets.TbAlert', array(
+		'block'=>true, // display a larger alert block?
+		'fade'=>true, // use transitions?
+		'closeText'=>'&times;', // close link text - if set to false, no close link is displayed
+		'alerts'=>array( // configurations per alert type
+			'success'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), // success, info, warning, error or danger
+			),
+		)
+	); 
+?>
 <form method="POST" enctype="multipart/form-data" name="dSungai">
 	<div class="span12" style="background: #fcd13c; height: auto; margin: -10px 0px 5px 0px; padding: 2px;">
 	<h5 style="margin: 0 5px auto;">
-	<div class="span9">
+	<div class="span11">
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>
-		Kelola 
-	<?php endif ?>	
-		Data Air Baku (Sungai)
+		Kelola Data Air Baku (Sungai)
 		<!--<div class="span4" style="margin-left: 50px;">-->
 		| <input type="button" value="Export" onClick="esungai()" class="btn btn-info">
 		| <input type="file" name="inputatab" value="Pilih File" class="btn btn-success">
 		| <input type="button" value="Import" onClick="isungai()" class="btn btn-danger">
-
-
-	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>  
 		| <?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
 			'type'=>'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
 			'buttons'=>array(
@@ -30,7 +36,18 @@
 					'---',
 					)),
 				),
-			)); ?> |
+			)); ?> 
+		| <input type="button" value="Update Dashboard" onClick="usungai()" class="btn btn-inverse">
+	<?php endif ?>
+	<?php if (!isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->isGuest)) : ?>
+		Data Air Baku (Sungai)
+		<!--<div class="span4" style="margin-left: 50px;">-->
+		| <input type="button" value="Export" onClick="esungai()" class="btn btn-info">
+	<?php endif ?>
+	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?>  
+		Data Air Baku (Sungai)
+		<!--<div class="span4" style="margin-left: 50px;">-->
+		| <input type="button" value="Export" onClick="esungai()" class="btn btn-info">
 	<?php endif ?>
 	</div>
 	</h4>
@@ -61,7 +78,7 @@
 								font-size: 13px;
 								color: #fff;
 								font-weight: bold;',
-							'colspan'=> 9,
+							'colspan'=> 10,
 						),
 					),
 				array(	// Nama Objek
@@ -122,34 +139,6 @@
 					'htmlOptions'=>array('style'=>'width: 80px;'),
 					'footerHtmlOptions'=>array('style'=>'display: none;'),
 					),
-				array(	// Jiwa
-					'header'=>'<p style="font-size: 10.8px;
-						margin: auto; text-align: center;">Manfaat (Jiwa)</p>',
-					'name'=>'manfaat_jiwa', 
-					'value'=>'number_format($data->manfaat->jiwa,0)',
-					'footer'=>"".$model->getTotals('jiwa',$model->search()->getKeys()).
-						"<b style='font-size: 10px;'> jiwa<b></p>",
-					'htmlOptions'=>array('style'=>'width: 65px; text-align: center;'),
-					'footerHtmlOptions'=>array( 'style'=>'background-color: #e35651; 
-							text-align: center; 
-							font-size: 11.5px; 
-							color: #fff;
-							font-weight: bold;'),
-					),
-				array(	// Debit
-					'header'=>'<p style="font-size: 10.8px; padding: 0px; 
-						margin: auto; text-align: center;">Debit (l/dtk)</p>',
-					'name'=>'debit_liter', 
-					'value'=>'number_format($data->manfaat->debit,0)', 'type'=>'raw', 
-					'footer'=>"<p>".$model->getTotals('debit',$model->search()->getKeys()).
-						" l/<b style='font-size: 10.5px;'>d<b></p>",
-					'htmlOptions'=>array('style'=>'width: 65px; text-align: center;'),
-					'footerHtmlOptions'=>array( 'style'=>'background-color: #44abc9;  
-							text-align: center; 
-							font-size: 12px; 
-							color: #fff;
-							font-weight: bold;'),
-					),
 				array(	// Tahun
 					'header'=>'<p style="font-size: 10.5px; padding: auto;
 						margin: auto; text-align: center;">Tahun Bangun</p>',
@@ -157,7 +146,46 @@
 					'value'=>'$data->teknisga->tahun_bangun', 
 					'htmlOptions'=>array('style'=>'width: 65px; text-align:center;'),
 					//'footer'=>"".$model->getTotal($model->search()->getData(), 'tahun_bangun'),
-					'footerHtmlOptions'=>array('style'=>'background-color: #5dbb5d;'),
+					'footerHtmlOptions'=>array('style'=>'display: none;'),
+					),
+				array(	// Debit
+					'header'=>'<p style="font-size: 10.8px; padding: 0px; 
+						margin: auto; text-align: center;">Debit (l/dtk)</p>',
+					'name'=>'debit_liter', 
+					'value'=>'number_format($data->manfaat->debit,0)', 'type'=>'raw', 
+					'footer'=>"<p>".$model->getTotals('debit',$model->search()->getKeys()).
+						" <b style='font-size: 10.5px;'><b></p>",
+					'htmlOptions'=>array('style'=>'width: 65px; text-align: center;'),
+					'footerHtmlOptions'=>array( 'style'=>'background-color: #44abc9;  
+							text-align: center; 
+							font-size: 12px; 
+							color: #fff;
+							font-weight: bold;'),
+					),
+				
+				array(	// Jiwa
+					'header'=>'<p style="font-size: 10.8px;
+						margin: auto; text-align: center;">Air Baku (Jiwa)</p>',
+					'name'=>'manfaat_jiwa', 
+					'value'=>'number_format($data->manfaat->jiwa,0)',
+					'footer'=>"".$model->getTotals('jiwa',$model->search()->getKeys()).
+						"<b style='font-size: 10px;'> <b></p>",
+					'htmlOptions'=>array('style'=>'width: 65px; text-align: center;'),
+					'footerHtmlOptions'=>array( 'style'=>'background-color: #e35651; 
+							text-align: center; 
+							font-size: 11.5px; 
+							color: #fff;
+							font-weight: bold;'),
+					),
+				array('class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{update}{delete}', 'buttons'=>array(
+					'viewButtonUrl'=>'Yii::app()->createUrl("unitKerja/view", array("id"=>$data->ID))'),
+					'footerHtmlOptions'=>array(
+						'style'=>'background-color: #5dbb5d; 
+							text-align: right; 
+							font-size: 12px;
+							color: #fff;
+							font-weight: bold;',
+						),
 					),
 				),
 			)
@@ -251,13 +279,22 @@
 					'htmlOptions'=>array('style'=>'width: 80px;'),
 					'footerHtmlOptions'=>array('style'=>'display: none;'),
 					),
+				array(	// Tahun
+					'header'=>'<p style="font-size: 10.5px; padding: auto;
+						margin: auto; text-align: center;">Tahun Bangun</p>',
+					'name'=>'tahun_bangun', 
+					'value'=>'$data->teknisga->tahun_bangun', 
+					'htmlOptions'=>array('style'=>'width: 65px; text-align:center;'),
+					//'footer'=>"".$model->getTotal($model->search()->getData(), 'tahun_bangun'),
+					'footerHtmlOptions'=>array('style'=>'background-color: #5dbb5d;', 'colspan'=> 2),
+					),
 				array(	// Jiwa
 					'header'=>'<p style="font-size: 10.8px;
-						margin: auto; text-align: center;">Manfaat (Jiwa)</p>',
+						margin: auto; text-align: center;">Air Baku (Jiwa)</p>',
 					'name'=>'manfaat_jiwa', 
 					'value'=>'number_format($data->manfaat->jiwa,0)',
 					'footer'=>"".$model->getTotals('jiwa',$model->search()->getKeys()).
-						"<b style='font-size: 10px;'> jiwa<b></p>",
+						"<b style='font-size: 10px;'> <b></p>",
 					'htmlOptions'=>array('style'=>'width: 65px; text-align: center;'),
 					'footerHtmlOptions'=>array( 'style'=>'background-color: #e35651; 
 							text-align: center; 
@@ -271,7 +308,7 @@
 					'name'=>'debit_liter', 
 					'value'=>'number_format($data->manfaat->debit,0)', 'type'=>'raw', 
 					'footer'=>"<p>".$model->getTotals('debit',$model->search()->getKeys()).
-						" l/<b style='font-size: 10.5px;'>d<b></p>",
+						" <b style='font-size: 10.5px;'><b></p>",
 					'htmlOptions'=>array('style'=>'width: 65px; text-align: center;'),
 					'footerHtmlOptions'=>array( 'style'=>'background-color: #44abc9;  
 							text-align: center; 
@@ -279,20 +316,7 @@
 							color: #fff;
 							font-weight: bold;'),
 					),
-				array(	// Tahun
-					'header'=>'<p style="font-size: 10.5px; padding: auto;
-						margin: auto; text-align: center;">Tahun Bangun</p>',
-					'name'=>'tahun_bangun', 
-					'value'=>'$data->teknisga->tahun_bangun', 
-					'htmlOptions'=>array('style'=>'width: 65px; text-align:center;'),
-					//'footer'=>"".$model->getTotal($model->search()->getData(), 'tahun_bangun'),
-					'footerHtmlOptions'=>array('style'=>'background-color: #5dbb5d;', 'colspan'=> 2),
-					),
-				array(
-					'class'=>'bootstrap.widgets.TbButtonColumn', 'template'=>'{delete}', 'buttons'=>array(
-					'viewButtonUrl'=>'Yii::app()->createUrl("Permukaan/delete", array("id"=>$data->ID))'),
-					'footerHtmlOptions'=>array('style'=>'display: none;'),
-					), 
+				
 				),
 			)
 
@@ -384,27 +408,13 @@
 					'htmlOptions'=>array('style'=>'width: 80px;'),
 					'footerHtmlOptions'=>array('style'=>'display: none;'),
 					),
-				array(	// Jiwa
-					'header'=>'<p style="font-size: 10.8px;
-						margin: auto; text-align: center;">Manfaat (Jiwa)</p>',
-					'name'=>'manfaat_jiwa', 
-					'value'=>'number_format($data->manfaat->jiwa,0)',
-					'footer'=>"".$model->getTotals('jiwa',$model->search()->getKeys()).
-						"<b style='font-size: 10px;'> jiwa<b></p>",
-					'htmlOptions'=>array('style'=>'width: 65px; text-align: center;'),
-					'footerHtmlOptions'=>array( 'style'=>'background-color: #e35651; 
-							text-align: center; 
-							font-size: 11.5px; 
-							color: #fff;
-							font-weight: bold;'),
-					),
 				array(	// Debit
 					'header'=>'<p style="font-size: 10.8px; padding: 0px; 
 						margin: auto; text-align: center;">Debit (l/dtk)</p>',
 					'name'=>'debit_liter', 
 					'value'=>'number_format($data->manfaat->debit,0)', 'type'=>'raw', 
 					'footer'=>"<p>".$model->getTotals('debit',$model->search()->getKeys()).
-						" l/<b style='font-size: 10.5px;'>d<b></p>",
+						" <b style='font-size: 10.5px;'><b></p>",
 					'htmlOptions'=>array('style'=>'width: 65px; text-align: center;'),
 					'footerHtmlOptions'=>array( 'style'=>'background-color: #44abc9;  
 							text-align: center; 
@@ -421,6 +431,21 @@
 					//'footer'=>"".$model->getTotal($model->search()->getData(), 'tahun_bangun'),
 					'footerHtmlOptions'=>array('style'=>'background-color: #5dbb5d;'),
 					),
+				array(	// Jiwa
+					'header'=>'<p style="font-size: 10.8px;
+						margin: auto; text-align: center;">Air Baku (Jiwa)</p>',
+					'name'=>'manfaat_jiwa', 
+					'value'=>'number_format($data->manfaat->jiwa,0)',
+					'footer'=>"".$model->getTotals('jiwa',$model->search()->getKeys()).
+						"<b style='font-size: 10px;'> <b></p>",
+					'htmlOptions'=>array('style'=>'width: 65px; text-align: center;'),
+					'footerHtmlOptions'=>array( 'style'=>'background-color: #e35651; 
+							text-align: center; 
+							font-size: 11.5px; 
+							color: #fff;
+							font-weight: bold;'),
+					),
+				
 				),
 			)
 
@@ -439,6 +464,12 @@ function esungai()
 function isungai()
 {	
     document.dSungai.action="/siatab/permukaan/isungai";
+	document.dSungai.submit();
+}
+
+function usungai()
+{	
+    document.dSungai.action="/siatab/permukaan/usungai";
 	document.dSungai.submit();
 }
 </script>

@@ -51,7 +51,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 </tr>
 <td>
 	<div>
-	<?php echo $form->dropDownListRow($model,'broncaptering',
+	<?php echo $form->dropDownListRow($model,'saringan',
 		array('Baik'=>'Baik', 'Rusak Ringan'=>'Rusak Ringan', 'Rusak Berat'=>'Rusak Berat'),
 		array('class'=>'input-small')); 
 	?>
@@ -67,10 +67,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 		array('Baik'=>'Baik', 'Rusak Ringan'=>'Rusak Ringan', 'Rusak Berat'=>'Rusak Berat'),
 		array('class'=>'input-small')); 
 	?>
-	<?php echo $form->dropDownListRow($model,'hidran_umum',
-		array('Baik'=>'Baik', 'Rusak Ringan'=>'Rusak Ringan', 'Rusak Berat'=>'Rusak Berat'),
-		array('class'=>'input-small')); 
-	?>
+
 	</div>
 </td>
 <td>
@@ -79,26 +76,36 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->textFieldRow($model,'ket_reservoar',array('class'=>'input-small')); ?>
 	<?php echo $form->textFieldRow($model,'ket_pompa',array('class'=>'input-small')); ?>
 	<?php echo $form->textFieldRow($model,'ket_rumah_pompa',array('class'=>'input-small')); ?>
-	<?php echo $form->textFieldRow($model,'ket_hidran_umum',array('class'=>'input-small')); ?>
+	
 	</div>
 </td>
 <td>
 	<div style="margin-left: 35px;">
-	<?php echo $form->dropDownListRow($model,'box_pembagi',
+	<?php echo $form->dropDownListRow($model,'hidran_umum',
 		array('Baik'=>'Baik', 'Rusak Ringan'=>'Rusak Ringan', 'Rusak Berat'=>'Rusak Berat'),
 		array('class'=>'input-small')); 
+	?>
+	<?php /* 
+		echo $form->dropDownListRow($model,'box_pembagi',
+		array('Baik'=>'Baik', 'Rusak Ringan'=>'Rusak Ringan', 'Rusak Berat'=>'Rusak Berat'),
+		array('class'=>'input-small')); 
+		*/
 	?>
 	<?php echo $form->dropDownListRow($model,'saluran_airbaku',
 		array('Baik'=>'Baik', 'Rusak Ringan'=>'Rusak Ringan', 'Rusak Berat'=>'Rusak Berat'),
 		array('class'=>'input-small')); 
 	?>
-	<?php echo $form->dropDownListRow($model,'saluran_irigasi',
+	<?php /* 
+		echo $form->dropDownListRow($model,'saluran_irigasi',
 		array('Baik'=>'Baik', 'Rusak Ringan'=>'Rusak Ringan', 'Rusak Berat'=>'Rusak Berat'),
 		array('class'=>'input-small')); 
+		*/
 	?>
-	<?php echo $form->dropDownListRow($model,'springkler',
+	<?php /*
+		echo $form->dropDownListRow($model,'springkler',
 		array('Baik'=>'Baik', 'Rusak Ringan'=>'Rusak Ringan', 'Rusak Berat'=>'Rusak Berat'),
 		array('class'=>'input-small')); 
+		*/
 	?>
 	<?php echo $form->dropDownListRow($model,'penggerak',
 		array('Baik'=>'Baik', 'Rusak Ringan'=>'Rusak Ringan', 'Rusak Berat'=>'Rusak Berat'),
@@ -108,10 +115,11 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 </td>
 <td>
 	<div style="margin-left: -175px;">
+	<?php echo $form->textFieldRow($model,'ket_hidran_umum',array('class'=>'input-small')); ?>
 	<?php echo $form->textFieldRow($model,'ket_saluran_airbaku',array('class'=>'input-small')); ?>
-	<?php echo $form->textFieldRow($model,'ket_saluran_irigasi',array('class'=>'input-small')); ?>
-	<?php echo $form->textFieldRow($model,'ket_box_pembagi',array('class'=>'input-small')); ?>
-	<?php echo $form->textFieldRow($model,'ket_springkler',array('class'=>'input-small')); ?>
+	<?php //echo $form->textFieldRow($model,'ket_saluran_irigasi',array('class'=>'input-small')); ?>
+	<?php //echo $form->textFieldRow($model,'ket_box_pembagi',array('class'=>'input-small')); ?>
+	<?php //echo $form->textFieldRow($model,'ket_springkler',array('class'=>'input-small')); ?>
 	<?php echo $form->textFieldRow($model,'ket_penggerak',array('class'=>'input-small')); ?>
 	</div>
 </td>

@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 ?>
 
 <h2 class="h-view">
-<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN OR Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>Pengaturan Peraturan | <?php echo CHtml::link('Membuat Peraturan', array('Peraturan/add'),['class'=>'btn btn-primary']); ?><?php endif ?></h2>	
-<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN OR Yii::app()->user->hakAkses == User::USER_ADMIN)) : ?>
+<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?>Pengaturan Peraturan | <?php echo CHtml::link('Unggah Peraturan', array('Peraturan/add'),['class'=>'btn btn-primary']); ?><?php endif ?></h2>	
+<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?>
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'type'=>'striped bordered condensed',
 	'dataProvider'=>$model->search(),

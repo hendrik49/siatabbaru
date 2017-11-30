@@ -230,27 +230,27 @@ class SiteController extends Controller
 
 		}
 
-		$sql='SELECT count(id),broncaptering FROM t_mataair6 where broncaptering !=" " GROUP BY broncaptering';
+		$sql='SELECT count(id),kinerja FROM t_mataair6 where kinerja !=" " GROUP BY kinerja';
 		$dataProvider=new CSqlDataProvider($sql,array(
             'keyField' => 'id',
 		));
 		
-		$sql='SELECT count(id),kondisi_sungai FROM t_permukaan6 WHERE kondisi_sungai !=" " GROUP BY kondisi_sungai';
+		$sql='SELECT count(id),kinerja FROM t_permukaan6 WHERE kinerja !=" " GROUP BY kinerja';
 		$dataProvider1=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
 		));
 
-		$sql='SELECT count(id),sumur FROM t_sumur6 where sumur !=" " GROUP BY sumur';
+		$sql='SELECT count(id),kinerja FROM t_sumur6 where kinerja !=" " GROUP BY kinerja';
 		$dataProvider2=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
 		));
 
-		$sql='SELECT count(id),reservoar FROM t_hujan5 where reservoar !=" " GROUP BY reservoar';
+		$sql='SELECT count(id),kinerja FROM t_hujan5 where kinerja !=" " GROUP BY kinerja';
 		$dataProvider3=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
 		));
 
-		$sql='SELECT count(id),kondisi_sungai FROM t_tampungan6 where kondisi_sungai !=" " GROUP BY kondisi_sungai';
+		$sql='SELECT count(id),kinerja FROM t_tampungan6 where kinerja !=" " GROUP BY kinerja';
 		$dataProvider4=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
 		));

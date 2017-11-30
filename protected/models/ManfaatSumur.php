@@ -28,7 +28,7 @@ class ManfaatSumur extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			//array('ID_IDBalaiWa', 'required'),
+			array('', 'required'),
 			//array('Tanggal', 'numerical', 'integerOnly'=>true),
 			array('ID_IDBalaiWa, NoDataWa, debit, jiwa', 'length', 'max'=>13),
 			array('catchment_area, catchment_area1', 'file', 'types'=>array('dbf', 'shp', 'sbx', 'sbn', 'prj'), 'allowEmpty'=>true),

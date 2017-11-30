@@ -11,12 +11,9 @@ $this->breadcrumbs=array(
 	th{padding:6px 3px;background: #fbc50b;}
 </style>
 		
-		
-<<<<<<< HEAD
-<b>Daftar Satker</b>
-=======
+
+
 <b>Daftar Staker</b>
->>>>>>> 4babcd7f82c9942e0770269afdd7bdb43cd93a7a
 
 	<?php if (isset(Yii::app()->user->hakAkses) AND (Yii::app()->user->hakAkses == User::USER_SUPER_ADMIN)) : ?> | 
 	<?php 

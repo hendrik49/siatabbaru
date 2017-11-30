@@ -45,7 +45,7 @@ class TampunganController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','search','tambah', 'detail', 'viewi', 'ewaduk','iwaduk'),
+				'actions'=>array('index','view','search','tambah', 'detail', 'viewi', 'ewaduk','iwaduk', 'uwaduk'),
 				'users'=>array('*'),
 			),
  
@@ -647,6 +647,14 @@ class TampunganController extends Controller
     {
 		if(isset($_POST['Tampungan'])){
 			Tampungan::importXls($_FILES);
+			$this->actionIndex();
+		}
+	}
+
+	public function actionUwaduk()
+    {
+		if(isset($_POST['Tampungan'])){
+			Tampungan::updateKondisi($_FILES);
 			$this->actionIndex();
 		}
 	}

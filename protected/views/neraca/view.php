@@ -23,7 +23,7 @@
 			'data'=>$model,
 			'attributes'=>array(
 				'Nrw', 'PopulasiKabKota', 'TargetJiwa', 'TotalABKabKota', 'JiwaTerlayani', 'JiwaBelumTerlayani', 
-				'KebutuhanAirBaku', 'Provinsi', 'NamaBalai', 'KabKota', 'JTOL', 
+				'KebutuhanAirBaku', 'provinsi', 'NamaBalai', 'KabKota', 'JTOL', 
 				),
 			)); 
 		?>		

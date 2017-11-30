@@ -41,8 +41,8 @@ if (isset($_POST['dataIndex'])) {
 		echo "<th>Jiwa</th>";
 		echo "<th>Debit</th>";
 		echo "<th width='90px'>Kondisi</th>";
-		echo "<th width='60px'>Berdiri</th>";
-		echo "<th width='60px'>AT & AB</th>";
+		echo "<th width='60px'>Tahun</th>";
+		//echo "<th width='60px'>AT & AB</th>";
 		echo "</tr>";
 		echo "</thead>";
 		echo "<tbody id='myTable'>";		
@@ -61,7 +61,7 @@ if (isset($_POST['dataIndex'])) {
 		echo "<td>".$data['debit']." l/d</td>";
 		echo "<td>".$data['sumur']."</td>";
 		echo "<td>thn ".$data['tahun_bangun']."</td>";
-		echo "<td>".$data['kriteria']."</td>";
+		//echo "<td>".$data['kriteria']."</td>";
 		echo "</tr>";
 		$datacek++;
 	}
@@ -93,7 +93,7 @@ if (isset($_POST['dataIndex'])) {
 		echo "<td>".$dmataair['debit']." l/d</td>";
 		echo "<td>".$dmataair['broncaptering']."</td>";
 		echo "<td>thn ".$dmataair['tahun_bangun']."</td>";
-		echo "<td>".$dmataair['kriteria']."</td>";
+		//echo "<td>".$dmataair['kriteria']."</td>";
 		echo "</tr>";
 		$datacek++;
 	}
@@ -125,7 +125,7 @@ if (isset($_POST['dataIndex'])) {
 	echo "<td>".$dtampungan['debit']." l/d</td>";
 	echo "<td>".$dtampungan['kondisi_sungai']."</td>";
 	echo "<td>thn ".$dtampungan['tahun_bangun']."</td>";
-	echo "<td>".$dtampungan['kriteria']."</td>";
+	//echo "<td>".$dtampungan['kriteria']."</td>";
 	echo "</tr>";
 	$datacek++;
 	}
@@ -157,21 +157,21 @@ if (isset($_POST['dataIndex'])) {
 	echo "<td>".$dpermukaan['debit']." l/d</td>";
 	echo "<td>".$dpermukaan['kondisi_sungai']."</td>";
 	echo "<td>thn ".$dpermukaan['tahun_bangun']."</td>";
-	echo "<td>".$dpermukaan['kriteria']."</td>";
+	//echo "<td>".$dpermukaan['kriteria']."</td>";
 	echo "</tr>";
 	$datacek++;
 	}
 
 	$dhujan="SELECT t_hujan1.nama_ws, t_hujan1.ID, t_hujan1.desa, t_hujan1.kecamatan, t_hujan1.kota, 
 	t_hujan1.provinsi, t_hujan1.status,	t_hujan2.jiwa, t_hujan2.debit, 
-	t_hujan1.kriteria, t_hujan1.nama_sistem, t_hujan4.tahun_bangun, t_hujan5.broncaptering 
+	t_hujan1.kriteria, t_hujan1.nama_sistem, t_hujan4.tahun_bangun, t_hujan5.saringan 
 	FROM t_hujan1 
 	JOIN t_hujan2 ON t_hujan1.ID = t_hujan2.ID JOIN t_hujan3 ON t_hujan1.ID = t_hujan3.ID
 	JOIN t_hujan4 ON t_hujan1.ID = t_hujan4.ID JOIN t_hujan5 ON t_hujan1.ID = t_hujan5.ID
 	WHERE t_hujan1.nama_ws LIKE '%$KeyData%' OR t_hujan1.nama_sistem LIKE '%$KeyData%'
 	OR t_hujan1.desa LIKE '%$KeyData%' OR t_hujan1.kecamatan LIKE '%$KeyData%' 
 	OR t_hujan1.kota LIKE '%$KeyData%' OR t_hujan1.provinsi LIKE '%$KeyData%'
-	OR t_hujan4.tahun_bangun LIKE '%$KeyData%' OR t_hujan5.broncaptering LIKE '%$KeyData%'
+	OR t_hujan4.tahun_bangun LIKE '%$KeyData%' OR t_hujan5.saringan LIKE '%$KeyData%'
 	OR t_hujan1.kriteria LIKE '%$KeyData%'
 	";	
 
@@ -187,9 +187,9 @@ if (isset($_POST['dataIndex'])) {
 	echo "<td>".$dhujan['provinsi']."</td>";
 	echo "<td>".$dhujan['jiwa']."</td>";
 	echo "<td>".$dhujan['debit']." l/d</td>";
-	echo "<td>".$dhujan['broncaptering']."</td>";
+	echo "<td>".$dhujan['saringan']."</td>";
 	echo "<td>thn ".$dhujan['tahun_bangun']."</td>";
-	echo "<td>".$dhujan['kriteria']."</td>";
+	//echo "<td>".$dhujan['kriteria']."</td>";
 	echo "</tr>";
 	$datacek++;
 	}
@@ -269,6 +269,7 @@ if (isset($_POST['dataIndex'])) {
         goTo(clickedPage,perPage);
         return false;
     });
+	
     pager.find('li .prev_link').click(function(){
         previous();
         return false;
