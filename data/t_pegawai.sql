@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2017 at 05:44 AM
+-- Generation Time: Nov 30, 2017 at 01:07 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -46,20 +46,20 @@ CREATE TABLE IF NOT EXISTS `t_pegawai` (
 --
 
 INSERT INTO `t_pegawai` (`ID`, `Nama`, `NoTelp`, `Email`, `Alamat`, `NIP`, `Tanggal`, `Golongan`, `Jabatan`, `Bidang`, `Foto`, `Dokumen`) VALUES
-(1, 'Novizar Mando, MKom', '088765432123', '123@123', 'where', '123456', 1502119194, '2', 'KEPALA BIDANG', 'PERENCANAAN DAN TATA USAHA', 'default_profil.png', ''),
-(2, 'Fajar S, MT', '088755532123', '123@123', 'where', '235465679', 1502120152, '2', 'KEPALA BIDANG', 'KONSERVASI AIR TANAH DAN AIR BAKU', 'default_profil.png', ''),
-(3, 'Ayu Indriyani, MSi', '088654232123', '123@123', 'where', 'danau', 1502120166, '2', 'KEPALA BIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH BARAT', 'default_profil.png', ''),
-(4, 'Budi Handoko, MT', '12346', '123@123', 'where', '346576', 1502121180, '2', 'KEPALA BIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH TIMUR', 'default_profil.png', ''),
+(1, 'Bambang Hidayah, ME', '088765432123', '123@123', 'where', '196209281998031002', 1502119194, '2', 'KEPALA BIDANG', 'PERENCANAAN DAN TATA USAHA', 'Bambang Hidayah (196209281998031002).jpg', ''),
+(2, 'Ir. Arif Budhiyo, Sp.1', '088755532123', '123@123', 'where', '196009041986021001', 1502120152, '2', 'KEPALA BIDANG', 'KONSERVASI AIR TANAH DAN AIR BAKU', 'Arif Budhiyo (196009041986021001).jpg', ''),
+(3, 'Alexander Leda, ST, MT', '088654232123', '123@123', 'where', '196808191998031006', 1502120166, '2', 'KEPALA BIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH BARAT', 'default_profil.png', ''),
+(4, 'Ir. Sigid Santoso, MM', '12346', '123@123', 'where', '196009151988111001', 1502121180, '2', 'KEPALA BIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH TIMUR', 'default_profil.png', ''),
 (5, 'Ir Muhamad Amir Hamzah, MM', '121234564568', 'adschb@ksjcbd', 'sdvdf', '195905011987031001', 1502880786, '1', 'KEPALA PUSAT', 'AIR TANAH DAN AIR BAKU', 'pakpu.jpg', ''),
-(12, 'Mama', '0297398273', 'dsjdlskjd@gmail.com', 'jdshdj', '21121212', 0, '3', 'KEPALA SUBBIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH BARAT', 'default_profil.png', ''),
-(13, 'Mama', '0297398273', 'dsjdlskjd@gmail.com', 'jdshdj', '21121212', 0, '3', 'KEPALA SUBBIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH BARAT', 'default_profil.png', ''),
-(14, 'fgfgfgf', '236235623', 'ncnvcm@gmail.com', 'hsdkhskdjhsjd', '234w535w45', 0, '3', 'KEPALA SUBBIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH TIMUR', 'default_profil.png', ''),
-(15, 'Manana', 'f', 'dsjdlskjd@gmail.com', 'ddfdf', '2323232323', 0, '3', 'KEPALA SUBBIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH TIMUR', 'default_profil.png', ''),
-(16, 'Kokoromo', '23131131', 'dsjdlskjd@gmail.com', 'wddsdsds', '223232323', 0, '3', 'KEPALA SUBBIDANG', 'KONSERVASI AIR TANAH DAN AIR BAKU BARAT', 'default_profil.png', ''),
-(17, 'Wsjdhsdghsd', '233232323', 'dsjdlskjd@gmail.com', 'dsdsd', '32323132323', 0, '3', 'KEPALA SUBBIDANG', 'KONSERVASI AIR TANAH DAN AIR BAKU TIMUR', 'default_profil.png', ''),
-(18, 'Mamake', '231323232', 'dsjdlskjd@gmail.com', 'sdsd', '2323232323', 0, '3', 'SUBAGIAN', 'PERENCANAAN', 'default_profil.png', ''),
-(19, 'Manomo', '236273652635', 'dsjdlskjd@gmail.com', 'wdsdgh', '232634256345', 0, '3', 'SUBAGIAN', 'BIMBINGAN TEKNIK', 'default_profil.png', ''),
-(20, 'Kikihaaa', '223232', 'dsjdlskjd@gmail.com', 'Jalan', '232323232', 0, '3', 'SUBAGIAN', 'TATA USAHA', 'default_profil.png', '');
+(12, 'Kapi Hapidah, ST, MT', '0297398273', 'dsjdlskjd@gmail.com', 'jdshdj', '197008181998032009', 0, '3', 'KEPALA SUBBIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH BARAT', 'Kapi Hapidah (197008181998032009).jpg', ''),
+(13, 'Mochamad Adhi Kurniawan, ST,M.Sc', '0297398273', 'dsjdlskjd@gmail.com', 'jdshdj', '198001302009121001', 0, '3', 'KEPALA SUBBIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH BARAT', 'Mochamad Adhi Kurniawan (198001302009121001).jpg', ''),
+(14, 'I Nyoman Sabar, BE, SE', '236235623', 'ncnvcm@gmail.com', 'hsdkhskdjhsjd', '196109061985121002', 0, '3', 'KEPALA SUBBIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH TIMUR', 'I Nyoman Sabar (196109061985121002).jpg', ''),
+(15, 'Eka Rahendra, SST, MSP', 'f', 'dsjdlskjd@gmail.com', 'ddfdf', '196201251983111001', 0, '3', 'KEPALA SUBBIDANG', 'AIR TANAH DAN AIR BAKU WILAYAH TIMUR', 'Eka Rahendra (196201251983111001).jpg', ''),
+(16, 'Eva Purnawan, S.ST, MT', '23131131', 'dsjdlskjd@gmail.com', 'wddsdsds', '197203101998031005', 0, '3', 'KEPALA SUBBIDANG', 'KONSERVASI AIR TANAH DAN AIR BAKU BARAT', 'Eva Purnawan (197203101998031006).jpg', ''),
+(17, 'Ir. Anshar, Sp.1', '233232323', 'dsjdlskjd@gmail.com', 'dsdsd', '196804221996031005', 0, '3', 'KEPALA SUBBIDANG', 'KONSERVASI AIR TANAH DAN AIR BAKU TIMUR', 'default_profil.png', ''),
+(18, 'Thomas Henk Bunarwan, ST,MT', '231323232', 'dsjdlskjd@gmail.com', 'sdsd', '198001152005021002', 0, '3', 'SUBAGIAN', 'PERENCANAAN', 'Thomas Henk Bunarwan (198001152005021002).jpg', ''),
+(19, 'Novizar Adiyansyah, ST, MPSDA', '236273652635', 'dsjdlskjd@gmail.com', 'wdsdgh', '197909182005021002', 0, '3', 'SUBAGIAN', 'BIMBINGAN TEKNIK', 'Novizar Aiyansyah (197909182005021002).jpg', ''),
+(20, 'Drs. Tanudji Laksono', '223232', 'dsjdlskjd@gmail.com', 'Jalan', ' 196109101988031001', 0, '3', 'SUBAGIAN', 'TATA USAHA', 'default_profil.png', '');
 
 --
 -- Indexes for dumped tables
