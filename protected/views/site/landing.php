@@ -250,7 +250,7 @@ p.word{
         </a>
         <a href="../siatab/sistembaku/listbaku">
             <div class="box airbaku">
-                <img src="../siatab/images/airbakulogo.png">
+                <img src="../siatab/">
             </div>
         </a>
     </div> 
