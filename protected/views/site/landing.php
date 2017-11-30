@@ -3,8 +3,7 @@
  #background_page{
     background: url(../siatab/images/bgtik.png) no-repeat;
     background-size: cover;
-  } 
-
+  }
 .header1 {
     background-color: #2f4d58;
     width:100%;
