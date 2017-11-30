@@ -45,7 +45,7 @@ class HujanController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','viewm','viewt','viewtg','viewts','viewk','search','tambah', 'detail', 'viewi','search', 'ehujan','ihujan'),
+				'actions'=>array('index','view','search','tambah', 'detail', 'viewi','uhujan', 'ehujan','ihujan'),
 				'users'=>array('*'),
 			),
  
@@ -614,7 +614,14 @@ class HujanController extends Controller
 			$this->actionIndex();
 		}
 	}
-	
+
+	public function actionUhujan()
+    {
+		if(isset($_POST['Hujan'])){
+			Hujan::updateKondisi($_FILES);
+			$this->actionIndex();
+		}
+	}
 	/**
 	 * Performs the AJAX validation.
 	 * @param CModel the model to be validated

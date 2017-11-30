@@ -30,7 +30,7 @@ class TeknisMA extends CActiveRecord
 		return array(
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID_IDBalaiGa, NoDataGa', 'length', 'max'=>13),
-			array('sistem, jenis_pompa, tahun_pengadaan', 'length', 'max'=>100),
+			array('sistem, jenis_pompa, tahun_pengadaan, nama_matair', 'length', 'max'=>100),
 			array('head_pompa, listrik, genset, solar_cell, lain_lain, debit_andal, debit_awal, his_ID, debit_idle', 'length', 'max'=>13),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

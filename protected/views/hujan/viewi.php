@@ -61,7 +61,7 @@
 					'value'=>'
 					<video width="320" height="240" controls>
 					<source src="'.Yii::app()->request->baseUrl.'/data/Unit Kerja/'
-					.UnitKerja::getNamaUnitKerjaByAdmin().'/Hujan/Video/'.$model->video.'" type="video/mp4">
+					.UnitKerja::getNamaUnitKerjaByAdmin().'/Hujan/Video/'.$model->Video.'" type="video/mp4">
 					  </video>',
 				),
 				),

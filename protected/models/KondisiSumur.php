@@ -30,6 +30,7 @@ class KondisiSumur extends CActiveRecord
 		return array(
 			//array('ID_IDBalaiWa', 'required'),
 			array('ID_IDBalaiNam, NoDataNam', 'length', 'max'=>13),
+			array('kinerja', 'length', 'max'=>30),
 			array('sumur, reservoar, pompa, rumah_pompa, hidran_umum, saluran_airbaku, saluran_irigasi, box_pembagi, springkler, penggerak', 'length', 'max'=>100),
 			array('ket_broncaptering, ket_reservoar, ket_pompa, ket_rumah_pompa, ket_hidran_umum, ket_saluran_airbaku, ket_saluran_irigasi, ket_box_pembagi, ket_springkler, penggerak', 'length', 'max'=>100),
 			// The following rule is used by search().

@@ -100,9 +100,7 @@ $model->provinsi = Unitkerja::getProvByAdmin();
 	<div class="span7"><?php echo CHtml::button("Kalkulasi",array('onclick'=>'js:getDataKota();')); ?></div>
 	<div class="span1">
 	<?php 
-		
 		$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); 
-		
 	?>
 	</div>
 	<div class="span1">

@@ -20,8 +20,8 @@ $this->breadcrumbs=array(
 			'cssFile'=>Yii::app()->baseUrl . '/css/dtgrid/detailview/styles.css',
 			'data'=>$model,
 			'attributes'=>array(
-				'kdsatker', 'NamaSatker', 'NamaBalai', 'KdOutput', 'nmoutput', 'Kinerja', 'Strategis', 
-				'satm', 'vol1', 'st_outcome', 'vol2', 'rpm', 'rmp', 'apln', 'Jumlah',
+				'kode_satker', 'NamaSatker', 'NamaBalai', 'kode_output', 'nama_output', 'kode_provinsi',
+				'sat_output', 'vol_output', 'sat_outcome', 'vol_outcome', 'rpm', 'rmp', 'apln', 'Jumlah',
 
 				),
 			)); 
@@ -32,8 +32,9 @@ $this->breadcrumbs=array(
 			'cssFile'=>Yii::app()->baseUrl . '/css/dtgrid/detailview/styles.css',
 			'data'=>$model,
 			'attributes'=>array(
-				'nmkabkota', 'kewenangan', 'jk2', 'b_sp', 'swakelola', 'RTRW', 'SIPPA',
-				'Permohonan', 'RKP_Renstra', 'DokumenLH', 'DokumenkesiapanLahan', 'FS_SID_DED', 'KAK_RAB', 'Keterangan',
+				array('header'=>'Nama Kab/Kota', 
+				'type'=>'raw',
+				'name'=>'nama_kabkota'), 
 				array(
 					'name'=>'file_',
 					'type'=>'raw',

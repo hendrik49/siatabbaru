@@ -35,7 +35,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	endif
 	?>
 	<div style="visibility:hidden; position:absolute;"><?php $model->ID_IDBalai = (Yii::app()->user->uid); 
-	$model->kriteria = "Permukaan";
+	$model->kriteria = "Sungai";
 	$model->nama_ws = Unitkerja::getNamaWS();
 	$model->NamaBalai = Unitkerja::getNamaUnitKerjaByAdmin();
 	$datakota = Provinsi::getKodeByProv($model->provinsi);
@@ -46,7 +46,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->textFieldRow($model,'NoData',array('size'=>25,'maxlength'=>30, 'readOnly'=>true)); ?>
 	<?php echo $form->textFieldRow($model,'nama_ws');?>
 	<?php echo $form->textFieldRow($model,'NamaBalai');?>
-	
+	<?php echo $form->textFieldRow($model,'kriteria');?>
 	</div>
 	</td>
 </tr>
@@ -78,7 +78,9 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->textFieldRow($model,'lintang_selatan'); ?>
 	<?php echo $form->textFieldRow($model,'bujur_timur'); ?>
 	<?php echo $form->textFieldRow($model,'elevasi'); ?>
-	<?php echo $form->dropDownListRow($model,'status',array('Rencana'=>'Rencana','Operasi'=>'Operasi')); ?>
+	<?php echo $form->dropDownListRow($model,'status',
+	array('Operasi'=>'Operasi', 'Rencana'=>array('Perlu Studi'=>'Perlu Studi', 'Sudah Studi'=>'Sudah Studi', 'Siap'=>'Siap'),
+	'Berjalan'=>'Berjalan')); ?>
 		
 	<!--</fieldset>-->
 </td>

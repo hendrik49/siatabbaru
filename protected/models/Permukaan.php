@@ -45,7 +45,7 @@ class Permukaan extends CActiveRecord
 			array('ID_IDBalai, NoData, kodefikasi', 'length', 'max'=>16),
 			/* ------------Data Dasar & Administrasi------------*/
 			array('nama_das,nama_sistem, nama_ws, data_dasar, nama_objek, tahun_data', 'length', 'max'=>100),
-			array('provinsi, kota, kecamatan, desa, status', 'length', 'max'=>100),
+			array('provinsi, kota, kecamatan, desa, status, kriteria, NamaBalai', 'length', 'max'=>100),
 			array('bujur_timur, lintang_selatan', 'length', 'max'=>20),
 			array('elevasi', 'length', 'max'=>10),
 			// The following rule is used by search().
@@ -96,11 +96,11 @@ class Permukaan extends CActiveRecord
 			'kota' => 'Kota/ Kabupaten',
 			'kecamatan' => 'Kecamatan',
 			'desa' => 'Desa/ Kelurahan',
-			'elevasi' => 'Elevasi Sumur (mdpl)',
+			'elevasi' => 'Elevasi Intake (mdpl)',
 			'bujur_timur' => 'Bujur Timur',
 			'lintang_selatan' => 'Lintang Selatan',
 			'tahun_data' => 'Tahun Data',
-			'status'=>'Status Pekerjaan',
+			'status'=>'Status Pembangunan',
 			'manfaat_jiwa'=>'Manfaat Jiwa',
 			'nama_prov'=>'Nama Kabupaten',
 			'n_prov' =>'id prov',
@@ -555,6 +555,94 @@ class Permukaan extends CActiveRecord
 		}else{
 			echo json_encode($_FILES);
 		}
+	}
+	public static function updateKondisi(){
+		$datadatas = self::model()->findAll();
+		$ii = 0;
+		$countkondisi = new KondisiPermukaan;
+		$datas= array();
+		$jumlah_nilai = 0;
+		$valid_data = 0;
+		foreach ($datadatas as $dkondisi){
+			$nilai = 0; $ii++;
+			if(Yii::app()->user->uid == $dkondisi->ID_IDBalai){
+				
+				if(($dkondisi->kondisi->kondisi_sungai != "")){
+					$datasumur = $dkondisi->kondisi->kondisi_sungai;
+					switch ($datasumur) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((100/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (100/5); 
+					}
+
+					$datareservoar = $dkondisi->kondisi->kondisi_reservoir;
+					switch ($datareservoar) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((100/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (100/5); 
+					}
+
+					$datapompa = $dkondisi->kondisi->kondisi_pompa;
+					switch ($datapompa) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((100/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (100/5); 
+					}
+					
+					$datarumah = $dkondisi->kondisi->kondisi_bangunan;
+					switch ($datarumah) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((100/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (100/5); 
+					}
+
+					$datapenggerak = $dkondisi->kondisi->kondisi_penggerak;
+					switch ($datapenggerak) { 
+						case "Rusak Ringan":
+							$nilai = $nilai + ((100/5) * 0.5); 
+							break;
+						case "Rusak Berat":
+							$nilai = $nilai + 0; 
+							break;
+						default:
+							$nilai = $nilai + (100/5); 
+					}
+					
+					
+
+					$jumlah_nilai = $jumlah_nilai + $nilai;
+					if($nilai > 90){
+						KondisiPermukaan::model()->updateByPk($ii, array('kinerja'=>'Baik'));	
+					}
+					else if($nilai > 60 and $nilai <= 90){				
+						KondisiPermukaan::model()->updateByPk($ii, array('kinerja'=>'Rusak Ringan'));	
+					}else{
+						KondisiPermukaan::model()->updateByPk($ii, array('kinerja'=>'Rusak Berat'));		
+					}			
+				}
+			}	
+		}
+		Yii::app()->user->setFlash('success', '<strong>Update Selasai!</strong> Anda dapat mengecek hasil perhitungan dikolom Kondisi.');	
 	}
 }
 ?>

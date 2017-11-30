@@ -53,7 +53,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->textFieldRow($model,'nama_sumur'); ?>
 	<?php echo $form->textFieldRow($model,'dalam_sumur'); ?>
 	<?php echo $form->dropDownListRow($model,'jenis_sumur',array('DTW'=>'DTW', 'ITW'=>'ITW', 'STW'=>'STW')); ?>
-	<?php echo $form->dropDownListRow($model,'sistem',array('Pompa'=>'Pompa', 'Gravitasi'=>'Gravitasi')); ?>
+	<?php //echo $form->dropDownListRow($model,'sistem',array('Pompa'=>'Pompa', 'Gravitasi'=>'Gravitasi')); ?>
 	<?php echo $form->dropDownListRow($model,'jenis_pompa',array('Sentrifugal'=>'Sentrifugal', 'Turbin'=>'Turbin', 'Submersible'=>'Submersible')); ?>
 	<?php echo $form->textFieldRow($model,'head_pompa'); ?>
 	<?php echo $form->textFieldRow($model,'tahun_pengadaan'); ?>

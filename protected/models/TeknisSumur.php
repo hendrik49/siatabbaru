@@ -28,9 +28,9 @@ class TeknisSumur extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			//array('ID_IDBalaiWa', 'required'),
+			array('nama_sumur', 'required'),
 			array('ID_IDBalaiGa, NoDataGa', 'length', 'max'=>13),
-			array('sistem, jenis_pompa, tahun_pengadaan, nama_sumur, jenis_sumur', 'length', 'max'=>100),
+			array('sistem, jenis_pompa, tahun_pengadaan, jenis_sumur', 'length', 'max'=>100),
 			array('head_pompa, listrik, genset, solar_cell, lain_lain, debit_andal, debit_awal, his_ID, debit_idle, dalam_sumur', 'length', 'max'=>13),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

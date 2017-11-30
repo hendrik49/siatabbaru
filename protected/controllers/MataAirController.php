@@ -45,11 +45,10 @@ class MataAirController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('search','index','view','search','tambah', 'detail', 'viewi', 'emataair','imataair'),
+				'actions'=>array('search','index','view','search','tambah', 'detail', 'viewi', 'emataair', 'umataair','imataair'),
 				'users'=>array('*'),
 			),
- 
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+ 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('add','update','create','setKot'),
 				'users'=>array_merge($user['superAdmin'], $user['admin']),
 			),
@@ -711,6 +710,14 @@ class MataAirController extends Controller
     {
 		if(isset($_POST['MataAir'])){
 			MataAir::importXls($_FILES);
+			$this->actionIndex();
+		}
+	}
+
+	public function actionUmataair()
+    {
+		if(isset($_POST['MataAir'])){
+			MataAir::updateKondisi($_FILES);
 			$this->actionIndex();
 		}
 	}

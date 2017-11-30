@@ -47,16 +47,16 @@ class SumurController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','tambah', 'detail', 'search', 'cetak'),
+				'actions'=>array('index','view','tambah', 'detail', 'search', 'cetak', 'isumur', 'usumur'),
 				'users'=>array('*'),
 			),
  
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('add','update','create','setKot'),
+				'actions'=>array('add','update','delete','create','setKot'),
 				'users'=>array_merge($user['superAdmin'], $user['admin']),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','tambah'),
+				'actions'=>array('admin','tambah'),
 				'users'=>$user['superAdmin'],
 			),
 			array('deny',  // deny all users
@@ -106,7 +106,7 @@ class SumurController extends Controller
 		if(isset($_POST['Sumur']))
 		{
 			$model->attributes=$_POST['Sumur'];
-			$model->Tanggal = time();
+			//$model->Tanggal = time();
 			if($model->save()) {
 				$this->redirect(array('//sumur/view','id'=>$model->ID));
 			}
@@ -280,10 +280,18 @@ class SumurController extends Controller
 		$model->unsetAttributes();
 		
 		if(isset($_GET['Sumur']))
-			$model->attributes=$_GET['Sumur'];
-			
+		//$columnsLabels = $model->attributes=$_GET['Permukaan'];
+		$model->attributes=$_GET['Sumur'];
+		$criteria=new CDbCriteria;
+		
+		$dataProvider=new CActiveDataProvider('Sumur', array(
+				'criteria'=>$criteria,
+				'sort'=>array(
+					//'defaultOrder'=>'Tanggal DESC',
+				),
+			));
 		$this->render('index',array(
-			//'dataProvider'=>$dataProvider,
+			'dataProvider'=>$dataProvider,
 			'model'=>$model,
 		));
 	}
@@ -295,6 +303,20 @@ class SumurController extends Controller
 		}
 	}
 
+	public function actionIsumur()
+    {
+		if(isset($_POST['Sumur'])){
+			Sumur::importXls($_FILES);
+			$this->actionIndex();
+		}
+	}
+	public function actionUsumur()
+    {
+		if(isset($_POST['Sumur'])){
+			Sumur::updateSumur();
+			$this->actionIndex();
+		}
+	}
 	
 	public function actionSetkot()
 	{	 
@@ -321,7 +343,7 @@ class SumurController extends Controller
 		if(isset($_POST['Sumur']))
 		{
 			$model->attributes=$_POST['Sumur'];
-			$model->Tanggal = time();
+			//$model->Tanggal = time();
 			if($model->save()) {
 				$modelmanfaat->ID_IDBalaiWa = $model->ID_IDBalai;
 				$modelmanfaat->NoDataWa = $model->NoData;

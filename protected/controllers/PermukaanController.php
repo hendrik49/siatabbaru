@@ -45,7 +45,7 @@ class PermukaanController extends Controller
 
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'search','tambah', 'detail', 'viewi', 'esungai','isungai'),
+				'actions'=>array('index','view', 'search','tambah', 'detail', 'viewi', 'esungai','isungai','usungai'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -264,6 +264,14 @@ class PermukaanController extends Controller
     {
 		if(isset($_POST['Permukaan'])){
 			Permukaan::importXls($_FILES);
+			$this->actionIndex();
+		}
+	}
+
+	public function actionUsungai()
+    {
+		if(isset($_POST['Permukaan'])){
+			Permukaan::updateKondisi($_FILES);
 			$this->actionIndex();
 		}
 	}

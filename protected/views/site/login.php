@@ -36,7 +36,7 @@ include('styles-css.php');
 		<center>
 		<img class="logo-page" src="<?php echo Yii::app()->baseUrl; ?>/images/LOGO-KEMENTERIAN-PEKERJAAN-UMUM.png">
 		</center>
-			<p class="profile-name">Balai | SDA | Pusat</p>
+			<p class="profile-name"></p>
 			<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 				'id'=>'gaia_loginform',
 				'type'=>'inline',

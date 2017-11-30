@@ -1,10 +1,9 @@
 <style type='text/css'>
 
  #background_page{
-    background: url(../siatabbaru/images/bgtik.png) no-repeat;
+    background: url(../siatab/images/bgtik.png) no-repeat;
     background-size: cover;
-  } 
-
+  }
 .header1 {
     background-color: #2f4d58;
     width:100%;
@@ -211,7 +210,7 @@ p.word{
 <!-- <body> -->
     <div class="header1">
         <div class="kiri">
-            <img class="logo" src="../siatabbaru/images/LOGO-KEMENTERIAN-PEKERJAAN-UMUM.png">
+            <img class="logo" src="../siatab/images/LOGO-KEMENTERIAN-PEKERJAAN-UMUM.png">
             <p class="homey">SISTEM INFORMASI AIR TANAH DAN AIR BAKU<p>
 
         </div>
@@ -239,18 +238,18 @@ p.word{
     </div>
 
     <div class="container-pic">
-        <img class="pic-a" src="../siatabbaru/data/Unit Kerja/PUSAT Air Tanah dan Air Baku/Foto-landingPage/picture-home.jpg">        
+        <img class="pic-a" src="../siatab/data/Unit Kerja/PUSAT Air Tanah dan Air Baku/Foto-landingPage/picture-home.jpg">        
     </div>
 
     <div class="container-air">
         <a href="<?php echo Yii::app()->baseUrl; ?>/sumur">
             <div class="box airtanah">
-                <img src="../siatabbaru/images/airtanahlogo.png">
+                <img src="../siatab/images/airtanahlogo.png">
             </div>
         </a>
-        <a href="http://localhost/siatabbaru/sistembaku/listbaku">
+        <a href="../siatab/sistembaku/listbaku">
             <div class="box airbaku">
-                <img src="../siatabbaru/images/airbakulogo.png">
+                <img src="../siatab/">
             </div>
         </a>
     </div> 
@@ -261,7 +260,7 @@ p.word{
 <!--             <th>
                 <a href="#">
                      <div class="box" alt="Avatar" style="background-color:#4d99d2; color:white"> 
-                        <img class="pic" src="../siatabbaru/images/icon-balai.png">
+                        <img class="pic" src="../siatab/images/icon-balai.png">
                         <div class="middle">
                             <div class="text">
                                 <p class="word">Balai</p>    
@@ -273,7 +272,7 @@ p.word{
  -->            <th>
                 <a href="#">        
                      <div class="box" alt="Avatar" style="background-color:#8dba4f; color:white"> 
-                        <img class="pic" src="../siatabbaru/images/icon-pemetaan.png">
+                        <img class="pic" src="../siatab/images/icon-pemetaan.png">
                         <div class="middle">
                             <div class="text">
                                 <p class="word"><b>Pemetaan</b></p>    
@@ -285,7 +284,7 @@ p.word{
             <th>
                 <a href="#">
                      <div class="box" alt="Avatar" style="background-color:#fd687c; color:white"> 
-                        <img class="pic" src="../siatabbaru/images/icon-peraturan.png">
+                        <img class="pic" src="../siatab/images/icon-peraturan.png">
                         <div class="middle">
                             <div class="text">
                                 <p class="word"><b>Peraturan</b></p>    
@@ -297,7 +296,7 @@ p.word{
             <th>
                 <a href="#">
                      <div class="box" alt="Avatar" style="background-color:#9850ba; color:white"> 
-                        <img class="pic" src="../siatabbaru/images/icon-berita.png">
+                        <img class="pic" src="../siatab/images/icon-berita.png">
                         <div class="middle">
                             <div class="text">
                                 <p class="word"><b>Berita</b></p>    
@@ -309,7 +308,7 @@ p.word{
             <th>
                 <a href="#">
                      <div class="box" alt="Avatar" style="background-color:#da8b0f; color:white"> 
-                        <img class="pic" src="../siatabbaru/images/icon-galeri.png">
+                        <img class="pic" src="../siatab/images/icon-galeri.png">
                         <div class="middle">
                             <div class="text">
                                 <p class="word"><b>galeri</b></p>    
@@ -331,19 +330,19 @@ p.word{
                     Kementrian PUPR
                     </p>
                 <div style="color:white"> 
-                <img class="logo-footer" src="../siatabbaru/images/placeholder.png">
+                <img class="logo-footer" src="../siatab/images/placeholder.png">
                     Jl. Pattimura 20, Kebayoran Baru<p style="padding-left:25px;">Jakarta 12110</p>
                 </div>
                 <div style="color:white"> 
-                <img class="logo-footer" src="../siatabbaru/images/phone.png">
+                <img class="logo-footer" src="../siatab/images/phone.png">
                     (0231)-7396616
                 </div>
                 <div style="color:white"> 
-                <img class="logo-footer" src="../siatabbaru/images/printer.png">
+                <img class="logo-footer" src="../siatab/images/printer.png">
                     (0231)-7396616
                 </div>
                 <div style="color:white"> 
-                <img class="logo-footer" src="../siatabbaru/images/email.png">
+                <img class="logo-footer" src="../siatab/images/email.png">
                     kompusda@pu.go.id<p style="padding-left:25px">kompu.sda@gmail.com</p>
                 </div>
             </div>

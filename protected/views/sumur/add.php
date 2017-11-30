@@ -84,7 +84,9 @@ include '../siatab/connect.php';
 	<?php echo $form->textFieldRow($model,'lintang_selatan'); ?>
 	<?php echo $form->textFieldRow($model,'bujur_timur'); ?>
 	<?php echo $form->textFieldRow($model,'elevasi_sumur'); ?>
-	<?php echo $form->dropDownListRow($model,'status',array('Rencana'=>'Rencana','Operasi'=>'Operasi')); ?>
+	<?php echo $form->dropDownListRow($model,'status',
+	array('Operasi'=>'Operasi', 'Rencana'=>array('Perlu Studi'=>'Perlu Studi', 'Sudah Studi'=>'Sudah Studi', 'Siap'=>'Siap'),
+	'Berjalan'=>'Berjalan')); ?>
 		
 	<!--</fieldset>-->
 </td>
