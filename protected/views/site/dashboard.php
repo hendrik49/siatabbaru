@@ -4,6 +4,7 @@ $this->pageTitle=Yii::app()->name;
 $this->breadcrumbs=array('Dashboard');
 include '../siatab/connect.php';
 ?>
+
     <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         'id'=>'site-form',
         'type'=>'horizontal',
@@ -76,11 +77,10 @@ include '../siatab/connect.php';
                     </ul>
                     <li class="active">
                         <div style="width: 330px;">
+                        
                         <?php $aa=array(); $xx=array();
-                            foreach($dataProvider2->getData() as $s=>$rr)
-                                $aa[$s]=array($rr['kinerja'],(int)$rr['count(id)']);
-                                //$xx[$s]=array($rr['rumah_pompa'],(int)$rr['count(id)']);
-
+                            foreach($dataProvider2->getData() as $s=>$rr) 
+                                $aa[$s]=array($rr['kinerja'],(int)$rr['count(t_sumur6.id)']); 
                         $this->widget('application.extensions.highcharts.HighchartsWidget', array(
                         'options'=>array(
                             'series' => array( array('type'=>'pie','data'=>$aa)),
@@ -95,6 +95,7 @@ include '../siatab/connect.php';
                             'credits'=>array('enabled'=>false),
                         )));
                         ?>
+                        
                         </div>
                     </li>
                 <li  data-toggle="collapse" data-target="#mataair" class="collapsed">
@@ -136,7 +137,7 @@ include '../siatab/connect.php';
                             foreach($dataProvider3->getData() as $s=>$rr)
                                 
                                 $pompa[$s]=array($rr['kinerja'],(int)$rr['count(id)']);
-                                
+                               
                             $this->widget('application.extensions.highcharts.HighchartsWidget', array(
                             'options'=>array(
                                 'series' => array( 

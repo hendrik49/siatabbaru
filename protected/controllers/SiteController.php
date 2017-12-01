@@ -194,42 +194,7 @@ class SiteController extends Controller
 	public function actionDashboard()
 	{
 		$model=new Neraca;
-		$ii = 1;
-		$nilai = 0;
-		$dataProvider = KondisiSumur::model()->findAll();
-		foreach($dataProvider as $datasumur){
-			$ii++;
-			if($datasumur->sumur != ""){
-				if($datasumur->sumur == "Baik"){
-					$nilaisumur[$ii] = + (1 * 0.0773);
-				}else if($datasumur->sumur == "Rusak Ringan"){
-					$nilaisumur[$ii] =+ (0.5 * 0.0773);
-				}else{
-					$nilaisumur[$ii] =+ 0;
-				}
-			}
-			if($datasumur->rumah_pompa != ""){
-				if($datasumur->rumah_pompa == "Baik"){
-					$nilaisumur[$ii] =+ (1 * 0.0773);
-				}else if($datasumur->rumah_pompa == "Rusak Ringan"){
-					$nilaisumur[$ii] =+ (0.5 * 0.0773);
-				}else{
-					$nilaisumur[$ii] =+ 0;
-				}
-			}
-			if($datasumur->pompa != ""){
-				if($datasumur->pompa == "Baik"){
-					$nilaisumur[$ii] =+ (1 * 0.0773);
-				}else if($datasumur->pompa == "Rusak Ringan"){
-					$nilaisumur[$ii] =+ (0.5 * 0.0773);
-				}else{
-					$nilaisumur[$ii] =+ 0;
-				}
-			}
-			
-
-		}
-
+		
 		$sql='SELECT count(id),kinerja FROM t_mataair6 where kinerja !=" " GROUP BY kinerja';
 		$dataProvider=new CSqlDataProvider($sql,array(
             'keyField' => 'id',
@@ -239,12 +204,13 @@ class SiteController extends Controller
 		$dataProvider1=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
 		));
-
-		$sql='SELECT count(id),kinerja FROM t_sumur6 where kinerja !=" " GROUP BY kinerja';
-		$dataProvider2=new CSqlDataProvider($sql,array(
-			'keyField' => 'id',
-		));
-
+		
+			$sql='SELECT count(t_sumur6.id),t_sumur6.kinerja,t_sumur1.provinsi FROM t_sumur6 JOIN t_sumur1 ON t_sumur6.ID = t_sumur1.ID 
+			WHERE t_sumur6.kinerja !=" " AND t_sumur1.provinsi ="Bali" GROUP BY t_sumur6.kinerja';
+			$dataProvider2=new CSqlDataProvider($sql,array(
+				'keyField' => 'id',
+			));
+		
 		$sql='SELECT count(id),kinerja FROM t_hujan5 where kinerja !=" " GROUP BY kinerja';
 		$dataProvider3=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
@@ -254,7 +220,7 @@ class SiteController extends Controller
 		$dataProvider4=new CSqlDataProvider($sql,array(
 			'keyField' => 'id',
 		));
-
+		
 		$this->render('dashboard',array(
 			'dataProvider'=>$dataProvider,
 			'dataProvider1'=>$dataProvider1,
