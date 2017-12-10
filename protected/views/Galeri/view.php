@@ -35,7 +35,7 @@ $this->breadcrumbs=array(
 <?php $this->widget('bootstrap.widgets.TbDetailView', array(
 	'cssFile'=>Yii::app()->baseUrl . '/css/detailview/styles.css',		
 	'data'=>$model,
-	'htmlOptions'=>array('style'=>'width:80%;'),
+	'htmlOptions'=>array('style'=>'width:85%;'),
 	'attributes'=>array(			
 		array(
 			'type'=>'raw',		
@@ -47,7 +47,12 @@ $this->breadcrumbs=array(
 		),
 		array(
 			'type'=>'raw',
-			'value'=>'<p  style="color:#999;">Jakarta, '.date('d, M Y', $model->Tanggal).'. Foto: Administrator Siatab'.$model->Deskripsi.'<p>',
+			'value'=>'<p  style="color:#999;"><i class="fa fa-clock-o"></i> '.date('d, M Y', $model->Tanggal).' <i class="fa fa-user"> created by Admin </i> <i class="fa fa-eye"></i> Foto: Administrator Siatab <p>',
+			'htmlOptions'=>array('style'=>'text-align:justify;')			
+		),		
+		array(
+			'type'=>'raw',
+			'value'=>'<p style="text-align:justify;">'.$model->Deskripsi.'<p>',
 			'htmlOptions'=>array('style'=>'text-align:justify;')			
 		)
 	),

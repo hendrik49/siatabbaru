@@ -63,7 +63,7 @@ $this->breadcrumbs=array(
 		),
 		array(
 			'type'=>'raw',
-			'value'=>'<p  style="color:#999;">Jakarta, '.date('d, M Y', $model->Tanggal).'. Foto: Administrator Siatab'.$model->Deskripsi.'<p>',
+			'value'=>'<p  style="color:#999;"><i class="fa fa-clock-o"></i> '.date('d, M Y', $model->Tanggal).' <i class="fa fa-user"> created by Admin </i> <i class="fa fa-eye"></i> Foto: Administrator Siatab <p>',
 			'htmlOptions'=>array('style'=>'text-align:justify;')			
 		)
 	),

@@ -10,12 +10,12 @@
 	<?php else : ?>
 	<iframe width="230" height="180"  src=<?php echo $data->Youtube; ?> frameborder="0" gesture="media" allowfullscreen></iframe>
 		<?php endif ?>	
-	</a>
-	<p class="date" style="font-size:12px;color:#999; background:rgb(58, 58, 58);padding: 5px 10px;">
+	</a>	
+	<p class="date"  style="font-size:12px;color:#FFF;background:rgb(69, 103, 141);padding: 5px 10px;">
 	<b><?php echo $data->NamaVideo ?></b>
 	</br>
-	<?php echo date('d, M Y', $data->Tanggal);?>	
-	<i> created by Admin </i>
+	<i class="fa fa-clock-o"></i> <?php echo date('d, M Y', $data->Tanggal); ?>	
+	<i class="fa fa-user"> created by Admin </i>
 	</p>
 	</p>
 
